@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan  1 18:42:23 PST 2002
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+add alg to display hits
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan  1 18:39:16 PST 2002
 G4Generator/src
 
