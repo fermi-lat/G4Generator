@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Nov  5 07:43:26 PST 2002
+G4Generator/src
+
+Modified Files:
+	McParticleManager.cxx 
+Log Message:
+fix warning
+    *
+------------------------------------------------------------
 User: riccardo  Tue Nov  5 01:02:11 PST 2002
 G4Generator/src
 
