@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed May  1 19:07:23 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	test_sources.xml 
+Log Message:
+remove FluxSvc
+    *
+------------------------------------------------------------
+User: burnett  Wed May  1 19:07:23 PDT 2002
 G4Generator/src
 
 Modified Files:
