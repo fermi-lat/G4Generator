@@ -1,6 +1,6 @@
 package G4Generator
-version v3r5
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.39 2002/04/29 04:55:09 burnett Exp $
+version v4r0
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.40 2002/05/02 12:22:22 burnett Exp $
 
 use GlastPolicy v4r*
 
@@ -24,9 +24,9 @@ use xmlUtil  v2*
 
 use idents   v2*
 
-use GlastEvent v7*
+use Event v8*
 
-use GlastSvc  v7*
+use GlastSvc  v8*
 
 # flux determination
 use FluxSvc  v5*

@@ -6,10 +6,12 @@
 
 #include "idents/VolumeIdentifier.h"
 
+
 #include "Event/MonteCarlo/McIntegratingHit.h"
 
 #include "DetectorManager.h"
 #include <map>
+
 
 class DetectorConstruction;
 class IDataProviderSvc;
@@ -24,7 +26,7 @@ class IDataProviderSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.4 2002/04/17 08:34:14 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.5 2002/05/10 18:05:10 richard Exp $
  */
 class IntDetectorManager : public DetectorManager {
 public:
