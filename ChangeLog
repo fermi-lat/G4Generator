@@ -1,31 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Sun Jan  6 14:23:01 PST 2002
-G4Generator/src
-
-Modified Files:
-	DetectorConstruction.cxx DisplayManager.h 
-Log Message:
-unix fixes
-    *
-------------------------------------------------------------
-User: burnett  Sat Jan  5 13:21:43 PST 2002
-G4Generator/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-fix data version
-    *
-------------------------------------------------------------
-User: burnett  Sat Jan  5 12:30:19 PST 2002
-G4Generator/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-detModel bug fix
-    *
-------------------------------------------------------------
 User: burnett  Sat Jan  5 11:46:48 PST 2002
 G4Generator/src/test
 
