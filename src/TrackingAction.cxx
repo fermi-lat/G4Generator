@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.12 2004/09/08 17:59:57 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.13 2004/12/15 01:00:32 burnett Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -28,7 +28,6 @@
 //clhep
 #include "CLHEP/Geometry/Point3D.h"
 #include "CLHEP/Geometry/Vector3D.h"
-#include <typeinfo.h>
 
 
 TrackingAction::TrackingAction(IG4GeometrySvc* gsv):m_geoSvc(gsv)
