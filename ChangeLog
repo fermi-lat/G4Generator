@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Mon Feb  3 11:46:37 PST 2003
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+fix job options to run the test, prepare to tag Tracy's modifications.
+    *
+------------------------------------------------------------
 User: usher  Mon Jan 27 16:39:01 PST 2003
 G4Generator/src
 
