@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: usher  Wed Sep  8 10:59:57 PDT 2004
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorManager.cxx EMPhysics.cxx 
+	GeneralPhysics.cxx HadronPhysics.cxx HadronPhysics.h 
+	IonPhysics.cxx MuonPhysics.cxx PosDetectorManager.cxx 
+	RunManager.cxx RunManager.h TrackingAction.cxx 
+Log Message:
+First round of modifications necessary for updating to G4 version 6.2
+
+    *
+------------------------------------------------------------
 User: usher  Wed Sep  8 10:59:56 PDT 2004
 G4Generator/doc
 
