@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec 16 08:15:03 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h 
+Log Message:
+add display options
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec 16 08:11:48 PST 2001
 G4Generator/src
 
