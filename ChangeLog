@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Sat Apr  6 12:12:06 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx DetectorManager.h DisplayManager.cxx 
+	DisplayManager.h IntDetectorManager.cxx 
+Log Message:
+
+Implement optional display of the volume ids of hit sensitive volumes. 
+    *
+------------------------------------------------------------
 User: burnett  Sat Apr  6 12:12:05 PST 2002
 G4Generator/cmt
 
