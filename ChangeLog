@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Wed Apr 17 21:32:54 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h McParticleManager.cxx 
+Log Message:
+
+allow possibility to find primary particle already on TDS. 
+G4Test has (commented out) code to test it.
+    *
+------------------------------------------------------------
 User: burnett  Wed Apr 17 21:22:04 PDT 2002
 G4Generator/cmt
 
