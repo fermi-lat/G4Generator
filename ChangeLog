@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jan 13 13:54:32 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx 
+Log Message:
+catch exception with assert
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan  8 14:34:05 PST 2002
 G4Generator/cmt
 
