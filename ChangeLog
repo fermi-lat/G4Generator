@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Tue Feb  4 09:42:32 PST 2003
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Log Message:
+Removed some warnings at the end of the job related to G4 destruction of the geometry
+    *
+------------------------------------------------------------
 User: riccardo  Tue Feb  4 00:51:44 PST 2003
 G4Generator/src
 
