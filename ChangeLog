@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: riccardo  Sat Apr 20 03:40:10 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4ParticlePropagator.cxx G4PropagatorSvc.cxx 
+	ParticleTransporter.cxx mainpage.h 
+Log Message:
+Comments for the code review and some formatting issues solved (not all)
+
+    *
+------------------------------------------------------------
 User: riccardo  Sat Apr 20 03:18:34 PDT 2002
 G4Generator/src
 
