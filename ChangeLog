@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Wed Mar 13 06:47:06 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Small change for Linux compatibility
+
+    *
+------------------------------------------------------------
 User: riccardo  Wed Mar 13 03:08:08 PST 2002
 G4Generator/src
 
