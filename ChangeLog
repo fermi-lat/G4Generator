@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Dec 14 17:00:33 PST 2004
+G4Generator/src
+
+Modified Files:
+	TrackingAction.cxx 
+Log Message:
+fix to recognize ions and reconstruct the pdgid as 80000+baryon number.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9p3, operation: add
 Package: G4Generator
