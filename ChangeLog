@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: burnett  Thu Apr 18 20:56:30 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	G4Generator.cxx G4Generator.h G4PropagatorSvc.cxx 
+	ParticleTransporter.h RunManager.cxx RunManager.h 
+Log Message:
+Provide for specifying the geometry mode (recon or propagate, for example) from the 
+properties of G4Generator. (The property name is "geometryMode").
+
+    *
+------------------------------------------------------------
 User: riccardo  Thu Apr 18 05:39:07 PDT 2002
 G4Generator/src
 
