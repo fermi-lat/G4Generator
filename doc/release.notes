@@ -1,5 +1,6 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.20 2002/07/25 09:59:30 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.21 2002/08/15 16:54:52 burnett Exp $
 /*
+ * v4r3p1 01-sep-02 THB Geant4Runtime used for clients
  * v4r3   15-aug-02 THB various: see changelog
  * v4r2   25-jul-02 THB 
  * v4r1p6 20-jun-02 THB remove arbitrary cut on number of mcparticles
