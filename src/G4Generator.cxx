@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.33 2002/05/10 18:06:03 richard Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.34 2002/05/15 12:03:16 riccardo Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -214,17 +214,7 @@ StatusCode G4Generator::execute()
   HepLorentzVector pin= primaryGenerator->GetFourMomentum();
 
 
-  Event::McParticle * parent= new Event::McParticle;
-  // This parent particle decay at the start in the first particle, 
-  // so initial momentum and final one are the same
-  parent->initialize(parent, pdef->GetPDGEncoding(), 
-                     Event::McParticle::PRIMARY,
-                     pin,p);
-  parent->finalize(pin, p);
-    
-  McParticleManager::getPointer()->addMcParticle(0,parent);
-    
-
+  McParticleManager::getPointer()->addMcParticle(0,primary);   
   // Run geant4
   m_runManager->BeamOn(); 
     
