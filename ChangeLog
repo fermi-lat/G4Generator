@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: riccardo  Tue Mar 12 08:55:59 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.h PosDetectorManager.cxx 
+Log Message:
+A small change in DetectorManager and PosDetectorManager to provide the right visualization of
+volumes involved in hits
+
+    *
+------------------------------------------------------------
 User: burnett  Mon Mar 11 14:51:46 PST 2002
 G4Generator/src
 
