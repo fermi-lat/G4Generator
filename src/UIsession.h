@@ -7,10 +7,10 @@
  *
  * @brief A dummy Geant4 user interface 
  *
- * Geant4 has some strange beahvior with respect to information output on the
+ * Geant4 has some strange behavior with respect to information streaming on the
  * standard output during initialization phase. Most information can be silenced
  * by choosing proper values for verbosity levels; netherless Geant4 print on
- * the std output a lot of information that can annoing (and not very
+ * the std output a lot of information that can be annoing (and not very
  * useful). To avoid this information to interfere with the standard output of
  * the Gaudi initialization phase this small class shut up the Geant4
  * output. Note that this has been set in such a way that only the
@@ -20,7 +20,7 @@
  *  
  * @author R.Giannitrapani
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/UIsession.h,v 1.2 2001/12/02 22:23:24 burnett Exp $ 
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/UIsession.h,v 1.3 2002/04/17 08:34:15 riccardo Exp $ 
  */
 class UIsession : public G4UIsession
 {  

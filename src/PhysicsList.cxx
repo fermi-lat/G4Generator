@@ -1,7 +1,9 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
 //
-// Description:
+// Description: This class manages the building of particles definitions and
+// physics processes setup by creating a set of specialized classes and
+// registering them
 //      
 //
 // Author(s):

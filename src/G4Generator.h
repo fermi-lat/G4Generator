@@ -20,7 +20,7 @@ class RunManager;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.9 2002/04/19 03:56:30 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.10 2002/04/19 07:44:41 riccardo Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -39,11 +39,11 @@ class G4Generator : public Algorithm {
   IParticlePropertySvc* m_ppsvc;
 
   /// source name to get from the Flux service; this is a property of the
-  /// algorithm and can be setted in the jobOptions file
+  /// algorithm and can be set in the jobOptions file
   std::string m_source_name;
 
   /// set of UI commands for setup; this is a property of the algorithm and can
-  /// be setted in the jobOptions file
+  /// be set in the jobOptions file
   StringArrayProperty m_uiCommands;
   
   /// This is the G4 manager that handles the simulation

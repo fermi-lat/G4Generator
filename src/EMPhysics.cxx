@@ -1,3 +1,12 @@
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
+//
+// Description: This class manages the building of gamma/electron/positron and
+// their processes
+//
+// Author(s):
+//      F.Longo
+
 #include "EMPhysics.h"
 
 #include "globals.hh"
@@ -27,6 +36,9 @@ EMPhysics::~EMPhysics()
 
 void EMPhysics::ConstructParticle()
 {
+  // Purpose and Method: this method is invoked by G4 to build the particles
+  //                     classes
+
   // gamma
   G4Gamma::GammaDefinition();
  
@@ -43,6 +55,9 @@ void EMPhysics::ConstructParticle()
 
 void EMPhysics::ConstructProcess()
 {
+  // Purpose and Method: this method is invoked by G4 to build the physics
+  //                     processes table
+
   G4ProcessManager * pManager = 0;
   
   // Gamma Physics
