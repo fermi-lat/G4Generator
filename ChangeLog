@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Thu Sep  9 15:26:09 PDT 2004
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Remove "apply_pattern package_includes" since G4Generator doesn't export anything
+
+    *
+------------------------------------------------------------
 User: usher  Wed Sep  8 10:59:57 PDT 2004
 G4Generator/src/test
 
