@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: frailis  Mon Dec 17 10:01:36 PST 2001
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Correct requirements file for linux
+    *
+------------------------------------------------------------
 User: burnett  Mon Dec 17 08:20:07 PST 2001
 G4Generator/src
 
