@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: burnett  Wed Dec  5 21:27:05 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4SectionsVisitor.cxx G4SectionsVisitor.h 
+Log Message:
+Apply principles of Refractoring's Extract Method(110) to the calculation of ids, defining a new
+private method  processIds. 
+This changed the behavior, since the previous code had a little bug.
+ 
+
+    *
+------------------------------------------------------------
 User: riccardo  Mon Dec  3 10:18:27 PST 2001
 G4Generator/src
 
