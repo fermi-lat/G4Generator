@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.h,v 1.1 2002/03/07 15:30:05 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.h,v 1.2 2002/03/11 17:27:56 riccardo Exp $
 
 #ifndef G4GEOMETRY_h
 #define G4GEOMETRY_h
@@ -39,9 +39,11 @@ public:
    * @param name
    * @param material
    * @param params vector with the six transformation parameters, followed by 3 or so dimensions
+   * @return tell caller whether to skip subvolumes or not
   */
-  virtual void pushShape(ShapeType s, const UintVector& id, std::string name, 
-			 std::string material, const DoubleVector& params, VolumeType type);
+  virtual IGeometry::VisitorRet
+  pushShape(ShapeType s, const UintVector& id, std::string name, 
+            std::string material, const DoubleVector& params, VolumeType type);
   
   //* called to signal end of nesting */
   virtual void popShape();
@@ -68,6 +70,10 @@ public:
   
   /// Return the number of physical volumes created
   unsigned int getPhysicalNumber(){return m_physicals.size();};
+
+  /// Need a setMode in order to implement getMode for IGeometry interface
+  virtual void setMode(std::string pmode) {m_mode = pmode;}
+  virtual std::string getMode() {return m_mode;}
 
  private:
   /// The mother volume of the geometry
@@ -100,5 +106,8 @@ public:
 
   /// a logical for optimizaion mechanism of the G4 geometry
   G4LogicalVolume* m_replicaMother;
+
+  std::string m_mode;
+
 };
 #endif
