@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Mon Apr  8 03:16:43 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Geometry.cxx 
+Log Message:
+Tentative correction of a rotation bug in volume positioning
+
+    *
+------------------------------------------------------------
 User: burnett  Sat Apr  6 12:27:54 PST 2002
 G4Generator/src
 
