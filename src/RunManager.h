@@ -17,6 +17,8 @@ class G4Run;
 
 class Hep3Vector;
 
+class IG4GeometrySvc;
+
 #include "G4Event.hh"
 
 #include "G4EventManager.hh"
@@ -49,7 +51,7 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.17 2003/05/15 17:06:09 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.18 2003/06/06 00:19:08 burnett Exp $
  */
 namespace Geant4 { class MultipleScatteringFactory; }
 
@@ -83,7 +85,8 @@ class RunManager
              std::string& physics_choice, 
              std::string& physics_table,
              std::string&  physics_dir,
-             Geant4::MultipleScatteringFactory& msfactory);
+             Geant4::MultipleScatteringFactory& msfactory,
+			 IG4GeometrySvc*);
   
   virtual ~RunManager();
 
