@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Dec 17 08:48:41 PST 2004
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Remove unnecessary #include <typeinfo.h>. Why was this put in?
+    *
+------------------------------------------------------------
 User: usher  Fri Dec 17 08:44:33 PST 2004
 G4Generator/src
 
