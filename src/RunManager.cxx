@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.22 2003/02/19 09:02:22 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.23 2003/02/19 09:22:51 flongo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -67,7 +67,7 @@ RunManager::RunManager(std::ostream& log, double defaultCutValue, std::string& p
    cutoffInitialized(false),
    geometryNeedsToBeClosed(true),runAborted(false),
    initializedAtLeastOnce(false),
-   geometryToBeOptimized(true),runIDCounter(0),verboseLevel(3),DCtable(NULL),
+   geometryToBeOptimized(true),runIDCounter(0),verboseLevel(0),DCtable(NULL),
    currentRun(NULL),
    storeRandomNumberStatus(0)
    
