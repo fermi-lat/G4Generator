@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Wed Mar  5 16:17:31 PST 2003
+G4Generator/G4Generator
+
+Modified Files:
+	IG4GeometrySvc.h 
+Log Message:
+Modify interface to G4GeometrySvc to keep idents map internal to dll. This
+should solve the problem seen in VC6
+
+    *
+------------------------------------------------------------
 User: burnett  Thu Feb 27 07:18:24 PST 2003
 G4Generator/doc
 
