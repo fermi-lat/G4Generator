@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Tue Nov  5 01:02:11 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx PrimaryGeneratorAction.cxx 
+	PrimaryGeneratorAction.h 
+Log Message:
+Small refactoring of the PrimaryGeneratorAction class; now it takes an McParticle to set the primary parameters. This is the first step for the ions introduction.
+    *
+------------------------------------------------------------
 User: burnett  Fri Nov  1 21:15:44 PST 2002
 G4Generator/src
 
