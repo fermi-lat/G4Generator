@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Thu Feb 27 07:18:23 PST 2003
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+forgot it needed FluxSvc for the test program. No interface dependency.
+    *
+------------------------------------------------------------
 User: burnett  Wed Feb 26 14:28:50 PST 2003
 G4Generator/doc
 
