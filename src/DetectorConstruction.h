@@ -37,7 +37,7 @@ class IntDetectorManager;
  *  
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.h,v 1.11 2002/04/05 16:23:51 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.h,v 1.12 2002/04/17 08:34:14 riccardo Exp $
  */
 
 class DetectorConstruction : public G4VUserDetectorConstruction
@@ -51,8 +51,9 @@ class DetectorConstruction : public G4VUserDetectorConstruction
    *  the TDS directly at the end of an event.  
    *  @param gds A pointer to the abstract interface of the GlastDetSvc 
    *  @param esv A pointer to the data provider service
+   *  @param geometry_mode The mode to use for detModel
    */
-  DetectorConstruction(IGlastDetSvc* gds, IDataProviderSvc* esv);
+  DetectorConstruction(IGlastDetSvc* gds, IDataProviderSvc* esv, std::string geometry_mode="recon");
 
   ~DetectorConstruction();
   
@@ -84,6 +85,9 @@ private:
 
   //! The sensitive detector manager of McIntegratingHit
   IntDetectorManager* m_intDet;
+
+  //! the mode to use when constructing the geometry
+  std::string m_geometryMode;
 };
 
 #endif
