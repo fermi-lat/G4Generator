@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.29 2002/08/12 13:17:17 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.30 2003/04/28 23:56:12 xchen Exp $
 //
 // Description: This class hinerits from G4VUserDetectorConstruction and it is
 // used to build the detector geometry of the G4 simulation by using two other
@@ -28,6 +28,7 @@
 
 #include "G4UniformMagField.hh"
 #include "G4FieldManager.hh"
+#include "G4ChordFinder.hh"
 #include "G4TransportationManager.hh"
 
 // visitors interfaces

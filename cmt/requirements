@@ -4,7 +4,7 @@ author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.78 2004/08/12 23:49:24 hansl Exp $
+#$Id: requirements,v 1.79 2004/08/12 23:54:58 hansl Exp $
 
 use GlastPolicy v*
 
@@ -23,9 +23,8 @@ use Geant4Runtime v2r* IExternal
 
 #=============================================================
 private
-# this is private to avoid passing on build info to clients
-use Geant4   v2r*  IExternal
-
+#this is private to avoid passing on build info to clients
+use Geant4   v2r6* IExternal
 
 # special code to replace the standared multiple scattering 
 use GlastMS
