@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: riccardo  Thu Apr  4 04:53:59 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	test_sources.xml 
+Log Message:
+Preliminary new version of physics list with hadronic processes; new TrackingAction class for McParticle tree filling
+    *
+------------------------------------------------------------
+User: riccardo  Thu Apr  4 04:53:59 PST 2002
 G4Generator/src
 
 Modified Files:
