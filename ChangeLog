@@ -1,4 +1,19 @@
 ------------------------------------------------------------
+User: riccardo  Thu Apr  4 04:53:59 PST 2002
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx PhysicsList.h PosDetectorManager.cxx 
+	RunManager.cxx RunManager.h 
+Added Files:
+	EMPhysics.cxx EMPhysics.h GeneralPhysics.cxx GeneralPhysics.h 
+	HadronPhysics.cxx HadronPhysics.h IonPhysics.cxx IonPhysics.h 
+	MuonPhysics.cxx MuonPhysics.h TrackingAction.cxx 
+	TrackingAction.h 
+Log Message:
+Preliminary new version of physics list with hadronic processes; new TrackingAction class for McParticle tree filling
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar 26 21:30:03 PST 2002
 G4Generator/src
 
