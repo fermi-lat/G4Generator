@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: riccardo  Thu Apr 18 05:39:07 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorManager.cxx 
+	DisplayManager.cxx G4Generator.cxx G4Geometry.cxx G4Media.cxx 
+	G4ParticlePropagator.h IntDetectorManager.cxx 
+	McParticleManager.cxx ParticleTransporter.h PhysicsList.cxx 
+	PosDetectorManager.cxx PrimaryGeneratorAction.cxx 
+	RunManager.cxx TrackingAction.cxx TransportStepInfo.h 
+	mainpage.h 
+Log Message:
+Some new comments (not complete) in the implementation files for the incoming code review
+
+    *
+------------------------------------------------------------
 User: burnett  Wed Apr 17 21:32:54 PDT 2002
 G4Generator/src/test
 
