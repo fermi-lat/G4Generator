@@ -4,7 +4,7 @@ author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.74 2004/01/15 22:17:05 burnett Exp $
+#$Id: requirements,v 1.75 2004/01/15 22:19:21 burnett Exp $
 
 use GlastPolicy v5*
 
@@ -39,11 +39,11 @@ use FluxSvc *
 
 apply_pattern package_Cshlibflags
 
-macro source "" WIN32 "*.h *.cxx"
+macro source "*.cxx" WIN32 "*.h *.cxx"
 library G4Generator -s=../src $(source) -s=Dll *.cxx  
 
 # test program 
-public 
+public
 apply_pattern package_test
 
 
