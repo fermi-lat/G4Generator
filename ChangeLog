@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Dec 19 02:56:50 PST 2001
+G4Generator/src
+
+Modified Files:
+	DisplayManager.cxx DisplayManager.h 
+Log Message:
+implement detector display
+    *
+------------------------------------------------------------
 User: frailis  Mon Dec 17 10:05:36 PST 2001
 G4Generator/cmt
 
