@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jrb  Thu Apr  4 10:25:25 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+G4Generator is no longer compatible with old IGeometry interface; requires
+new GlastSvc major version.
+
+    *
+------------------------------------------------------------
 User: riccardo  Thu Apr  4 04:53:59 PST 2002
 G4Generator/src/test
 
