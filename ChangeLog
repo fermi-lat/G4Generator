@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: usher  Mon Jan 27 16:39:01 PST 2003
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx DetectorManager.h G4Generator.cxx 
+	G4GeometrySvc.cxx 
+Log Message:
+Small modifications:
+1) DetectorManager - look up DisplayManager singleton instead of relying on member variable
+2) G4Generator - request G4GeometrySvc to be created if not already in existence
+3) G4GeometrySvc - small code cleanup
+
+    *
+------------------------------------------------------------
 User: usher  Thu Jan 23 08:21:01 PST 2003
 G4Generator/src
 
