@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: kuss  Fri Oct 25 01:00:50 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Geometry.cxx 
+Log Message:
+for gcc3, apply a cast
+
+    *
+------------------------------------------------------------
 User: burnett  Thu Oct 10 02:40:27 PDT 2002
 G4Generator/doc
 
