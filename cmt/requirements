@@ -1,6 +1,6 @@
 package G4Generator
-version v2r1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.25 2002/03/15 18:04:46 burnett Exp $
+version v3
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.28 2002/03/18 19:12:29 heather Exp $
 
 use GlastPolicy v4r3
 
@@ -29,8 +29,8 @@ use xmlUtil  v2*
 
 use idents   v2*
 
-use GlastEvent v5*
-use GlastSvc  v4*
+use GlastEvent v6*
+use GlastSvc  v5*
 
 # flux determination
 use FluxSvc  v5*
@@ -40,7 +40,7 @@ use GlastDigi
 
 #to make standard display available
 use gui      v2r6p2
-use GuiSvc   v2r4
+use GuiSvc   v3
 use geometry v3
 use geomrep  v4r1
 
@@ -62,7 +62,7 @@ set JOBOPTIONS ${G4GENERATORROOT}/src/test/jobOptions.txt
 private
 # alternative test program that links stuff into the exe
 
-macro G4Testlinkopts "$(GuiSvc_lib) ${guiapp_linkopts} -u GuiSvc_loadRef  -ldl "\
+macro G4Testlinkopts "${Geant4_linkopts} $(GuiSvc_lib) ${guiapp_linkopts} ${gui_linkopts} -u GuiSvc_loadRef -ldl "\
               WIN32 " $(GaudiKernel_linkopts) $(GuiSvc_lib) $(guiapp_linkopts) $(gui_linkopts) /include:_GuiSvc_loadRef "
 
 
