@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.39 2002/09/24 16:59:47 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.40 2002/11/05 09:02:11 riccardo Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -221,7 +221,7 @@ StatusCode G4Generator::execute()
     for( int i = 0; i< m_runManager->getNumberOfTrajectories(); ++i){
       std::auto_ptr<std::vector<Hep3Vector> > points = 
         m_runManager->getTrajectoryPoints(i);
-      dm->addTrack(*(points.get()), m_runManager->getTrajectoryCharge(i));
+      dm->addTrack(*(points.get()), m_runManager->getTrajectoryCharge(i), i==0);
     }
   }
 
