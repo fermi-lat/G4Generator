@@ -17,7 +17,7 @@
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.19 2003/07/22 15:47:58 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.21 2004/09/08 17:59:57 usher Exp $
  */
 //
 //
@@ -87,7 +87,7 @@ class IG4GeometrySvc;
 #include <vector>
 #include <memory>
 
-namespace GlastMS { class MultipleScatteringFactory; }
+namespace GlastMS { class MultipleScatteringFactory; class EnergyLossFactory;}
 
 class RunManager
 {
@@ -116,6 +116,7 @@ class RunManager
              std::string& physics_table,
              std::string&  physics_dir,
              GlastMS::MultipleScatteringFactory& msfactory,
+             GlastMS::EnergyLossFactory& eLossFactory,
 			 IG4GeometrySvc*);
 
     virtual ~RunManager();
