@@ -1,4 +1,4 @@
-// $Header:$
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.1 2001/11/30 17:11:56 riccardo Exp $
 
 /** Very draft version of a customized G4RunManager for Glast;
     It will override the normal eventloop of G4, letting Gaudi
@@ -35,9 +35,13 @@ class RunManager
   
  private:
   static RunManager* fRunManager;
+  std::string m_topvol;
+
+  /// mode to apply to start the visitor, like "fastmc"
+  std::string m_visitorMode;
   
  public: // with description
-  RunManager();
+     RunManager(std::string topvol, std::string visitorMode);
   virtual ~RunManager();
   //  The constructor and the destructor. The user must construct this class
   // object at the beginning of his/her main() and must delete it at the 

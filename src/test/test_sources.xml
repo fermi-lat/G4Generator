@@ -1,13 +1,21 @@
 
 <source_library>
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.1 2001/11/30 16:36:43 burnett Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.2 2001/11/30 17:34:53 riccardo Exp $
        Some simple test flux definitions for debugging
     -->
 
     <source name="muon_pencil">
        <spectrum> 
          <particle name="mu+"><energy e="10"/> </particle>
+           <direction theta="0" phi="0" />
+           <launch_point x="5" y="5" z="60" />
+       </spectrum>
+     </source>
+
+    <source name="gamma_test">
+       <spectrum> 
+         <particle name="gamma"><energy e="1.0"/> </particle>
            <direction theta="0" phi="0" />
            <launch_point x="5" y="5" z="60" />
        </spectrum>
