@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: burnett  Fri Jun  7 11:30:13 PDT 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+make test program a proper one.
+clean out lots of redundant use statements.
+tagging v4r1p4
+    *
+------------------------------------------------------------
 User: usher  Wed Jun  5 14:26:46 PDT 2002
 G4Generator/src
 
