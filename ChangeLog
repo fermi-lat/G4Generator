@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 17 00:34:56 PST 2001
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Removed Files:
+	setup.bat 
+Log Message:
+fix unix build; remove setup.bat
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec 16 09:51:50 PST 2001
 G4Generator/cmt
 
