@@ -1,7 +1,8 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.48 2004/12/08 01:35:03 usher Exp $
+    $Id: release.notes,v 1.49 2004/12/10 17:25:16 usher Exp $
+ v5r9p2 10-Dec-04 THB Add log indication as to which energy loss was selected. 
  v5r9p1 10-Dec-04 TU  This fixes a problem with switching muon energy loss between 5.2 and 6.2
  v5r9p0  7-Dec-04 TU  Switch to using an EnergyLossFactory for electrons, positrons and muons
  v5r8p1  2-Dec-04 TU  Patch to fix problem with artificial energy in McPositionHits
