@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Thu Mar  7 07:30:05 PST 2002
+G4Generator/src
+
+Added Files:
+	G4Geometry.cxx G4Geometry.h G4Media.cxx G4Media.h 
+Log Message:
+Removed dipendencies from detModel and Instrument; now it uses new abstract interfaces in GlastDetSvc for both the geometry and materials. Inserted in a better way the hits collection (for now only PositionHit) in the TDS
+    *
+------------------------------------------------------------
 User: riccardo  Thu Mar  7 07:29:04 PST 2002
 G4Generator/src/test
 
