@@ -1,4 +1,11 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.9 2002/04/11 11:42:30 burnett Exp $
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+//
+// Description:
+//      
+//
+// Author(s):
+//      T.Burnett
 
 #include "DisplayManager.h"
 
