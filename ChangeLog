@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lsrea  Thu Aug 21 13:54:08 PDT 2003
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+little bug in log output
+    *
+------------------------------------------------------------
 User: lsrea  Fri Aug  8 17:21:58 PDT 2003
 G4Generator/src
 
