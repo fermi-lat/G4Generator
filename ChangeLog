@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Oct 17 18:29:08 PDT 2003
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+make comment about msc version a warning.
+    *
+------------------------------------------------------------
 User: burnett  Fri Oct 17 18:28:28 PDT 2003
 G4Generator/src
 
