@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Apr 17 21:22:04 PDT 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+update required version of GlastSvc
+    *
+------------------------------------------------------------
 User: riccardo  Wed Apr 17 01:34:15 PDT 2002
 G4Generator/src/test
 
