@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jun  5 17:19:07 PDT 2003
+G4Generator
+
+Modified Files:
+	.cvsignore 
+Log Message:
+implement MultipleScatteringFactory to control MS version used
+    *
+------------------------------------------------------------
 User: burnett  Sat May 31 19:28:05 PDT 2003
 G4Generator/src
 
