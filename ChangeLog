@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Fri Mar 15 13:54:49 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+update use of GuiSvc
+    *
+------------------------------------------------------------
 User: heather  Fri Mar 15 12:31:26 PST 2002
 G4Generator/src/Dll
 
