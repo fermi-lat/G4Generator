@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Wed Jun  5 14:26:46 PDT 2002
+G4Generator/src
+
+Modified Files:
+	ParticleTransporter.cxx 
+Log Message:
+Modify minStep calculation to calculate arclength to exit at z plane. 
+**This may need to be revisited in the future**
+
+    *
+------------------------------------------------------------
 User: riccardo  Mon Jun  3 09:22:06 PDT 2002
 G4Generator/src
 
