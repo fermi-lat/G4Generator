@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Wed Mar 13 03:08:08 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Geometry.cxx G4Media.h 
+Log Message:
+Small changes to G4Geometry and G4Media for Linux compatibility
+
+    *
+------------------------------------------------------------
 User: riccardo  Tue Mar 12 09:25:20 PST 2002
 G4Generator/src
 
