@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: riccardo  Tue Nov 27 09:42:32 PST 2001
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Added the SensitiveDetector class for dealing with hit
+    *
+------------------------------------------------------------
+User: riccardo  Tue Nov 27 09:42:32 PST 2001
 G4Generator/src
 
 Modified Files:
