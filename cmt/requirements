@@ -1,6 +1,6 @@
 package G4Generator
 version v3r3p2
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.36 2002/04/11 11:46:51 burnett Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.37 2002/04/11 14:29:07 burnett Exp $
 
 use GlastPolicy v4r*
 
@@ -12,8 +12,6 @@ use GaudiAlg
 apply_pattern packageShr
 
 # export nothing but the dll path
-#=============================================================
-private
 # this version has Geant4 library path
 use EXTLIB v2r4p2
 
@@ -28,7 +26,7 @@ use idents   v2*
 
 use GlastEvent v7*
 
-use GlastSvc  v6*
+use GlastSvc  v7*
 
 # flux determination
 use FluxSvc  v5*
@@ -40,6 +38,8 @@ use GuiSvc   v3*
 use geometry v3*
 use geomrep  v4r*
 
+#=============================================================
+private
 
 # get flags to build shared library
 
