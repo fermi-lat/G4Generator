@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec 16 08:28:15 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4SectionsVisitor.cxx 
+Log Message:
+construct identifiers with VolumeIdentifier class
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec 16 08:25:18 PST 2001
 G4Generator/src
 
