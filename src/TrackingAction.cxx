@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.9 2002/09/24 16:59:47 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.10 2003/07/22 15:47:58 riccardo Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -63,7 +63,7 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
   
   if ( man->getMode()== 0)
     if ((aTrack->GetTrackID() == 1) || 
-        ((aTrack->GetParentID() == 1) && (process == "conv")))
+        (aTrack->GetParentID() == 1))
       save = 1;
     else save = 0;
 
