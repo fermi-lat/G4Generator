@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.1 2002/03/11 17:27:56 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.2 2002/03/11 22:51:46 burnett Exp $
 
 #include "IntDetectorManager.h"
 #include <iostream>
@@ -11,7 +11,7 @@
 #include "G4Box.hh"
 #include "G4SDManager.hh"
 
-
+#include <algorithm>
 
 IntDetectorManager::IntDetectorManager(DetectorConstruction *det,
                                            IDataProviderSvc* esv)
@@ -85,6 +85,9 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void IntDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
 {
+    // Let's sort the hits
+    std::sort(m_intHit->begin(),m_intHit->end(), CompareIntHits());
+
     // store the hits in the TDS
     m_esv->registerObject("/Event/MC/IntegratingHitsCol", m_intHit);    
 
