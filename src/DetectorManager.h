@@ -17,6 +17,7 @@
 
 #include <map>
 class G4TouchableHistory;
+class DisplayManager;
 namespace mc {class McPositionHit;}
 
 /** 
@@ -34,7 +35,7 @@ namespace mc {class McPositionHit;}
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.7 2002/04/06 20:12:05 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.8 2002/04/06 20:27:54 burnett Exp $
  */
 class DetectorManager : public G4VSensitiveDetector {
  public:
@@ -72,9 +73,12 @@ class DetectorManager : public G4VSensitiveDetector {
 
   //! A map to keep track of hit detectors for display
   DetectorList m_detectorList;
+
+  DisplayManager* displayMgr(){return m_display;}
   
  private:
   /// The identifier indicized map of physical volume
   DetectorConstruction::IdMap* m_idMap;
+  DisplayManager* m_display;
 };
 #endif
