@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jul  2 09:00:03 PDT 2003
+G4Generator/src
+
+Modified Files:
+	DisplayManager.cxx 
+Log Message:
+inital dispaly option for hit boxes is now off, since MCdisplay does that from the TDS
+    *
+------------------------------------------------------------
 User: burnett  Thu Jun  5 17:26:28 PDT 2003
 G4Generator/doc
 
