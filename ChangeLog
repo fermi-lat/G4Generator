@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: burnett  Thu Jun  5 17:19:07 PDT 2003
+G4Generator/cmt
+
+Modified Files:
+	.cvsignore 
+Removed Files:
+      Tag: v5r3
+	cleanup.bat 
+Log Message:
+implement MultipleScatteringFactory to control MS version used
+    *
+------------------------------------------------------------
+User: burnett  Thu Jun  5 17:19:07 PDT 2003
 G4Generator
 
 Modified Files:
