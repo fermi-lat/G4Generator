@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Thu Jan  3 09:39:32 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Make into a temporary checkout package.
+
+    *
+------------------------------------------------------------
+User: burnett  Thu Jan  3 09:39:32 PST 2002
 G4Generator/cmt
 
 Modified Files:
