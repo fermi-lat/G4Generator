@@ -1,8 +1,8 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.42 2003/10/18 01:33:03 burnett Exp $
-
+    $Id: release.notes,v 1.43 2004/01/15 22:19:21 burnett Exp $
+ v5r7p1 16-jan-04 THB small correction to req. 
  v5r7   15-jan-04 THB moved MS calculation to new package
  v5r6p2 17-oct-03 THB correct GeV/MeV confusion for heavy ions masses
  v5r6p1 08-aug-03 LSR fix for picky unix compiler; apparently SmartRef!=pointer in delete statement?
