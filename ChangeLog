@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Fri May 10 19:39:04 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+
+fix the source selection for G4test: G4Generator no longer "knows" the source.
+    *
+------------------------------------------------------------
 User: burnett  Fri May 10 12:24:33 PDT 2002
 G4Generator/src
 
