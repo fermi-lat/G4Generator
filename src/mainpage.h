@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.9 2002/09/04 15:06:47 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.10 2002/11/02 05:15:44 burnett Exp $
 // Mainpage for doxygen
 
 /** @mainpage package G4Generator
@@ -79,7 +79,7 @@
  * @param G4Generator.UICommands  
  *   default value ""
  * @param G4Generator.geometryMode [""] Blank means use default from GlastDetSvc
- * @param G4Generator.saveTrajectories [0] Set non-zero to allow trajectorie objects (Event::McTrajectory) to be saved on the TDS
+ * @param G4Generator.saveTrajectories [0] Set non-zero to allow trajectory objects (Event::McTrajectory) to be saved on the TDS
  * @param G4Generator.mcTreeMode ["minimal"]
  * @param G4Generator.defaultCutValue [0.1*mm] The cut to be applied to all physics processes, all materials
  *
