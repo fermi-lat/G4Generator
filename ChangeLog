@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: frailis  Wed Nov 28 07:13:21 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx G4MaterialsVisitor.cxx 
+Log Message:
+Solved some problems with elements
+    *
+------------------------------------------------------------
 User: riccardo  Wed Nov 28 05:47:24 PST 2001
 G4Generator/src
 
