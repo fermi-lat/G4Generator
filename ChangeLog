@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: riccardo  Tue Mar 12 09:25:20 PST 2002
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx PosDetectorManager.cxx 
+Log Message:
+Added the sorting of the hits collections, both Position and Integrating, before storing them
+in the TDS 
+
+    *
+------------------------------------------------------------
 User: riccardo  Tue Mar 12 08:55:59 PST 2002
 G4Generator/src
 
