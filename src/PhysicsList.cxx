@@ -1,12 +1,11 @@
 // File and Version Information:
-// /$Header/$
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
 //
 // Description:
-//      PhysicsList .....
+//      
 //
 // Author(s):
 //      F.Longo
-
 
 #include "PhysicsList.h"
 

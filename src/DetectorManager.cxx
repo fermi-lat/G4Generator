@@ -1,4 +1,11 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.6 2002/04/12 22:20:54 burnett Exp $
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+//
+// Description:
+//      
+//
+// Author(s):
+//      R.Giannitrapani
 
 #include "DetectorManager.h"
 #include <iostream>

@@ -1,4 +1,12 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.21 2002/03/07 15:29:04 riccardo Exp $
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.22 2002/03/11 17:27:56 riccardo Exp $
+//
+// Description:
+//      
+//
+// Author(s):
+//      R.Giannitrapani
+
 #include "DetectorConstruction.h"
 
 #include "G4Material.hh"

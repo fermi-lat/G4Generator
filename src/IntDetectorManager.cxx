@@ -1,4 +1,11 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.11 2002/04/08 14:59:07 riccardo Exp $
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+//
+// Description:
+//      
+//
+// Author(s):
+//      R.Giannitrapani
 
 #include "IntDetectorManager.h"
 #include "McParticleManager.h"
