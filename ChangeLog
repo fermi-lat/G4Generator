@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lsrea  Sat Mar  8 15:49:33 PST 2003
+G4Generator/src
+
+Modified Files:
+	G4GeometrySvc.cxx 
+Log Message:
+#include  <float.h>  to get rid of VC++ warnings
+    *
+------------------------------------------------------------
 User: usher  Thu Mar  6 10:30:21 PST 2003
 G4Generator/doc
 
