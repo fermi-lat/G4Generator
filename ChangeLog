@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu May 23 20:24:09 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx PosDetectorManager.cxx 
+Log Message:
+fix bad assumption about G4 3-d transformations
+    *
+------------------------------------------------------------
 User: riccardo  Thu May 23 02:55:14 PDT 2002
 G4Generator/src/test
 
