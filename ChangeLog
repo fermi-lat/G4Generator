@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: richard  Fri May 10 11:06:03 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+GlastEvent namespace change
+    *
+------------------------------------------------------------
 User: richard  Fri May 10 11:05:10 PDT 2002
 G4Generator/src
 
