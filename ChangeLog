@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Dec 14 17:04:06 PST 2004
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tagging after fix for saving ion pdg number
+    *
+------------------------------------------------------------
 User: burnett  Tue Dec 14 17:00:33 PST 2004
 G4Generator/src
 
