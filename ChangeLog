@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lsrea  Thu Dec 19 18:18:53 PST 2002
+G4Generator/src
+
+Modified Files:
+	ParticleTransporter.cxx 
+Log Message:
+Fix tiny bug... affected the corners of the wafer.
+    *
+------------------------------------------------------------
 User: burnett  Mon Dec  2 15:44:02 PST 2002
 G4Generator/doc
 
