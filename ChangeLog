@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Tue Sep 24 09:59:47 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h McParticleManager.cxx 
+	McParticleManager.h PosDetectorManager.cxx TrackingAction.cxx 
+Log Message:
+Added a new mcTreeMode to G4Generator (pruneCal) to save an McParticleTree full in the TKR and pruned in the CAL. To be tested
+    *
+------------------------------------------------------------
 User: riccardo  Tue Sep 24 09:58:50 PDT 2002
 G4Generator/src/test
 
