@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: riccardo  Mon Mar 11 09:27:57 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Added 2 new sensitive detector managers, PosDetectorManager (to deal with volumes 
+that must create McPositionHit vectors) and IntDetectorManager (to deal with
+volumes that must create McIntegratingHit vectors). Both classes derive from
+GlastDetectorManager.
+
+    *
+------------------------------------------------------------
 User: riccardo  Mon Mar 11 09:27:56 PST 2002
 G4Generator/src
 
