@@ -1,7 +1,7 @@
 
 <source_library>
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.6 2002/01/02 03:16:57 burnett Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.7 2002/03/07 15:29:04 riccardo Exp $
        Some simple test flux definitions for debugging
     -->
 
@@ -24,6 +24,30 @@
     <source name="muon_patch">
        <spectrum> 
          <particle name="mu+"><energy e="10"/> </particle>
+           <direction theta="0" phi="0" />
+           <patch xmin="-70" xmax="70" ymin="-70" ymax="70" />
+       </spectrum>
+     </source>
+
+    <source name="alpha_test">
+       <spectrum> 
+         <particle name="alpha"><energy e="20"/> </particle>
+           <direction theta="0" phi="0" />
+           <patch xmin="-70" xmax="70" ymin="-70" ymax="70" />
+       </spectrum>
+     </source>
+
+    <source name="pi0_test">
+       <spectrum> 
+         <particle name="pi0"><energy e="20"/> </particle>
+           <direction theta="0" phi="0" />
+           <patch xmin="-70" xmax="70" ymin="-70" ymax="70" />
+       </spectrum>
+     </source>
+
+    <source name="lambda_test">
+       <spectrum> 
+         <particle name="lambda"><energy e="20"/> </particle>
            <direction theta="0" phi="0" />
            <patch xmin="-70" xmax="70" ymin="-70" ymax="70" />
        </spectrum>
