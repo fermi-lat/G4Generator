@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat May 11 15:48:39 PDT 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+fix so clients do not see the G4 libs when linking
+    *
+------------------------------------------------------------
 User: burnett  Fri May 10 19:39:04 PDT 2002
 G4Generator/src/test
 
