@@ -1,6 +1,6 @@
 package G4Generator
 version v3r3p2
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.35 2002/04/06 20:12:05 burnett Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.36 2002/04/11 11:46:51 burnett Exp $
 
 use GlastPolicy v4r*
 
@@ -26,7 +26,7 @@ use xmlUtil  v2*
 
 use idents   v2*
 
-use GlastEvent v6*
+use GlastEvent v7*
 
 use GlastSvc  v6*
 
