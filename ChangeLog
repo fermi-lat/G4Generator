@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: frailis  Wed Nov 28 02:14:33 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx 
+Added Files:
+	G4MaterialsVisitor.cxx G4MaterialsVisitor.h 
+Log Message:
+added G4MaterialsVisitor
+    *
+------------------------------------------------------------
 User: riccardo  Tue Nov 27 09:42:32 PST 2001
 G4Generator/src/test
 
