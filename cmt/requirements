@@ -1,6 +1,6 @@
 package G4Generator
 version v2r1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.24 2002/03/15 15:26:16 burnett Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.25 2002/03/15 18:04:46 burnett Exp $
 
 use GlastPolicy v4r3
 
@@ -20,7 +20,7 @@ use EXTLIB v2r4p2
 
 #  this is a checkout package
 # that should need only the Gaudi system stuff
-use Geant4   v1
+use Geant4   v1r1
 
 use facilities v2r1
 use XMLEXT   v2r2
