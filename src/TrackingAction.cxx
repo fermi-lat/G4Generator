@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.5 2002/04/19 07:44:41 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.6 2002/05/10 18:05:10 richard Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -56,7 +56,7 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
   // we initialize the particle by giving the parent, the PDG encoding, a flag
   // (in that case Swum, and the initial momentum of the particle
   particle->initialize(parent, aTrack->GetDefinition()->GetPDGEncoding(),
-                       Event::McParticle::Swum,pin);
+                       Event::McParticle::Swum,pin,aTrack->GetPosition());
   
   // we add this particle to our collection for subsequent saving in the TDS
   man->addMcParticle(aTrack->GetTrackID(),particle);  
