@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Mon Feb 24 09:32:03 PST 2003
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx PhysicsList.h 
+Log Message:
+Tentative Solution for Initialisation Time
+    *
+------------------------------------------------------------
 User: flongo  Mon Feb 24 09:31:42 PST 2003
 G4Generator/src
 
