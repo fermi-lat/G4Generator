@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar  8 07:49:03 PST 2002
+G4Generator/src
+
+Modified Files:
+	DisplayManager.cxx 
+Log Message:
+convert display to mm
+    *
+------------------------------------------------------------
 User: riccardo  Thu Mar  7 07:30:05 PST 2002
 G4Generator/src
 
