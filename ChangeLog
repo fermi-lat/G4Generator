@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Dec 10 09:25:16 PST 2004
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+This fixes the switching of muon energy loss (must switch ALL e loss mechanisms!) prepare to tag v5r9p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9p0, operation: add
 Package: G4Generator
