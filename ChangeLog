@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: richard  Fri May 10 11:05:10 PDT 2002
+G4Generator/src
+
+Modified Files:
+	PosDetectorManager.h PosDetectorManager.cxx 
+	IntDetectorManager.h IntDetectorManager.cxx TrackingAction.cxx 
+	McParticleManager.h McParticleManager.cxx DetectorManager.cxx 
+Log Message:
+GlastEvent namespace change
+    *
+------------------------------------------------------------
 User: burnett  Sun May  5 11:16:34 PDT 2002
 G4Generator/src/test
 
