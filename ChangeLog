@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Thu Apr 11 01:56:18 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Geometry.cxx 
+Log Message:
+Changed the world volume dimensions to fix a geometry bug in G4Geometry
+
+    *
+------------------------------------------------------------
 User: riccardo  Tue Apr  9 05:08:19 PDT 2002
 G4Generator/src
 
