@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.12 2002/05/24 12:48:40 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.13 2002/08/12 13:17:17 riccardo Exp $
 //
 // Description: This is an abstract class that represent a generic sensitive
 // detectors manager. Its methods are common to both kind of detectors managers
@@ -34,8 +34,6 @@ DetectorManager::DetectorManager(DetectorConstruction::IdMap *map,
   
   // tell G4 about us
   G4SDManager::GetSDMpointer()->AddNewDetector( this );
-  // this will be null if no GUI
-  m_display = DisplayManager::instance();
 }
 
 DetectorManager::~DetectorManager()
