@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.50 2003/07/22 15:47:58 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.51 2003/07/26 23:07:19 lsrea Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -138,7 +138,7 @@ StatusCode G4Generator::initialize()
   }
   if (zOffset!=0.0) {
       log << MSG::INFO << "Particles will be offset in z by " 
-          << zOffset << " mm" << std::endl;
+          << zOffset << " mm" << endreq;
   }
 
   // Init the McParticle hierarchy 
