@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.cxx,v 1.5 2001/12/03 18:18:27 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.cxx,v 1.6 2001/12/06 05:27:05 burnett Exp $
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -222,7 +222,7 @@ void  G4SectionsVisitor::visitTube(detModel::Tube* tube)
 			       tube->getRin()*mm,
 			       tube->getRout()*mm,
 			       tube->getZ()*mm*0.5,
-			       2*M_PI,0);
+			       0,2*M_PI);
   
   g4Logicals.push_back(
 		       new G4LogicalVolume(
