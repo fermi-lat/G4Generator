@@ -46,7 +46,7 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.14 2003/01/23 16:15:05 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.15 2003/02/19 09:02:22 flongo Exp $
  */
 class RunManager
 {
@@ -71,7 +71,7 @@ class RunManager
      GlastDetSvc and to the DataProviderSvc. It gets also the mode for the
      geometry level of details
   */
-  RunManager(std::ostream& log, double defaultCutValue, std::string& physics_choice);
+  RunManager(std::ostream& log, double defaultCutValue, std::string& physics_choice, std::string& physics_table,std::string&  physics_dir);
   
   virtual ~RunManager();
 

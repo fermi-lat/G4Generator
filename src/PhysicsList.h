@@ -20,12 +20,12 @@
  *  
  * @author F.Longo 
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.h,v 1.4 2002/09/04 15:06:47 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.h,v 1.5 2003/02/19 09:02:38 flongo Exp $
  */
 class PhysicsList: public G4VModularPhysicsList
 {
  public:
-  PhysicsList(double cutValue, std::string& physicsChoice);
+  PhysicsList(double cutValue, std::string& physicsChoice, std::string& physicsTable, std::string& physicsDir);
   ~PhysicsList();
   
  public:
@@ -37,6 +37,8 @@ class PhysicsList: public G4VModularPhysicsList
  private:
   
   std::string m_physicsChoice;
+  std::string m_physicsTable;
+  std::string m_physicsDir;
 
 };
 

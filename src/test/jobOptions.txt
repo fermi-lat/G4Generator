@@ -2,7 +2,7 @@
 //
 // Job options file for G4Generator test
 // 
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.38 2003/02/03 19:46:37 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.39 2003/02/19 10:14:34 flongo Exp $
 
 //  -------------- basic Glast/Gaudi run enviornment -----------
 ApplicationMgr.DLLs   = {  "GlastSvc"};
@@ -64,8 +64,10 @@ G4Generator.mcTreeMode = "pruneCal";
 
 // do you want the full or only the em physics? (default is full)
 
-G4Generator.physics_choice = "only_em";
-
+G4Generator.physics_choice = "full";
+G4Generator.defaultCutValue= 0.7;		
+G4Generator.physics_tables = "store";	
+G4Generator.physics_dir = "G4cuts/700micron";
 
 // commands to run before each event. 
 //G4Generator.UIcommands+={"/run/verbose 3"};
@@ -81,4 +83,6 @@ ApplicationMgr.EvtMax =10;
 // End of job options file
 //
 //##############################################################
+
+
 
