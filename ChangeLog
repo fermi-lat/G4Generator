@@ -1,4 +1,19 @@
 ------------------------------------------------------------
+User: riccardo  Thu Mar  7 07:29:04 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	G4Generator.cxx G4Generator.h GlastDetectorManager.cxx 
+	GlastDetectorManager.h RunManager.cxx RunManager.h 
+Removed Files:
+	G4MaterialsVisitor.cxx G4MaterialsVisitor.h 
+	G4SectionsVisitor.cxx G4SectionsVisitor.h IrfDisplay.cxx 
+	McHitsManager.cxx McHitsManager.h 
+Log Message:
+Removed dipendencies from detModel and Instrument; now it uses new abstract interfaces in GlastDetSvc for both the geometry and materials. Inserted in a better way the hits collection (for now only PositionHit) in the TDS
+    *
+------------------------------------------------------------
 User: riccardo  Thu Mar  7 07:29:03 PST 2002
 G4Generator/cmt
 
