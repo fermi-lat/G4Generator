@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.3 2002/03/19 15:46:38 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.4 2002/03/19 16:56:08 burnett Exp $
 
 #include "DetectorManager.h"
 #include <iostream>
@@ -47,7 +47,9 @@ void DetectorManager::process(G4LogicalVolume* lvol)
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-void DetectorManager::makeDisplayBox(G4TouchableHistory* touched, bool hitBox)
+void DetectorManager::makeDisplayBox(G4TouchableHistory* touched,
+                                     idents::VolumeIdentifier id,
+                                     bool hitBox)
 {
     G4VPhysicalVolume* pvol = touched->GetVolume(); 
     
@@ -68,7 +70,9 @@ void DetectorManager::makeDisplayBox(G4TouchableHistory* touched, bool hitBox)
         if( hitBox)  DisplayManager::instance()->addHitBox(global, x,y,z);
         else        DisplayManager::instance()->addIntegratingBox(global, x,y,z);
 
+
     }
+    DisplayManager::instance()->addIdDisplay(global, id);
     
 }
 
@@ -80,7 +84,7 @@ void DetectorManager::display(G4TouchableHistory* touched,
     DisplayManager::instance()->addHit(entry, exit);
 
     if( m_detectorList[id]==0) {
-        makeDisplayBox( touched ,true);        
+        makeDisplayBox( touched , id, true);        
     }
     ++ m_detectorList[id]; 
 

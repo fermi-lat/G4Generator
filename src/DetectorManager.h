@@ -34,7 +34,7 @@ namespace mc {class McPositionHit;}
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.5 2002/03/19 16:56:08 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.6 2002/04/05 16:23:51 riccardo Exp $
  */
 class DetectorManager : public G4VSensitiveDetector {
  public:
@@ -56,7 +56,9 @@ class DetectorManager : public G4VSensitiveDetector {
   idents::VolumeIdentifier constructId(G4Step * aStep);
   
   /// generate the box parameters to display
-  void makeDisplayBox(G4TouchableHistory* touched, bool hitBox=false);
+  void makeDisplayBox(G4TouchableHistory* touched,
+                                     idents::VolumeIdentifier id,
+                                     bool hitBox=true);
   
   /// The pointer to the IdataProviderSvc
   IDataProviderSvc* m_esv;

@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.8 2002/03/27 05:30:03 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.9 2002/04/06 00:18:28 chehtman Exp $
 
 #include "IntDetectorManager.h"
 #include <iostream>
@@ -60,7 +60,7 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     if( !(hit = m_detectorList[id]))
       {
         // This draw the volume
-        makeDisplayBox( theTouchable );        
+        makeDisplayBox( theTouchable, id );        
         // Filling of the hits container
     	hit = new mc::McIntegratingHit;
         hit->setVolumeID(id);
