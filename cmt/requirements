@@ -1,6 +1,6 @@
 package G4Generator
 version v3r1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.27 2002/03/15 21:54:49 heather Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.30 2002/03/19 16:56:08 burnett Exp $
 
 use GlastPolicy v4r3
 
@@ -34,10 +34,10 @@ use FluxSvc  v5*
 
 
 #to make standard display available
-use gui      v2r6p2
+use gui      v2r*
 use GuiSvc   v3*
-use geometry v3
-use geomrep  v4r1
+use geometry v3*
+use geomrep  v4r*
 
 
 # get flags to build shared library
