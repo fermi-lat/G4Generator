@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.8 2002/03/07 15:29:04 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.9 2002/04/04 12:53:59 riccardo Exp $
 #include "G4Timer.hh"
 
 #include "DetectorConstruction.h"
@@ -141,7 +141,8 @@ void RunManager::BeamOn()
     
     stateManager->SetNewState(GeomClosed);
     
-    /// currentEvent = NULL;
+    //    delete currentEvent;
+    //    currentEvent = NULL;
 
     RunTermination();
   }
@@ -188,6 +189,7 @@ G4bool RunManager::ConfirmBeamOnCondition()
 
 void RunManager::RunInitialization()
 {
+  if (currentEvent) delete currentEvent;
   currentRun = new G4Run();
   currentRun->SetRunID(runIDCounter);
 
