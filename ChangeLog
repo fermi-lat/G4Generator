@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 15 14:17:05 PST 2004
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+vcc 7.1 flaged missing consts for constructor; added
+    *
+------------------------------------------------------------
 User: burnett  Fri Oct 17 18:33:03 PDT 2003
 G4Generator/doc
 
