@@ -1,5 +1,23 @@
 ------------------------------------------------------------
 User: riccardo  Mon Mar 11 09:27:56 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	G4Generator.cxx G4Geometry.cxx G4Geometry.h 
+	GlastDetectorManager.h 
+Added Files:
+	IntDetectorManager.cxx IntDetectorManager.h 
+	PosDetectorManager.cxx PosDetectorManager.h 
+Log Message:
+Added 2 new sensitive detector managers, PosDetectorManager (to deal with volumes 
+that must create McPositionHit vectors) and IntDetectorManager (to deal with
+volumes that must create McIntegratingHit vectors). Both classes derive from
+GlastDetectorManager.
+
+    *
+------------------------------------------------------------
+User: riccardo  Mon Mar 11 09:27:56 PST 2002
 G4Generator/cmt
 
 Modified Files:
