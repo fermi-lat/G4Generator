@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Fri Dec 17 08:44:33 PST 2004
-G4Generator/src
-
-Modified Files:
-	TrackingAction.cxx 
-Log Message:
-Remove unnecessary #include <typeinfo.h>. Why was this put in?
-    *
-------------------------------------------------------------
 TAG
 Tag name: v5r9p4, operation: add
 Package: G4Generator
