@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: riccardo  Mon Apr  8 07:59:07 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx IntDetectorManager.cxx PosDetectorManager.cxx 
+	TrackingAction.cxx 
+Added Files:
+	McParticleManager.cxx McParticleManager.h 
+Log Message:
+First draft version of an McParticle hierarchy filling; added a new class, McParticleManager,
+to deal with that; small changes to TrackerAction and to PosDetectorManager and IntDetectorManager
+
+    *
+------------------------------------------------------------
 User: riccardo  Mon Apr  8 03:16:44 PDT 2002
 G4Generator/src/test
 
