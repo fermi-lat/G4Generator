@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.15 2002/03/11 17:27:56 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.16 2002/03/13 11:08:08 riccardo Exp $
 
 // Include files
 
@@ -140,6 +140,15 @@ void G4Generator::setupGui()
 StatusCode G4Generator::execute() 
 {
     MsgStream   log( msgSvc(), name() );
+
+    // Here the TDS is prepared to receive hits vectors
+    // Check for the MC branch - it will be created if it is not available
+    DataObject *mc;
+    eventSvc()->retrieveObject("/Event/MC", mc);
+
+    log << MSG::DEBUG << "TDS ready" << endreq;
+
+
 
     // following model from previous version, allow property "UIcommands" to generate
     // UI commands here. (but does not seem to work??)
