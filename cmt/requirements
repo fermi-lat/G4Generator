@@ -1,6 +1,6 @@
 package G4Generator
-version v3r2
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.34 2002/04/04 18:25:25 jrb Exp $
+version v3r3p2
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.35 2002/04/06 20:12:05 burnett Exp $
 
 use GlastPolicy v4r*
 
