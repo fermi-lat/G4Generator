@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Sat May 31 19:28:05 PDT 2003
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+fix a few warnings; change INFO to DEBUG for some output; tagging v5r3
+    *
+------------------------------------------------------------
 User: usher  Thu May 15 10:06:09 PDT 2003
 G4Generator/src
 
