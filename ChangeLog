@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: burnett  Fri Mar 15 07:26:16 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx DetectorManager.h DisplayManager.cxx 
+	DisplayManager.h IntDetectorManager.cxx PosDetectorManager.cxx 
+Removed Files:
+	GlastDetectorManager.cxx GlastDetectorManager.h 
+Log Message:
+clean up display stuff
+    *
+------------------------------------------------------------
+User: burnett  Fri Mar 15 07:26:16 PST 2002
 G4Generator/cmt
 
 Modified Files:
