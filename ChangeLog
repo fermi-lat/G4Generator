@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Feb 26 14:28:50 PST 2003
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+ready to tag after removing FluxSvc
+    *
+------------------------------------------------------------
 User: flongo  Mon Feb 24 09:33:54 PST 2003
 G4Generator/src/test
 
