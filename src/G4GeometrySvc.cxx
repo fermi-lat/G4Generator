@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.cxx,v 1.3 2003/02/04 18:57:33 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.cxx,v 1.4 2003/03/06 00:17:31 usher Exp $
 //
 // Description: Service for particle transport management
 //
@@ -12,11 +12,19 @@
 #include "GaudiKernel/SvcFactory.h"
 #include "GaudiKernel/MsgStream.h"
 
+// needed to supress warning messages, same as in DetectorConstruction.h 
+#ifdef WIN32  
+# include <float.h>
+#endif
+
 #include "G4VUserDetectorConstruction.hh"
 #include "G4TransportationManager.hh"
+
+
+
 #include "DetectorConstruction.h"
 
-#include <cassert>
+//#include <cassert>
 
 /** 
  * @class G4GeometrySvc
