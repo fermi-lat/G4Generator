@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.14 2003/07/22 15:47:58 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.15 2003/07/25 16:48:38 usher Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -128,7 +128,7 @@ void McParticleManager::pruneCal()
               mother->addDaughter(part);
             }
 
-          delete mcPart;
+          delete &(*mcPart); // unix expects a real pointer
           it->second = 0;
         }
       
