@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Fri Mar 15 12:31:26 PST 2002
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_dll.cxx G4Generator_load.cxx 
+Log Message:
+use standard macros to load shareable libraries - new macros
+available in Gaudi v9
+    *
+------------------------------------------------------------
 User: heather  Fri Mar 15 12:30:15 PST 2002
 G4Generator/cmt
 
