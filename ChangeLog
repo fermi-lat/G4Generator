@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: riccardo  Fri Apr 19 00:44:42 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorManager.cxx 
+	DisplayManager.cxx EMPhysics.h G4Generator.cxx G4Generator.h 
+	G4Geometry.cxx G4Media.cxx GeneralPhysics.h HadronPhysics.cxx 
+	IntDetectorManager.cxx IonPhysics.cxx McParticleManager.cxx 
+	MuonPhysics.cxx PosDetectorManager.cxx 
+	PrimaryGeneratorAction.cxx RunManager.cxx TrackingAction.cxx 
+	mainpage.h 
+Log Message:
+Added more comments to the implementation files for the incoming code review
+
+    *
+------------------------------------------------------------
 User: burnett  Thu Apr 18 20:56:30 PDT 2002
 G4Generator/src
 
