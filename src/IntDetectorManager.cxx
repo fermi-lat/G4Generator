@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.20 2002/08/12 13:17:17 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.21 2003/07/04 22:22:53 burnett Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -123,14 +123,8 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
       p = Event::McIntegratingHit::electron;
     else p = Event::McIntegratingHit::positron;
 
-#if 0
   // fill the energy and position    
-  hit->addEnergyItem(edep, 
-                     partMan->getLastParticle(),
-                     (prePos+postPos)/2);
-#else
   hit->addEnergyItem(edep, p, (prePos+postPos)/2);
-#endif
 
   return true;
 }
