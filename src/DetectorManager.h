@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.2 2002/03/12 16:55:59 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.3 2002/03/15 15:26:16 burnett Exp $
 
 #ifndef DetectorManager_h
 #define DetectorManager_h
@@ -50,7 +50,8 @@ protected:
     /// The pointer to the IdataProviderSvc
     IDataProviderSvc* m_esv;
     
-    void display(G4TouchableHistory* touched, mc::McPositionHit * hit);
+    void display(G4TouchableHistory* touched, idents::VolumeIdentifier id, 
+        const HepPoint3D& entry, const HepPoint3D& exit);
 
    //! keep track of hit detectors for display
     typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;

@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.5 2002/03/15 15:26:16 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.6 2002/03/18 20:48:00 heather Exp $
 
 #include "PosDetectorManager.h"
 #include <iostream>
@@ -55,20 +55,18 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     // Filling of the hits container
     mc::McPositionHit *hit = new mc::McPositionHit;
 
-#if 0 // this transforms it to local coordinates
+    // this transforms it to local coordinates
     
     HepTransform3D 
         global(*(theTouchable->GetRotation()), 
         theTouchable->GetTranslation());
 
     HepTransform3D local = global.inverse();
-    prePos= local*prePos;
-    postPos=local*postPos;
-#endif
-    hit->init(edep, id, prePos, postPos);
+
+    hit->init(edep, id, local*prePos, local*postPos);
     m_posHit->push_back(hit);
 
-    display(theTouchable, hit);
+    display(theTouchable, id, prePos, postPos);
 
 
     return true;
