@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/ParticleTransporter.cxx,v 1.4 2002/06/05 21:26:46 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/ParticleTransporter.cxx,v 1.6 2002/07/05 19:34:18 usher Exp $
 //
 // Description: Geant4 class for particle transport management
 //
@@ -13,6 +13,7 @@
 #include "G4TransportationManager.hh"
 
 #include <string>
+#include <algorithm>
 
 //Constructor for the propagator class
 ParticleTransporter::ParticleTransporter() 
@@ -379,8 +380,12 @@ double ParticleTransporter::insideActiveArea() const
     double distInY    = fabs(distInPosY) < fabs(distInNegY) ? distInPosY : distInNegY;
 
 
-    if (fabs(distInX) < fabs(distInY)) return distInX;
-    else                               return distInY;
+    //if (fabs(distInX) < fabs(distInY)) return distInX;
+    //else                               return distInY;
+
+    if(distInX>0 || distInY>0) {return std::min(distInX, distInY);}
+    else                       {return -sqrt(distInX*distInX + distInY*distInY);}
+
 }
 
 
