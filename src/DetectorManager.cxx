@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.5 2002/04/06 20:12:05 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.6 2002/04/12 22:20:54 burnett Exp $
 
 #include "DetectorManager.h"
 #include <iostream>
@@ -70,7 +70,7 @@ void DetectorManager::makeDisplayBox(G4TouchableHistory* touched,
             z = 2*box->GetZHalfLength();
         
         if( hitBox)  DisplayManager::instance()->addHitBox(global, x,y,z);
-        else        DisplayManager::instance()->addIntegratingBox(global, x,y,z);
+        else DisplayManager::instance()->addIntegratingBox(global, x,y,z);
 
 
     }

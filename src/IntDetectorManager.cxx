@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.10 2002/04/06 20:12:06 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.11 2002/04/08 14:59:07 riccardo Exp $
 
 #include "IntDetectorManager.h"
 #include "McParticleManager.h"
@@ -31,13 +31,12 @@ void IntDetectorManager::Initialize(G4HCofThisEvent*HCE)
   m_intHit = new McIntegratingHitVector;    
 }
 
-G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
-{
-    
-    // Energy Deposition & Step Length
-    
-    G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
-    G4double stepl = aStep->GetStepLength()/mm;
+G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
+                                       G4TouchableHistory* ROhist)
+{    
+  // Energy Deposition & Step Length  
+  G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
+  G4double stepl = aStep->GetStepLength()/mm;
     
     if ((edep==0.)) return false;          
     // Physical Volume
@@ -64,31 +63,28 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
         // This draw the volume
         makeDisplayBox( theTouchable, id );        
         // Filling of the hits container
-    	hit = new mc::McIntegratingHit;
+        hit = new mc::McIntegratingHit;
         hit->setVolumeID(id);
         m_intHit->push_back(hit);
-    	m_detectorList[id] = hit;
+        m_detectorList[id] = hit;
       }
 
     // this transforms it to local coordinates
     HepTransform3D 
         global(*(theTouchable->GetRotation()), 
         theTouchable->GetTranslation());
-	
-
+    
     HepTransform3D local = global.inverse();
     prePos = local * (HepPoint3D)prePos;
     postPos = local * (HepPoint3D)postPos;
 
     // fill the energy and position    
-    hit->addEnergyItem(edep, McParticleManager::getPointer()->getLastParticle(),
-		       (prePos+postPos)/2);
-
+    hit->addEnergyItem(edep, 
+                       McParticleManager::getPointer()->getLastParticle(),
+                       (prePos+postPos)/2);
     return true;
-    
 }
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void IntDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
 {
     // Let's sort the hits
