@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.h,v 1.4 2001/12/03 15:34:34 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.h,v 1.5 2001/12/03 18:18:27 riccardo Exp $
 #ifndef G4SECTIONSVISITOR_H
 #define G4SECTIONSVISITOR_H
 #include "detModel/Management/SectionsVisitor.h"
@@ -11,6 +11,7 @@ class G4LogicalVolume;
 class G4VisAttributes;
 class Gdd;
 class G4VSensitiveDetector;
+namespace detModel { class Position; }
 /*
  * This is a concrete implementation of a sectionsVisitor that produces
  * the Geant4 geometry. 
@@ -109,10 +110,16 @@ class G4SectionsVisitor : public detModel::SectionsVisitor {
   G4VPhysicalVolume* worldphys;
   G4LogicalVolume* worldlog;
  private:
-  // a little map to count the number of physical volumes for each logical one
+
+   //! private function to manage the identifiers
+   //! @param pos a Position object, in practice either a PosXYZ or an AxisMpos.
+   //! @param i the index for an element of a stack (only needed for AxixMpos)
+   void processIds(/*const*/ detModel::Position* pos, unsigned int i=0); 
+  //! a little map to count the number of physical volumes for each logical one
   std::map<std::string, int> m_physicalsPerLogical;
 };
 #endif //G4SECTIONSVISITOR_H
+
 
 
 
