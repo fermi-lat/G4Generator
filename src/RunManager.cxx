@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.19 2003/01/23 16:15:05 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.20 2003/02/04 08:51:44 riccardo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -106,6 +106,8 @@ RunManager::~RunManager()
   delete session;
 
   delete timer;
+
+  G4GeometryManager::GetInstance()->OpenGeometry();
 
   physicsList->RemoveProcessManager();
   G4ParticleTable::GetParticleTable()->DeleteMessenger();
