@@ -1,7 +1,7 @@
 #ifndef IG4GEOMETRYSVC_H
 #define IG4GEOMETRYSVC_H
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.h,v 1.0 2003/01/05 19:34:18 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/G4Generator/IG4GeometrySvc.h,v 1.1 2003/01/23 16:21:00 usher Exp $
 //
 // Description: Defines interface for Geant4 Geometry Service
 //
@@ -37,9 +37,8 @@ class IG4GeometrySvc : virtual public IInterface
   /// Return pointer to the G4 Transportation Manager
   virtual G4TransportationManager* getTransportationManager() = 0;
 
-  /// Return pointer to the ID map
-  typedef std::map<const G4VPhysicalVolume*, idents::VolumeIdentifier > IdMap;
-  virtual IdMap* getIdMap() = 0;
+  /// Returns the identifier associated with a specific volume
+  virtual idents::VolumeIdentifier getVolumeIdent(const G4VPhysicalVolume* volume) = 0;
 
   /// queryInterface - for implementing a Service this is necessary
   static const InterfaceID& interfaceID() { return IID_IG4GeometrySvc; }
