@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Thu Jan 23 08:21:00 PST 2003
+G4Generator/G4Generator
+
+Added Files:
+	IG4GeometrySvc.h 
+Log Message:
+Adding the files for the G4GeoemtrySvc...
+
+    *
+------------------------------------------------------------
 User: usher  Thu Jan 23 08:19:50 PST 2003
 G4Generator/cmt
 
