@@ -1,5 +1,21 @@
 ------------------------------------------------------------
 User: riccardo  Thu Jul 18 03:14:43 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h IntDetectorManager.cxx 
+	IntDetectorManager.h McParticleManager.cxx McParticleManager.h 
+	PosDetectorManager.cxx RunManager.cxx RunManager.h 
+	TrackingAction.cxx 
+Log Message:
+Added a new mechanism to save only a minimal tree of McParticle in the TDS; it is now possible
+to choose between a full tree or a minimal tree from the jobOptions file. Also added a new McTrajectory
+collection in the TDS; also this collection is optional
+
+
+    *
+------------------------------------------------------------
+User: riccardo  Thu Jul 18 03:14:43 PDT 2002
 G4Generator/cmt
 
 Modified Files:
