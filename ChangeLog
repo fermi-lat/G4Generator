@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: usher  Thu Apr 11 16:20:21 PDT 2002
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+1) Add new files for implementing a Geant4 particle transporter used
+   mainly by tracking in the track fit stage
+2) Modify G4Generator.cxx to look for a RunManager before attempting to
+   instantiate one.
+
+    *
+------------------------------------------------------------
+User: usher  Thu Apr 11 16:20:21 PDT 2002
 G4Generator/src
 
 Modified Files:
