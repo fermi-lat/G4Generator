@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun May 26 08:07:24 PDT 2002
+G4Generator/src
+
+Modified Files:
+	McParticleManager.cxx 
+Log Message:
+use EventModel, cut number of particles
+    *
+------------------------------------------------------------
 User: lubrano  Fri May 24 08:33:54 PDT 2002
 G4Generator/src/test
 
