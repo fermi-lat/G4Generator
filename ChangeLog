@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: riccardo  Wed Apr 17 01:34:15 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	G4TestAlg.cxx 
+Log Message:
+Lots of small changes to fix code conventions (naming and style); added doxygen comments to almost all 
+the header; first steps to prepare for code review release
+
+    *
+------------------------------------------------------------
+User: riccardo  Wed Apr 17 01:34:15 PDT 2002
 G4Generator/src
 
 Modified Files:
