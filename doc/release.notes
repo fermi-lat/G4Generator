@@ -1,5 +1,6 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.13 2002/05/11 22:48:39 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.14 2002/05/16 16:07:23 burnett Exp $
 /*
+ * v4r1p2 26-may-02 THB fix global to local transformations
  * v4r1p1 16-may-02 THB small fix for new McParticle
  * v4r1   11-may-02 THB hide the G4 libs from clients only wanting the DLL
  * v4r0   10-may-02 THB convert from GlastEvent to Event
