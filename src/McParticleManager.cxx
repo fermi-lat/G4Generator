@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.10 2002/07/18 10:14:43 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.11 2002/09/24 16:59:47 riccardo Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -94,7 +94,8 @@ void McParticleManager::pruneCal()
   for(it=m_particles.begin();it != m_particles.end() ; it++)
     {
       if (((it->second)->initialPosition().z() < 0) && ((it->second)->finalPosition().z()<0)
-          && !((it->second)->statusFlags()&Event::McParticle::POSHIT))
+          && !((it->second)->statusFlags()&Event::McParticle::POSHIT)
+          && !((it->second)->statusFlags()&Event::McParticle::PRIMARY))
         {
           for(unsigned int i=0;i<(it->second)->daughterList().size();i++)
             {
