@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: xchen  Mon Apr 28 16:56:12 PDT 2003
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h G4Geometry.cxx 
+	G4Geometry.h G4GeometrySvc.cxx 
+Added Files:
+	LocalMagneticFieldDes.h 
+Log Message:
+Modify codes to generate a local magnetic field
+    *
+------------------------------------------------------------
 User: lsrea  Tue Mar 11 07:13:08 PST 2003
 G4Generator/doc
 
