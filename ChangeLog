@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan  1 18:36:33 PST 2002
+G4Generator/src
+
+Modified Files:
+	GlastDetectorManager.cxx GlastDetectorManager.h 
+Log Message:
+Finish setting up GlastDetector interface.
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan  1 18:35:25 PST 2002
 G4Generator/src
 
