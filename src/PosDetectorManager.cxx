@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.3 2002/03/12 16:55:59 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.4 2002/03/12 17:25:20 riccardo Exp $
 
 #include "PosDetectorManager.h"
 #include <iostream>
@@ -17,7 +17,7 @@
 
 PosDetectorManager::PosDetectorManager(DetectorConstruction *det,
                                            IDataProviderSvc* esv)
-:DetectorManager(det, esv,"PositionDetectorManager")
+:DetectorManager(det->idMap(), esv,"PositionDetectorManager")
 {
 }
 
@@ -46,23 +46,30 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     G4String material = logVol->GetMaterial()->GetName();
     G4String nameVolume = physVol->GetName();
     
-    G4ThreeVector InitPos = aStep->GetPreStepPoint()->GetPosition();
-    G4ThreeVector FinPos = aStep->GetPostStepPoint()->GetPosition();
+    HepPoint3D prePos = aStep->GetPreStepPoint()->GetPosition();
+    HepPoint3D postPos = aStep->GetPostStepPoint()->GetPosition();
     
     // determine the ID by studying the history, then call appropriate 
     idents::VolumeIdentifier id = constructId(aStep);
 
     // Filling of the hits container
     mc::McPositionHit *hit = new mc::McPositionHit;
-    
-    hit->setDepositedEnergy(edep);
-    hit->setVolumeID(id);
-    hit->setEntryPoint(InitPos);
-    hit->setExitPoint(FinPos);
 
+#if 0 // this transforms it to local coordinates
+    
+    HepTransform3D 
+        global(*(theTouchable->GetRotation()), 
+        theTouchable->GetTranslation());
+
+    HepTransform3D local = global.inverse();
+    prePos= local*prePos;
+    postPos=local*postPos;
+#endif
+    hit->init(edep, id, prePos, postPos);
     m_posHit->push_back(hit);
 
     display(theTouchable, hit);
+
 
     return true;
     
