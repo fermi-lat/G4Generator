@@ -1,4 +1,4 @@
-// $Header:$
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.1 2001/12/16 16:15:31 burnett Exp $
 
 #include "DisplayManager.h"
 
@@ -59,9 +59,12 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
     d->add(m_tracks = new TracksRep, "tracks");
 }
 
-void DisplayManager::addDetectorBox(const Box* b)
+void DisplayManager::addDetectorBox(const HepTransform3D& T, double x, double y, double z)
 {
-    m_all_boxes->append(BoxRep(*b));
+    Box b(x,y,z);
+    b.transform(CoordTransform(T.getRotation(), T.getTranslation()));
+
+    m_all_boxes->append(BoxRep(b));
 }
 
 void DisplayManager::addBox(const HepTransform3D& T, double x, double y, double z)
