@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Wed Nov 28 05:23:40 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4MaterialsVisitor.cxx G4MaterialsVisitor.h 
+Log Message:
+Some bug fixes in G4MaterialsVisitor
+    *
+------------------------------------------------------------
 User: frailis  Wed Nov 28 02:14:33 PST 2001
 G4Generator/src
 
