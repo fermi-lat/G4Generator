@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: burnett  Fri Sep 20 09:46:10 PDT 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+specify "GeV" in source xml
+tagging v4r3p4
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Sep 10 17:41:02 PDT 2002
 G4Generator/doc
 
