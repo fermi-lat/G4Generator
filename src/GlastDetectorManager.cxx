@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.cxx,v 1.4 2002/01/02 02:36:33 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.cxx,v 1.5 2002/01/03 04:31:52 burnett Exp $
 
 #include "GlastDetectorManager.h"
 #include <iostream>
@@ -275,7 +275,7 @@ void GlastDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
 {
     
     m_instrument->rootDetector()->generateResponse(true);
-
+#if 0
     std::cout << "Detector list:" << std::endl;
     
     for( DetectorList::const_iterator itd = m_detectorList.begin(); itd!=m_detectorList.end(); ++ itd){
@@ -292,7 +292,7 @@ void GlastDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
             << std::setw(10) << std::setprecision(3) << (*it).second 
             << std::endl;
     }
-    
+#endif
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
