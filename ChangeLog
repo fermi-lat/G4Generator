@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Tue Feb  4 10:57:33 PST 2003
+G4Generator/src
+
+Modified Files:
+	G4GeometrySvc.cxx 
+Log Message:
+Bandaid fix for G4GeometrySvc so test programs will not fail
+
+    *
+------------------------------------------------------------
 User: riccardo  Tue Feb  4 09:42:32 PST 2003
 G4Generator/src
 
