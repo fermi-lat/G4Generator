@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Dec 10 20:40:36 PST 2004
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Add info output to indicate which energy loss version is used.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9p1, operation: add
 Package: G4Generator
