@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Tue May 28 14:19:28 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4ParticlePropagator.cxx 
+Log Message:
+Fixes the completely incorrect radlen calculation
+
+    *
+------------------------------------------------------------
 User: burnett  Sun May 26 11:28:48 PDT 2002
 G4Generator/src
 
