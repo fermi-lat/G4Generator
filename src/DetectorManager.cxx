@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.9 2002/04/19 07:44:41 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.10 2002/05/10 18:05:10 richard Exp $
 //
 // Description: This is an abstract class that represent a generic sensitive
 // detectors manager. Its methods are common to both kind of detectors managers
@@ -87,7 +87,7 @@ void DetectorManager::makeDisplayBox(G4TouchableHistory* touched,
   G4VPhysicalVolume* pvol = touched->GetVolume(); 
     
   HepTransform3D 
-    global(*(touched->GetRotation()), 
+    global( ((touched->GetRotation())->inverse()) , 
            touched->GetTranslation());
     
     
