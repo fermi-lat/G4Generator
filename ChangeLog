@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Thu Jan 23 08:16:42 PST 2003
+G4Generator/src
+
+Removed Files:
+	G4PropagatorSvc.cxx G4PropagatorSvc.h 
+Log Message:
+Removed the Propagator Service
+
+    *
+------------------------------------------------------------
 User: usher  Thu Jan 23 08:15:05 PST 2003
 G4Generator/src/Dll
 
