@@ -1,0 +1,29 @@
+------------------------------------------------------------
+User: burnett  Sun Nov 18 18:55:43 PST 2001
+G4Generator
+
+Log Message:
+Inital version of a package containing a skeleton algorithm to generate events using G4
+
+Status:
+
+Vendor Tag:	GLAST
+Release Tags:	v0
+		
+N G4Generator/.cvsignore
+N G4Generator/cmt/cleanup.bat
+N G4Generator/cmt/Makefile
+N G4Generator/cmt/NMake
+N G4Generator/cmt/requirements
+N G4Generator/cmt/setup.bat
+N G4Generator/doc/release.notes
+N G4Generator/src/G4Generator.cxx
+N G4Generator/src/G4Generator.h
+N G4Generator/src/Dll/G4Generator_dll.cxx
+N G4Generator/src/Dll/G4Generator_load.cxx
+N G4Generator/src/test/G4TestAlg.cxx
+N G4Generator/src/test/jobOptions.txt
+
+No conflicts created by this import
+
+    *
