@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Fri Dec  7 10:01:05 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4MaterialsVisitor.cxx 
+Log Message:
+Modified the fractionmass addition to accomodate non normalized values
+    *
+------------------------------------------------------------
 User: riccardo  Fri Dec  7 05:43:31 PST 2001
 G4Generator/src/test
 
