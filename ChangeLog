@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: riccardo  Thu Mar  7 07:29:04 PST 2002
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+Removed dipendencies from detModel and Instrument; now it uses new abstract interfaces in GlastDetSvc for both the geometry and materials. Inserted in a better way the hits collection (for now only PositionHit) in the TDS
+    *
+------------------------------------------------------------
+User: riccardo  Thu Mar  7 07:29:04 PST 2002
 G4Generator/src
 
 Modified Files:
