@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Wed Nov  6 08:33:20 PST 2002
+G4Generator/src
+
+Modified Files:
+	PrimaryGeneratorAction.cxx PrimaryGeneratorAction.h 
+Log Message:
+Introduced changes to PrimaryGeneratorAction to accomodate Ions generation
+    *
+------------------------------------------------------------
 User: burnett  Tue Nov  5 07:43:26 PST 2002
 G4Generator/src
 
