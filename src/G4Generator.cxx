@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.3 2001/11/27 17:42:31 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.4 2001/11/30 17:11:56 riccardo Exp $
 
 // Include files
 
@@ -80,13 +80,15 @@ StatusCode G4Generator::execute()
     double ke= m_flux->energy() ;
     HepPoint3D p(m_flux->launchPoint());
     
-    p = 10*p*mm;
-    ke = ke*1000*MeV;
+    p = 10*p;
+    ke = ke*1000;
     
     PrimaryGeneratorAction* primaryGenerator = 
       (PrimaryGeneratorAction*)m_runManager->GetUserPrimaryGeneratorAction();
     
     // Set the G4 primary generator
+    // the position has to be expressed in mm
+    // while the energy in MeV
     primaryGenerator->setParticle(name);
     primaryGenerator->setMomentum(dir);
     primaryGenerator->setPosition(p);
