@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Fri Oct  4 08:05:16 PDT 2002
+G4Generator/src
+
+Modified Files:
+	McParticleManager.cxx 
+Log Message:
+Fixed a bug in the pruneCal mode
+    *
+------------------------------------------------------------
 User: riccardo  Tue Sep 24 09:59:47 PDT 2002
 G4Generator/src
 
