@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: riccardo  Mon Aug 12 06:17:17 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorManager.cxx DetectorManager.h 
+	IntDetectorManager.cxx IntDetectorManager.h 
+	PosDetectorManager.cxx PosDetectorManager.h 
+Log Message:
+Changes to use the new prefix identifier stuff in the case the topVolume is not the LAT; also added the energy ot the particle to the McPositionHit filling
+    *
+------------------------------------------------------------
 User: riccardo  Fri Jul 26 09:24:23 PDT 2002
 G4Generator/src
 
