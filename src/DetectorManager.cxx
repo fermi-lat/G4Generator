@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.14 2003/01/28 00:39:01 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.15 2003/07/04 22:22:53 burnett Exp $
 //
 // Description: This is an abstract class that represent a generic sensitive
 // detectors manager. Its methods are common to both kind of detectors managers
@@ -50,11 +50,10 @@ idents::VolumeIdentifier DetectorManager::constructId(G4Step * aStep)
   // Inputs: the G4Step pointer aStep
   using  idents::VolumeIdentifier;
   VolumeIdentifier ret;
-  G4TouchableHistory* theTouchable
-    = (G4TouchableHistory*)(aStep->GetPreStepPoint()->GetTouchable());
+  G4TouchableHistory* theTouchable = (G4TouchableHistory*)(aStep->GetPreStepPoint()->GetTouchable());
   for( int i = 0; i<theTouchable->GetHistoryDepth() ; ++i) {
     const G4VPhysicalVolume* physVol = theTouchable->GetVolume(i); 
-    if( physVol->GetMother()==0) break;
+//**    if( physVol->GetMother()==0) break;
     VolumeIdentifier id = (*m_idMap)[physVol];
     ret.prepend(id);
   }

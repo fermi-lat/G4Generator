@@ -2,7 +2,7 @@
 
 
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.6 2003/06/06 00:19:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.7 2004/01/15 22:17:39 burnett Exp $
 //
 // Description: This class manages the building of hadrons and their processes
 //
@@ -13,7 +13,7 @@
 
 #include "globals.hh"
 #include "G4ios.hh"
-#include "g4std/iomanip"   
+#include <iomanip>
 
 HadronPhysics::HadronPhysics(const G4String& name, std::string& physicsChoice,
                              GlastMS::MultipleScatteringFactory& msFactory)

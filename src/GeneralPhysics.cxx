@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GeneralPhysics.cxx,v 1.2 2002/04/20 10:18:33 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GeneralPhysics.cxx,v 1.3 2003/02/19 09:03:20 flongo Exp $
 //
 // Description: This class manages the building of the geantino and the generic
 // decay process
@@ -11,7 +11,7 @@
 
 #include "globals.hh"
 #include "G4ios.hh"
-#include "g4std/iomanip"   
+#include <iomanip>   
 
 GeneralPhysics::GeneralPhysics(const G4String& name)
                      :  G4VPhysicsConstructor(name)
