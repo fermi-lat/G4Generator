@@ -1,4 +1,30 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec  2 14:23:23 PST 2001
+G4Generator/cmt
+
+Modified Files:
+	requirements setup.bat 
+Log Message:
+
+1) In requirements, restored test program that does not load dll
+
+2) Added several properties of the algorithm G4Generator to set
+   * the topvolume, for example oneTower, to allow tests of a subset
+   * the mode for the sections visitor (and mods to propagate it to detModel) 
+   * a set of UI commands to run before each event (but does not seem to work??)
+
+3) Added various summary output:
+   * a list of logical volume names, and number of associated physical volumes
+   * a list of the total energy deposited per sensitive detector name, for each event
+
+4) Fixed apparent bug in G4SectionsVisitor, with rotation matrix. replaced with (conditional) code,
+   rather more concise, with select and loop rearranged for clarity. Also null rotation matrix if no 
+   rotation needed.
+
+5) A few changes to bring code style into compliance with GLAST standards. (Many more needed.)
+
+    *
+------------------------------------------------------------
 User: riccardo  Fri Nov 30 09:34:53 PST 2001
 G4Generator/src/test
 
