@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Thu Nov 29 14:49:39 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	G4MaterialsVisitor.cxx SensitiveDetector.cxx 
+Log Message:
+fix for Windows
+    *
+------------------------------------------------------------
 User: riccardo  Thu Nov 29 08:08:32 PST 2001
 G4Generator/src
 
