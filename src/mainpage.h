@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.4 2002/04/17 08:34:15 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.5 2002/04/18 12:39:07 riccardo Exp $
 // Mainpage for doxygen
 
 /** @mainpage package G4Generator
@@ -8,7 +8,7 @@
  * @section description Description
  *
  * This package is the GLAST interface to the Montecarlo simulations toolkit
- * Geant4 (see <a href="http://geant4.web.cern.ch">here</a> 
+ * Geant4 (see <a href="http://geant4.web.cern.ch/geant4/">here</a> 
  * for more information on this C++ toolkit). 
  * The steering is done with the main Algorithm, G4Generator.<br>
  * 
@@ -68,6 +68,9 @@
  * Few other classes are used to help in the filling of the McParticle tree (the
  * TrackingAction and McParticleManager) and to deal with some oddity in the
  * output of Geant4 (UIsession)<br>
+ *
+ * The algorithm has three properties, source_name, geometryMode and UIcommands,
+ * that can be setted in the jobOptions file
  *
  * A test program, under src/test, exercises everything.
  *

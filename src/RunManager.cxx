@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.12 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.13 2002/04/19 03:56:30 burnett Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -8,7 +8,7 @@
 // G4RunManager class. Most of its methods and members are hinerited from the
 // Geant4 one; since they are not supposed to be used directly by any GLAST
 // client (since they are automatically used by Geant4 internal architecture)
-// they are not documented. For their meaning please look at the standard Geant4
+// they are not documented. For their meaning please see the standard Geant4
 // documentation
 //
 // Author(s):
