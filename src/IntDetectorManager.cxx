@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.19 2002/07/18 10:14:43 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.20 2002/08/12 13:17:17 riccardo Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -94,8 +94,6 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
   // create a new one
   if( !(hit = m_detectorList[id]))
     {
-      // This draw the volume
-      makeDisplayBox( theTouchable, id );        
       // A new object is needed
       hit = new Event::McIntegratingHit;
       // Set its volume identifier

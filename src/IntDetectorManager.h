@@ -1,9 +1,6 @@
 #ifndef INTEGRATINGDETECTORMANAGER_H
 #define INTEGRATINGDETECTORMANAGER_H
 
-
-#include "DisplayManager.h"
-
 #include "idents/VolumeIdentifier.h"
 
 
@@ -26,7 +23,7 @@ class IGlastDetSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.7 2002/07/18 10:14:43 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.8 2002/08/12 13:17:17 riccardo Exp $
  */
 class IntDetectorManager : public DetectorManager {
 public:
