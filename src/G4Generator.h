@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.1.1.1 2001/11/19 02:55:42 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.2 2001/11/26 18:00:19 riccardo Exp $
 
 
 #ifndef G4Generator_h
@@ -9,8 +9,7 @@
 #include <string>
 class IFluxSvc;
 class IFlux;
-class G4RunManager;
-class PrimaryGeneratorAction;
+class RunManager;
 
 /**
   Geant4 interface
@@ -30,9 +29,10 @@ private:
     std::string m_source_name;
 
     /// This is the G4 manager that handles the simulation
-    G4RunManager* m_runManager;
-    /// This is the primaries generator class 
-    PrimaryGeneratorAction* m_primaryGenerator;
+    RunManager* m_runManager;
 };
 
 #endif
+
+
+
