@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.12 2002/04/19 07:44:41 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.13 2002/04/19 12:51:30 riccardo Exp $
 //
 // Description: this class is responsable of the drawing of hits, hits volumes
 // and trajectories if the GUI has been activated
@@ -27,6 +27,7 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
 :m_display(d)
 {
     s_instance = this;
+    gui::DisplayControl::DisplaySubMenu& m = d->subMenu("G4");
 
     //! minimal rep just to append stuff to. Allows default color
     class EmptyRep : public gui::DisplayRep {
@@ -38,16 +39,16 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
         std::string m_color;
     };
 
-    d->add(m_detmap["steps"] = new EmptyRep, "hits", false);
+    m.add(m_detmap["steps"] = new EmptyRep, "hits", false);
     
-    d->add(m_detmap["hit_boxes"] = new EmptyRep("orange"), 
+    m.add(m_detmap["hit_boxes"] = new EmptyRep("orange"), 
            "hit Pos detectors");
 
-    d->add(m_detmap["integrating_boxes"] = new EmptyRep("blue"), 
+    m.add(m_detmap["integrating_boxes"] = new EmptyRep("blue"), 
            "hit Int detectors");
 
-    d->add((m_detmap["tracks"]= new EmptyRep("black")), "tracks");
-    d->add((m_detmap["ids"] = new EmptyRep("black")), 
+    m.add((m_detmap["tracks"]= new EmptyRep("black")), "tracks");
+    m.add((m_detmap["ids"] = new EmptyRep("black")), 
            "volume identifiers", false);
 }
 void DisplayManager::addDetectorBox(std::string detName, 
