@@ -5,10 +5,9 @@
 
 #include <string>
 #include <vector>
-class IFluxSvc;
-class IFlux;
-class IParticlePropertySvc;
 class RunManager;
+class IParticlePropertySvc;
+
 
 /** 
  * @class G4Generator
@@ -20,7 +19,7 @@ class RunManager;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.10 2002/04/19 07:44:41 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.11 2002/04/20 10:18:33 riccardo Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -31,16 +30,9 @@ class G4Generator : public Algorithm {
  
   
  private:
-  /// a pointer to the flux service main classes
-  IFluxSvc* m_fluxSvc;
-  IFlux*    m_flux;
-
   /// a pointer to the service for particle properties
   IParticlePropertySvc* m_ppsvc;
 
-  /// source name to get from the Flux service; this is a property of the
-  /// algorithm and can be set in the jobOptions file
-  std::string m_source_name;
 
   /// set of UI commands for setup; this is a property of the algorithm and can
   /// be set in the jobOptions file
