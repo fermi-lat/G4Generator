@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: als  Thu Jan 16 20:41:02 PST 2003
+G4Generator/src
+
+Modified Files:
+	DisplayManager.cxx 
+Log Message:
+linux compile fix
+add argument to constructor
+
+    *
+------------------------------------------------------------
 User: als  Thu Jan  9 17:05:33 PST 2003
 G4Generator/cmt
 
