@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Jun 18 15:42:21 PDT 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+put neutrals on separate display button -- tag it v4r1p5
+    *
+------------------------------------------------------------
 User: burnett  Fri Jun  7 11:30:13 PDT 2002
 G4Generator/src/test
 
