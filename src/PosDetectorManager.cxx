@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.15 2002/05/10 18:05:10 richard Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.16 2002/05/24 03:24:08 burnett Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -14,6 +14,7 @@
 #include "McParticleManager.h"
 
 #include <iostream>
+#include "Event/TopLevel/EventModel.h"
 #include "Event/MonteCarlo/McPositionHit.h"
 #include "idents/VolumeIdentifier.h"
 
@@ -105,12 +106,12 @@ void PosDetectorManager::EndOfEvent(G4HCofThisEvent*)
   std::sort(m_posHit->begin(),m_posHit->end(), ComparePosHits());
 
   // store the hits in the TDS
-  m_esv->registerObject("/Event/MC/PositionHitsCol", m_posHit);    
-
+  m_esv->registerObject( EventModel::MC::McPositionHitCol  , m_posHit);    
+#if 0
   // This message is for debug purpouses .. it should be eliminated or converted
   // to a true GAUDI log message
   std::cout << "Actual Event done! " << m_posHit->size() 
             << " position hits stored in the TDS" << std::endl;
-
+#endif
 }
 

@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.16 2002/05/10 18:05:10 richard Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.17 2002/05/24 12:48:40 riccardo Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -12,6 +12,7 @@
 #include "McParticleManager.h"
 
 #include <iostream>
+#include "Event/TopLevel/EventModel.h"
 #include "Event/MonteCarlo/McIntegratingHit.h"
 #include "idents/VolumeIdentifier.h"
 
@@ -121,12 +122,12 @@ void IntDetectorManager::EndOfEvent(G4HCofThisEvent*)
   std::sort(m_intHit->begin(),m_intHit->end(), Event::CompareIntHits());
 
   // store the hits in the TDS
-  m_esv->registerObject("/Event/MC/IntegratingHitsCol", m_intHit);    
-
+  m_esv->registerObject(EventModel::MC::McIntegratingHitCol , m_intHit);    
+#if 0
   // This message is for debug purpouses .. it should be eliminated or converted
   // to a true GAUDI log message
   std::cout << "Actual Event done! " << m_intHit->size() 
             << " integrating hits stored in the TDS" << std::endl;
-
+#endif
 }
 
