@@ -1,9 +1,9 @@
-// $Header:$
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/VolumeIdentifier.h,v 1.1 2001/12/11 15:33:00 burnett Exp $
 
 #ifndef VolumeIdentifier_h
 #define VolumeIdentifier_h
 #include <deque>
-
+#include <string>
 
 
 /**

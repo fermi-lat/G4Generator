@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.2 2001/12/02 22:23:24 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.3 2001/12/03 15:34:34 riccardo Exp $
 #include "G4Timer.hh"
 
 #include "RunManager.h"
@@ -128,12 +128,18 @@ void RunManager::BeamOn()
     currentEvent = GenerateEvent(0);
 
     eventManager->ProcessOneEvent(currentEvent);
-
+    
     stateManager->SetNewState(GeomClosed);
-    currentEvent = NULL;
+    
+    /// currentEvent = NULL;
 
     RunTermination();
   }
+}
+
+G4Event* RunManager::getCurrentEvent()const
+{
+  return currentEvent;
 }
 
 G4bool RunManager::ConfirmBeamOnCondition()
