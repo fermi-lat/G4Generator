@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.26 2002/04/19 12:51:30 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.27 2002/05/02 12:22:23 burnett Exp $
 //
 // Description: This class hinerits from G4VUserDetectorConstruction and it is
 // used to build the detector geometry of the G4 simulation by using two other
@@ -72,7 +72,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
   // summary log output
   m_log << "\tDetectorConstruction created "
-      << geom.getPhysicalNumber() <<  " physical volumes, using ";
+      << geom.getPhysicalNumber() << ", "<< geom.getLogicalNumber()<< " physical, logical volumes, using ";
   if (m_geometryMode=="" ) {
       m_log <<  "default mode from GlastDetSvc"  << std::endl;
   }else {
