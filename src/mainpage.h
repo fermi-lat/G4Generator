@@ -1,9 +1,9 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.7 2002/04/20 10:18:34 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.8 2002/04/20 10:40:10 riccardo Exp $
 // Mainpage for doxygen
 
 /** @mainpage package G4Generator
  *
- * @authors T.Burnett and R.Giannitrapani
+ * @authors T.Burnett, R.Giannitrapani, F. Longo
  *
  * @section description Description
  *
@@ -74,9 +74,16 @@
  * ParticleTransporter and G4ParticlePropagator) and to deal with some oddity in
  * the output of Geant4 (UIsession)<br>
  *
- * The algorithm has three properties, source_name, geometryMode and UIcommands,
- * that can be set in the jobOptions file
+ * @section properties properties
+ * These properties can be set in the job options file
  *
+ * -  UIcommands [""]
+ * -  geometryMode [""] Blank means use default from GlastDetSvc
+ * -  saveTrajectories [0]
+ * -  mcTreeMode ["minimal"]
+ * -  defaultCutValue [0.1*mm] The cut to be applied to all physics processes, all materials
+ *
+ * @section test test
  * A test program, under src/test, exercises everything.
  *
  * <hr>

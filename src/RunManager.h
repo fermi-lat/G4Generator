@@ -46,7 +46,7 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.11 2002/05/02 12:22:24 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.12 2002/07/18 10:14:43 riccardo Exp $
  */
 class RunManager
 {
@@ -72,7 +72,7 @@ class RunManager
      geometry level of details
   */
   RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv, 
-      std::string geometryMode, std::ostream& log);
+      std::string geometryMode, std::ostream& log, double defaultCutValue);
   virtual ~RunManager();
 
  public: 
