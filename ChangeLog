@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Thu Jun 20 07:13:23 PDT 2002
+G4Generator/src
+
+Modified Files:
+	McParticleManager.cxx 
+Log Message:
+
+remove arbitrary and temporary cut on the number of McParticles, to fix memory leak.
+Could not just delete the remainder, due to use of link from McIntegrating hit objects
+    *
+------------------------------------------------------------
 User: burnett  Tue Jun 18 15:42:22 PDT 2002
 G4Generator/src
 
