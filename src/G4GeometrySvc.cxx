@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.cxx,v 1.1 2003/01/23 16:21:00 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.cxx,v 1.2 2003/01/28 00:39:01 usher Exp $
 //
 // Description: Service for particle transport management
 //
@@ -81,7 +81,7 @@ G4GeometrySvc::~G4GeometrySvc()
   if (UserDetector)
   {
 	  DetectorConstruction* UserDetectorConstruction = dynamic_cast<DetectorConstruction*>(UserDetector);
-      delete UserDetectorConstruction;
+      //delete UserDetectorConstruction;
   }
 }
 
