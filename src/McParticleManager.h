@@ -26,7 +26,7 @@
  *
  *  @author R.Giannitrapani
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.h,v 1.3 2002/05/10 18:05:10 richard Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.h,v 1.4 2002/07/18 10:14:43 riccardo Exp $
  */
 class McParticleManager {
  public:
@@ -78,6 +78,9 @@ class McParticleManager {
 
   /// Return the number of McParticle saved
   unsigned int size(){return m_particles.size();};
+
+  /// Prune the tree in the CAL part
+  void pruneCal();
 
  private:
   /// The constructor is private since this is a singleton

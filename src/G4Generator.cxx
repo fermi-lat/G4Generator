@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.37 2002/07/18 11:24:24 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.38 2002/09/04 15:06:47 burnett Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -227,6 +227,11 @@ StatusCode G4Generator::execute()
   // Run geant4
   m_runManager->BeamOn(); 
     
+  // If we set the pruneCal mode than we remove all the not TKR interacting
+  // particles that does not touch the TKR zone (z>0)
+  if (m_mcTreeMode=="pruneCal")
+    McParticleManager::getPointer()->pruneCal();
+
   // Save the McParticle hierarchy in the TDS
   McParticleManager::getPointer()->save();
     
@@ -257,11 +262,14 @@ StatusCode G4Generator::execute()
               McParticleManager::getPointer()->getMcParticle(m_runManager->getTrajectoryTrackId(j));
           }
         
-        Event::McTrajectory* tr = new Event::McTrajectory();
-        tr->addPoints(*(points.get()));
-        tr->setMcParticle(part);
-        
-        traj->push_back(tr);
+        if(part)
+          {
+            Event::McTrajectory* tr = new Event::McTrajectory();
+            tr->addPoints(*(points.get()));
+            tr->setMcParticle(part);
+            
+            traj->push_back(tr);
+          }
       }
 
     }

@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.22 2002/07/26 16:23:18 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.23 2002/08/12 13:17:17 riccardo Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -100,6 +100,8 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
   McParticleManager* partMan =  McParticleManager::getPointer();
   
   hit->init(edep, id, local*(prePos-center), local*(postPos-center), global*prePos, global*postPos );
+
+  partMan->getLastParticle()->addStatusFlag(Event::McParticle::POSHIT);
 
   // Track energy at this point
   G4double trkEnergy = aStep->GetTrack()->GetTotalEnergy();

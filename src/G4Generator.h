@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.13 2002/07/18 10:14:43 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.14 2002/09/04 15:06:47 burnett Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -53,9 +53,9 @@ class G4Generator : public Algorithm {
   bool m_saveTrajectories;
 
   /// the McParticle tree mode
-  /// It can be "full" or "minimal"
+  /// It can be "full" or "minimal" or "pruneCal"
   std::string m_mcTreeMode;
-
+  
   /// The default cutoff value (in mm)
   DoubleProperty m_defaultCutValue;
 };
