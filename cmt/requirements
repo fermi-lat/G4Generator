@@ -1,6 +1,6 @@
 package G4Generator
-version v3r1p1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.31 2002/03/23 20:56:22 burnett Exp $
+version v3r2
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.32 2002/03/26 17:24:27 burnett Exp $
 
 use GlastPolicy v4r3
 
@@ -19,7 +19,7 @@ use EXTLIB v2r4p2
 
 use Geant4   v1r1
 
-use facilities v2r1
+use facilities v2r*
 use XMLEXT   v2r2
 use xml      v4*
 use xmlUtil  v2*

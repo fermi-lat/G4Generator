@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.6 2002/03/19 16:56:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.7 2002/03/19 17:46:43 riccardo Exp $
 
 #include "IntDetectorManager.h"
 #include <iostream>
@@ -78,7 +78,7 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     postPos = local * (HepVector3D)postPos;
 
     // fill the energy and position    
-    hit->addEnergyItem(edep,0,(prePos+postPos)/2);
+    hit->addEnergyItem(edep,(mc::McParticle*)0,(prePos+postPos)/2);
 
     return true;
     
