@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: riccardo  Fri Nov 30 09:34:53 PST 2001
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt test_sources.xml 
+Log Message:
+Some minor changes in G4Generator
+    *
+------------------------------------------------------------
+User: riccardo  Fri Nov 30 09:34:53 PST 2001
 G4Generator/src
 
 Modified Files:
