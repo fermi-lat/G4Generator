@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 17 08:20:07 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4SectionsVisitor.cxx 
+Log Message:
+fix id generation
+    *
+------------------------------------------------------------
 User: burnett  Mon Dec 17 01:15:54 PST 2001
 G4Generator/src
 
