@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar  8 14:51:57 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+reflect removal of dependence on instrument, detModel.
+    *
+------------------------------------------------------------
 User: burnett  Fri Mar  8 07:49:03 PST 2002
 G4Generator/src/test
 
