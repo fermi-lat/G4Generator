@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: riccardo  Fri Dec  7 05:43:31 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx G4Generator.cxx SensitiveDetector.cxx 
+	SensitiveDetector.h 
+Added Files:
+	HepRepXMLWriter.cxx HepRepXMLWriter.h 
+Log Message:
+Added HepRep support; it is in SensitiveDetector for now, but MUST be moved somewhere in the future (probably doing a HepRepSvc). Added also HepRepXMLWriter class from J.Perl, needed to produce heprep xml files.
+    *
+------------------------------------------------------------
 User: burnett  Wed Dec  5 21:27:05 PST 2001
 G4Generator/src
 
