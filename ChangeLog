@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: burnett  Thu Jun  5 17:19:08 PDT 2003
+G4Generator/src
+
+Modified Files:
+	EMPhysics.cxx EMPhysics.h G4Generator.cxx G4Generator.h 
+	HadronPhysics.cxx HadronPhysics.h IonPhysics.cxx IonPhysics.h 
+	MuonPhysics.cxx MuonPhysics.h PhysicsList.cxx PhysicsList.h 
+	RunManager.cxx RunManager.h mainpage.h 
+Log Message:
+implement MultipleScatteringFactory to control MS version used
+    *
+------------------------------------------------------------
 User: burnett  Thu Jun  5 17:19:07 PDT 2003
 G4Generator/cmt
 
