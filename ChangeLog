@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Tue Jan  4 08:52:05 PST 2005
+G4Generator/src
+
+Modified Files:
+	IonPhysics.cxx 
+Log Message:
+Ion Ionisation process added
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9p5, operation: add
 Package: G4Generator
