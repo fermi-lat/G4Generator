@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Oct 17 18:28:28 PDT 2003
+G4Generator/src
+
+Modified Files:
+	PrimaryGeneratorAction.cxx 
+Log Message:
+convert from GeV to MeV for ions, so that masses aren' t in the TeV range
+    *
+------------------------------------------------------------
 User: burnett  Fri Oct 17 18:27:25 PDT 2003
 G4Generator/cmt
 
