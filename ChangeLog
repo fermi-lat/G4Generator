@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 26 21:30:03 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx IntDetectorManager.cxx 
+	PrimaryGeneratorAction.h 
+Log Message:
+
+Add suport for McParticle, fix facilities dependence
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar 26 21:30:02 PST 2002
 G4Generator/doc
 
