@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Fri Nov 30 09:34:53 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx PrimaryGeneratorAction.cxx 
+	PrimaryGeneratorAction.h 
+Log Message:
+Some minor changes in G4Generator
+    *
+------------------------------------------------------------
 User: riccardo  Fri Nov 30 09:11:56 PST 2001
 G4Generator/src
 
