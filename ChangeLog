@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: riccardo  Wed May 15 05:03:16 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Small fix for the new McParticle
+
+    *
+------------------------------------------------------------
+User: riccardo  Wed May 15 05:03:16 PDT 2002
 G4Generator/src
 
 Modified Files:
