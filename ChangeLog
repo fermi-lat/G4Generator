@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Sat Jul 26 16:07:19 PDT 2003
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h PrimaryGeneratorAction.cxx 
+	PrimaryGeneratorAction.h 
+Log Message:
+provide for z displacement of primary to match possible LAT displacement
+
+    *
+------------------------------------------------------------
 User: usher  Fri Jul 25 09:48:38 PDT 2003
 G4Generator/src
 
