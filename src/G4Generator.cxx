@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.19 2002/04/05 16:23:51 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.20 2002/04/08 14:59:07 riccardo Exp $
 
 // Include files
 
@@ -94,8 +94,17 @@ StatusCode G4Generator::initialize()
     // Init the McParticle hierarchy 
     McParticleManager::getPointer()->initialize(eventSvc());
 
+
     // The geant4 manager
-    m_runManager = new RunManager(gsv,eventSvc());
+    if (!(m_runManager = RunManager::GetRunManager()))
+    {
+        m_runManager = new RunManager(gsv,eventSvc());
+
+        // Initialize Geant4
+        m_runManager->Initialize();
+
+        log << MSG::DEBUG << "G4 RunManager ready" << endreq;
+    }
 
     // Initialize Geant4
     m_runManager->Initialize();
