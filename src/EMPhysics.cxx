@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EMPhysics.cxx,v 1.7 2004/09/08 17:59:57 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EMPhysics.cxx,v 1.8 2004/12/08 01:33:54 usher Exp $
 //
 // Description: This class manages the building of gamma/electron/positron and
 // their processes
@@ -57,9 +57,6 @@ void EMPhysics::ConstructParticle()
 #include "G4PhotoElectricEffect.hh"
 #include "G4ComptonScattering.hh"
 #include "G4GammaConversion.hh"
-//THB #include "G4MultipleScattering.hh"
-#include "G4eIonisation.hh"
-#include "G4eBremsstrahlung.hh"
 #include "G4eplusAnnihilation.hh"
 
 void EMPhysics::ConstructProcess()
@@ -88,7 +85,7 @@ void EMPhysics::ConstructProcess()
   G4VContinuousDiscreteProcess* theElectronIonisation         = 
       m_eLossFactory(GlastMS::EnergyLossFactory::ELECTRON, GlastMS::EnergyLossFactory::IONIZATION);
   G4VContinuousDiscreteProcess* theElectronBremsStrahlung     = 
-      m_eLossFactory(GlastMS::EnergyLossFactory::ELECTRON, GlastMS::EnergyLossFactory::BREMSTRAHLUNG);
+      m_eLossFactory(GlastMS::EnergyLossFactory::ELECTRON, GlastMS::EnergyLossFactory::BREMSSTRAHLUNG);
   
   pManager->AddProcess(theElectronMultipleScattering, -1, 1, 1);
   pManager->AddProcess(theElectronIonisation,         -1, 2, 2);
@@ -102,12 +99,12 @@ void EMPhysics::ConstructProcess()
   G4VContinuousDiscreteProcess* thePositronIonisation         = 
       m_eLossFactory(GlastMS::EnergyLossFactory::POSITRON, GlastMS::EnergyLossFactory::IONIZATION);
   G4VContinuousDiscreteProcess* thePositronBremsStrahlung     = 
-      m_eLossFactory(GlastMS::EnergyLossFactory::POSITRON, GlastMS::EnergyLossFactory::BREMSTRAHLUNG);
+      m_eLossFactory(GlastMS::EnergyLossFactory::POSITRON, GlastMS::EnergyLossFactory::BREMSSTRAHLUNG);
   G4eplusAnnihilation*          theAnnihilation               = new G4eplusAnnihilation();
   
-  pManager->AddProcess(theElectronMultipleScattering, -1,  1, 1);
-  pManager->AddProcess(theElectronIonisation,         -1,  2, 2);
-  pManager->AddProcess(theElectronBremsStrahlung,     -1,  3, 3);
+  pManager->AddProcess(thePositronMultipleScattering, -1,  1, 1);
+  pManager->AddProcess(thePositronIonisation,         -1,  2, 2);
+  pManager->AddProcess(thePositronBremsStrahlung,     -1,  3, 3);
   pManager->AddProcess(theAnnihilation,                0, -1, 4);
 }
 
