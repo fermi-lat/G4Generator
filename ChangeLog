@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Apr  6 12:27:54 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.h 
+Log Message:
+tweak to get right color
+    *
+------------------------------------------------------------
 User: burnett  Sat Apr  6 12:12:07 PST 2002
 G4Generator/src/test
 
