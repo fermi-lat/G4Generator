@@ -1,10 +1,13 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.6 2001/12/02 22:23:24 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.7 2001/12/07 13:43:31 riccardo Exp $
 
 // Include files
 
 // Geant4
 #include "G4Generator.h"
 #include "G4UImanager.hh"
+#include "G4Event.hh"
+#include "G4TrajectoryContainer.hh"
+#include "G4Trajectory.hh"
 
 #include "RunManager.h"
 #include "PrimaryGeneratorAction.h"
@@ -126,6 +129,9 @@ StatusCode G4Generator::execute()
     // Run geant4
     m_runManager->BeamOn();  
 
+    G4Event* currentEvent = m_runManager->getCurrentEvent();
+    std::cout << (*((currentEvent)->GetTrajectoryContainer())).entries() << std::endl;
+    
     return StatusCode::SUCCESS;
 }
 

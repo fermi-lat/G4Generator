@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.2 2001/12/02 22:23:24 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.3 2001/12/03 15:34:34 riccardo Exp $
 
 #ifndef RunManager_h
 #define RunManager_h 1
@@ -60,6 +60,8 @@ class RunManager
 
   /// Not used
   virtual void AbortRun();
+
+  G4Event* getCurrentEvent() const;
   
  protected: 
 

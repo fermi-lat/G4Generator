@@ -1,4 +1,4 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/SensitiveDetector.cxx,v 1.5 2001/12/03 15:34:34 riccardo Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/SensitiveDetector.cxx,v 1.6 2001/12/07 13:43:31 riccardo Exp $
 
 #include <map>
 
@@ -24,6 +24,11 @@
 #include "G4TouchableHistory.hh"
 #include "G4SDManager.hh"
 #include "G4ios.hh"
+
+#include "G4Event.hh"
+#include "G4EventManager.hh"
+#include "G4TrajectoryContainer.hh"
+#include "G4Trajectory.hh"
 
 /**
     This class is used by G4 to retrive hits information during the simulation.
@@ -239,7 +244,6 @@ void SensitiveDetector::EndOfEvent(G4HCofThisEvent* HCE)
 	vertex = rot*G4ThreeVector(-x,y,z) + trans;
 	m_hepRepXMLWriter->addPoint(vertex.x(),vertex.y(),vertex.z());
       }
-
 
 
 }
