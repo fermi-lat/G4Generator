@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.2 2002/03/11 22:51:46 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.3 2002/03/12 16:55:59 riccardo Exp $
 
 #include "PosDetectorManager.h"
 #include <iostream>
@@ -10,6 +10,8 @@
 #include "G4VSolid.hh"
 #include "G4Box.hh"
 #include "G4SDManager.hh"
+
+#include <algorithm>
 
 
 
@@ -69,6 +71,8 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void PosDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
 {
+    // Let's sort the hits
+    std::sort(m_posHit->begin(),m_posHit->end(), ComparePosHits());
     // store the hits in the TDS
     m_esv->registerObject("/Event/MC/PositionHitsCol", m_posHit);    
 
