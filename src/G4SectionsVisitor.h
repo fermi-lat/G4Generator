@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.h,v 1.3 2001/12/02 22:23:24 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.h,v 1.4 2001/12/03 15:34:34 riccardo Exp $
 #ifndef G4SECTIONSVISITOR_H
 #define G4SECTIONSVISITOR_H
 #include "detModel/Management/SectionsVisitor.h"
@@ -45,7 +45,7 @@ class G4SectionsVisitor : public detModel::SectionsVisitor {
   /**
    * This is the visitor for the Tube 
    */
-  virtual void visitTube(detModel::Tube*){};
+  virtual void visitTube(detModel::Tube*);
 
   /**
    * This is the visitor for the GDDposXYZ 
@@ -91,7 +91,11 @@ class G4SectionsVisitor : public detModel::SectionsVisitor {
   double trans;
   double halfPrec;
 
+  /** Todo: there is no sense in having the following two vector,
+      it is sufficient to have a vector of G4VShape*
+   */
   std::vector <G4Box*> g4Boxes;
+  std::vector <G4Tubs*> g4Tubes;
   std::vector <G4LogicalVolume*> g4Logicals;  
   std::vector <G4VPhysicalVolume*> g4Physicals;  
   std::map <std::string, G4VisAttributes*> g4VisAttributes;  
