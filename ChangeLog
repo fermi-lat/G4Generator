@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sat Dec 11 14:14:38 PST 2004
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx mainpage.h 
+Log Message:
+switch default for e-loss to native.
+    *
+------------------------------------------------------------
+User: burnett  Sat Dec 11 14:14:38 PST 2004
 G4Generator/doc
 
 Modified Files:
