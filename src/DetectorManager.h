@@ -12,13 +12,12 @@
 #include "idents/VolumeIdentifier.h"
 #include "DetectorConstruction.h"
 
-#include "GlastEvent/MonteCarlo/McPositionHit.h"
 #include "GaudiKernel/IDataProviderSvc.h"
 
 #include <map>
 class G4TouchableHistory;
 class DisplayManager;
-namespace mc {class McPositionHit;}
+namespace Event {class McPositionHit;}
 
 /** 
  * @class DetectorManager
@@ -35,7 +34,7 @@ namespace mc {class McPositionHit;}
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.9 2002/04/12 22:20:54 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.10 2002/04/17 08:34:14 riccardo Exp $
  */
 class DetectorManager : public G4VSensitiveDetector {
  public:
