@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.6 2003/02/19 09:02:38 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.7 2003/02/24 17:32:03 flongo Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -28,7 +28,10 @@
 
 #include <cstdlib>
 
-PhysicsList::PhysicsList(double cutValue, std::string& physicsChoice, std::string& physicsTable, std::string& physicsDir):  G4VModularPhysicsList()
+PhysicsList::PhysicsList(double cutValue, std::string& physicsChoice, 
+                         std::string& physicsTable, std::string& physicsDir,
+                         Geant4::MultipleScatteringFactory& msFactory
+                         ):  G4VModularPhysicsList()
 {
   // The default cut value for all particles
   defaultCutValue = cutValue;
@@ -48,20 +51,20 @@ PhysicsList::PhysicsList(double cutValue, std::string& physicsChoice, std::strin
   
   // EM Physics 
 
-  RegisterPhysics( new EMPhysics("standard EM"));
+  RegisterPhysics( new EMPhysics("standard EM", msFactory));
 
   // Muon Physics
 
-  RegisterPhysics(  new MuonPhysics("muon"));
+  RegisterPhysics(  new MuonPhysics("muon", msFactory));
 
   // Full or EM Hadron Physics
 
-  RegisterPhysics(  new HadronPhysics("hadron", m_physicsChoice));
+  RegisterPhysics(  new HadronPhysics("hadron", m_physicsChoice, msFactory));
   // RegisterPhysics(  new HadronPhysics("hadron"));
   
   // Full or EM Ion Physics
 
-  RegisterPhysics( new IonPhysics("ion", m_physicsChoice));
+  RegisterPhysics( new IonPhysics("ion", m_physicsChoice, msFactory));
   //RegisterPhysics( new IonPhysics("ion"));
   
 
