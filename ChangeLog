@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Dec 17 00:35:49 PST 2001
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+clean up visitor interface, implementation
+    *
+------------------------------------------------------------
+User: burnett  Mon Dec 17 00:35:49 PST 2001
 G4Generator/src
 
 Modified Files:
