@@ -7,6 +7,7 @@
 #include <vector>
 class IFluxSvc;
 class IFlux;
+class IParticlePropertySvc;
 class RunManager;
 namespace gui{class GuiMgr;}
 
@@ -20,7 +21,7 @@ namespace gui{class GuiMgr;}
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.6 2002/03/07 15:29:04 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.7 2002/04/17 08:34:14 riccardo Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -39,6 +40,8 @@ class G4Generator : public Algorithm {
   /// a pointer to the flux service main classes
   IFluxSvc* m_fluxSvc;
   IFlux*    m_flux;
+
+  IParticlePropertySvc* m_ppsvc;
 
   /// source name to get from the Flux service
   std::string m_source_name;
