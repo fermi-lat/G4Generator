@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Jan 15 14:17:05 PST 2004
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx PhysicsList.h RunManager.cxx RunManager.h 
+Log Message:
+vcc 7.1 flaged missing consts for constructor; added
+    *
+------------------------------------------------------------
+User: burnett  Thu Jan 15 14:17:05 PST 2004
 G4Generator/cmt
 
 Modified Files:
