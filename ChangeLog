@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Mar 18 12:48:00 PST 2002
+G4Generator/src
+
+Modified Files:
+	PosDetectorManager.cxx 
+Log Message:
+temp fix for putting the MC branch on the TDS
+    *
+------------------------------------------------------------
 User: heather  Mon Mar 18 11:12:29 PST 2002
 G4Generator/cmt
 
