@@ -1,4 +1,4 @@
-// $Header:$
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.h,v 1.3 2001/12/02 22:23:24 burnett Exp $
 #ifndef G4SECTIONSVISITOR_H
 #define G4SECTIONSVISITOR_H
 #include "detModel/Management/SectionsVisitor.h"
@@ -41,6 +41,11 @@ class G4SectionsVisitor : public detModel::SectionsVisitor {
    * This is the visitor for the GDDbox 
    */
   virtual void visitBox(detModel::Box*);
+
+  /**
+   * This is the visitor for the Tube 
+   */
+  virtual void visitTube(detModel::Tube*){};
 
   /**
    * This is the visitor for the GDDposXYZ 
