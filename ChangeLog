@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: riccardo  Mon Dec  3 07:34:34 PST 2001
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Added fake visitTube to SectionsVisitor to compile with new version of detModel, need to be implemented
+    *
+------------------------------------------------------------
+User: riccardo  Mon Dec  3 07:34:34 PST 2001
 G4Generator/src
 
 Modified Files:
