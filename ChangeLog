@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Wed Apr 17 21:32:54 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+
+allow possibility to find primary particle already on TDS. 
+G4Test has (commented out) code to test it.
+    *
+------------------------------------------------------------
+User: burnett  Wed Apr 17 21:32:54 PDT 2002
 G4Generator/src
 
 Modified Files:
