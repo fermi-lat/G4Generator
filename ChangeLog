@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Thu Jan 23 08:19:50 PST 2003
+G4Generator/cmt
+
+Modified Files:
+	cleanup.bat requirements 
+Log Message:
+Modify requirements to expose G4GeometrySvc to external world (for propagator)
+
+    *
+------------------------------------------------------------
 User: usher  Thu Jan 23 08:17:21 PST 2003
 G4Generator/G4Generator
 
