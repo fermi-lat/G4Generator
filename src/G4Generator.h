@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.16 2003/02/19 09:03:29 flongo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.17 2003/02/24 17:31:42 flongo Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -58,8 +58,11 @@ class G4Generator : public Algorithm {
   std::string m_mcTreeMode;
   
   /// The default cutoff value (in mm)
-
+  /// This now includes cutoffs for the tracker, calorimeter and 
+  /// everything else
   DoubleProperty m_defaultCutValue;
+  DoubleProperty m_defaultTkrCutValue;
+  DoubleProperty m_defaultCalCutValue;
 
   /// the Physics List
   /// It can be "full" or "only_em"
