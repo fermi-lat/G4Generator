@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 15 14:17:39 PST 2004
+G4Generator/src
+
+Modified Files:
+	EMPhysics.cxx EMPhysics.h G4Generator.cxx HadronPhysics.cxx 
+	HadronPhysics.h IonPhysics.cxx IonPhysics.h MuonPhysics.cxx 
+	MuonPhysics.h 
+Log Message:
+result of moving MS calculation to new package, GlastMS
+    *
+------------------------------------------------------------
 User: burnett  Thu Jan 15 14:17:05 PST 2004
 G4Generator/src
 
