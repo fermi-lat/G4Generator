@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.4 2002/04/20 10:18:34 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.5 2002/09/04 15:06:47 burnett Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -27,25 +27,36 @@
 #include "IonPhysics.h"
 
 
-PhysicsList::PhysicsList(double cutValue):  G4VModularPhysicsList()
+PhysicsList::PhysicsList(double cutValue, std::string& physicsChoice):  G4VModularPhysicsList()
 {
   // The default cut value for all particles
   defaultCutValue = cutValue;
+
+  // Physics Choice
+
+  m_physicsChoice = physicsChoice;
   
   // General Physics
   RegisterPhysics( new GeneralPhysics("general") );
   
-  // EM Physics
+  // EM Physics 
+
   RegisterPhysics( new EMPhysics("standard EM"));
 
   // Muon Physics
+
   RegisterPhysics(  new MuonPhysics("muon"));
 
-  // Hadron Physics
-  RegisterPhysics(  new HadronPhysics("hadron"));
+  // Full or EM Hadron Physics
 
-  // Ion Physics
-  RegisterPhysics( new IonPhysics("ion"));
+  RegisterPhysics(  new HadronPhysics("hadron", m_physicsChoice));
+  // RegisterPhysics(  new HadronPhysics("hadron"));
+  
+  // Full or EM Ion Physics
+
+  RegisterPhysics( new IonPhysics("ion", m_physicsChoice));
+  //RegisterPhysics( new IonPhysics("ion"));
+  
 
 }
 
@@ -56,6 +67,14 @@ void PhysicsList::SetCuts()
 {
   SetCutsWithDefault();   
 }
+
+
+
+
+
+
+
+
 
 
 

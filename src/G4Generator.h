@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.14 2002/09/04 15:06:47 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.15 2002/09/24 16:59:47 riccardo Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -58,9 +58,17 @@ class G4Generator : public Algorithm {
   
   /// The default cutoff value (in mm)
   DoubleProperty m_defaultCutValue;
+
+  /// the Physics List
+  /// It can be "full" or "only_em"
+
+  std::string m_physics_choice;
+
 };
 
 #endif
+
+
 
 
 

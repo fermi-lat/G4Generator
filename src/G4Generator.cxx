@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.42 2003/01/23 16:15:05 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.43 2003/01/28 00:39:01 usher Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -70,6 +70,7 @@ G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator)
   declareProperty("saveTrajectories", m_saveTrajectories=0);
   declareProperty("mcTreeMode", m_mcTreeMode="minimal");
   declareProperty("defaultCutValue", m_defaultCutValue=0.1*mm);
+  declareProperty("physics_choice", m_physics_choice="full");
 }
     
 ////////////////////////////////////////////////////////////////////////////
@@ -87,7 +88,13 @@ StatusCode G4Generator::initialize()
 
   // setup the GuiSvc, if available
   setupGui();
+
+  // user jobOtions on cuts and physics 
+
   log << MSG::INFO << "DefaultCutValue=" << m_defaultCutValue << " mm" << endreq;
+
+  log << MSG::INFO << "Physics List = " << m_physics_choice << endreq;
+ 
 
   // Apply Geant4 specific commands throught the ui
   if( !m_uiCommands.value().empty() ) {
@@ -119,7 +126,7 @@ StatusCode G4Generator::initialize()
   // The geant4 manager
   if (!(m_runManager = RunManager::GetRunManager()))
     {
-      m_runManager = new RunManager(log.stream(), m_defaultCutValue);
+      m_runManager = new RunManager(log.stream(), m_defaultCutValue, m_physics_choice);
 
       log << "\n done." << endreq;
     }
