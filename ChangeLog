@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: riccardo  Fri Apr  5 08:23:51 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Some small changes to the doxygen documentation (started the work for the code review); G4Generator
+uses the new initialize and finalize methods for McParticle
+
+    *
+------------------------------------------------------------
+User: riccardo  Fri Apr  5 08:23:51 PST 2002
 G4Generator/src
 
 Modified Files:
