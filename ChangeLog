@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kyoung  Tue Oct  8 15:15:14 PDT 2002
+G4Generator/src
+
+Added Files:
+	G4GeneratorRandom.cxx 
+Log Message:
+Add G4GeneratorRandom tool
+    *
+------------------------------------------------------------
 User: riccardo  Fri Oct  4 08:05:17 PDT 2002
 G4Generator/src/test
 
