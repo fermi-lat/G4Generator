@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: burnett  Fri Sep 20 09:46:11 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	test_sources.xml 
+Log Message:
+
+specify "GeV" in source xml
+tagging v4r3p4
+
+    *
+------------------------------------------------------------
+User: burnett  Fri Sep 20 09:46:11 PDT 2002
 G4Generator/doc
 
 Modified Files:
