@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 17 01:15:54 PST 2001
+G4Generator/src
+
+Removed Files:
+	HepRepXMLWriter.cxx HepRepXMLWriter.h 
+Log Message:
+remove HepRepXMLWriter
+    *
+------------------------------------------------------------
 User: burnett  Mon Dec 17 01:14:09 PST 2001
 G4Generator/src
 
