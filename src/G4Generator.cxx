@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.51 2003/07/26 23:07:19 lsrea Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.52 2003/08/21 20:54:08 lsrea Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -154,7 +154,7 @@ StatusCode G4Generator::initialize()
       m_mscatOption? Geant4::MultipleScatteringFactory::OLD32 
                    : Geant4::MultipleScatteringFactory::NATIVE);
 
-  log << MSG::ERROR << "Using the " << (m_mscatOption? "Old 3.2" : "current G4") 
+  log << MSG::WARNING << "Using the " << (m_mscatOption? "Old 3.2" : "current G4") 
       << " version of Multiple scattering" << endreq;
 
   log << MSG::INFO << "Initializing run manager...\n";
