@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Sat Jun  1 17:49:15 PDT 2002
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+
+move display buttons to sub menu -- v4r1p3
+    *
+------------------------------------------------------------
+User: burnett  Sat Jun  1 17:49:15 PDT 2002
 G4Generator/cmt
 
 Modified Files:
