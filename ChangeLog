@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Nov 26 21:42:03 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4SectionsVisitor.cxx G4SectionsVisitor.h 
+Log Message:
+a lot of std's, disable attributes in WIN32 version
+    *
+------------------------------------------------------------
 User: riccardo  Mon Nov 26 10:00:20 PST 2001
 G4Generator/src/test
 
