@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: burnett  Mon Mar 11 14:51:46 PST 2002
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx IntDetectorManager.h 
+	PosDetectorManager.cxx PosDetectorManager.h 
+Added Files:
+	DetectorManager.cxx DetectorManager.h 
+Log Message:
+add missing files, refactor code in G4SenstiveDetector hierarchy
+    *
+------------------------------------------------------------
 User: riccardo  Mon Mar 11 09:27:57 PST 2002
 G4Generator/src/test
 
