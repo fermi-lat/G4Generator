@@ -1,5 +1,19 @@
 ------------------------------------------------------------
 User: riccardo  Mon Nov 26 10:00:19 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h 
+Added Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	G4SectionsVisitor.cxx G4SectionsVisitor.h PhysicsList.cxx 
+	PhysicsList.h PrimaryGeneratorAction.cxx 
+	PrimaryGeneratorAction.h 
+Log Message:
+First draft versions of DetectorConstruction, G4SectionsVisitor, PhysicsList, PrimaryGeneratorAction classes
+    *
+------------------------------------------------------------
+User: riccardo  Mon Nov 26 10:00:19 PST 2001
 G4Generator/cmt
 
 Modified Files:
