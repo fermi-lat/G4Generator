@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: riccardo  Thu Feb 28 17:11:44 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx GlastDetectorManager.cxx 
+Added Files:
+	McHitsManager.cxx McHitsManager.h 
+Log Message:
+Added an McHitsManager singelton class to collect hits and store them in TDS with an McPositionHit vector
+    *
+------------------------------------------------------------
+User: riccardo  Thu Feb 28 17:11:44 PST 2002
 G4Generator/cmt
 
 Modified Files:
