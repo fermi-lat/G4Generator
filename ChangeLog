@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Tue Feb  4 00:51:44 PST 2003
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Log Message:
+Changes to RunManager for the new 5.0 version of Gean4
+    *
+------------------------------------------------------------
 User: burnett  Mon Feb  3 11:46:37 PST 2003
 G4Generator/src/test
 
