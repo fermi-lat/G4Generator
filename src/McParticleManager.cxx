@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.8 2002/05/26 15:07:23 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.9 2002/06/20 14:13:23 burnett Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -19,6 +19,21 @@
 // This is the singleton static pointer
 McParticleManager* McParticleManager::m_pointer = 0;
 
+Event::McParticle* McParticleManager::getMcParticle(unsigned int id)
+{
+  Event::McParticle* particle = 0;
+  std::map<unsigned int, Event::McParticle*>::iterator it;
+  
+  for(it=m_particles.begin();it != m_particles.end() ; it++){
+    if (it->first == id) 
+      {
+        particle = it->second;
+        break;
+      }
+  }
+
+  return particle;
+}
 void McParticleManager::addMcParticle(unsigned int id, 
                                       Event::McParticle *particle){
   // Purpose and Method: with that method we add a new McParticle to the map of
@@ -60,6 +75,7 @@ void McParticleManager::save()
   for(it=m_particles.begin();it != m_particles.end() ; it++){
     pcol->push_back(it->second);
   }
+
 }
 
 

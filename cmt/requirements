@@ -1,6 +1,6 @@
 package G4Generator
 version v4r1p6
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.47 2002/06/18 22:42:21 burnett Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.48 2002/06/20 14:14:58 burnett Exp $
 
 use GlastPolicy v4r*
 
@@ -14,6 +14,7 @@ use Event v8*
 use GlastSvc  v8*
 # following for test
 use FluxSvc  v5r*
+
 
 use GuiSvc   v3*
 use geometry v3*

@@ -12,7 +12,7 @@
 #include "DetectorManager.h"
 #include <map>
 
-
+class McParticle;
 class DetectorConstruction;
 class IDataProviderSvc;
 
@@ -26,7 +26,7 @@ class IDataProviderSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.5 2002/05/10 18:05:10 richard Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.6 2002/05/10 19:24:33 burnett Exp $
  */
 class IntDetectorManager : public DetectorManager {
 public:
@@ -56,5 +56,6 @@ public:
   /// A map of McIntegratingHit indicized by volume id to pile up energy
   /// deposited
   std::map<idents::VolumeIdentifier,Event::McIntegratingHit*> m_detectorList;
+
 };
 #endif

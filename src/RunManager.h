@@ -46,7 +46,7 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.10 2002/04/19 12:51:30 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.11 2002/05/02 12:22:24 burnett Exp $
  */
 class RunManager
 {
@@ -100,6 +100,9 @@ class RunManager
   /// This method return the vector of points of a trajectory
   std::auto_ptr<std::vector<Hep3Vector> > getTrajectoryPoints(unsigned int);
 
+  /// This method return the id (an integer) of the track associated to a
+  /// trajectory
+  int getTrajectoryTrackId(unsigned int i);
   
  protected: 
 
