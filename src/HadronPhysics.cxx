@@ -2,7 +2,7 @@
 
 
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.5 2003/06/01 02:28:05 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.6 2003/06/06 00:19:08 burnett Exp $
 //
 // Description: This class manages the building of hadrons and their processes
 //
@@ -16,7 +16,7 @@
 #include "g4std/iomanip"   
 
 HadronPhysics::HadronPhysics(const G4String& name, std::string& physicsChoice,
-                             Geant4::MultipleScatteringFactory& msFactory)
+                             GlastMS::MultipleScatteringFactory& msFactory)
   :  G4VPhysicsConstructor(name),  m_physicsChoice(physicsChoice), m_msFactory(msFactory)
 {
 }

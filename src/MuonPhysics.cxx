@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/MuonPhysics.cxx,v 1.5 2003/02/19 09:03:03 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/MuonPhysics.cxx,v 1.6 2003/06/06 00:19:08 burnett Exp $
 //
 // Description: This class manages the building of muon/tau and their processes
 //
@@ -13,7 +13,7 @@
 #include "g4std/iomanip"   
 
 MuonPhysics::MuonPhysics(const G4String& name, 
-                         Geant4::MultipleScatteringFactory& msfactory)
+                         GlastMS::MultipleScatteringFactory& msfactory)
                    :  G4VPhysicsConstructor(name), m_msFactory(msfactory)
 {
 }

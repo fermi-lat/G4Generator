@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EMPhysics.cxx,v 1.4 2003/02/19 09:02:47 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EMPhysics.cxx,v 1.5 2003/06/06 00:19:07 burnett Exp $
 //
 // Description: This class manages the building of gamma/electron/positron and
 // their processes
@@ -14,7 +14,7 @@
 #include "g4std/iomanip"   
 
 
-EMPhysics::EMPhysics(const G4String& name, Geant4::MultipleScatteringFactory& msFactory)
+EMPhysics::EMPhysics(const G4String& name, GlastMS::MultipleScatteringFactory& msFactory)
                :  G4VPhysicsConstructor(name), m_msFactory(msFactory)
 {
 }
