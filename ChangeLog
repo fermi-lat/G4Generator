@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Wed Aug  6 00:28:22 PDT 2003
+G4Generator/src
+
+Modified Files:
+	TrackingAction.cxx mainpage.h 
+Log Message:
+Changed the minimal pruning mode in order to keep every particle that has the primary has mother; added some documentation on pruning modes to the doxygen file 
+    *
+------------------------------------------------------------
 User: usher  Mon Aug  4 12:47:44 PDT 2003
 G4Generator/src
 
