@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.5 2002/11/05 09:02:11 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.6 2002/11/06 16:33:20 riccardo Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -67,8 +67,9 @@ void PrimaryGeneratorAction::init(Event::McParticle* part, IParticlePropertySvc*
   // the position has to be expressed in mm
   // while the energy in MeV
 
+  // note the conversion from mass in Gev/c^2 to AMU in case of the ion.
   if (isIon(hepid))
-    setIon((int)ppty->charge() , (int)ppty->mass());
+    setIon((int)ppty->charge() , (int)ppty->mass()/0.93149);
   else
     setParticle(ppty->particle());
   
