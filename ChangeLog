@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Dec 11 07:33:00 PST 2001
+G4Generator/src/test
+
+Added Files:
+	VolumeIdentifier.cxx VolumeIdentifier.h 
+Log Message:
+tentative class to manage volume identifiers
+    *
+------------------------------------------------------------
 User: riccardo  Tue Dec 11 02:24:59 PST 2001
 G4Generator/src
 
