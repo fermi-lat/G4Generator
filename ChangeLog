@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Wed Nov 28 08:00:35 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4MaterialsVisitor.cxx SensitiveDetector.cxx 
+Log Message:
+Added dumpr of volume name and material used in the SensitiveDetector
+    *
+------------------------------------------------------------
 User: riccardo  Wed Nov 28 07:46:25 PST 2001
 G4Generator/src/test
 
