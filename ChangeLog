@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Thu Apr 11 04:46:51 PDT 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+update for patch tag (v3r3p2) including fixes to world volume size and patch to satisfy egcs
+    *
+------------------------------------------------------------
 User: burnett  Thu Apr 11 04:42:31 PDT 2002
 G4Generator/src
 
