@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Wed May 15 05:03:16 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx TrackingAction.cxx 
+Log Message:
+Small fix for the new McParticle
+
+    *
+------------------------------------------------------------
 User: burnett  Sat May 11 15:48:39 PDT 2002
 G4Generator/doc
 
