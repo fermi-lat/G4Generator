@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/ParticleTransporter.cxx,v 1.2 2002/04/20 10:18:34 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/ParticleTransporter.cxx,v 1.3 2002/04/20 10:40:10 riccardo Exp $
 //
 // Description: Geant4 class for particle transport management
 //
@@ -111,69 +111,74 @@ bool ParticleTransporter::transport()
                                            0., 
                                            stepManager->GetfCurrentVolume()));
 
-  //Continue stepping until the track is no longer "alive"
-  while(track->GetTrackStatus() == fAlive)
-    {
-      track->IncrementCurrentStepNumber();
-      stepStatus = stepManager->Stepping();
+  //If maxArcLen is zero then we are done, otherwise we need to track the particle
+  if (maxArcLen != 0.)
+  {
 
-      //Ok, for a Geantino this should be the only step possibility
-      //while inside the "world"
-      if (stepStatus == fGeomBoundary)
-        {
-          double trackLen = track->GetTrackLength();
+    //Continue stepping until the track is no longer "alive"
+    while(track->GetTrackStatus() == fAlive)
+      {
+        track->IncrementCurrentStepNumber();
+        stepStatus = stepManager->Stepping();
+
+        //Ok, for a Geantino this should be the only step possibility
+        //while inside the "world"
+        if (stepStatus == fGeomBoundary)
+          {
+            double trackLen = track->GetTrackLength();
         
-          G4VSensitiveDetector* pSensitive = stepManager->GetfSensitive();
+            G4VSensitiveDetector* pSensitive = stepManager->GetfSensitive();
 
-          //Set the stopping condition
-          //If stepping to next sensitive boundary, then pSensitive in nonzero
-          //If stepping a finite distance, total arclen exceeds that distance
-          if ((pSensitive && trackLen > minStep && maxArcLen < 0.) || 
+            //Set the stopping condition
+            //If stepping to next sensitive boundary, then pSensitive in nonzero
+            //If stepping a finite distance, total arclen exceeds that distance
+            if ((pSensitive && trackLen > minStep && maxArcLen < 0.) || 
               (trackLen >= maxArcLen && maxArcLen >= 0.)) 
-            {
-              track->SetTrackStatus(fSuspend);
-              success = true;
-            }
+              {
+                track->SetTrackStatus(fSuspend);
+                success = true;
+              }
 
-          nBoundaries++;
+            nBoundaries++;
 
-          stepInfo.push_back(new TransportStepInfo(track->GetPosition(), 
-                                                   trackLen-arcLen, 
-                                                   stepManager->GetfCurrentVolume()));
+            stepInfo.push_back(new TransportStepInfo(track->GetPosition(), 
+                                                     trackLen-arcLen, 
+                                                     stepManager->GetfCurrentVolume()));
 
-          arcLen = trackLen;
-        }
-      else track->SetTrackStatus(fSuspend);
-    }
+            arcLen = trackLen;
+          }
+        else track->SetTrackStatus(fSuspend);
+      }
 
-  //Let the physics processes have a rest
-  track->GetDefinition()->GetProcessManager()->EndTracking();
+    //Let the physics processes have a rest
+    track->GetDefinition()->GetProcessManager()->EndTracking();
 
-  //If stepping an arc length, make sure we step the desired distance
-  if (maxArcLen > 0 && arcLen > maxArcLen)
-    {
-      G4ThreeVector hitPos  = stepInfo.back()->GetCoords();
-      G4double      stepLen = stepInfo.back()->GetArcLen();
-      G4double      corLen  = maxArcLen - arcLen;
+    //If stepping an arc length, make sure we step the desired distance
+    if (maxArcLen > 0 && arcLen > maxArcLen)
+      {
+          G4ThreeVector hitPos  = stepInfo.back()->GetCoords();
+          G4double      stepLen = stepInfo.back()->GetArcLen();
+          G4double      corLen  = maxArcLen - arcLen;
 
-      hitPos -= corLen * startDir;
+          hitPos -= corLen * startDir;
 
-      stepInfo.back()->SetCoords(hitPos);
-      stepInfo.back()->SetArcLen(stepLen-corLen);
-    }
+          stepInfo.back()->SetCoords(hitPos);
+          stepInfo.back()->SetArcLen(stepLen-corLen);
+      }
 
-  //If ending in a sensitive layer then stop in the middle of that volume
-  G4VPhysicalVolume* pCurVolume = stepInfo.back()->GetVolume();
-  if (maxArcLen < 0 && pCurVolume->GetLogicalVolume()->GetSensitiveDetector())
-    {
-      G4ThreeVector hitPos = stepInfo.back()->GetCoords();
-      G4double      corLen = stepInfo.back()->GetArcLen() * 0.5;
+    //If ending in a sensitive layer then stop in the middle of that volume
+    G4VPhysicalVolume* pCurVolume = stepInfo.back()->GetVolume();
+    if (maxArcLen < 0 && pCurVolume->GetLogicalVolume()->GetSensitiveDetector())
+      {
+        G4ThreeVector hitPos = stepInfo.back()->GetCoords();
+        G4double      corLen = stepInfo.back()->GetArcLen() * 0.5;
 
-      hitPos -= corLen * startDir;
+        hitPos -= corLen * startDir;
 
-      stepInfo.back()->SetCoords(hitPos);
-      stepInfo.back()->SetArcLen(corLen);
-    }
+        stepInfo.back()->SetCoords(hitPos);
+        stepInfo.back()->SetArcLen(corLen);
+      }
+  }
 
   //Stepping complete
   return success;
@@ -213,7 +218,9 @@ double ParticleTransporter::minStepSize(G4SteppingManager* stepManager)
 
       //This calculates the distance along the direction of the track to the 
       //boundary of the current volume
-      minStep = pCurVolume->GetLogicalVolume()->GetSolid()->DistanceToOut(trackPos,trackDir);
+      //But here we are only concerned with the distance to the z plane exit
+      Vector zDir(0.,0.,trackDir.z());
+      minStep = pCurVolume->GetLogicalVolume()->GetSolid()->DistanceToOut(trackPos,zDir);
     }
 
   return minStep;
