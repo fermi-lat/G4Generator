@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed Mar  2 09:35:07 PST 2005
+G4Generator/G4Generator
+
+Modified Files:
+	IG4GeometrySvc.h 
+Log Message:
+Insert newline at end of file to get rid of linux warnings
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9p6, operation: add
 Package: G4Generator
