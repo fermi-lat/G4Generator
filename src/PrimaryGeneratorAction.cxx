@@ -1,8 +1,8 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
 //
-// Description:
-//      
+// Description: this class is called by Geant4 to generate the primary particle
+// during the event run
 //
 // Author(s):
 //      R.Giannitrapani
@@ -18,9 +18,14 @@
 
 PrimaryGeneratorAction::PrimaryGeneratorAction()
 {
+  
+  // A new Geant4 particle gun is created (with just one particle to be
+  // produced)
   G4int n_particle = 1;
   particleGun = new G4ParticleGun(n_particle);
 
+  // By default we use an electron starting in the origin, directed along the
+  // negative z axis with 30 MeV of energy. 
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4String particleName;
   G4ParticleDefinition* particle
@@ -38,6 +43,10 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::setParticle(std::string pname)
 {
+  // Purpose and Method: this method set the particle by searching a name in the
+  // particle table (the name should be recognized as a valid name by Geant4)
+  // Inputs: pname is the name of the particle
+  
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4ParticleDefinition* particle
     = particleTable->FindParticle(pname);
@@ -47,6 +56,9 @@ void PrimaryGeneratorAction::setParticle(std::string pname)
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
+  // Purpose and Method: this method is automatically called by the internal
+  // mechanisms of Geant4 and it generates a primary particle in the simulation
+  // Inputs: the G4Event pointer anEvent that represent the actual event
   particleGun->GeneratePrimaryVertex(anEvent);
 }
 

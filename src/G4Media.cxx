@@ -1,16 +1,15 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Media.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
 //
-// Description: 
-// This class implements the abstract interface IMedia of GlastDetSvc. The main
-// purpouse is to build the material table for a Geant4 simulation by reading
-// material specifications from the detModel representation (obtained by reading
-// xml files). The use of an abstract interface permits to avoid the explicit
-// exposition of detModel interfaces to clients.
+// Description: This class implements the abstract interface IMedia of
+// GlastDetSvc. The main purpouse is to build the material table for a Geant4
+// simulation by reading material specifications from the detModel
+// representation (obtained by reading xml files). The use of an abstract
+// interface permits to avoid the explicit exposition of detModel interfaces to
+// clients. For more detailed information, please see the GlastDetSvc
+// documentation
 //      
-//
-// Author(s):
-//      R.Giannitrapani
+// Author(s): R.Giannitrapani
 
 #include "G4Media.h"
 
@@ -54,7 +53,6 @@ void G4Media::addComposite(std::string name,
                            const StringVector& components, 
                            const DoubleVector& qty){
   // Purpose and Method:  This routine add a composite to the table
-
   // Inputs: the material name, type (by mass fractions or atomic composition),
   //         density, vector of components and their quantities
 
