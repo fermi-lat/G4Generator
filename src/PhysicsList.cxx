@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.8 2003/06/06 00:19:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.9 2004/01/15 22:17:05 burnett Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -30,7 +30,8 @@
 
 PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice, 
                          const std::string& physicsTable, const std::string& physicsDir,
-                         GlastMS::MultipleScatteringFactory& msFactory
+                         GlastMS::MultipleScatteringFactory& msFactory,
+                         GlastMS::EnergyLossFactory& eLossFactory
                          ):  G4VModularPhysicsList()
 {
   // The default cut value for all particles
@@ -51,11 +52,11 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
   
   // EM Physics 
 
-  RegisterPhysics( new EMPhysics("standard EM", msFactory));
+  RegisterPhysics( new EMPhysics("standard EM", msFactory, eLossFactory));
 
   // Muon Physics
 
-  RegisterPhysics(  new MuonPhysics("muon", msFactory));
+  RegisterPhysics(  new MuonPhysics("muon", msFactory, eLossFactory));
 
   // Full or EM Hadron Physics
 

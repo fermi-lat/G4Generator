@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.20 2003/07/04 22:22:53 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.21 2003/07/26 23:07:19 lsrea Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -75,6 +75,7 @@ class G4Generator : public Algorithm {
 
   /// if true, use Glast special version
   BooleanProperty m_mscatOption;
+  BooleanProperty m_eLossCurrent;
 
 };
 
