@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Sat Jan  5 11:46:47 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Added Files:
+	.cvsignore 
+Log Message:
+add mainpage, update requirements
+    *
+------------------------------------------------------------
 User: burnett  Fri Jan  4 11:09:17 PST 2002
 G4Generator/src/test
 
