@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.15 2002/04/19 12:51:30 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.16 2002/05/02 12:22:23 burnett Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -426,6 +426,25 @@ std::auto_ptr<std::vector<Hep3Vector> > RunManager::getTrajectoryPoints(unsigned
     }
   else return std::auto_ptr<std::vector<Hep3Vector> >(0);
 }
+
+int RunManager::getTrajectoryTrackId(unsigned int i)
+{
+  if (i > getNumberOfTrajectories())
+    return -1;
+  
+  G4Event* event = getCurrentEvent();
+  if (event->GetTrajectoryContainer())
+    {
+      G4Trajectory* trajectory =
+        static_cast<G4Trajectory*>((*((event)->GetTrajectoryContainer()))[i]);
+      
+      return trajectory->GetTrackID();
+    }
+  else return -1;
+}
+
+
+
 
 
 

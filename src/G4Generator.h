@@ -19,7 +19,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.11 2002/04/20 10:18:33 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.12 2002/05/02 02:07:23 burnett Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -46,6 +46,13 @@ class G4Generator : public Algorithm {
 
   /// the geometry level of details
   std::string m_geometryMode;
+  
+  /// flag to save trajectories in the TDS
+  bool m_saveTrajectories;
+
+  /// the McParticle tree mode
+  /// It can be "full" or "minimal"
+  std::string m_mcTreeMode;
 };
 
 #endif
