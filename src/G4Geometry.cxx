@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.11 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.12 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: this is a concrete implementation of the abstract interface
 // IGeometry of GlastDetSvc. Its methods are called by the visitor mechanism of
@@ -57,7 +57,8 @@ G4Geometry::pushShape(ShapeType s, const UintVector& idvec,
   // Purpose and Method: this method push a new volume in the stack of volumes
   // Inputs: for the meaning of ShapeType, the VolumeType and the params vector
   // see the GlastDetSvc documentation. T
-  // Outputs: the VisitorRet can be used to stop the recursion during geometry building
+  // Outputs: the VisitorRet can be used to stop the recursion during geometry
+  // building
 
   // The first 6 parameters in params are the translations and rotations
   double x=params[0], y=params[1], z=params[2];

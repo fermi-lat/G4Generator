@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.11 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.12 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: this class is responsable of the drawing of hits, hits volumes
 // and trajectories if the GUI has been activated
@@ -47,7 +47,8 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
            "hit Int detectors");
 
     d->add((m_detmap["tracks"]= new EmptyRep("black")), "tracks");
-    d->add((m_detmap["ids"] = new EmptyRep("black")), "volume identifiers", false);
+    d->add((m_detmap["ids"] = new EmptyRep("black")), 
+           "volume identifiers", false);
 }
 void DisplayManager::addDetectorBox(std::string detName, 
                                     const HepTransform3D& T, 

@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.24 2002/04/19 03:56:30 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.25 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: This class hinerits from G4VUserDetectorConstruction and it is
 // used to build the detector geometry of the G4 simulation by using two other
@@ -58,10 +58,12 @@ DetectorConstruction::~DetectorConstruction()
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
 {  
-  // Purpose and Method: this is the method called by Geant4 to build the geometry
+  // Purpose and Method: this is the method called by Geant4 to build the
+  // geometry 
   // Outputs: a pointer to the world physical volume
 
-  G4Geometry* geom = new G4Geometry(m_posDet, m_intDet, &m_idMap, m_geometryMode);
+  G4Geometry* geom = new G4Geometry(m_posDet, m_intDet, &m_idMap, 
+                                    m_geometryMode);
   G4Media* media = new G4Media();
   m_gsv->accept(*media);
   m_gsv->accept(*geom);

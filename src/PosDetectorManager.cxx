@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.12 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.13 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -34,7 +34,7 @@ PosDetectorManager::PosDetectorManager(DetectorConstruction *det,
   // See the father class DetectorManager
 }
 
-void PosDetectorManager::Initialize(G4HCofThisEvent*HCE)
+void PosDetectorManager::Initialize(G4HCofThisEvent*)
 {
   // Purpose and Method: initialization of the detectors manager
   // Inputs: the G4HCofThisEvent is hinerited from the Geant4 structure and is
@@ -93,7 +93,7 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
   return true;
 }
 
-void PosDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
+void PosDetectorManager::EndOfEvent(G4HCofThisEvent*)
 {
   // Purpose and Method: this method finalize the manager by saving the
   // integrating hits collection in the TDS
