@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: riccardo  Fri Nov 30 09:11:56 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h G4MaterialsVisitor.cxx 
+	G4MaterialsVisitor.h 
+Added Files:
+	RunManager.cxx RunManager.h UIsession.h 
+Log Message:
+Added a first version of RunManager and of UIsession to override normal G4 event loop and G4 outputs on screen
+    *
+------------------------------------------------------------
 User: burnett  Fri Nov 30 08:51:20 PST 2001
 G4Generator/src/test
 
