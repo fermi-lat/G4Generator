@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lsrea  Fri Jan 17 20:31:06 PST 2003
+G4Generator/src
+
+Modified Files:
+	G4ParticlePropagator.cxx G4ParticlePropagator.h 
+Log Message:
+Add 2 new methods to get separate edge distances for X and Y.
+    *
+------------------------------------------------------------
 User: als  Thu Jan 16 20:42:14 PST 2003
 G4Generator/cmt
 
