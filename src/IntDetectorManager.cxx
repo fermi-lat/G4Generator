@@ -1,8 +1,7 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.cxx,v 1.8 2002/03/07 15:29:04 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.1 2002/03/11 17:27:56 riccardo Exp $
 
 #include "IntDetectorManager.h"
 #include <iostream>
-#include "CLHEP/Geometry/Transform3D.h"
 #include "GlastEvent/MonteCarlo/McIntegratingHit.h"
 #include "idents/VolumeIdentifier.h"
 
@@ -13,30 +12,6 @@
 #include "G4SDManager.hh"
 
 
-namespace{
-    void makeBox(G4TouchableHistory* touched)
-    {
-        G4VPhysicalVolume* pvol = touched->GetVolume(); 
-        
-        HepTransform3D 
-            global(*(touched->GetRotation()), 
-            touched->GetTranslation());
-        
-        
-        const G4LogicalVolume* lvol = pvol->GetLogicalVolume();
-        const G4VSolid * solid = lvol->GetSolid();
-        const G4Box* box = dynamic_cast<const G4Box*>(solid);
-        if( box !=0){
-            double 
-                x = 2*box->GetXHalfLength(), 
-                y = 2*box->GetYHalfLength(), 
-                z = 2*box->GetZHalfLength();
-            
-            DisplayManager::instance()->addHitBox(global, x,y,z);
-        }
-        
-    }
-}
 
 IntDetectorManager::IntDetectorManager(DetectorConstruction *det,
                                            IDataProviderSvc* esv)
