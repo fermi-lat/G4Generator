@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.h,v 1.2 2001/12/19 10:56:50 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.h,v 1.3 2002/01/02 02:35:25 burnett Exp $
 
 #ifndef DisplayManager_h
 #define DisplayManager_h
@@ -10,7 +10,7 @@ class HepTransform3D;
 class Hep3Vector;
 #include <vector>
 #include <map>
-
+#include <string>
 
 /**
     A simple class to manage a GuiSvc display of G4 objects. It is a singleton
