@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Jan  4 11:09:17 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+fix up to be checkout package
+    *
+------------------------------------------------------------
+User: burnett  Fri Jan  4 11:09:17 PST 2002
 G4Generator/cmt
 
 Modified Files:
