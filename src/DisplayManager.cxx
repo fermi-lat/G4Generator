@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.15 2002/06/18 22:42:22 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.16 2002/12/02 23:37:23 burnett Exp $
 //
 // Description: this class is responsable of the drawing of hits, hits volumes
 // and trajectories if the GUI has been activated
@@ -47,7 +47,7 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
     m.add(m_detmap["integrating_boxes"] = new EmptyRep("blue"), 
            "hit Int detectors");
  
-    m.add((m_detmap["primary"] = new EmptyRep()), "primary track");
+    m.add((m_detmap["primary"] = new EmptyRep("black")), "primary track");
     m.add((m_detmap["tracks"]= new EmptyRep("black")), "charged tracks");
     m.add((m_detmap["neutrals"] = new EmptyRep("white")), "neutral tracks");
     m.add((m_detmap["ids"] = new EmptyRep("black")), 
