@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Mon Jun  3 09:22:06 PDT 2002
+G4Generator/src
+
+Modified Files:
+	PosDetectorManager.cxx 
+Log Message:
+Modified PosDetectorManager; McPositionHit are now associated to StdHepId (integer) and no more to the McParticle pointer
+    *
+------------------------------------------------------------
 User: burnett  Sat Jun  1 17:49:16 PDT 2002
 G4Generator/src
 
