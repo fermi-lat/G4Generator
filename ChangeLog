@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Tue Mar 19 02:43:55 PST 2002
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx 
+Log Message:
+Started to fill the McIntegratingHit with energy info and position info (in relative coordinates)
+
+    *
+------------------------------------------------------------
 User: heather  Mon Mar 18 12:48:00 PST 2002
 G4Generator/src
 
