@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Mar  8 07:49:03 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+convert display to mm
+    *
+------------------------------------------------------------
+User: burnett  Fri Mar  8 07:49:03 PST 2002
 G4Generator/src
 
 Modified Files:
