@@ -1,7 +1,7 @@
 
 <source_library>
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.10 2002/05/02 02:07:23 burnett Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.11 2002/05/02 12:22:24 burnett Exp $
        Some simple test flux definitions for debugging
     -->
 
@@ -41,7 +41,7 @@
        <spectrum> 
          <particle name="mu+"><energy e="2"/> </particle>
            <direction theta="30" phi="90" />
-           <launch_point x="20" y="500" z="1000" />
+           <launch_point x="50" y="500" z="1000" />
        </spectrum>
      </source>
 
