@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Apr 12 15:21:34 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4ParticlePropagator.h 
+Log Message:
+suppress windows warning message
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr 12 15:20:54 PDT 2002
 G4Generator/src
 
