@@ -1,9 +1,9 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.5 2001/12/16 09:54:47 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.6 2001/12/16 16:11:48 burnett Exp $
 #include "G4Timer.hh"
 
+#include "DetectorConstruction.h"
 #include "RunManager.h"
 #include "UIsession.h"
-#include "DetectorConstruction.h"
 #include "PhysicsList.h"
 #include "PrimaryGeneratorAction.h"
 
