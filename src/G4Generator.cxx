@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.13 2002/03/01 01:11:44 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.14 2002/03/07 15:29:04 riccardo Exp $
 
 // Include files
 
@@ -192,8 +192,10 @@ StatusCode G4Generator::execute()
     }
 
 
+#if 0
     SmartDataPtr<McPositionHitVector> hits(eventSvc(), "/Event/MC/PositionHitsCol");
      if (hits) log << MSG::INFO << "Number of hits in the event = " << hits->size() << endreq;
+#endif
 
     return StatusCode::SUCCESS;
 }

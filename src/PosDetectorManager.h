@@ -1,7 +1,7 @@
 // $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.h,v 1.4 2002/03/07 15:29:04 riccardo Exp $
 
-#ifndef GlastDetectorManager_h
-#define GlastDetectorManager_h
+#ifndef POSITIONDETECTORMANAGER_H
+#define POSITIONDETECTORMANAGER_H
 #ifdef WIN32 // for G4 
 #include <float.h>
 #endif
@@ -17,25 +17,19 @@
 #include "GlastEvent/MonteCarlo/McPositionHit.h"
 #include "GaudiKernel/IDataProviderSvc.h"
 
+#include "DetectorManager.h"
 #include <map>
 
 /**
-A single class that manages the GlastDetector hierarchy in the G4 environment:
-- Reads the xml description file and instantiates them
-- connects each GlastDetector object with a special interface object to convert G4Step information
-- When called with a G4Step, construcs the ID from the touchable history, then looks up the 
-  corresponding object
 
   */
-class GlastDetectorManager : public G4VSensitiveDetector {
+class PosDetectorManager : public DetectorManager {
 public:
     
     //! constructor called with pointer to DetectorConstruction, for map of (partial) ids
     //! needed for constructing the from the list of physical volumes in the touchable history
     //! @param idmap map of volume ids for all sensitive detectors
-    GlastDetectorManager( DetectorConstruction*, IDataProviderSvc*);
-    
-    ~GlastDetectorManager();
+    PosDetectorManager( DetectorConstruction*, IDataProviderSvc*);
     
     //! initialize clears things 
     virtual void Initialize(G4HCofThisEvent*);
@@ -46,25 +40,12 @@ public:
     //! End of event will finish digitization
     virtual void EndOfEvent(G4HCofThisEvent*);
     
-    idents::VolumeIdentifier constructId(G4Step * aStep);
-    
-    //! Called from DetectorConstruction to set the sensitive detector propery
-    void process(G4LogicalVolume*);
-
 private:
-    DetectorConstruction::IdMap* m_idMap;
-    
-    //! keep track of detectors
-    typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;
-    typedef std::map<idents::VolumeIdentifier, double>DetectorEnergyTotal;
-    DetectorList m_detectorList;
-    DetectorEnergyTotal m_detectorEnergy;
-
-    /// The pointer to the IdataProviderSvc
-    IDataProviderSvc* m_esv;
     /// The collection of McPositionHit to save in the TDS
     McPositionHitVector *m_posHit;  
-    
+
+    typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;
+    DetectorList m_detectorList;
 };
 
 #endif
