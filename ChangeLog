@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Oct  8 22:39:00 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	test_sources.xml 
+Log Message:
+add name to source lib
+    *
+------------------------------------------------------------
 User: kyoung  Tue Oct  8 15:15:15 PDT 2002
 G4Generator/src/Dll
 
