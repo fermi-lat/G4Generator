@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Mon Feb 24 09:31:42 PST 2003
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h 
+Log Message:
+Tentative Solution for Initialisation Time
+    *
+------------------------------------------------------------
 User: flongo  Mon Feb 24 09:30:43 PST 2003
 G4Generator/src
 
