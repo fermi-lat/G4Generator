@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.24 2002/09/24 16:59:47 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.25 2003/07/04 22:22:53 burnett Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -115,6 +115,11 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
       hit->setOriginMcParticle(partMan->getOriginParticle());
     }
 
+  // Get the proper time for particle at this hit
+  G4double properTime = aStep->GetTrack()->GetProperTime();
+  G4double localTime  = aStep->GetTrack()->GetLocalTime();
+  hit->setTimeOfFlight(properTime);
+
   hit->setMcParticleId(aStep->GetTrack()->GetDefinition()->GetPDGEncoding());
   hit->setOriginMcParticleId(partMan->getOriginParticle()->particleProperty());
 
@@ -132,7 +137,7 @@ void PosDetectorManager::EndOfEvent(G4HCofThisEvent*)
   // /Event/MC/PositionHitsCol folder
   
   // Let's sort the hits
-  std::sort(m_posHit->begin(),m_posHit->end(), ComparePosHits());
+///////  std::sort(m_posHit->begin(),m_posHit->end(), ComparePosHits());
 
   // store the hits in the TDS
   m_esv->registerObject( EventModel::MC::McPositionHitCol  , m_posHit);    
