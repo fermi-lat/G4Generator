@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.16 2002/05/24 03:24:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.17 2002/05/26 18:28:48 burnett Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "Event/TopLevel/EventModel.h"
+#include "Event/MonteCarlo/McParticle.h"
 #include "Event/MonteCarlo/McPositionHit.h"
 #include "idents/VolumeIdentifier.h"
 
@@ -84,8 +85,15 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
   HepRotation local(*(theTouchable->GetRotation()));
   HepPoint3D center=theTouchable->GetTranslation();
 
+  McParticleManager* partMan =  McParticleManager::getPointer();
+  
   hit->init(edep, id, local*(prePos-center), local*(postPos-center) );
-  hit->setMcParticle(McParticleManager::getPointer()->getLastParticle());
+  // Retrieve the id of the particle causing the hit and set the corresponding
+  // attribute of the McPositionHit
+  hit->setMcParticleId(partMan->getLastParticle()->particleProperty());
+  // Retrieve the primary particle and set the corresponding pointer of the
+  // McPositionHit
+  hit->setOriginMcParticle(partMan->getMcParticle(1));
   m_posHit->push_back(hit);
 
   display(theTouchable, id, prePos, postPos);
