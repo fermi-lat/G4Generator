@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Wed Nov 28 07:46:25 PST 2001
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Working version of MaterialsVisitor
+    *
+------------------------------------------------------------
 User: riccardo  Wed Nov 28 07:46:24 PST 2001
 G4Generator/src
 
