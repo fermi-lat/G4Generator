@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: burnett  Wed Sep  4 08:06:47 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h PhysicsList.cxx PhysicsList.h 
+	RunManager.cxx RunManager.h mainpage.h 
+Log Message:
+
+Define a new propery called DefaultCutValue; with default 0.1 mm. 
+Pass the value via the RunManager and PhysicsList constructors to G4.
+
+    *
+------------------------------------------------------------
 User: burnett  Sun Sep  1 13:42:00 PDT 2002
 G4Generator/doc
 
