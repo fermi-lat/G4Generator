@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Wed Nov 28 07:46:24 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx G4MaterialsVisitor.cxx 
+	G4SectionsVisitor.cxx 
+Log Message:
+Working version of MaterialsVisitor
+    *
+------------------------------------------------------------
 User: frailis  Wed Nov 28 07:13:21 PST 2001
 G4Generator/src
 
