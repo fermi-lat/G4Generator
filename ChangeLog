@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Mon Jan 17 09:13:08 PST 2005
-G4Generator/src
-
-Modified Files:
-	IntDetectorManager.cxx 
-Log Message:
-remove dead code
-    *
-------------------------------------------------------------
 User: flongo  Tue Jan  4 08:52:05 PST 2005
 G4Generator/src
 
