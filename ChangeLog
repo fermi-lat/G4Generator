@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Fri Nov 30 05:37:08 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx 
+Log Message:
+Get rid of char*
+    *
+------------------------------------------------------------
 User: riccardo  Fri Nov 30 04:35:07 PST 2001
 G4Generator/src
 
