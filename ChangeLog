@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: riccardo  Wed Mar 13 06:47:06 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Geometry.cxx 
+Log Message:
+Small change for Linux compatibility
+
+    *
+------------------------------------------------------------
+User: riccardo  Wed Mar 13 06:47:06 PST 2002
 G4Generator/cmt
 
 Modified Files:
