@@ -1,3 +1,10 @@
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
+//
+// Description: Geant4 class for particle transport management
+//
+// Author(s):
+//      T.Usher
 
 #include "G4ParticlePropagator.h"
 #include "RunManager.h"

@@ -1,3 +1,11 @@
+// File and Version Information:
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
+//
+// Description: Service for particle transport management
+//
+// Author(s):
+//      T.Usher
+
 #include "GlastSvc/Reco/IPropagatorSvc.h"
 #include "G4ParticlePropagator.h"
 
