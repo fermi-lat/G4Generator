@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: riccardo  Mon Apr  8 07:59:07 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+First draft version of an McParticle hierarchy filling; added a new class, McParticleManager,
+to deal with that; small changes to TrackerAction and to PosDetectorManager and IntDetectorManager
+
+    *
+------------------------------------------------------------
+User: riccardo  Mon Apr  8 07:59:07 PDT 2002
 G4Generator/src
 
 Modified Files:
