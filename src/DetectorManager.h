@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.5 2002/03/11 17:27:56 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.1 2002/03/11 22:51:46 burnett Exp $
 
 #ifndef DetectorManager_h
 #define DetectorManager_h
@@ -51,12 +51,13 @@ protected:
     
     void display(G4TouchableHistory* touched, mc::McPositionHit * hit);
 
+   //! keep track of hit detectors for display
+    typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;
+    DetectorList m_detectorList;
+
 private:
     DetectorConstruction::IdMap* m_idMap;
 
-    //! keep track of hit detectors for display
-    typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;
-    DetectorList m_detectorList;
 
 #if 0
     

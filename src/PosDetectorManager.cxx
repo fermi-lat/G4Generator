@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.1 2002/03/11 17:27:56 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.2 2002/03/11 22:51:46 burnett Exp $
 
 #include "PosDetectorManager.h"
 #include <iostream>
@@ -21,6 +21,7 @@ PosDetectorManager::PosDetectorManager(DetectorConstruction *det,
 
 void PosDetectorManager::Initialize(G4HCofThisEvent*HCE)
 {
+  m_detectorList.clear();
   // At the start of the event we create a new container
   m_posHit = new McPositionHitVector;    
 }
