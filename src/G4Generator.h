@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.18 2003/05/15 17:06:09 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.19 2003/06/06 00:19:08 burnett Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -42,9 +42,6 @@ class G4Generator : public Algorithm {
   
   /// This is the G4 manager that handles the simulation
   RunManager* m_runManager;
-
-  /// internal routine to set up the (optional) gui stuff  
-  void setupGui();
 
   /// the geometry level of details
   std::string m_geometryMode;

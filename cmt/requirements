@@ -1,6 +1,10 @@
 package G4Generator
-version v5r4
-#$Id: requirements,v 1.68 2003/06/01 02:28:05 burnett Exp $
+version v5r5
+author  T. Burnett <tburnett@u.washington.edu>
+author  R.Giannitrapani <riccardo@fisica.uniud.it>
+author  Francesco Longo <Francesco.Longo@ts.infn.it>
+
+#$Id: requirements,v 1.69 2003/06/06 00:26:28 burnett Exp $
 
 use GlastPolicy v5*
 
@@ -13,7 +17,6 @@ use Event *
 
 use GlastSvc  *
 
-use GuiSvc   v3*
 use geometry v3*
 use geomrep  v4r*
 
