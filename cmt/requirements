@@ -4,13 +4,14 @@ author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.80 2004/09/08 17:59:56 usher Exp $
+#$Id: requirements,v 1.81 2004/09/09 22:26:09 usher Exp $
 
 use GlastPolicy v*
 
 # this is only a shareable package
 apply_pattern packageShr
 apply_pattern package_headers
+apply_pattern package_include
 
 use Event     v*
 use GlastSvc  v*
