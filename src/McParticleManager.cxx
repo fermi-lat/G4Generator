@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.6 2002/04/19 12:51:30 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.7 2002/05/10 18:05:10 richard Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -13,6 +13,8 @@
 
 // Gaudi
 #include "GaudiKernel/SmartDataPtr.h"
+
+#include "Event/TopLevel/EventModel.h"
 
 // This is the singleton static pointer
 McParticleManager* McParticleManager::m_pointer = 0;
@@ -44,18 +46,19 @@ void McParticleManager::save()
 
   // if running FluxAlg, collection will already have parent 
   Event::McParticleCol*  pcol=  
-    SmartDataPtr<Event::McParticleCol>(m_esv, "/Event/MC/McParticleCol");
+    SmartDataPtr<Event::McParticleCol>(m_esv, EventModel::MC::McParticleCol);
 
   if( pcol==0) {
     // create the TDS stuff
     pcol = new Event::McParticleCol;
-    m_esv->registerObject("/Event/MC/McParticleCol", pcol);
+    m_esv->registerObject(EventModel::MC::McParticleCol, pcol);
   }
   
   // fill the McParticleCol with McParticles
   std::map <unsigned int, Event::McParticle*>::iterator it;
   
-  for(it=m_particles.begin();it != m_particles.end(); it++)
+  // note limit on size, temporarily wired in
+  for(it=m_particles.begin();it != m_particles.end() && pcol->size()<10 ; it++)
     pcol->push_back(it->second);
 }
 
