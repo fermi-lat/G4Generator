@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: riccardo  Fri Apr  5 08:23:51 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.h DetectorManager.h G4Generator.cxx 
+	IntDetectorManager.h PosDetectorManager.h mainpage.h 
+Log Message:
+Some small changes to the doxygen documentation (started the work for the code review); G4Generator
+uses the new initialize and finalize methods for McParticle
+
+    *
+------------------------------------------------------------
 User: jrb  Thu Apr  4 10:26:09 PST 2002
 G4Generator/src
 
