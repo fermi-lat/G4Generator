@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.52 2003/08/21 20:54:08 lsrea Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.53 2003/10/18 01:29:08 burnett Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -24,7 +24,7 @@
 #include "McParticleManager.h"
 // GLAST Geant4
 
-#include "Geant4/MultipleScatteringFactory.h"
+#include "GlastMS/MultipleScatteringFactory.h"
 
 // Gaudi
 #include "GaudiKernel/MsgStream.h"
@@ -150,9 +150,9 @@ StatusCode G4Generator::initialize()
   }
 
   // create a factory for the multiplescattering to pass around to the physics guys
-  Geant4::MultipleScatteringFactory msFactory(
-      m_mscatOption? Geant4::MultipleScatteringFactory::OLD32 
-                   : Geant4::MultipleScatteringFactory::NATIVE);
+  GlastMS::MultipleScatteringFactory msFactory(
+      m_mscatOption? GlastMS::MultipleScatteringFactory::OLD32 
+                   : GlastMS::MultipleScatteringFactory::NATIVE);
 
   log << MSG::WARNING << "Using the " << (m_mscatOption? "Old 3.2" : "current G4") 
       << " version of Multiple scattering" << endreq;

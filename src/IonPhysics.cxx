@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IonPhysics.cxx,v 1.4 2003/02/19 09:02:57 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IonPhysics.cxx,v 1.5 2003/06/06 00:19:08 burnett Exp $
 //
 // Description: This class manages the building of ions and their processes
 //
@@ -13,7 +13,7 @@
 #include "g4std/iomanip"   
 
 IonPhysics::IonPhysics(const G4String& name, std::string& physicsChoice
-                       , Geant4::MultipleScatteringFactory& msfactory)
+                       , GlastMS::MultipleScatteringFactory& msfactory)
   :  G4VPhysicsConstructor(name), m_physicsChoice(physicsChoice), m_msFactory(msfactory)
 {
 }
