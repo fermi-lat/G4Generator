@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.4 2001/12/16 08:35:19 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.5 2001/12/16 09:54:47 riccardo Exp $
 #include "G4Timer.hh"
 
 #include "RunManager.h"
@@ -374,7 +374,7 @@ unsigned int RunManager::getNumberOfTrajectories()
 int RunManager::getTrajectoryCharge(unsigned int i)
 {
   if (i > getNumberOfTrajectories())
-    return;
+    return -99;
   
   G4Event* currentEvent = getCurrentEvent();
   if (currentEvent->GetTrajectoryContainer())
@@ -383,13 +383,14 @@ int RunManager::getTrajectoryCharge(unsigned int i)
       
       return currentTrajectory->GetCharge();
     }
+  else return -99;
 
 }
 
 std::auto_ptr<std::vector<Hep3Vector> > RunManager::getTrajectoryPoints(unsigned int i)
 {
   if (i > getNumberOfTrajectories())
-    return;
+    return std::auto_ptr<std::vector<Hep3Vector> >(0);
   
   G4Event* currentEvent = getCurrentEvent();
   if (currentEvent->GetTrajectoryContainer())
@@ -407,6 +408,8 @@ std::auto_ptr<std::vector<Hep3Vector> > RunManager::getTrajectoryPoints(unsigned
       
       return std::auto_ptr<std::vector<Hep3Vector> >(points);
     }
+  else  return std::auto_ptr<std::vector<Hep3Vector> >(0);
+
 }
 
 
