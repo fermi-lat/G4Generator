@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 19 08:56:08 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+Clean up display code a bit (refactoring!)
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar 19 07:46:38 PST 2002
 G4Generator/src
 
