@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kyoung  Tue Oct  8 15:15:15 PDT 2002
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+Add G4GeneratorRandom tool
+    *
+------------------------------------------------------------
 User: kyoung  Tue Oct  8 15:15:14 PDT 2002
 G4Generator/src
 
