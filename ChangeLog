@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon May 20 13:23:53 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx G4Geometry.h 
+Log Message:
+add output do summarize the number of logical volumes created
+    *
+------------------------------------------------------------
 User: burnett  Thu May 16 09:07:23 PDT 2002
 G4Generator/doc
 
