@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: burnett  Fri Jun  7 11:30:13 PDT 2002
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+
+make test program a proper one.
+clean out lots of redundant use statements.
+tagging v4r1p4
+    *
+------------------------------------------------------------
+User: burnett  Fri Jun  7 11:30:13 PDT 2002
 G4Generator/cmt
 
 Modified Files:
