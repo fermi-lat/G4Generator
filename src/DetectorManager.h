@@ -35,7 +35,7 @@ namespace Event {class McPositionHit;}
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.11 2002/05/10 19:24:33 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.12 2002/08/12 13:17:17 riccardo Exp $
  */
 class DetectorManager : public G4VSensitiveDetector {
  public:
@@ -72,7 +72,7 @@ class DetectorManager : public G4VSensitiveDetector {
                const HepPoint3D& entry, const HepPoint3D& exit);
   
   /// @return Return the display manager ponter
-  DisplayManager* displayMgr(){return m_display;} 
+  DisplayManager* displayMgr(){return DisplayManager::instance();} 
   
   typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;
 
@@ -91,7 +91,6 @@ class DetectorManager : public G4VSensitiveDetector {
  private:
   /// The identifier indicized map of physical volume
   DetectorConstruction::IdMap* m_idMap;
-  DisplayManager* m_display;
 
 };
 #endif

@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.41 2002/12/02 23:37:23 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.42 2003/01/23 16:15:05 usher Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -102,7 +102,7 @@ StatusCode G4Generator::initialize()
 
   // Get the G4Geometry Service
   IG4GeometrySvc* geosv=0;
-  if( service( "G4GeometrySvc", geosv).isFailure() ) {
+  if( service( "G4GeometrySvc", geosv, true).isFailure() ) {
     log << MSG::ERROR << "Couldn't set up G4GeometrySvc!" << endreq;
     return StatusCode::FAILURE;
   }
