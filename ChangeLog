@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Tue Apr  9 05:08:19 PDT 2002
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Log Message:
+Solved a memory leackage in RunManager
+
+    *
+------------------------------------------------------------
 User: riccardo  Mon Apr  8 09:51:20 PDT 2002
 G4Generator/doc
 
