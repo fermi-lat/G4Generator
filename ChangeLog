@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Wed Nov  6 10:37:24 PST 2002
+G4Generator/src
+
+Modified Files:
+	PrimaryGeneratorAction.cxx 
+Log Message:
+Added a conversion from Gev/c^2 to AMU for the mass of ions in the PrimaryGeneratorAction class
+    *
+------------------------------------------------------------
 User: riccardo  Wed Nov  6 08:33:20 PST 2002
 G4Generator/src
 
