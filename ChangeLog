@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 26 21:30:02 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+Add suport for McParticle, fix facilities dependence
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar 26 09:24:29 PST 2002
 G4Generator/src
 
