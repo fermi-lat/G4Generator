@@ -23,7 +23,7 @@ class McParticle;
  *  
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.5 2002/11/05 09:02:11 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.6 2002/11/06 16:33:20 riccardo Exp $
  */
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -41,7 +41,8 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     /// FluxSvc.
     /// @param part The pointer to the Event::McParticle
     /// @param ppsvc The pointer to the ParticlePropertySvc of GAUDI
-    void init(Event::McParticle* part, IParticlePropertySvc* ppsvc);
+    /// @param dz Z offset of primary particle, to match LAT offset (optional)
+    void init(Event::McParticle* part, IParticlePropertySvc* ppsvc, double dz = 0.0);
 
     /// This method is used to set a normal Geant4 particle
     /// @param pname The name of the particle
