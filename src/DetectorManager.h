@@ -13,6 +13,7 @@
 #include "DetectorConstruction.h"
 
 #include "GaudiKernel/IDataProviderSvc.h"
+#include "GlastSvc/GlastDetSvc/IGlastDetSvc.h"
 
 #include <map>
 class G4TouchableHistory;
@@ -34,7 +35,7 @@ namespace Event {class McPositionHit;}
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.10 2002/04/17 08:34:14 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.h,v 1.11 2002/05/10 19:24:33 burnett Exp $
  */
 class DetectorManager : public G4VSensitiveDetector {
  public:
@@ -46,7 +47,8 @@ class DetectorManager : public G4VSensitiveDetector {
    *  @param name the name to be used by the sensitive detector manager
    */
   DetectorManager( DetectorConstruction::IdMap* idMap, 
-                   IDataProviderSvc* esv, 
+                   IDataProviderSvc* esv,
+                   IGlastDetSvc* gsv,
                    std::string name);
   
   ~DetectorManager();
@@ -79,10 +81,17 @@ class DetectorManager : public G4VSensitiveDetector {
 
   /// The pointer to the IdataProviderSvc
   IDataProviderSvc* m_esv;
-  
+
+  /// The pointer to the GlastDetSvc interface
+  IGlastDetSvc* m_gsv;  
+
+  /// A prefix volume id in the case LAT is not the topvolume
+  idents::VolumeIdentifier m_prefix;
+
  private:
   /// The identifier indicized map of physical volume
   DetectorConstruction::IdMap* m_idMap;
   DisplayManager* m_display;
+
 };
 #endif

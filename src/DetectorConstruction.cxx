@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.27 2002/05/02 12:22:23 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.28 2002/05/20 20:23:53 burnett Exp $
 //
 // Description: This class hinerits from G4VUserDetectorConstruction and it is
 // used to build the detector geometry of the G4 simulation by using two other
@@ -48,8 +48,8 @@ DetectorConstruction::DetectorConstruction(IGlastDetSvc* gsv,
   // will be able to save hits in the TDS
   
   // now create the GlastDetector managers
-  m_posDet = new PosDetectorManager(this, esv);
-  m_intDet = new IntDetectorManager(this, esv);
+  m_posDet = new PosDetectorManager(this, esv, gsv);
+  m_intDet = new IntDetectorManager(this, esv, gsv);
 }
 
 DetectorConstruction::~DetectorConstruction()
