@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.2 2001/12/19 10:56:50 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.3 2002/01/02 02:35:25 burnett Exp $
 
 #include "DisplayManager.h"
 
@@ -56,7 +56,7 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
     d->add(m_detmap["dio"]=new AllBoxes, "diodes", false);
     d->menu().addSeparator();
 
-    d->add(m_detmap["steps"] = new HitsRep, "hits");
+    d->add(m_detmap["steps"] = new HitsRep, "hits", false);
     
     d->add(m_detmap["hit_boxes"] = new Boxes, "hit detectors");
 
