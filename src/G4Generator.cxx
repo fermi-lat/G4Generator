@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.48 2003/06/06 00:19:07 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.49 2003/07/04 22:22:53 burnett Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -119,8 +119,15 @@ StatusCode G4Generator::initialize()
     return StatusCode::FAILURE;
   }
 
+  // Get the GlastDetService Service
+  IGlastDetSvc* glastsvc=0;
+  if( service( "GlastDetSvc", glastsvc, true).isFailure() ) {
+    log << MSG::ERROR << "Couldn't set up GlastDetSvc!" << endreq;
+    return StatusCode::FAILURE;
+  }
+
   // Init the McParticle hierarchy 
-  McParticleManager::getPointer()->initialize(eventSvc());
+  McParticleManager::getPointer()->initialize(eventSvc(), glastsvc);
 
   if( service( "ParticlePropertySvc", m_ppsvc).isFailure() ) {
       log << MSG::ERROR << "Couldn't set up ParticlePropertySvc!" << endreq;
@@ -146,7 +153,8 @@ StatusCode G4Generator::initialize()
                                     m_physics_choice, 
                                     m_physics_table, 
                                     m_physics_dir,
-                                    msFactory);
+                                    msFactory,
+									geosv);
 
       log << "\n done." << endreq;
     }

@@ -3,6 +3,7 @@
 
 #include "G4UserTrackingAction.hh"
 
+class IG4GeometrySvc;
 /** 
  * @class TrackingAction
  *
@@ -14,12 +15,12 @@
  *  
  * @author R.Giannitrapani
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.3 2002/04/05 16:23:51 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.h,v 1.2 2002/04/17 08:34:15 riccardo Exp $
  */
 class TrackingAction : public G4UserTrackingAction {
 
   public:
-    TrackingAction();
+    TrackingAction(IG4GeometrySvc*);
     virtual ~TrackingAction(){};
 
     /// Action to be performed before a new track is created
@@ -28,5 +29,6 @@ class TrackingAction : public G4UserTrackingAction {
     virtual void PostUserTrackingAction(const G4Track*);
   
   private:
+    IG4GeometrySvc* m_geoSvc;
 };
 #endif
