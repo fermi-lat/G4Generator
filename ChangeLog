@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: usher  Tue Jun 25 08:47:14 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4ParticlePropagator.cxx ParticleTransporter.cxx 
+	ParticleTransporter.h 
+Log Message:
+First set of modifications to propagator to fix problems with geometry changes. 
+Also, add "print" routine for outputting volume information
+
+    *
+------------------------------------------------------------
 User: burnett  Thu Jun 20 07:14:58 PDT 2002
 G4Generator/doc
 
