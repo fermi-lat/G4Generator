@@ -14,6 +14,8 @@ class G4VPhysicalVolume;
 class PosDetectorManager;
 class IntDetectorManager;
 
+class DetectorConstruction;
+
 /**
  * @class G4Geometry
  * 
@@ -27,7 +29,7 @@ class IntDetectorManager;
  *
  * @author R.Giannitrapani
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.h,v 1.5 2002/04/17 08:34:14 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.h,v 1.6 2002/05/20 20:23:53 burnett Exp $
  */
 class G4Geometry : public IGeometry
 {
@@ -38,9 +40,11 @@ class G4Geometry : public IGeometry
 
   G4Geometry(std::string mode="propagate");
   G4Geometry(PosDetectorManager* pdm,IntDetectorManager* idm,
-             IdMap* idmap, std::string mode="propagate") : 
+             IdMap* idmap, std::string mode="propagate",
+	     DetectorConstruction* det=0) : 
     m_pdm(pdm),m_idm(idm),m_idMap(idmap), 
-    m_worldPhys(0),m_replica(0),m_replicaMother(0), m_mode(mode) {};
+    m_worldPhys(0),m_replica(0),m_replicaMother(0), m_mode(mode),
+    m_det(det) {};
   
   ~G4Geometry();
 
@@ -131,5 +135,6 @@ class G4Geometry : public IGeometry
   /// the mode of traversal of the geometry
   std::string m_mode;
 
+  DetectorConstruction* m_det;
 };
 #endif
