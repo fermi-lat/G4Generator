@@ -1,4 +1,21 @@
 ------------------------------------------------------------
+User: usher  Thu Apr 11 16:20:21 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Added Files:
+	G4ParticlePropagator.cxx G4ParticlePropagator.h 
+	G4PropagatorSvc.cxx ParticleTransporter.cxx 
+	ParticleTransporter.h TransportStepInfo.h 
+Log Message:
+1) Add new files for implementing a Geant4 particle transporter used
+   mainly by tracking in the track fit stage
+2) Modify G4Generator.cxx to look for a RunManager before attempting to
+   instantiate one.
+
+    *
+------------------------------------------------------------
 User: burnett  Thu Apr 11 07:29:08 PDT 2002
 G4Generator/cmt
 
