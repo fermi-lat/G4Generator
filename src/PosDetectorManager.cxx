@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.13 2002/04/19 07:44:41 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.14 2002/04/19 12:51:30 riccardo Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -14,7 +14,7 @@
 #include "McParticleManager.h"
 
 #include <iostream>
-#include "GlastEvent/MonteCarlo/McPositionHit.h"
+#include "Event/MonteCarlo/McPositionHit.h"
 #include "idents/VolumeIdentifier.h"
 
 // Geant4 interface
@@ -44,7 +44,7 @@ void PosDetectorManager::Initialize(G4HCofThisEvent*)
   // clear the list of hited detectors
   m_detectorList.clear();
   // At the start of the event we create a new container
-  m_posHit = new McPositionHitVector;    
+  m_posHit = new Event::McPositionHitVector;    
 }
 
 G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
@@ -77,7 +77,7 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
   idents::VolumeIdentifier id = constructId(aStep);
 
   // Filling of the hits container
-  mc::McPositionHit *hit = new mc::McPositionHit;
+  Event::McPositionHit *hit = new Event::McPositionHit;
 
   // this transforms it to local coordinates    
   HepTransform3D 

@@ -1,7 +1,7 @@
 #ifndef POSITIONDETECTORMANAGER_H
 #define POSITIONDETECTORMANAGER_H
 
-#include "GlastEvent/MonteCarlo/McPositionHit.h"
+#include "Event/MonteCarlo/McPositionHit.h"
 
 #include "DetectorManager.h"
 
@@ -18,7 +18,7 @@ class IDataProviderSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.h,v 1.3 2002/04/05 16:23:51 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.h,v 1.4 2002/04/17 08:34:14 riccardo Exp $
  */
 class PosDetectorManager : public DetectorManager {
 public:
@@ -43,6 +43,6 @@ public:
   
  private:
   /// The collection of McPositionHit to save in the TDS
-  McPositionHitVector *m_posHit;  
+  Event::McPositionHitVector *m_posHit;  
 };
 #endif

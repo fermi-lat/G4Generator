@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.8 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.9 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: This is an abstract class that represent a generic sensitive
 // detectors manager. Its methods are common to both kind of detectors managers
@@ -11,7 +11,7 @@
 #include "DetectorManager.h"
 
 #include "CLHEP/Geometry/Transform3D.h"
-#include "GlastEvent/MonteCarlo/McPositionHit.h"
+#include "Event/MonteCarlo/McPositionHit.h"
 #include "idents/VolumeIdentifier.h"
 
 // Geant4 interface
