@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Mon Aug  4 12:47:44 PDT 2003
+G4Generator/src
+
+Modified Files:
+	PosDetectorManager.cxx 
+Log Message:
+Fill the McParticle "time of flight" with the particle's proper time
+
+    *
+------------------------------------------------------------
 User: lsrea  Sat Jul 26 16:07:19 PDT 2003
 G4Generator/src
 
