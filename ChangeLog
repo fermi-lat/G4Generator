@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Fri Jul 26 09:23:18 PDT 2002
+G4Generator/src
+
+Modified Files:
+	PosDetectorManager.cxx 
+Log Message:
+Added the global entry and exit point to the McPositionHit stored in the PosDetectorManager
+    *
+------------------------------------------------------------
 User: burnett  Thu Jul 25 02:59:30 PDT 2002
 G4Generator/doc
 
