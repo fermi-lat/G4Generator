@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan  1 19:16:57 PST 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt test_sources.xml 
+Log Message:
+test setup for G4 with full detector
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan  1 19:04:21 PST 2002
 G4Generator/src
 
