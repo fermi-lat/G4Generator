@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Tue Dec 11 02:24:59 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4SectionsVisitor.cxx 
+Log Message:
+Fixed a bug on visitTube method
+    *
+------------------------------------------------------------
 User: riccardo  Fri Dec  7 10:01:05 PST 2001
 G4Generator/src
 
