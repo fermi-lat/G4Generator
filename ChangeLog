@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: riccardo  Fri Apr 19 05:51:31 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	DisplayManager.cxx G4Generator.cxx G4Geometry.cxx 
+	IntDetectorManager.cxx McParticleManager.cxx 
+	PosDetectorManager.cxx RunManager.cxx RunManager.h 
+	TransportStepInfo.h 
+Log Message:
+Solved minor warnings in the gcc compilation under Linux
+
+    *
+------------------------------------------------------------
 User: riccardo  Fri Apr 19 00:44:42 PDT 2002
 G4Generator/src
 
