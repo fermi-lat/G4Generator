@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 19 07:46:38 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx DetectorManager.h PosDetectorManager.cxx 
+Log Message:
+convert to local coords in PosHits
+    *
+------------------------------------------------------------
 User: heather  Tue Mar 19 07:37:05 PST 2002
 G4Generator/cmt
 
