@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.17 2001/12/19 10:57:41 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.18 2002/01/02 02:33:25 burnett Exp $
 #include "DetectorConstruction.h"
 
 #include "G4Material.hh"
@@ -16,7 +16,7 @@
 #include "detModel/Sections/Volume.h"
 #include "detModel/Sections/Box.h"
 #include "detModel/Gdd.h"
-#include "detModel/Management/IDmapBUilder.h"
+#include "detModel/Management/IDmapBuilder.h"
 #include "detModel/Utilities/PositionedVolume.h"
 
 #include "G4SectionsVisitor.h"
