@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.3 2001/12/03 15:34:34 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.4 2001/12/16 08:35:19 riccardo Exp $
 #include "G4Timer.hh"
 
 #include "RunManager.h"
@@ -26,10 +26,15 @@
 #include "G4ProcessTable.hh"
 #include "G4UnitsTable.hh"
 #include "G4VVisManager.hh"
+#include "G4Event.hh"
+#include "G4TrajectoryContainer.hh"
+#include "G4Trajectory.hh"
+#include "G4TrajectoryPoint.hh"
 
 #include "G4ios.hh"
 #include "g4std/strstream"
 
+#include <memory>
 
 RunManager* RunManager::fRunManager = NULL;
 
@@ -358,8 +363,51 @@ void RunManager::RestoreRandomNumberStatus(G4String fileN)
 }
 
 
+unsigned int RunManager::getNumberOfTrajectories()
+{
+  G4Event* currentEvent = getCurrentEvent();
+  if (currentEvent->GetTrajectoryContainer())
+    return(*((currentEvent)->GetTrajectoryContainer())).entries();
+  else return 0;
+}
 
+int RunManager::getTrajectoryCharge(unsigned int i)
+{
+  if (i > getNumberOfTrajectories())
+    return;
+  
+  G4Event* currentEvent = getCurrentEvent();
+  if (currentEvent->GetTrajectoryContainer())
+    {
+      G4Trajectory* currentTrajectory = static_cast<G4Trajectory*>((*((currentEvent)->GetTrajectoryContainer()))[i]);
+      
+      return currentTrajectory->GetCharge();
+    }
 
+}
+
+std::auto_ptr<std::vector<Hep3Vector> > RunManager::getTrajectoryPoints(unsigned int i)
+{
+  if (i > getNumberOfTrajectories())
+    return;
+  
+  G4Event* currentEvent = getCurrentEvent();
+  if (currentEvent->GetTrajectoryContainer())
+    {
+      G4Trajectory* currentTrajectory = static_cast<G4Trajectory*>((*((currentEvent)->GetTrajectoryContainer()))[i]);
+      
+      std::vector<Hep3Vector>* points = new std::vector<Hep3Vector>;;
+      
+      for(unsigned int j=0;j<currentTrajectory->GetPointEntries();j++)
+	{
+	  G4TrajectoryPoint* currentPoint = 
+	    static_cast<G4TrajectoryPoint*>(currentTrajectory->GetPoint(j));
+	  points->push_back(currentPoint->GetPosition());
+	}
+      
+      return std::auto_ptr<std::vector<Hep3Vector> >(points);
+    }
+}
 
 
 
