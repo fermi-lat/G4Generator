@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec 16 08:51:40 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+Log Message:
+clean up a little more
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec 16 08:33:16 PST 2001
 G4Generator/src/test
 
