@@ -2,7 +2,7 @@
 //
 // Job options file for G4Generator test
 // 
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.37 2002/10/04 15:05:17 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.38 2003/02/03 19:46:37 burnett Exp $
 
 //  -------------- basic Glast/Gaudi run enviornment -----------
 ApplicationMgr.DLLs   = {  "GlastSvc"};
@@ -58,8 +58,14 @@ FluxAlg.source_name="gamma_test";
 
 // do you want trajectories in the TDS? (default is 0)
 G4Generator.saveTrajectories = 1;
+
 // do you want the full or minimal tree of particles? (default is minimal)
 G4Generator.mcTreeMode = "pruneCal";
+
+// do you want the full or only the em physics? (default is full)
+
+G4Generator.physics_choice = "only_em";
+
 
 // commands to run before each event. 
 //G4Generator.UIcommands+={"/run/verbose 3"};
