@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Tue Dec  7 17:33:54 PST 2004
+G4Generator/src
+
+Modified Files:
+	EMPhysics.cxx EMPhysics.h G4Generator.cxx G4Generator.h 
+	MuonPhysics.cxx MuonPhysics.h PhysicsList.cxx PhysicsList.h 
+	RunManager.cxx RunManager.h 
+Log Message:
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r8p1, operation: add
 Package: G4Generator
