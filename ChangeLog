@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jrb  Thu Apr  4 10:26:09 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Geometry.cxx G4Geometry.h 
+Log Message:
+Changes to concrete implementation of IGeometry for compatibility with
+new interface
+
+    *
+------------------------------------------------------------
 User: jrb  Thu Apr  4 10:25:25 PST 2002
 G4Generator/cmt
 
