@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec 16 08:29:49 PST 2001
+G4Generator/src
+
+Added Files:
+	GlastDetectorManager.cxx GlastDetectorManager.h 
+Log Message:
+add sensitive detector for GlastDetector stuff
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec 16 08:28:23 PST 2001
 G4Generator/src
 
