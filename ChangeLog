@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Thu Feb 28 17:11:44 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Added an McHitsManager singelton class to collect hits and store them in TDS with an McPositionHit vector
+    *
+------------------------------------------------------------
 User: als  Thu Feb  7 14:59:22 PST 2002
 G4Generator/cmt
 
