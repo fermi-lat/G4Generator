@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.10 2002/11/02 05:15:44 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.11 2002/11/06 19:21:19 burnett Exp $
 // Mainpage for doxygen
 
 /** @mainpage package G4Generator
@@ -82,6 +82,16 @@
  * @param G4Generator.saveTrajectories [0] Set non-zero to allow trajectory objects (Event::McTrajectory) to be saved on the TDS
  * @param G4Generator.mcTreeMode ["minimal"]
  * @param G4Generator.defaultCutValue [0.1*mm] The cut to be applied to all physics processes, all materials
+ * @param G4Generator.physics_choice ["full"]
+ This can use 
+any particle (apart only I think the lambda test ..) that one has from 
+FluxSvc. Specyfying only muons, I think you could get a segmentation fault 
+in the case you will use the proton for example. The "only-em" has the Decay processes, the muon 
+processes (where I commented out the MuonAbsorption), all the e-/e+ and 
+gamma processes and the multiple scattering + ionisation for hadrons and 
+ions. For the full there is the actual choice of processes. 
+
+
  *
  * @section test test
  * A test program, under src/test, exercises everything.
