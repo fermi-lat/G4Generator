@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed May  1 19:07:23 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h 
+Log Message:
+remove FluxSvc
+    *
+------------------------------------------------------------
 User: burnett  Sun Apr 28 21:55:10 PDT 2002
 G4Generator/src
 
