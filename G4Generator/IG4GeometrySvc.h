@@ -1,7 +1,7 @@
 #ifndef IG4GEOMETRYSVC_H
 #define IG4GEOMETRYSVC_H
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/G4Generator/IG4GeometrySvc.h,v 1.2 2003/03/06 00:17:31 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/G4Generator/IG4GeometrySvc.h,v 1.3 2003/03/06 18:30:20 usher Exp $
 //
 // Description: Defines interface for Geant4 Geometry Service
 //
