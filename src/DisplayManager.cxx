@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.16 2002/12/02 23:37:23 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.17 2003/01/17 04:41:02 als Exp $
 //
 // Description: this class is responsable of the drawing of hits, hits volumes
 // and trajectories if the GUI has been activated
@@ -27,7 +27,7 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
 :m_display(d)
 {
     s_instance = this;
-    gui::DisplayControl::DisplaySubMenu& m = d->subMenu("G4");
+    gui::DisplayControl::DisplaySubMenu& m = d->subMenu("G4Generator");
 
     //! minimal rep just to append stuff to. Allows default color
     class EmptyRep : public gui::DisplayRep {
@@ -42,10 +42,10 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
     m.add(m_detmap["steps"] = new EmptyRep, "hits", false);
     
     m.add(m_detmap["hit_boxes"] = new EmptyRep("orange"), 
-           "hit Pos detectors");
+           "hit Pos detectors", false);
 
     m.add(m_detmap["integrating_boxes"] = new EmptyRep("blue"), 
-           "hit Int detectors");
+           "hit Int detectors",false);
  
     m.add((m_detmap["primary"] = new EmptyRep("black")), "primary track");
     m.add((m_detmap["tracks"]= new EmptyRep("black")), "charged tracks");
