@@ -1,7 +1,7 @@
 
-<source_library name="G4_test_sources">
+<source_library title="G4_test_sources">
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.14 2002/09/20 16:46:11 burnett Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.15 2002/10/09 05:39:00 burnett Exp $
        Some simple test flux definitions for debugging
     -->
 
