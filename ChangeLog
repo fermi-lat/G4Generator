@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Fri Jul  4 15:22:53 PDT 2003
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Remove GUI display code, which has been moved.
+Modify trajectory code to copy all trajectories to the TDS.
+    *
+------------------------------------------------------------
 User: burnett  Wed Jul  2 09:00:03 PDT 2003
 G4Generator/src
 
