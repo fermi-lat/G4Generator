@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Feb  7 14:25:57 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+fix linkopts for gui test
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb  2 07:25:13 PST 2002
 G4Generator/src
 
