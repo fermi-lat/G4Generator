@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.13 2002/04/19 12:51:30 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.14 2002/06/02 00:49:16 burnett Exp $
 //
 // Description: this class is responsable of the drawing of hits, hits volumes
 // and trajectories if the GUI has been activated
@@ -48,6 +48,7 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
            "hit Int detectors");
 
     m.add((m_detmap["tracks"]= new EmptyRep("black")), "tracks");
+    m.add((m_detmap["neutrals"] = new EmptyRep("white")), "neutrals");
     m.add((m_detmap["ids"] = new EmptyRep("black")), 
            "volume identifiers", false);
 }
@@ -98,8 +99,7 @@ void DisplayManager::addTrack(const PointList & track, int charge)
 {
     class TrackRep : public gui::DisplayRep {
     public:
-        TrackRep( const DisplayManager::PointList& track, int charge){
-            setColor(charge==0? "white" : "black");
+        TrackRep( const DisplayManager::PointList& track){
             DisplayManager::PointList::const_iterator pit = track.begin();
         moveTo(*pit++);
         for(; pit !=track.end(); ++pit) lineTo(*pit);
@@ -107,7 +107,8 @@ void DisplayManager::addTrack(const PointList & track, int charge)
         void update(){}
     };
 
-    m_detmap["tracks"]->append(TrackRep(track,charge));
+    if(charge==0) m_detmap["neutrals"]->append(TrackRep(track));
+    else          m_detmap["tracks"]->append(TrackRep(track));
 }
 void DisplayManager::addIdDisplay(const HepTransform3D& T, 
                                   idents::VolumeIdentifier id)
