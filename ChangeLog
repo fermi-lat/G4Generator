@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan  1 18:33:25 PST 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+Log Message:
+make topvol available, pass in idmap to GlastDetectorManager
+    *
+------------------------------------------------------------
 User: burnett  Wed Dec 19 02:58:21 PST 2001
 G4Generator/src
 
