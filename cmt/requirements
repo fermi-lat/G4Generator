@@ -1,6 +1,6 @@
 package G4Generator
-version v3r1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.30 2002/03/19 16:56:08 burnett Exp $
+version v3r1p1
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.31 2002/03/23 20:56:22 burnett Exp $
 
 use GlastPolicy v4r3
 
@@ -63,7 +63,7 @@ macro G4Testlinkopts "${Geant4_linkopts} $(GuiSvc_lib) ${guiapp_linkopts} ${gui_
 
 
 macro other_source "" WIN32 "test/*.txt test/*.xml *.h test/*.h" 
-application G4Test ${GlastMain} test/*.cxx *.cxx  Dll/*.cxx ${other_source} ${Win32Resource}
+application G4Test ${GlastMain} test/*.cxx ${other_source} ${Win32Resource}
 
 
 
