@@ -1,5 +1,8 @@
+
+
+
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.3 2002/04/20 10:18:34 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.4 2003/02/19 09:03:11 flongo Exp $
 //
 // Description: This class manages the building of hadrons and their processes
 //

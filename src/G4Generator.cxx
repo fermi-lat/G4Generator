@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.45 2003/02/24 17:31:42 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.46 2003/05/15 17:06:09 usher Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -202,7 +202,7 @@ StatusCode G4Generator::execute()
            k = m_uiCommands.value().begin(); 
          k!=m_uiCommands.value().end(); ++k){
       G4UImanager::GetUIpointer()->ApplyCommand(*k);
-      log << MSG::INFO << "Apply UI command: \"" << (*k) << "\"" <<endreq;
+      log << MSG::DEBUG << "Apply UI command: \"" << (*k) << "\"" <<endreq;
     }
   }  
 
@@ -241,7 +241,7 @@ StatusCode G4Generator::execute()
   // set up display of trajectories
   DisplayManager* dm = DisplayManager::instance();
   if(dm !=0) {   
-    for( int i = 0; i< m_runManager->getNumberOfTrajectories(); ++i){
+    for(unsigned int i = 0; i< m_runManager->getNumberOfTrajectories(); ++i){
       std::auto_ptr<std::vector<Hep3Vector> > points = 
         m_runManager->getTrajectoryPoints(i);
       dm->addTrack(*(points.get()), m_runManager->getTrajectoryCharge(i), i==0);
@@ -254,13 +254,14 @@ StatusCode G4Generator::execute()
       Event::McTrajectoryList* traj = new Event::McTrajectoryList();  
       eventSvc()->registerObject("Event/MC/TrajectoryCol",traj);
 
-      for( int j = 0; j< m_runManager->getNumberOfTrajectories(); ++j){
+      for(unsigned int j = 0; j< m_runManager->getNumberOfTrajectories(); ++j){
         std::auto_ptr<std::vector<Hep3Vector> > points = 
           m_runManager->getTrajectoryPoints(j);
 
         Event::McParticle* part = 0;
       
-        if (McParticleManager::getPointer()->size() > m_runManager->getTrajectoryTrackId(j))
+        if (McParticleManager::getPointer()->size() > 
+            static_cast<unsigned int>( m_runManager->getTrajectoryTrackId(j)))
           {
             part = 
               McParticleManager::getPointer()->getMcParticle(m_runManager->getTrajectoryTrackId(j));
