@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.7 2002/05/15 12:03:16 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.8 2002/07/18 10:14:43 riccardo Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -86,9 +86,12 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
   // if the particle is an e+ or an e- coming from the conversion of a gamma,
   // than set it as the origin particle, otherwise the primary is the origin
   // particle
-  if ((parent == man->getMcParticle(1)) && (parent->particleProperty() == 22) && (process == "conv"))
+  if ((parent == man->getMcParticle(1)) && 
+      (parent->particleProperty() == 22) && 
+      (process == "conv"))
     man->setOriginParticle(particle);
   else man->setOriginParticle(man->getMcParticle(1));
+
 }
 
 void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
@@ -114,6 +117,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
       // we finalize the particle by giving the final momentum and position
       particle->finalize(pfin, aTrack->GetPosition());
     }
+
 }
 
 

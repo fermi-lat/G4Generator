@@ -2,7 +2,7 @@
 //
 // Job options file for G4Generator test
 // 
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.34 2002/07/18 11:24:24 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.35 2002/09/24 16:57:46 riccardo Exp $
 
 //  -------------- basic Glast/Gaudi run enviornment -----------
 ApplicationMgr.DLLs   = {  "GlastSvc", "HepRepSvc", "CorbaSvc"};
@@ -64,16 +64,6 @@ G4Generator.UIcommands+={"/tracking/storeTrajectory 1"};
 //G4Generator.UIcommands+={"/tracking/verbose 0"};
 
 ApplicationMgr.EvtMax =100;
-
-// needed to have the gui available
-ApplicationMgr.ExtSvc +={"HepRepSvc", "CorbaSvc"};
-
-HepRepSvc.saveXml = 1;
-HepRepSvc.xmlPath = "c:\\riccardo\\temp\\";
-HepRepSvc.geometryDepth = 4;
-
-ApplicationMgr.Runable= "CorbaSvc";
-//  GuiSvc.size = -2000; 
 
 //==============================================================
 //
