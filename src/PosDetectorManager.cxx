@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.6 2002/03/18 20:48:00 heather Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.7 2002/03/19 15:46:38 burnett Exp $
 
 #include "PosDetectorManager.h"
 #include <iostream>
@@ -78,10 +78,6 @@ void PosDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
 {
     // Let's sort the hits
     std::sort(m_posHit->begin(),m_posHit->end(), ComparePosHits());
-    
-    // Check for the MC branch - it will be created if it is not available
-    DataObject *mc;
-    m_esv->retrieveObject("/Event/MC", mc);
 
     // store the hits in the TDS
     m_esv->registerObject("/Event/MC/PositionHitsCol", m_posHit);    

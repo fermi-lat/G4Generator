@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.5 2002/03/19 10:43:55 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.6 2002/03/19 16:56:08 burnett Exp $
 
 #include "IntDetectorManager.h"
 #include <iostream>
@@ -68,7 +68,7 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     	m_detectorList[id] = hit;
       }
 
-#if 1 // this transforms it to local coordinates
+    // this transforms it to local coordinates
     HepTransform3D 
         global(*(theTouchable->GetRotation()), 
         theTouchable->GetTranslation());
@@ -76,7 +76,6 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     HepTransform3D local = global.inverse();
     prePos = local * (HepVector3D)prePos;
     postPos = local * (HepVector3D)postPos;
-#endif
 
     // fill the energy and position    
     hit->addEnergyItem(edep,0,(prePos+postPos)/2);
