@@ -1,6 +1,6 @@
 package G4Generator
-version v5r1p1
-#$Id: requirements,v 1.65 2003/02/26 22:28:50 burnett Exp $
+version v5r2p1
+#$Id: requirements,v 1.66 2003/02/27 15:18:23 burnett Exp $
 
 use GlastPolicy v5*
 
