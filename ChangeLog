@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan  1 18:35:25 PST 2002
+G4Generator/src
+
+Modified Files:
+	DisplayManager.cxx DisplayManager.h 
+Log Message:
+Convert from mm to cm, for consistency with old convention
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan  1 18:33:25 PST 2002
 G4Generator/src
 
