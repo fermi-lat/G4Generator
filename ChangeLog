@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Apr 20 14:30:03 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+set vertex from TDS
+    *
+------------------------------------------------------------
 User: riccardo  Sat Apr 20 07:03:24 PDT 2002
 G4Generator/doc
 
