@@ -7,6 +7,7 @@
 
 class DetectorConstruction;
 class IDataProviderSvc;
+class IGlastDetSvc;
 
 /** 
  * @class PosDetectorManager
@@ -18,7 +19,7 @@ class IDataProviderSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.h,v 1.4 2002/04/17 08:34:14 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.h,v 1.5 2002/05/10 18:05:10 richard Exp $
  */
 class PosDetectorManager : public DetectorManager {
 public:
@@ -26,7 +27,8 @@ public:
   /// @param det the DetectorConstruction pointer to retrive the map of volume
   ///        ids for all sensitive detectors 
   /// @param esv the data provider service for TDS access 
-  PosDetectorManager( DetectorConstruction* det, IDataProviderSvc* esv);
+  /// @param gsv the interface to the GlastDetSvc service
+  PosDetectorManager( DetectorConstruction* det, IDataProviderSvc* esv, IGlastDetSvc* gsv);
     
   /// Clears things; this implement a pure abstract method in the
   /// hierarchy ancestor of this class (geant4 name convention)

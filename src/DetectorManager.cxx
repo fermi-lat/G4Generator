@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.11 2002/05/24 03:24:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorManager.cxx,v 1.12 2002/05/24 12:48:40 riccardo Exp $
 //
 // Description: This is an abstract class that represent a generic sensitive
 // detectors manager. Its methods are common to both kind of detectors managers
@@ -21,8 +21,8 @@
 #include "G4SDManager.hh"
 
 DetectorManager::DetectorManager(DetectorConstruction::IdMap *map,
-                                 IDataProviderSvc* esv, std::string name)
-  :m_idMap(map), m_esv(esv),G4VSensitiveDetector(name)
+                                 IDataProviderSvc* esv, IGlastDetSvc* gsv, std::string name)
+  :m_idMap(map), m_esv(esv), m_gsv(gsv), G4VSensitiveDetector(name)
 {
   // Inputs: the IdMap, coming from the DetectorConstruction and actually built
   // from the GlastDetSvc calls to detModel functionalities, provide a mapping

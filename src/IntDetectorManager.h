@@ -15,7 +15,7 @@
 class McParticle;
 class DetectorConstruction;
 class IDataProviderSvc;
-
+class IGlastDetSvc;
 /** 
  * @class IntDetectorManager
  *
@@ -26,7 +26,7 @@ class IDataProviderSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.6 2002/05/10 19:24:33 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.7 2002/07/18 10:14:43 riccardo Exp $
  */
 class IntDetectorManager : public DetectorManager {
 public:
@@ -34,7 +34,8 @@ public:
   /// @param det the DetectorConstruction pointer to retrive the map of volume
   ///        ids for all sensitive detectors 
   /// @param esv the data provider service for TDS access 
-  IntDetectorManager( DetectorConstruction* det, IDataProviderSvc* esv);
+  /// @param gsv the interface to the IGlastDetSvc service
+  IntDetectorManager( DetectorConstruction* det, IDataProviderSvc* esv, IGlastDetSvc* gsv);
   
   /// Clears things; this implement a pure abstract method in the
   /// hierarchy ancestor of this class (geant4 name convention)
