@@ -1,9 +1,10 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/GlastSvc/GlastSvc/GlastDetSvc/IGeometry.h,v 1.1 2002/02/27 18:35:00 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Media.h,v 1.1 2002/03/07 15:30:05 riccardo Exp $
 
 
 #ifndef G4MEDIA_H
 #define G4MEDIA_H
 #include <vector>
+#include <string>
 #include "GlastSvc/GlastDetSvc/IMedia.h"
 
 class G4Media : public IMedia {

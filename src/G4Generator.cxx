@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.14 2002/03/07 15:29:04 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.15 2002/03/11 17:27:56 riccardo Exp $
 
 // Include files
 
@@ -88,8 +88,7 @@ StatusCode G4Generator::initialize()
         return StatusCode::FAILURE;
     }
 
-    // Set the geant4 classes needed for the simulation
-    // The manager, with specified (maybe) top volume
+    // The geant4 manager
     m_runManager = new RunManager(gsv,eventSvc());
 
     // Initialize Geant4
