@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Sun Sep  1 13:42:00 PDT 2002
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+
+use new Geant4Runtime package to pass G4 runtime settings to clients.
+    *
+------------------------------------------------------------
 User: burnett  Sun Sep  1 13:41:59 PDT 2002
 G4Generator/cmt
 
