@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.13 2002/04/19 12:51:30 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.14 2002/05/23 09:55:14 riccardo Exp $
 //
 // Description: this is a concrete implementation of the abstract interface
 // IGeometry of GlastDetSvc. Its methods are called by the visitor mechanism of
@@ -195,7 +195,7 @@ G4VPhysicalVolume* G4Geometry::getPhysicalByName(std::string name){
   std::vector<G4VPhysicalVolume*>::const_iterator i;
   
   for(i=m_physicals.begin();i!=m_physicals.end();i++)
-    if ((*i)->GetName() == name) return (*i);
+    if ((std::string)(*i)->GetName() == name) return (*i);
 
   return 0;
 }
