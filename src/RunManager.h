@@ -33,6 +33,9 @@ class IG4GeometrySvc;
 
 #include <memory>
 
+namespace GlastMS { class MultipleScatteringFactory; }
+
+
 /** 
  * @class RunManager
  *
@@ -51,9 +54,9 @@ class IG4GeometrySvc;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.18 2003/06/06 00:19:08 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.19 2003/07/22 15:47:58 riccardo Exp $
  */
-namespace Geant4 { class MultipleScatteringFactory; }
+
 
 class RunManager
 {
@@ -82,10 +85,10 @@ class RunManager
              double defaultCutValue, 
              double defaultTkrCutValue,
              double defaultCalCutValue,
-             std::string& physics_choice, 
-             std::string& physics_table,
-             std::string&  physics_dir,
-             Geant4::MultipleScatteringFactory& msfactory,
+             const std::string& physics_choice, 
+             const std::string& physics_table,
+             const std::string&  physics_dir,
+             GlastMS::MultipleScatteringFactory& msfactory,
 			 IG4GeometrySvc*);
   
   virtual ~RunManager();
