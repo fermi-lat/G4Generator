@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Mon Nov 26 10:00:19 PST 2001
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+First draft versions of DetectorConstruction, G4SectionsVisitor, PhysicsList, PrimaryGeneratorAction classes
+    *
+------------------------------------------------------------
 User: burnett  Sun Nov 18 18:55:43 PST 2001
 G4Generator
 
