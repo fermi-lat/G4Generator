@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar 23 12:56:22 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove explict versions
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 21 12:31:36 PST 2002
 G4Generator/doc
 
