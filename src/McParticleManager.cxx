@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.4 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.5 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -43,7 +43,8 @@ void McParticleManager::save()
   // /Event/MC/McParticleCol folder of the TDS
 
   // if running FluxAlg, collection will already have parent 
-  mc::McParticleCol*  pcol=  SmartDataPtr<mc::McParticleCol>(m_esv, "/Event/MC/McParticleCol");
+  mc::McParticleCol*  pcol=  
+    SmartDataPtr<mc::McParticleCol>(m_esv, "/Event/MC/McParticleCol");
 
   if( pcol==0) {
     // create the TDS stuff

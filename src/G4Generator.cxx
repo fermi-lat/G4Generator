@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.26 2002/04/19 03:56:30 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.27 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -194,7 +194,8 @@ StatusCode G4Generator::execute()
   // and define it as a MCParticle
   //
   // is there a particle already in the TDS??
-  mc::McParticleCol*  pcol=  SmartDataPtr<mc::McParticleCol>(eventSvc(), "/Event/MC/McParticleCol");
+  mc::McParticleCol*  pcol=  
+    SmartDataPtr<mc::McParticleCol>(eventSvc(), "/Event/MC/McParticleCol");
 
   HepVector3D dir;
   double ke;
@@ -223,7 +224,9 @@ StatusCode G4Generator::execute()
     name = ppty->particle(); 
     const HepLorentzVector& pfinal = primary->finalFourMomentum();
     dir=    pfinal.vect().unit();
-    ke =   pfinal.e() - pfinal.m(); // note possibility of truncation error here! especially with MeV.
+
+    // note possibility of truncation error here! especially with MeV.
+    ke =   pfinal.e() - pfinal.m(); 
 
   }
     
