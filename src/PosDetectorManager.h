@@ -1,24 +1,17 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.h,v 1.4 2002/03/07 15:29:04 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.h,v 1.1 2002/03/11 17:27:56 riccardo Exp $
 
 #ifndef POSITIONDETECTORMANAGER_H
 #define POSITIONDETECTORMANAGER_H
-#ifdef WIN32 // for G4 
-#include <float.h>
-#endif
 
-#include "G4LogicalVolume.hh"
-#include "G4VSensitiveDetector.hh"
 
-#include "DisplayManager.h"
 
-#include "idents/VolumeIdentifier.h"
-#include "DetectorConstruction.h"
 
 #include "GlastEvent/MonteCarlo/McPositionHit.h"
-#include "GaudiKernel/IDataProviderSvc.h"
 
 #include "DetectorManager.h"
-#include <map>
+
+class DetectorConstruction;
+class IDataProviderSvc;
 
 /**
 
@@ -44,8 +37,6 @@ private:
     /// The collection of McPositionHit to save in the TDS
     McPositionHitVector *m_posHit;  
 
-    typedef std::map<idents::VolumeIdentifier, unsigned int> DetectorList;
-    DetectorList m_detectorList;
 };
 
 #endif
