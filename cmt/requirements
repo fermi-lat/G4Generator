@@ -1,6 +1,6 @@
 package G4Generator
-version v5r1
-#$Id: requirements,v 1.64 2003/02/06 20:22:57 burnett Exp $
+version v5r1p1
+#$Id: requirements,v 1.65 2003/02/26 22:28:50 burnett Exp $
 
 use GlastPolicy v5*
 
@@ -25,6 +25,8 @@ private
 #this is private to avoid passing on build info to clients
 use Geant4   v2r5* IExternal
 
+# only needed by test program
+use FluxSvc *
 
 # get flags to build shared library
 
