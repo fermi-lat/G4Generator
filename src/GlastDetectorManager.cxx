@@ -1,4 +1,4 @@
-// $Header:$
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.cxx,v 1.1 2001/12/16 16:29:49 burnett Exp $
 
 #include "GlastDetectorManager.h"
 #include <iostream>
@@ -15,7 +15,7 @@
 // Geant4 interface
 #include "G4Step.hh"
 #include "G4VSolid.hh"
-#include "G4Box.hH"
+#include "G4Box.hh"
 #include "G4SDManager.hh"
 
 
