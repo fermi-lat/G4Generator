@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Sun Dec 16 00:35:19 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx RunManager.cxx RunManager.h 
+	SensitiveDetector.cxx 
+Log Message:
+Added a new method getCurrentEvent to RunManager class
+    *
+------------------------------------------------------------
 User: burnett  Tue Dec 11 07:33:00 PST 2001
 G4Generator/src/test
 
