@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: usher  Thu May 15 10:06:09 PDT 2003
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h RunManager.cxx RunManager.h 
+Log Message:
+a) G4Generator - include member variables for cutoff ranges in Tracker, Cal
+   and rest of GLAST
+b) Modify RunManager for upgrate to 5.1 and to include "regions" for Tracker,
+   Cal and rest of GLAST
+
+    *
+------------------------------------------------------------
 User: xchen  Mon Apr 28 16:56:12 PDT 2003
 G4Generator/src
 
