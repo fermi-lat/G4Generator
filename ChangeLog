@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Mon Dec  3 10:18:27 PST 2001
+G4Generator/src
+
+Modified Files:
+	G4SectionsVisitor.cxx G4SectionsVisitor.h 
+Log Message:
+Some minor changes in G4SectionsVisitor.cxx, added the Tube stuff and some optimization
+    *
+------------------------------------------------------------
 User: riccardo  Mon Dec  3 07:34:34 PST 2001
 G4Generator/src/test
 
