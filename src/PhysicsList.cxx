@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.7 2003/02/24 17:32:03 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.8 2003/06/06 00:19:08 burnett Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -28,9 +28,9 @@
 
 #include <cstdlib>
 
-PhysicsList::PhysicsList(double cutValue, std::string& physicsChoice, 
-                         std::string& physicsTable, std::string& physicsDir,
-                         Geant4::MultipleScatteringFactory& msFactory
+PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice, 
+                         const std::string& physicsTable, const std::string& physicsDir,
+                         GlastMS::MultipleScatteringFactory& msFactory
                          ):  G4VModularPhysicsList()
 {
   // The default cut value for all particles

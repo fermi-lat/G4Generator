@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.27 2003/06/06 00:19:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.28 2003/07/22 15:47:58 riccardo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -66,14 +66,14 @@ RunManager* RunManager::fRunManager = NULL;
 RunManager* RunManager::GetRunManager()
 { return fRunManager; }
 
-RunManager::RunManager(std::ostream& log, 
+RunManager::RunManager(std::ostream& log,
                        double defaultCutValue, 
                        double defaultTkrCutValue,
                        double defaultCalCutValue,
-                       std::string& physics_choice, 
-                       std::string& physics_table,
-                       std::string&  physics_dir,
-                       Geant4::MultipleScatteringFactory& msfactory,
+                       const std::string& physics_choice, 
+                       const std::string& physics_table,
+                       const std::string&  physics_dir,
+                       GlastMS::MultipleScatteringFactory& msfactory,
 					   IG4GeometrySvc* gsv)
   :m_log(log),
    physicsList(NULL),

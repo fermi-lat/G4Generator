@@ -6,7 +6,7 @@
 #include "G4VModularPhysicsList.hh"
 #include "globals.hh"
 
-#include "Geant4/MultipleScatteringFactory.h"
+#include "GlastMS/MultipleScatteringFactory.h"
 
 /** 
  * @class PhysicsList
@@ -22,14 +22,14 @@
  *  
  * @author F.Longo 
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.h,v 1.6 2003/02/24 17:32:03 flongo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.h,v 1.7 2003/06/06 00:19:08 burnett Exp $
  */
 class PhysicsList: public G4VModularPhysicsList
 {
  public:
-  PhysicsList(double cutValue, std::string& physicsChoice, 
-      std::string& physicsTable, std::string& physicsDir,
-      Geant4::MultipleScatteringFactory& msFactory
+  PhysicsList(double cutValue, const std::string& physicsChoice, 
+      const std::string& physicsTable, const std::string& physicsDir,
+      GlastMS::MultipleScatteringFactory& msFactory
       );
   ~PhysicsList();
   
