@@ -5,6 +5,8 @@
 
 #include <string>
 #include <vector>
+#include "GaudiKernel/Property.h"
+
 class RunManager;
 class IParticlePropertySvc;
 
@@ -19,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.12 2002/05/02 02:07:23 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.13 2002/07/18 10:14:43 riccardo Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -53,6 +55,9 @@ class G4Generator : public Algorithm {
   /// the McParticle tree mode
   /// It can be "full" or "minimal"
   std::string m_mcTreeMode;
+
+  /// The default cutoff value (in mm)
+  DoubleProperty m_defaultCutValue;
 };
 
 #endif
