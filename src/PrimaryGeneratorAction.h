@@ -6,6 +6,10 @@
 #include "CLHEP/Vector/LorentzVector.h"
 
 class G4Event;
+class IParticlePropertySvc;
+namespace Event{
+class McParticle;
+}
 
 /** 
  * @class PrimaryGeneratorAction
@@ -19,7 +23,7 @@ class G4Event;
  *  
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.3 2002/03/27 05:30:03 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.4 2002/04/17 08:34:14 riccardo Exp $
  */
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -32,6 +36,12 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     /// this is the main trigger to particle production in the detector and is
     /// called automatically by Geant4
     void GeneratePrimaries(G4Event*);
+
+    /// This method init the generator with an McParticle coming from the
+    /// FluxSvc.
+    /// @param part The pointer to the Event::McParticle
+    /// @param ppsvc The pointer to the ParticlePropertySvc of GAUDI
+    void init(Event::McParticle* part, IParticlePropertySvc* ppsvc);
 
     /// @param pname The name of the particle
     void setParticle(std::string pname);

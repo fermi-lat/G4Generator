@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.4 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -8,6 +8,12 @@
 //      R.Giannitrapani
 
 #include "PrimaryGeneratorAction.h"
+
+#include "Event/MonteCarlo/McParticle.h"
+
+#include "GaudiKernel/MsgStream.h"
+#include "GaudiKernel/IParticlePropertySvc.h"
+#include "GaudiKernel/ParticleProperty.h"
 
 #include "G4Event.hh"
 #include "G4ParticleGun.hh"
@@ -39,6 +45,31 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
 {
   delete particleGun;
+}
+
+void PrimaryGeneratorAction::init(Event::McParticle* part, IParticlePropertySvc* ppsvc)
+{
+  // Purpose and Method: this method set the particle by passing an
+  // Event::McParticle pointer; 
+  // Inputs: part is the pointer to the Event::McParticle
+  // Inputs: ppsvc is the pointer to the IParticlePropertySvc
+
+  Event::McParticle::StdHepId hepid= part->particleProperty();
+  ParticleProperty* ppty = ppsvc->findByStdHepID( hepid );
+  std::string name = ppty->particle(); 
+  const HepLorentzVector& pfinal = part->finalFourMomentum();
+  Hep3Vector dir=    pfinal.vect().unit();
+  HepPoint3D p =   part->finalPosition();
+  // note possibility of truncation error here! especially with MeV.
+  double ke =   pfinal.e() - pfinal.m(); 
+  
+  // Set the G4 primary generator
+  // the position has to be expressed in mm
+  // while the energy in MeV
+  setParticle(name);
+  setMomentum(dir);
+  setPosition(p);
+  setEnergy(ke);  
 }
 
 void PrimaryGeneratorAction::setParticle(std::string pname)
