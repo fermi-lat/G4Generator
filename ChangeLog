@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: chehtman  Fri Apr  5 16:18:28 PST 2002
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx 
+Log Message:
+Bug fixed in coordinates conversion to local reference system:
+ HepVector3D replaced by HepPoint3D
+    *
+------------------------------------------------------------
 User: jrb  Fri Apr  5 15:44:07 PST 2002
 G4Generator/src
 
