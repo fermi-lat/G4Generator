@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan  1 18:39:16 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+Implement setup for Instrument with GlastDetector service, clean a little.
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan  1 18:36:33 PST 2002
 G4Generator/src
 
