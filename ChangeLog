@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb  2 07:25:13 PST 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+fix wrong include for flux service
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb  2 07:24:11 PST 2002
 G4Generator/cmt
 
