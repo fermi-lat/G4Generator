@@ -37,7 +37,7 @@ class IntDetectorManager;
  *  
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.h,v 1.13 2002/04/19 03:56:30 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.h,v 1.14 2002/04/19 12:51:30 riccardo Exp $
  */
 
 class DetectorConstruction : public G4VUserDetectorConstruction
@@ -52,9 +52,10 @@ class DetectorConstruction : public G4VUserDetectorConstruction
    *  @param gds A pointer to the abstract interface of the GlastDetSvc 
    *  @param esv A pointer to the data provider service
    *  @param geometry_mode The mode to use for detModel
+   *  @param log the G4Generator log file for summary output
    */
   DetectorConstruction(IGlastDetSvc* gds, IDataProviderSvc* esv, 
-                       std::string geometry_mode="recon");
+      std::string geometry_mode, std::ostream& log);
 
   ~DetectorConstruction();
   
@@ -89,6 +90,9 @@ private:
 
   //! the mode to use when constructing the geometry
   std::string m_geometryMode;
+
+  //! log
+  std::ostream& m_log;
 };
 
 #endif

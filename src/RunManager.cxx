@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.14 2002/04/19 07:44:41 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.15 2002/04/19 12:51:30 riccardo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -60,8 +60,9 @@ RunManager* RunManager::GetRunManager()
 { return fRunManager; }
 
 RunManager::RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv,
-                       std::string geometryMode)
-  :userDetector(NULL),physicsList(NULL),
+                       std::string geometryMode, std::ostream& log)
+  :m_log(log),
+   userDetector(NULL),physicsList(NULL),
    userPrimaryGeneratorAction(NULL),
    currentEvent(NULL),
    geometryInitialized(false),physicsInitialized(false),
@@ -94,7 +95,7 @@ RunManager::RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv,
   randomNumberStatusDir = "./";
 
   // The user stuff
-  userDetector = new DetectorConstruction(gds,esv, geometryMode);
+  userDetector = new DetectorConstruction(gds,esv, geometryMode, m_log);
   physicsList = new PhysicsList;
   userPrimaryGeneratorAction = new PrimaryGeneratorAction;
 }
