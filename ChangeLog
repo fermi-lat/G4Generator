@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: riccardo  Mon Dec 17 01:10:59 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx GlastDetectorManager.cxx 
+Removed Files:
+	SensitiveDetector.cxx SensitiveDetector.h 
+Log Message:
+Removed old SensitiveDetector class
+    *
+------------------------------------------------------------
 User: burnett  Mon Dec 17 00:35:49 PST 2001
 G4Generator/src/test
 
