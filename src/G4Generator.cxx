@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.10 2001/12/16 16:15:03 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.11 2002/01/02 02:39:16 burnett Exp $
 
 // Include files
 
@@ -28,7 +28,7 @@
 #include "data/SiData.h"
 
 //flux
-#include "FluxSvc/FluxSvc.h"
+#include "FluxSvc/IFluxSvc.h"
 #include "FluxSvc/IFlux.h"
 
 
