@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Apr 12 15:20:54 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx DetectorManager.h G4Generator.cxx 
+Log Message:
+allow for no display
+    *
+------------------------------------------------------------
 User: usher  Thu Apr 11 16:20:21 PDT 2002
 G4Generator/src/Dll
 
