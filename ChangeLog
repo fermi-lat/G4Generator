@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun May 26 11:28:48 PDT 2002
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx PosDetectorManager.cxx 
+Log Message:
+remove debug output
+    *
+------------------------------------------------------------
 User: burnett  Sun May 26 10:47:34 PDT 2002
 G4Generator/doc
 
