@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.35 2002/05/23 09:55:14 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.36 2002/07/18 10:14:43 riccardo Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -65,7 +65,7 @@ G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator)
   declareProperty("UIcommands", m_uiCommands);
   declareProperty("geometryMode", m_geometryMode="");
   declareProperty("saveTrajectories", m_saveTrajectories=0);
-  declareProperty("mcTreeMode", m_mcTreeMode="full");
+  declareProperty("mcTreeMode", m_mcTreeMode="minimal");
 }
     
 ////////////////////////////////////////////////////////////////////////////
