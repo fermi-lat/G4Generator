@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: riccardo  Fri May 24 05:48:40 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorManager.cxx IntDetectorManager.cxx 
+Log Message:
+Fixed global to local transformation in the IntDetectorManager for hits
+position used in the momentum calculation
+
+
+    *
+------------------------------------------------------------
 User: burnett  Thu May 23 20:24:09 PDT 2002
 G4Generator/src
 
