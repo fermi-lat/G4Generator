@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4PropagatorSvc.cxx,v 1.3 2002/04/20 10:18:33 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4PropagatorSvc.cxx,v 1.4 2002/04/20 10:40:10 riccardo Exp $
 //
 // Description: Service for particle transport management
 //
@@ -126,7 +126,7 @@ StatusCode G4PropagatorSvc::initialize()
         }
 
       // The geant4 run manager
-      m_RunManager = new RunManager(gsv,eventSvc, "recon");
+      m_RunManager = new RunManager(gsv,eventSvc, "recon", std::cout);
 
       // Initialize Geant4
       m_RunManager->Initialize();

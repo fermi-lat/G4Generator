@@ -46,7 +46,7 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.9 2002/04/19 03:56:30 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.10 2002/04/19 12:51:30 riccardo Exp $
  */
 class RunManager
 {
@@ -61,6 +61,9 @@ class RunManager
   std::string m_topvol;
   /// mode to apply to start the visitor, like "fastmc"
   std::string m_visitorMode;
+
+  /// log for summary output
+  std::ostream& m_log;
   
  public: 
   /** 
@@ -69,7 +72,7 @@ class RunManager
      geometry level of details
   */
   RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv, 
-             std::string geometryMode);
+      std::string geometryMode, std::ostream& log);
   virtual ~RunManager();
 
  public: 

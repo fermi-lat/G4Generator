@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.30 2002/04/29 04:55:10 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.31 2002/05/02 02:07:23 burnett Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -62,7 +62,7 @@ G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator)
 {
   // set defined properties
   declareProperty("UIcommands", m_uiCommands);
-  declareProperty("geometryMode", m_geometryMode="propagate");
+  declareProperty("geometryMode", m_geometryMode="");
 }
     
 ////////////////////////////////////////////////////////////////////////////
@@ -107,22 +107,22 @@ StatusCode G4Generator::initialize()
       return StatusCode::FAILURE;
   }
 
-
+  log << MSG::INFO << "Initializing run manager...\n";
   // The geant4 manager
   if (!(m_runManager = RunManager::GetRunManager()))
     {
-      m_runManager = new RunManager(gsv,eventSvc(), m_geometryMode);
+      m_runManager = new RunManager(gsv,eventSvc(), m_geometryMode,  log.stream());
 
       // Initialize Geant4
       m_runManager->Initialize();
 
-      log << MSG::DEBUG << "G4 RunManager ready" << endreq;
+      log << "\n done." << endreq;
     }
 
   // Initialize Geant4
   m_runManager->Initialize();
 
-  log << MSG::DEBUG << "G4 RunManager ready" << endreq;
+  log << endreq;
   return StatusCode::SUCCESS;
 
 }
