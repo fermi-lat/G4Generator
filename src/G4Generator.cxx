@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.5 2001/11/30 17:34:53 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.6 2001/12/02 22:23:24 burnett Exp $
 
 // Include files
 
@@ -106,8 +106,10 @@ StatusCode G4Generator::execute()
     HepVector3D dir(m_flux->launchDir());
     double ke= m_flux->energy() ;
     HepPoint3D p(m_flux->launchPoint());
-    
+
+    /// Starting position, in mm
     p = 10*p;
+    /// Energy in MeV
     ke = ke*1000;
     
     PrimaryGeneratorAction* primaryGenerator = 
