@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: riccardo  Thu May 23 02:55:14 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Added a sign reversal for rotation in G4Geometry to be consistent with rotations
+conventions. Fixed an error in the McParticle tree building for which there were two
+primaries in the tree.
+
+
+    *
+------------------------------------------------------------
+User: riccardo  Thu May 23 02:55:14 PDT 2002
 G4Generator/src
 
 Modified Files:
