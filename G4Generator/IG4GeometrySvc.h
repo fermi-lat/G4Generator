@@ -1,7 +1,7 @@
 #ifndef IG4GEOMETRYSVC_H
 #define IG4GEOMETRYSVC_H
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/G4Generator/IG4GeometrySvc.h,v 1.1 2003/01/23 16:21:00 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/G4Generator/IG4GeometrySvc.h,v 1.2 2003/03/06 00:17:31 usher Exp $
 //
 // Description: Defines interface for Geant4 Geometry Service
 //
@@ -26,7 +26,7 @@ class G4VPhysicalVolume;
  */
 
 // Declaration of the interface ID
-static const InterfaceID IID_IG4GeometrySvc("IG4GeometrySvc", 1 , 0); 
+static const InterfaceID IID_IG4GeometrySvc("IG4GeometrySvc", 2 , 0); 
 
 class IG4GeometrySvc : virtual public IInterface
 {
