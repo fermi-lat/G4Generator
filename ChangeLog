@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 26 09:24:28 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+
+Fix sign of rotation angles, remove dll source from G4test. -----> v3r1p1
+    *
+------------------------------------------------------------
 User: burnett  Sat Mar 23 12:56:22 PST 2002
 G4Generator/cmt
 
