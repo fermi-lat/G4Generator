@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Fri Jul 25 09:48:38 PDT 2003
+G4Generator/src
+
+Modified Files:
+	McParticleManager.cxx 
+Log Message:
+Modify pruneCal mode to remove reference to deleted particle in its mother's 
+daughter list
+
+    *
+------------------------------------------------------------
 User: riccardo  Tue Jul 22 08:47:58 PDT 2003
 G4Generator/src
 
