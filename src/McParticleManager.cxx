@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.11 2002/09/24 16:59:47 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.12 2002/10/04 15:05:15 riccardo Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -88,7 +88,6 @@ void McParticleManager::pruneCal()
   // start and end position of an McParticle) and that does not interact with the
   // TKR itself (producing an McPositionHit).
 
-  SmartRefVector<Event::McParticle>::const_iterator d; 
   std::map <unsigned int, Event::McParticle*>::iterator it;
 
   for(it=m_particles.begin();it != m_particles.end() ; it++)
