@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.9 2002/04/04 12:53:59 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.10 2002/04/08 14:59:07 riccardo Exp $
 
 #include "PosDetectorManager.h"
 #include "McParticleManager.h"
@@ -30,13 +30,12 @@ void PosDetectorManager::Initialize(G4HCofThisEvent*HCE)
   m_posHit = new McPositionHitVector;    
 }
 
-G4bool PosDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
+G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
+                                       G4TouchableHistory* ROhist)
 {
-    
-    // Energy Deposition & Step Length
-    
-    G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
-    G4double stepl = aStep->GetStepLength()/mm;
+  // Energy Deposition & Step Length
+  G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
+  G4double stepl = aStep->GetStepLength()/mm;
     
     if ((edep==0.)) return false;          
     // Physical Volume
@@ -75,7 +74,6 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     
 }
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void PosDetectorManager::EndOfEvent(G4HCofThisEvent* HCE)
 {
     // Let's sort the hits

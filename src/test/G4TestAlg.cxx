@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/GismoGenerator/src/test/TestAlg.cxx,v 1.4 2001/10/05 19:17:57 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/G4TestAlg.cxx,v 1.1.1.1 2001/11/19 02:55:42 burnett Exp $
 
 // Include files
 
@@ -31,9 +31,6 @@ private:
 static const AlgFactory<G4TestAlg>  Factory;
 const IAlgFactory& G4TestAlgFactory = Factory;
 
-
-
-//------------------------------------------------------------------------------
 //
 G4TestAlg::G4TestAlg(const std::string& name, ISvcLocator* pSvcLocator) :
 Algorithm(name, pSvcLocator){
@@ -41,7 +38,6 @@ Algorithm(name, pSvcLocator){
 }
 
 
-//------------------------------------------------------------------------------
 /*! */
 StatusCode G4TestAlg::initialize() {
       
@@ -57,7 +53,6 @@ StatusCode G4TestAlg::initialize() {
 }
 
 
-//------------------------------------------------------------------------------
 StatusCode G4TestAlg::execute() {
     
     StatusCode  sc = StatusCode::SUCCESS;
@@ -67,7 +62,6 @@ StatusCode G4TestAlg::execute() {
 }
 
 
-//------------------------------------------------------------------------------
 StatusCode G4TestAlg::finalize() {
     
     return StatusCode::SUCCESS;

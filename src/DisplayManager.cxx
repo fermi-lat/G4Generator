@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.8 2002/04/06 20:12:06 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.9 2002/04/11 11:42:30 burnett Exp $
 
 #include "DisplayManager.h"
 
@@ -35,9 +35,11 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
 
     d->add(m_detmap["steps"] = new EmptyRep, "hits", false);
     
-    d->add(m_detmap["hit_boxes"] = new EmptyRep("orange"), "hit Pos detectors");
+    d->add(m_detmap["hit_boxes"] = new EmptyRep("orange"), 
+           "hit Pos detectors");
 
-    d->add(m_detmap["integrating_boxes"] = new EmptyRep("blue"), "hit Int detectors");
+    d->add(m_detmap["integrating_boxes"] = new EmptyRep("blue"), 
+           "hit Int detectors");
 
     d->add((m_detmap["tracks"]= new EmptyRep("black")), "tracks");
     d->add((m_detmap["ids"] = new EmptyRep("black")), "volume identifiers", false);
@@ -100,7 +102,8 @@ void DisplayManager::addTrack(const PointList & track, int charge)
 
     m_detmap["tracks"]->append(TrackRep(track,charge));
 }
-void DisplayManager::addIdDisplay(const HepTransform3D& T, idents::VolumeIdentifier id)
+void DisplayManager::addIdDisplay(const HepTransform3D& T, 
+                                  idents::VolumeIdentifier id)
 {
     class IdRep : public gui::DisplayRep {
     public:
