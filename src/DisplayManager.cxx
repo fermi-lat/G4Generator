@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.5 2002/03/08 15:49:03 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.cxx,v 1.6 2002/03/15 15:26:16 burnett Exp $
 
 #include "DisplayManager.h"
 
@@ -46,9 +46,9 @@ DisplayManager::DisplayManager( gui::DisplayControl* d)
     };
     d->add(m_detmap["steps"] = new HitsRep, "hits", false);
     
-    d->add(m_detmap["hit_boxes"] = new Boxes("blue"), "hit detectors");
+    d->add(m_detmap["hit_boxes"] = new Boxes("orange"), "hit Pos detectors");
 
-    d->add(m_detmap["integrating_boxes"] = new Boxes("orange"), "hit integrating detectors");
+    d->add(m_detmap["integrating_boxes"] = new Boxes("blue"), "hit Int detectors");
 
     d->add(m_detmap["tracks"]= new TracksRep, "tracks");
 }
