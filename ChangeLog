@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec 16 08:11:48 PST 2001
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Log Message:
+fix returns to avoid errors
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec 16 08:07:52 PST 2001
 G4Generator/src/Dll
 
