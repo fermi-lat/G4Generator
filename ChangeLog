@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jan 13 13:56:44 PST 2002
+G4Generator/src
+
+Modified Files:
+	GlastDetectorManager.cxx 
+Log Message:
+disable debug dump of hit summary
+    *
+------------------------------------------------------------
 User: burnett  Sun Jan 13 13:55:20 PST 2002
 G4Generator/src
 
