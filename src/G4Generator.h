@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.17 2003/02/24 17:31:42 flongo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.18 2003/05/15 17:06:09 usher Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -76,6 +76,9 @@ class G4Generator : public Algorithm {
 
   std::string m_physics_table;
   std::string m_physics_dir;
+
+  /// if true, use Glast special version
+  BooleanProperty m_mscatOption;
 
 };
 

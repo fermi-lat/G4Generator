@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.11 2002/11/06 19:21:19 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/mainpage.h,v 1.12 2003/02/20 03:38:26 burnett Exp $
 // Mainpage for doxygen
 
 /** @mainpage package G4Generator
@@ -83,6 +83,8 @@
  * @param G4Generator.mcTreeMode ["minimal"]
  * @param G4Generator.defaultCutValue [0.1*mm] The cut to be applied to all physics processes, all materials
  * @param G4Generator.physics_choice ["full"]
+ * @param G4Generator.mscatOption [true]  If true: replace the native G4 multiple scattering code with a 
+ different version managed by Geant4/MultipleScatteringFactory.
  This can use 
 any particle (apart only I think the lambda test ..) that one has from 
 FluxSvc. Specyfying only muons, I think you could get a segmentation fault 

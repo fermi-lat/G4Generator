@@ -49,8 +49,10 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.16 2003/02/24 17:30:43 flongo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.17 2003/05/15 17:06:09 usher Exp $
  */
+namespace Geant4 { class MultipleScatteringFactory; }
+
 class RunManager
 {
  public: 
@@ -80,7 +82,8 @@ class RunManager
              double defaultCalCutValue,
              std::string& physics_choice, 
              std::string& physics_table,
-             std::string&  physics_dir);
+             std::string&  physics_dir,
+             Geant4::MultipleScatteringFactory& msfactory);
   
   virtual ~RunManager();
 
