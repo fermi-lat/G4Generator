@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Dec  2 16:40:04 PST 2004
+G4Generator/src
+
+Modified Files:
+	PosDetectorManager.cxx 
+Log Message:
+Comment out line which would artificially give energy to a hit. But I can't see how this would lead to a reduction in McPositionHits...
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r8p0, operation: add
 Package: G4Generator
