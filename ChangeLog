@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Fri Oct  4 08:05:17 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Fixed a bug in the pruneCal mode
+    *
+------------------------------------------------------------
 User: riccardo  Fri Oct  4 08:05:16 PDT 2002
 G4Generator/src
 
