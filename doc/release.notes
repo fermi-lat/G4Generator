@@ -1,5 +1,6 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.12 2002/05/10 19:24:32 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.13 2002/05/11 22:48:39 burnett Exp $
 /*
+ * v4r1p1 16-may-02 THB small fix for new McParticle
  * v4r1   11-may-02 THB hide the G4 libs from clients only wanting the DLL
  * v4r0   10-may-02 THB convert from GlastEvent to Event
  * v3r5   02-may-02 THB No longer uses FluxSvc: gets incoming particle from TDS
