@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.49 2003/07/04 22:22:53 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.50 2003/07/22 15:47:58 riccardo Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -57,6 +57,10 @@
 
 static const AlgFactory<G4Generator>  Factory;
 const IAlgFactory& G4GeneratorFactory = Factory;
+
+namespace {
+    double zOffset;
+}
 
 G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator) 
   :Algorithm(name, pSvcLocator) 
@@ -124,6 +128,17 @@ StatusCode G4Generator::initialize()
   if( service( "GlastDetSvc", glastsvc, true).isFailure() ) {
     log << MSG::ERROR << "Couldn't set up GlastDetSvc!" << endreq;
     return StatusCode::FAILURE;
+  }
+
+  //look for z offset
+  zOffset = 0.0;
+  if (glastsvc->getTopVolume()=="LAT") {
+      if(glastsvc->getNumericConstByName("globalOffset_dz", &zOffset).isFailure()) 
+          zOffset = 0.0;
+  }
+  if (zOffset!=0.0) {
+      log << MSG::INFO << "Particles will be offset in z by " 
+          << zOffset << " mm" << std::endl;
   }
 
   // Init the McParticle hierarchy 
@@ -218,10 +233,10 @@ StatusCode G4Generator::execute()
   // we get the primaryGenerator from the RunManager
   PrimaryGeneratorAction* primaryGenerator = 
     (PrimaryGeneratorAction*)m_runManager->GetUserPrimaryGeneratorAction();
-
+  
   // we set the primary particle by passing the pointer of the McParticle to the
   // primaryGenerator class
-  primaryGenerator->init(primary, m_ppsvc);
+  primaryGenerator->init(primary, m_ppsvc, zOffset);
 
   McParticleManager::getPointer()->addMcParticle(0,primary);   
   // Run geant4

@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.19 2003/06/06 00:19:08 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.20 2003/07/04 22:22:53 burnett Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -34,7 +34,6 @@ class G4Generator : public Algorithm {
  private:
   /// a pointer to the service for particle properties
   IParticlePropertySvc* m_ppsvc;
-
 
   /// set of UI commands for setup; this is a property of the algorithm and can
   /// be set in the jobOptions file
