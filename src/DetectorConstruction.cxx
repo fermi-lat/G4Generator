@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.22 2002/03/11 17:27:56 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.23 2002/04/18 12:39:07 riccardo Exp $
 //
 // Description:
 //      
@@ -28,7 +28,10 @@
 #include <cassert>
 
 DetectorConstruction::DetectorConstruction(IGlastDetSvc* gsv,
-                                           IDataProviderSvc* esv):m_gsv(gsv)
+                                           IDataProviderSvc* esv,
+                                           std::string geometry_mode)
+                                           :m_gsv(gsv), 
+                                           m_geometryMode(geometry_mode)
 {
     
   // now create the GlastDetector managers
@@ -45,7 +48,7 @@ DetectorConstruction::~DetectorConstruction()
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
 {  
-  G4Geometry* geom = new G4Geometry(m_posDet, m_intDet, &m_idMap);
+  G4Geometry* geom = new G4Geometry(m_posDet, m_intDet, &m_idMap, m_geometryMode);
   G4Media* media = new G4Media();
   m_gsv->accept(*media);
   m_gsv->accept(*geom);

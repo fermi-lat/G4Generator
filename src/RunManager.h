@@ -46,7 +46,7 @@ class Hep3Vector;
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.7 2002/04/04 12:53:59 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.8 2002/04/17 08:34:14 riccardo Exp $
  */
 class RunManager
 {
@@ -67,7 +67,7 @@ class RunManager
      The constructor needs a pointer to the abstract interface of
      the GlastDetSvc and to the DataProviderSvc
   */
-  RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv);
+     RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv, std::string geometryMode);
   virtual ~RunManager();
 
  public: 
