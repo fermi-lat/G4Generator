@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan  3 09:39:32 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Make into a temporary checkout package.
+
+    *
+------------------------------------------------------------
 User: burnett  Wed Jan  2 20:31:53 PST 2002
 G4Generator/src
 
