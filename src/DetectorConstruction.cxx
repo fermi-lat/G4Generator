@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.18 2002/01/02 02:33:25 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.19 2002/01/06 22:23:01 burnett Exp $
 #include "DetectorConstruction.h"
 
 #include "G4Material.hh"
@@ -24,11 +24,15 @@
 #include "GlastDetectorManager.h"
 
 #include <iomanip>
+#include <cassert>
 
 DetectorConstruction::DetectorConstruction(std::string topvol, std::string visitorMode)
 : m_topvol(topvol)
 {
-  std::string filename= std::string(::getenv("XMLUTILROOT"))+"/xml/flight.xml" ;
+    //! TODO: make this depend on env var set by the service
+    const char * xmlroot = ::getenv("XMLUTILROOT");
+    assert(xmlroot);
+  std::string filename= std::string(xmlroot)+"/xml/flight.xml" ;
 
   detModel::Manager* gddManager = detModel::Manager::getPointer();
   
