@@ -1,8 +1,9 @@
 /** @file release.notes
     @brief package G4Generator 
 
-    $Id: release.notes,v 1.31 2003/02/06 20:22:57 burnett Exp $
+    $Id: release.notes,v 1.32 2003/02/20 03:38:25 burnett Exp $
 *<br><pre>
+ * v5r1   26-feb-03 THB Tag Francesco's changes; remove FluxSvc dependency   
  *        19-feb-03     Start of physics list selection
  * v5r0   06-feb-03 THB Tagged Riccardo's fixes for G4 5.0.
  * v4r7   03-feb-03 THB apply tag to Tracy's G4Geoemtry mods.
