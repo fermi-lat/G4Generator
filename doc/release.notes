@@ -1,5 +1,6 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.15 2002/05/26 17:47:34 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.16 2002/06/02 00:49:15 burnett Exp $
 /*
+ * v4r1p4 07-jun-02 THB clean out uses; remove test dependence on GlastDigi
  * v4r1p3 31-may-02 THB put display options under submenu
  * v4r1p2 26-may-02 THB fix global to local transformations
  * v4r1p1 16-may-02 THB small fix for new McParticle
