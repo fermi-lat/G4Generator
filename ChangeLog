@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec 16 08:07:52 PST 2001
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+ implement WARNING and FATAL for old code (temporary)
+    *
+------------------------------------------------------------
 User: riccardo  Sun Dec 16 01:54:47 PST 2001
 G4Generator/src
 
