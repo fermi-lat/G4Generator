@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Oct 17 18:27:25 PDT 2003
+G4Generator/cmt
+
+Removed Files:
+	Makefile NMake cleanup.bat 
+Log Message:
+remove--should not have been comitted
+    *
+------------------------------------------------------------
 User: lsrea  Thu Aug 21 13:54:08 PDT 2003
 G4Generator/src
 
