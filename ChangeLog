@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: usher  Thu Jan 23 08:15:05 PST 2003
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+Removed files associated with Propagator
+Created a G4GeometrySvc to handle the Geant4 (and propagator) geometry
+Modified G4Generator and RunManager accordingly
+
+    *
+------------------------------------------------------------
+User: usher  Thu Jan 23 08:15:05 PST 2003
 G4Generator/src
 
 Modified Files:
