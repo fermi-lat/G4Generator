@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: usher  Thu Jan 23 08:15:05 PST 2003
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx RunManager.cxx RunManager.h 
+Removed Files:
+	G4ParticlePropagator.cxx G4ParticlePropagator.h 
+	ParticleTransporter.cxx ParticleTransporter.h 
+	TransportStepInfo.h 
+Log Message:
+Removed files associated with Propagator
+Created a G4GeometrySvc to handle the Geant4 (and propagator) geometry
+Modified G4Generator and RunManager accordingly
+
+    *
+------------------------------------------------------------
 User: burnett  Sun Jan 19 17:45:41 PST 2003
 G4Generator/src/test
 
