@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Wed Feb 19 01:02:47 PST 2003
+G4Generator/src
+
+Modified Files:
+	EMPhysics.cxx EMPhysics.h 
+Log Message:
+Selectable Physics List
+    *
+------------------------------------------------------------
 User: flongo  Wed Feb 19 01:02:38 PST 2003
 G4Generator/src
 
