@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.h,v 1.3 2002/01/02 02:35:25 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.h,v 1.4 2002/01/06 22:23:01 burnett Exp $
 
 #ifndef DisplayManager_h
 #define DisplayManager_h
@@ -26,6 +26,11 @@ public:
     //! @param T global to local transformation
     //! @param x,y,z dimensions of the box
     void addHitBox(const HepTransform3D& T, double x, double y, double z);
+
+    //! add a integrating detector box to the display
+    //! @param T global to local transformation
+    //! @param x,y,z dimensions of the box
+    void addIntegratingBox(const HepTransform3D& T, double x, double y, double z);
 
     //! add to the static display of all detector boxes
     //! @param detname The name of the logical volume

@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.2 2002/03/11 22:51:46 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.3 2002/03/12 17:25:20 riccardo Exp $
 
 #include "IntDetectorManager.h"
 #include <iostream>
@@ -15,7 +15,7 @@
 
 IntDetectorManager::IntDetectorManager(DetectorConstruction *det,
                                            IDataProviderSvc* esv)
-:DetectorManager(det, esv,"IntegratingDetectorManager")
+:DetectorManager(det->idMap(), esv,"IntegratingDetectorManager")
 {
 }
 
@@ -55,7 +55,7 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     //    DisplayManager::instance()->addHit(InitPos, FinPos);
     
     if( !m_detectorList[id]) {
-        makeBox( theTouchable );        
+        makeIntegratingBox( theTouchable );        
     }
 
     
