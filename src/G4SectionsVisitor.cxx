@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.cxx,v 1.8 2001/12/16 16:28:15 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4SectionsVisitor.cxx,v 1.9 2001/12/17 08:35:49 burnett Exp $
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -351,12 +351,12 @@ void G4SectionsVisitor::processIds(/* const*/ detModel::Position * pos, unsigned
   
   idents::VolumeIdentifier idvec;
   for(std::vector <detModel::IdField*>::const_iterator j = ids.begin(); j!=ids.end(); ++j) {
-    
-    idvec.append( (*j)->getValue() );
-    
+      unsigned int idvalue = (*j)->getValue();
+      if( i>0) idvalue += (*j)->getStep()*i;
+      idvec.append( idvalue );    
   }
   (*m_idMap)[g4Physicals.back()] = idvec;
-
+  
   
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
