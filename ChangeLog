@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: riccardo  Thu May 23 02:55:14 PDT 2002
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Geometry.cxx 
+Log Message:
+Added a sign reversal for rotation in G4Geometry to be consistent with rotations
+conventions. Fixed an error in the McParticle tree building for which there were two
+primaries in the tree.
+
+
+    *
+------------------------------------------------------------
 User: burnett  Mon May 20 13:23:53 PDT 2002
 G4Generator/src
 
