@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.7 2002/05/10 18:05:10 richard Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.8 2002/05/26 15:07:23 burnett Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -57,9 +57,9 @@ void McParticleManager::save()
   // fill the McParticleCol with McParticles
   std::map <unsigned int, Event::McParticle*>::iterator it;
   
-  // note limit on size, temporarily wired in
-  for(it=m_particles.begin();it != m_particles.end() && pcol->size()<10 ; it++)
+  for(it=m_particles.begin();it != m_particles.end() ; it++){
     pcol->push_back(it->second);
+  }
 }
 
 
