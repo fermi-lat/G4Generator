@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.4 2001/12/16 08:35:19 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.5 2001/12/16 09:54:47 riccardo Exp $
 
 #ifndef RunManager_h
 #define RunManager_h 1
@@ -24,6 +24,9 @@ class Hep3Vector;
 #include "globals.hh"
 #include "g4std/vector"
 
+#include "GlastSvc/GlastDetSvc/IGlastDetSvc.h"
+#include "GaudiKernel/IDataProviderSvc.h"
+
 #include <memory>
 
 /** Very draft version of a customized G4RunManager for Glast;
@@ -47,10 +50,10 @@ class RunManager
   
  public: 
   /** 
-     The constructor, with the top volume to be visited for geometry and the 
-     mode to be used in the visit
+     The constructor needs a pointer to the abstract interface of
+     the GlastDetSvc
   */
-  RunManager(std::string topvol, std::string visitorMode);
+  RunManager(IGlastDetSvc* gds, IDataProviderSvc* esv);
   virtual ~RunManager();
 
  public: 

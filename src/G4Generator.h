@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.4 2001/12/02 22:23:24 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.5 2001/12/16 16:15:03 burnett Exp $
 
 
 #ifndef G4Generator_h
@@ -34,13 +34,6 @@ private:
 
     /// set of UI commands for setup
     StringArrayProperty m_UIcommands;
-
-
-    // the top volume for instantiating the detector
-    std::string m_topvol;
-
-    // the visitor mode
-    std::string m_visitorMode;
 
     /// This is the G4 manager that handles the simulation
     RunManager* m_runManager;
