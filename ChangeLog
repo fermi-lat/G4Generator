@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Dec 10 09:25:17 PST 2004
+G4Generator/src
+
+Modified Files:
+	EMPhysics.cxx MuonPhysics.cxx 
+Log Message:
+This fixes the switching of muon energy loss (must switch ALL e loss mechanisms!) prepare to tag v5r9p1
+    *
+------------------------------------------------------------
 User: usher  Fri Dec 10 09:25:16 PST 2004
 G4Generator/doc
 
