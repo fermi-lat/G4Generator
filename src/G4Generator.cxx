@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.40 2002/11/05 09:02:11 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.41 2002/12/02 23:37:23 burnett Exp $
 //
 // Description: This is the Gaudi algorithm that runs Geant4 and fills the TDS
 // with Montecarlo data. It initalizes some services (for tds and detector
@@ -51,9 +51,12 @@
 #include "gui/SimpleCommand.h"
 #include "DisplayManager.h"
 
+#include "G4Generator/IG4GeometrySvc.h"
+
 //vectors
 #include "CLHEP/Geometry/Point3D.h"
 #include "CLHEP/Geometry/Vector3D.h"
+
 
 static const AlgFactory<G4Generator>  Factory;
 const IAlgFactory& G4GeneratorFactory = Factory;
@@ -97,10 +100,10 @@ StatusCode G4Generator::initialize()
     }
   }  
 
-  // Get the Glast detector service 
-  IGlastDetSvc* gsv=0;
-  if( service( "GlastDetSvc", gsv).isFailure() ) {
-    log << MSG::ERROR << "Couldn't set up GlastDetSvc!" << endreq;
+  // Get the G4Geometry Service
+  IG4GeometrySvc* geosv=0;
+  if( service( "G4GeometrySvc", geosv).isFailure() ) {
+    log << MSG::ERROR << "Couldn't set up G4GeometrySvc!" << endreq;
     return StatusCode::FAILURE;
   }
 
@@ -116,10 +119,7 @@ StatusCode G4Generator::initialize()
   // The geant4 manager
   if (!(m_runManager = RunManager::GetRunManager()))
     {
-      m_runManager = new RunManager(gsv,eventSvc(), m_geometryMode,  log.stream(), m_defaultCutValue);
-
-      // Initialize Geant4
-      m_runManager->Initialize();
+      m_runManager = new RunManager(log.stream(), m_defaultCutValue);
 
       log << "\n done." << endreq;
     }
