@@ -1,6 +1,6 @@
 package G4Generator
 version v1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.8 2001/12/17 18:05:36 frailis Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.9 2002/01/03 17:39:31 burnett Exp $
 
 use GaudiSvc
 use GaudiAlg
@@ -13,14 +13,14 @@ use Geant4   v1
 use facilities v2r1
 use XMLEXT   v2r2
 use xml      v4
-use xmlUtil  v2r5
+use xmlUtil  v2r6
 
 use idents   v2r3
 use detModel v2r5
 use instrument v4r1
 use data     v4r1
 
-use GlastEvent v4r1
+use GlastEvent v4
 use GlastSvc v3
 
 use flux     v6
