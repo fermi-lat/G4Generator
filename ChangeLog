@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: riccardo  Tue Sep 24 09:57:46 PDT 2002
+G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+Added a new mcTreeMode to G4Generator (pruneCal) to save an McParticleTree full in the TKR and pruned in the CAL. To be tested
+    *
+------------------------------------------------------------
 User: burnett  Fri Sep 20 09:46:11 PDT 2002
 G4Generator/src/test
 
