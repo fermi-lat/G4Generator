@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/MuonPhysics.cxx,v 1.3 2002/04/20 10:18:34 riccardo Exp $
 //
 // Description: This class manages the building of muon/tau and their processes
 //
@@ -87,7 +87,7 @@ void MuonPhysics::ConstructProcess()
   pManager->AddProcess(&fMuMinusMultipleScattering);
   pManager->SetProcessOrdering(&fMuMinusMultipleScattering, idxAlongStep,  1);
   pManager->SetProcessOrdering(&fMuMinusMultipleScattering, idxPostStep,  1);
-  pManager->AddRestProcess(&fMuMinusCaptureAtRest);
+//  pManager->AddRestProcess(&fMuMinusCaptureAtRest);
 
   // Tau Plus Physics
   pManager = G4TauPlus::TauPlus()->GetProcessManager();
