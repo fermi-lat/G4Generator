@@ -1,6 +1,6 @@
 package G4Generator
 version v1
-#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.11 2002/01/05 19:46:47 burnett Exp $
+#$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/cmt/requirements,v 1.12 2002/01/05 20:30:19 burnett Exp $
 
 # this version has Geant4 library path
 use EXTLIB v2r4p2
@@ -24,7 +24,7 @@ use idents   v2r3
 use detModel v2r6
 
 use instrument v5
-use data     v4r1
+use data     v4r2
 use GlastEvent v4
 use GlastSvc v3
 
