@@ -1,6 +1,8 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.9 2002/04/06 00:18:28 chehtman Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.10 2002/04/06 20:12:06 burnett Exp $
 
 #include "IntDetectorManager.h"
+#include "McParticleManager.h"
+
 #include <iostream>
 #include "GlastEvent/MonteCarlo/McIntegratingHit.h"
 #include "idents/VolumeIdentifier.h"
@@ -79,7 +81,8 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,G4TouchableHistory* ROhist)
     postPos = local * (HepPoint3D)postPos;
 
     // fill the energy and position    
-    hit->addEnergyItem(edep,(mc::McParticle*)0,(prePos+postPos)/2);
+    hit->addEnergyItem(edep, McParticleManager::getPointer()->getLastParticle(),
+		       (prePos+postPos)/2);
 
     return true;
     
