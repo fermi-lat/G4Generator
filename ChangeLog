@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Apr 11 04:42:31 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DisplayManager.cxx 
+Log Message:
+provide default parameters for egcs
+    *
+------------------------------------------------------------
 User: riccardo  Thu Apr 11 01:56:18 PDT 2002
 G4Generator/src
 
