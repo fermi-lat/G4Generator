@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.h,v 1.1 2001/12/16 16:29:49 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/GlastDetectorManager.h,v 1.2 2002/01/02 02:36:33 burnett Exp $
 
 #ifndef GlastDetectorManager_h
 #define GlastDetectorManager_h
@@ -70,7 +70,7 @@ private:
     DetectorConstruction::IdMap* m_idMap;
     idents::VolumeIdentifier checkId(idents::VolumeIdentifier::int64 newid, const char * name);
     // this map is used to connect the GlastDetector object with the volume ids
-    typedef std::map<idents::VolumeIdentifier::int64, GenericDet*> DetectorMap;
+    typedef std::map<idents::VolumeIdentifier, GenericDet*> DetectorMap;
     DetectorMap m_detMap;
 
     // vector of volume ids used to correlate with GlastDetector list
