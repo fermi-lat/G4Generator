@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Mar 19 07:37:05 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+update G4Test to work on linux
+    *
+------------------------------------------------------------
 User: riccardo  Tue Mar 19 02:43:55 PST 2002
 G4Generator/src
 
