@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Fri Sep 17 09:32:19 PDT 2004
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+oops, G4Generator does export one interface class
+
+    *
+------------------------------------------------------------
 User: usher  Thu Sep  9 15:26:09 PDT 2004
 G4Generator/cmt
 
