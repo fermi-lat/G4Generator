@@ -1,5 +1,6 @@
-//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.17 2002/06/07 18:30:13 burnett Exp $
+//$Header: /nfs/slac/g/glast/ground/cvs/G4Generator/doc/release.notes,v 1.18 2002/06/18 22:42:22 burnett Exp $
 /*
+ * v4r1p6 20-jun-02 THB remove arbitrary cut on number of mcparticles
  * v4r1p5 18-jun-02 THB put neutrals on separate display button
  * v4r1p4 07-jun-02 THB clean out uses; remove test dependence on GlastDigi
  * v4r1p3 31-may-02 THB put display options under submenu
