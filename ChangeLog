@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Fri Apr  5 15:42:42 PST 2002
+G4Generator/cmt
+
+Modified Files:
+	.cvsignore 
+Log Message:
+Ignore unix makefiles
+
+    *
+------------------------------------------------------------
 User: riccardo  Fri Apr  5 08:23:51 PST 2002
 G4Generator/src/test
 
