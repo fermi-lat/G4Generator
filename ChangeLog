@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: burnett  Thu May  2 05:22:24 PDT 2002
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+	G4Generator.cxx G4PropagatorSvc.cxx RunManager.cxx 
+	RunManager.h 
+Log Message:
+
+Make the Gaudi log file available for summary output from the geometry;
+fix memory leak by deleting the visitors
+make default mode the same as GlastDetSvc.
+add a test muon at an angle
+tag v3r5
+    *
+------------------------------------------------------------
 User: burnett  Thu May  2 05:22:23 PDT 2002
 G4Generator/doc
 
