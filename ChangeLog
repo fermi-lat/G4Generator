@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 17 01:14:09 PST 2001
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx DetectorConstruction.h 
+Log Message:
+remove sensitive detector
+    *
+------------------------------------------------------------
 User: riccardo  Mon Dec 17 01:10:59 PST 2001
 G4Generator/src
 
