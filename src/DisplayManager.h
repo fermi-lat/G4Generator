@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.h,v 1.7 2002/04/17 08:34:14 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DisplayManager.h,v 1.8 2002/04/20 10:18:33 riccardo Exp $
 
 #ifndef DisplayManager_h
 #define DisplayManager_h
@@ -52,8 +52,11 @@ public:
     void addHit(const Hep3Vector& a, const Hep3Vector& b);
 
     //! Add rep to display the tracks
+    //! @param track a list of dots to connect
+    //! @param charge tell if neurtal
+    //! @param primary flag if primary track, to distinguish from neutrals?
     typedef std::vector<Hep3Vector> PointList;
-    void addTrack(const PointList& track,  int charge);
+    void addTrack(const PointList& track,  int charge, bool primary=false);
     
     //! Add to rep that displays ID's
     void addIdDisplay(const HepTransform3D& T, idents::VolumeIdentifier id);
