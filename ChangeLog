@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: riccardo  Fri Apr 22 07:31:17 PDT 2005
+G4Generator/src
+
+Modified Files:
+	HadronPhysics.cxx IonPhysics.cxx PrimaryGeneratorAction.cxx 
+Added Files:
+	EpaxInelasticModel.hh G4EpaxFragmentCrossSection.hh 
+	G4IonsShenCrossSection.hh G4TripathiCrossSection.cxx 
+	TripathiCrossSection.hh 
+Log Message:
+Adding functionalities to deal with Ions
+
+
+
+    *
+------------------------------------------------------------
 User: usher  Wed Mar  2 09:35:07 PST 2005
 G4Generator/G4Generator
 
