@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: riccardo  Fri Apr 22 07:31:59 PDT 2005
+G4Generator/src
+
+Added Files:
+	EpaxInelasticModel.cxx 
+Log Message:
+Add a new file for Ion dealing
+
+    *
+------------------------------------------------------------
 User: riccardo  Fri Apr 22 07:31:17 PDT 2005
 G4Generator/src
 
