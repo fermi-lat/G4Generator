@@ -2,7 +2,7 @@
 
 
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.7 2004/01/15 22:17:39 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.8 2004/09/08 17:59:57 usher Exp $
 //
 // Description: This class manages the building of hadrons and their processes
 //
@@ -334,7 +334,7 @@ void HadronPhysics::ConstructProcess()
   
   // Full Physics List
   
-  if (m_physicsChoice=="full")
+  if (m_physicsChoice=="full" || m_physicsChoice=="improved")
     {
       // Elastic scatter 
       
