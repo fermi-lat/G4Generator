@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.30 2004/09/08 17:59:57 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.31 2004/12/08 01:33:54 usher Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -345,7 +345,9 @@ void RunManager::InitializePhysics()
   if(physicsList)
   {
     if(verboseLevel>1) G4cout << "physicsList->Construct() start." << G4endl;
-    kernel->InitializePhysics(physicsList);
+    kernel->InitializePhysics(physicsList);   // Use this for G4 v6
+    //kernel->SetPhysics(physicsList);        // Use this for G4 v7
+    //kernel->InitializePhysics();
   }
   else
   {

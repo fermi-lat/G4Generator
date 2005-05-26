@@ -21,7 +21,7 @@ class IParticlePropertySvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.21 2003/07/26 23:07:19 lsrea Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.22 2004/12/08 01:33:54 usher Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -47,6 +47,11 @@ class G4Generator : public Algorithm {
   
   /// flag to save trajectories in the TDS
   bool m_saveTrajectories;
+
+  /// Maximum number of generations to store trajectories for
+  int m_numGenerations;
+  double m_minDistance;
+  double m_lowEnergy;
 
   /// the McParticle tree mode
   /// It can be "full" or "minimal" or "pruneCal"
