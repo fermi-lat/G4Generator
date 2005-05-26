@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.31 2004/12/08 01:33:54 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.32 2005/05/26 20:23:13 usher Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -13,6 +13,7 @@
 //
 // Author(s):
 //      R.Giannitrapani
+
 
 #include "G4Timer.hh"
 
