@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.15 2003/07/25 16:48:38 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.16 2003/08/09 00:21:58 lsrea Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -33,15 +33,17 @@ void McParticleManager::initialize(IDataProviderSvc* esv, IGlastDetSvc* gsvc)
 Event::McParticle* McParticleManager::getMcParticle(unsigned int id)
 {
   Event::McParticle* particle = 0;
-  std::map<unsigned int, Event::McParticle*>::iterator it;
   
-  for(it=m_particles.begin();it != m_particles.end() ; it++){
-    if (it->first == id) 
-      {
-        particle = it->second;
-        break;
-      }
-  }
+  particle = m_particles[id];
+
+  //std::map<unsigned int, Event::McParticle*>::iterator it;
+  //for(it=m_particles.begin();it != m_particles.end() ; it++){
+  //  if (it->first == id) 
+  //    {
+  //      particle = it->second;
+  //      break;
+  //    }
+  //}
 
   return particle;
 }
