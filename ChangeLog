@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu May 26 13:25:30 PDT 2005
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Log Message:
+This and immediately previous checkins are for: 1) filling added informaiton into McParticle and McPositionHit, 2) Provides a "generation" ordering scheme to the McTrajectories for Fred (doesn't need to be used).
+    *
+------------------------------------------------------------
 User: usher  Thu May 26 13:23:14 PDT 2005
 G4Generator/src
 
