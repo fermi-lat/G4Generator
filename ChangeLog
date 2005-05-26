@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Thu May 26 13:23:14 PDT 2005
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h McParticleManager.cxx 
+	PosDetectorManager.cxx RunManager.cxx 
+Log Message:
+
+    *
+------------------------------------------------------------
 User: riccardo  Fri Apr 22 07:36:26 PDT 2005
 G4Generator/src/test
 
