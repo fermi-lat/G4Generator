@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul 21 17:41:52 PDT 2005
+G4Generator
+
+Modified Files:
+	.cvsignore 
+Log Message:
+Add a default basicOptions.txt; fix test program
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r10p0, operation: add
 Package: G4Generator
