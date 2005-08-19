@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Fri Aug 19 12:16:45 PDT 2005
+G4Generator/src
+
+Modified Files:
+	G4Geometry.cxx G4Geometry.h 
+Log Message:
+Changes for modified IGeometry interface
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r10p1, operation: add
 Package: G4Generator
