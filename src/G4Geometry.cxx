@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.15 2002/10/25 08:00:50 kuss Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.16 2003/04/28 23:56:12 xchen Exp $
 //
 // Description: this is a concrete implementation of the abstract interface
 // IGeometry of GlastDetSvc. Its methods are called by the visitor mechanism of
@@ -58,7 +58,8 @@ G4Geometry::~G4Geometry()
 IGeometry::VisitorRet 
 G4Geometry::pushShape(ShapeType s, const UintVector& idvec, 
                       std::string name, std::string material, 
-                      const DoubleVector& params, VolumeType type)
+                      const DoubleVector& params, VolumeType type,
+                      SenseType sense)
 {
   // Purpose and Method: this method push a new volume in the stack of volumes
   // Inputs: for the meaning of ShapeType, the VolumeType and the params vector
@@ -171,11 +172,11 @@ G4Geometry::pushShape(ShapeType s, const UintVector& idvec,
   (*m_idMap)[phys] = vid;
 
   // Register the volume to the sensitive detector if necessary
-  if (type == posSensitive) 
+  if (sense == posSensitive) 
     {
       m_pdm->process(logical);
     }
-  else if (type == intSensitive)
+  else if (sense == intSensitive)
     {
       m_idm->process(logical);
     }

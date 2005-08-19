@@ -29,7 +29,7 @@ class DetectorConstruction;
  *
  * @author R.Giannitrapani
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.h,v 1.6 2002/05/20 20:23:53 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.h,v 1.7 2003/04/28 23:56:12 xchen Exp $
  */
 class G4Geometry : public IGeometry
 {
@@ -58,6 +58,8 @@ class G4Geometry : public IGeometry
    * @param material
    * @param params vector with the six transformation parameters, 
    *        followed by 3 or so dimensions
+   * @param type kind of volume: simple, stack or composition
+   * @param sense Sensitivity type of volume
    * @return tell caller whether to skip subvolumes or not
    */
   virtual IGeometry::VisitorRet
@@ -66,7 +68,8 @@ class G4Geometry : public IGeometry
               std::string name, 
               std::string material, 
               const DoubleVector& params, 
-              VolumeType type);
+              VolumeType type,
+              SenseType  sense);
   
   /// called to signal end of nesting 
   virtual void popShape();
