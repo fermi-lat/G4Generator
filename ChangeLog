@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: flongo  Tue Sep 20 04:51:51 PDT 2005
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Added Files:
+	SteppingAction.cxx SteppingAction.h 
+Log Message:
+Stepping Action added to limit infinite step loop
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r10p2, operation: add
 Package: G4Generator
