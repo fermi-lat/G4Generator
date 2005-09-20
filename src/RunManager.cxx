@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.32 2005/05/26 20:23:13 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.33 2005/05/26 20:25:30 usher Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -24,6 +24,7 @@
 #include "PhysicsList.h"
 #include "PrimaryGeneratorAction.h"
 #include "TrackingAction.h"
+#include "SteppingAction.h"
 #include "G4Generator/IG4GeometrySvc.h"
 #include "Randomize.hh"
 
@@ -103,6 +104,7 @@ RunManager::RunManager(std::ostream& log,
 
   // Set the TrackingAction to track the McParticle
   eventManager->SetUserAction(new TrackingAction(gsv));
+  eventManager->SetUserAction(new SteppingAction());
 
   // G4 Messenger stuff
   G4ParticleTable::GetParticleTable()->CreateMessenger();
