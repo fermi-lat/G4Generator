@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Sep 20 21:17:54 PDT 2005
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+Change "CalException" to "G4Exception"
+    *
+------------------------------------------------------------
 User: usher  Tue Sep 20 20:57:45 PDT 2005
 G4Generator/src
 
