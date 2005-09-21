@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: usher  Tue Sep 20 20:56:23 PDT 2005
+G4Generator/src/Utilities
+
+Added Files:
+	G4GenErrorRecord.cxx G4GenErrorRecord.h G4GenException.h 
+	G4GenReconSvc.cxx IG4GenErrorSvc.h 
+Log Message:
+New files and udpates to 1) implement a GLAST G4 exception handler and 2) to implement an event exception handling similar to Cal and Tkr Recons.
+    *
+------------------------------------------------------------
+User: usher  Tue Sep 20 20:56:23 PDT 2005
 G4Generator/src
 
 Modified Files:
