@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.33 2005/05/26 20:25:30 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.34 2005/09/20 11:51:51 flongo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -54,6 +54,8 @@
 
 #include "G4ios.hh"
 #include <strstream>
+
+#include "src/G4GenExceptionHandler.h"
 
 
 RunManager* RunManager::fRunManager = 0;
@@ -256,6 +258,9 @@ void RunManager::Initialize()
   if(!initializedAtLeastOnce) initializedAtLeastOnce = true;
 
   pUImanager->SetCoutDestination(new G4UIsession);
+
+  // Set the exception handler
+  m_ExceptionHandler = new G4GenExceptionHandler();
 }
 
 void RunManager::InitializeGeometry()
@@ -369,7 +374,7 @@ void RunManager::InitializeCutOff()
   cutoffInitialized = true;
 }
 
-void RunManager::AbortRun()
+void RunManager::AbortRun(G4bool softAbort)
 {
   // This method is valid only for GeomClosed or EventProc state
   G4ApplicationState currentState = 
@@ -377,7 +382,7 @@ void RunManager::AbortRun()
   if(currentState==G4State_GeomClosed || currentState==G4State_EventProc)
   {
     runAborted = true;
-    if(currentState==G4State_EventProc)
+    if(currentState==G4State_EventProc && !softAbort)
     {
       currentEvent->SetEventAborted();
       eventManager->AbortCurrentEvent();
@@ -386,6 +391,22 @@ void RunManager::AbortRun()
   else
   {
     G4cerr << "Run is not in progress. AbortRun() ignored." << G4endl;
+  }
+}
+
+void RunManager::AbortEvent()
+{
+  // This method is valid only for EventProc state
+  G4ApplicationState currentState = 
+    G4StateManager::GetStateManager()->GetCurrentState();
+  if(currentState==G4State_EventProc)
+  {
+    currentEvent->SetEventAborted();
+    eventManager->AbortCurrentEvent();
+  }
+  else
+  {
+    G4cerr << "Event is not in progress. AbortEevnt() ignored." << G4endl;
   }
 }
 
