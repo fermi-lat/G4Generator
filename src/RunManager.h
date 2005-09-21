@@ -17,7 +17,7 @@
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.21 2004/09/08 17:59:57 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.22 2004/12/08 01:33:54 usher Exp $
  */
 //
 //
@@ -76,6 +76,8 @@ class G4Run;
 class Hep3Vector;
 class IG4GeometrySvc;
 
+class G4GenExceptionHandler;
+
 #include "GlastSvc/GlastDetSvc/IGlastDetSvc.h"
 #include "GaudiKernel/IDataProviderSvc.h"
 
@@ -101,6 +103,9 @@ class RunManager
 
     /// log for summary output
     std::ostream& m_log;
+
+    /// Exception handler for G4 code
+    G4GenExceptionHandler* m_ExceptionHandler;
 
   public: 
     /** 
@@ -129,7 +134,10 @@ class RunManager
 	virtual void Initialize();
 
     /// Not used
-	virtual void AbortRun();
+	virtual void AbortRun(G4bool softAbort = true);
+
+    /// This method handles aborting an event for certain specific circumstances
+    virtual void AbortEvent();
   
     /// This method return the number of trajectories stored in the currentEvent
     unsigned int getNumberOfTrajectories();
