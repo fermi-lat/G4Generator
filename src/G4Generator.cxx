@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.58 2005/05/26 20:23:13 usher Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.59 2005/09/21 03:56:22 usher Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -268,7 +268,7 @@ StatusCode G4Generator::execute()
   }
   catch(G4GenException& e)
   {
-      return m_ErrorSvc->handleError(name()+" CalException",e.what());
+      return m_ErrorSvc->handleError(name()+" G4Exception",e.what());
   }
   catch(...)
   {
