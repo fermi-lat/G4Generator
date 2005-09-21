@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Sep 20 20:57:45 PDT 2005
+G4Generator/src
+
+Added Files:
+	G4GenExceptionHandler.cxx G4GenExceptionHandler.h 
+Log Message:
+Tow more exception handling files
+    *
+------------------------------------------------------------
 User: usher  Tue Sep 20 20:56:23 PDT 2005
 G4Generator/src/Utilities
 
