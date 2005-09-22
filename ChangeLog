@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Sep 22 09:12:01 PDT 2005
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Include reference to utilities
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r11p1, operation: add
 Package: G4Generator
