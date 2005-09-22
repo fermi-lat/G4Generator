@@ -1,10 +1,10 @@
 package G4Generator
-version v5r11p1
+version v5r11p2
 author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.89 2005/09/20 17:40:48 burnett Exp $
+#$Id: requirements,v 1.90 2005/09/21 17:19:33 usher Exp $
 
 use GlastPolicy v*
 
@@ -40,7 +40,7 @@ use flux *
 apply_pattern package_Cshlibflags
 
 macro source "*.cxx" WIN32 "*.h *.cxx"
-library G4Generator -s=../src $(source) -s=Dll *.cxx  
+library G4Generator -s=../src $(source) -s=../src/Utilities $(source) -s=Dll *.cxx  
 
 # test program 
 public
