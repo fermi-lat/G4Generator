@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.21 2003/07/04 22:22:53 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.22 2005/01/17 17:13:08 burnett Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -125,6 +125,11 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
 
   // fill the energy and position    
   hit->addEnergyItem(edep, p, (prePos+postPos)/2);
+
+  // Fill the ID array?
+  int particlePDGId = aStep->GetTrack()->GetDefinition()->GetPDGEncoding();
+  std::pair<Event::McParticle::StdHepId, double> idEnePair(particlePDGId,edep);
+  hit->itemizedEnergyId().push_back(idEnePair);
 
   return true;
 }
