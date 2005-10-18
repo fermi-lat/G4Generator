@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Oct 18 11:24:26 PDT 2005
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx 
+Log Message:
+Add lines to fill particel ID - energy map
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r11p2, operation: add
 Package: G4Generator
