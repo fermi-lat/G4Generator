@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed Oct 19 10:50:25 PDT 2005
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx 
+Log Message:
+Apply patch to get heavy ion particle id's when running in "full tree" mode
+    *
+------------------------------------------------------------
 User: usher  Tue Oct 18 11:24:26 PDT 2005
 G4Generator/src
 
