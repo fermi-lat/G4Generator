@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.22 2005/01/17 17:13:08 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.23 2005/10/18 18:24:26 usher Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -127,7 +127,20 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
   hit->addEnergyItem(edep, p, (prePos+postPos)/2);
 
   // Fill the ID array?
+  // Note that this will be the PDG id, not the "std" id used in the beginning
   int particlePDGId = aStep->GetTrack()->GetDefinition()->GetPDGEncoding();
+
+  // Heavy ions return a zero for ID, if we are in "full" mode then can look up from McParticle
+  if (partMan->getMode())
+  {
+      // Look up the particle being tracked
+      Event::McParticle* mcPart = partMan->getLastParticle();
+
+      // This now sets the ID to the "std" HEP id...
+      particlePDGId = mcPart->particleProperty();
+  }
+
+  // Creat the map entry and add to list
   std::pair<Event::McParticle::StdHepId, double> idEnePair(particlePDGId,edep);
   hit->itemizedEnergyId().push_back(idEnePair);
 
