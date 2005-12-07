@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Dec  7 12:03:44 PST 2005
+G4Generator/src/Dll
+
+Modified Files:
+	G4Generator_load.cxx 
+Log Message:
+put in preliminary version of the beam transform guy.
+    *
+------------------------------------------------------------
 User: usher  Wed Oct 19 10:50:25 PDT 2005
 G4Generator/src
 
