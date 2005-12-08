@@ -28,12 +28,17 @@ class IGlastDetSvc;
  *
  *  @author R.Giannitrapani
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.h,v 1.5 2002/09/24 16:59:47 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.h,v 1.6 2003/07/22 15:47:58 riccardo Exp $
  */
 class McParticleManager {
  public:
   /// The static pointer retrival method of the singleton
   static McParticleManager* getPointer();
+
+  /// This method add an McParticle to the map with id as an index
+  /// @param id The Geant4 id (a progressive integer)
+  /// @param particle The pointer to the McParticle to be added
+  void addMcParticle(Event::McParticleCol *pcol);
 
   /// This method add an McParticle to the map with id as an index
   /// @param id The Geant4 id (a progressive integer)

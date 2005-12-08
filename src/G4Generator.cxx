@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.59 2005/09/21 03:56:22 usher Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.60 2005/09/21 04:17:54 usher Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -247,8 +247,7 @@ StatusCode G4Generator::execute()
   
   }  
 
-  assert(pcol->size()==1); // something wrong: must be only one
-  Event::McParticle* primary = pcol->front();
+  assert(pcol->size() > 0); // something wrong: must be 1 or more
 
   // we get the primaryGenerator from the RunManager
   PrimaryGeneratorAction* primaryGenerator = 
@@ -259,9 +258,10 @@ StatusCode G4Generator::execute()
   {
       // we set the primary particle by passing the pointer of the McParticle to the
       // primaryGenerator class
-      primaryGenerator->init(primary, m_ppsvc, zOffset);
+      primaryGenerator->init(pcol, m_ppsvc, zOffset);
 
-      McParticleManager::getPointer()->addMcParticle(0,primary);
+      // Add the primary particles to the McParticle list
+      McParticleManager::getPointer()->addMcParticle(pcol);
 
       // Run geant4
       m_runManager->BeamOn(); 
