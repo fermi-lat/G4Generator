@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Thu Dec  8 14:46:30 PST 2005
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx McParticleManager.cxx McParticleManager.h 
+	PrimaryGeneratorAction.cxx PrimaryGeneratorAction.h 
+	TrackingAction.cxx 
+Log Message:
+First import of modifications to handle multiple "primaries" in an event
+    *
+------------------------------------------------------------
 User: usher  Thu Dec  8 14:46:29 PST 2005
 G4Generator/cmt
 
