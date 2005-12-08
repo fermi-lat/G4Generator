@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Dec  8 14:46:29 PST 2005
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+First import of modifications to handle multiple "primaries" in an event
+    *
+------------------------------------------------------------
 User: burnett  Wed Dec  7 12:03:44 PST 2005
 G4Generator/src
 
