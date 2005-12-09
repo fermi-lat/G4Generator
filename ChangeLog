@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Dec  8 20:24:30 PST 2005
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx 
+Log Message:
+emergency inclusion of Leon's patch to avoid duplication of daughter particles
+    *
+------------------------------------------------------------
 User: usher  Thu Dec  8 16:20:03 PST 2005
 G4Generator/cmt
 
