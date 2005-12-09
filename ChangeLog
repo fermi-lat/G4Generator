@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Dec  9 08:06:46 PST 2005
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx 
+Log Message:
+implement spec of pivot and beam plane.
+    *
+------------------------------------------------------------
 User: burnett  Thu Dec  8 21:36:37 PST 2005
 G4Generator/src
 
