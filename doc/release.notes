@@ -1,7 +1,10 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.59 2005/09/21 17:19:33 usher Exp $
+    $Id: release.notes,v 1.60 2005/09/22 16:13:08 usher Exp $
+ v5r12   09-Dec-05 THB New Gaudi algorithm, BeamRotate, to rotate incoming beam, specifically for Beam Test
+                       G4Generator algorithm modified to propagate multiple incoming particles, specifically the 
+		       daughters of a mother particle. (work by TU)
  v5r11p2 22-Sep-05 TU  Fix requirements file to include code in Utilities subfolder
  v5r11p1 21-Sep-05 TU  Add more error handling, similar to Cal and Tkr Recon, also implement
                        a G4 exception handler to properly access "our" run manager in case of
