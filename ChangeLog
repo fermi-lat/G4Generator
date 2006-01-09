@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Jan  9 14:07:19 PST 2006
+G4Generator/src
+
+Modified Files:
+	PrimaryGeneratorAction.cxx PrimaryGeneratorAction.h 
+Log Message:
+Create separate "vertices" for the "primary" particles in the beam test. This allows for separate particle origins.
+    *
+------------------------------------------------------------
 User: usher  Mon Jan  9 14:06:24 PST 2006
 G4Generator/src
 
