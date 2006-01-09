@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Jan  9 14:06:24 PST 2006
+G4Generator/src
+
+Modified Files:
+	TrackingAction.cxx 
+Log Message:
+This should fix the "primary" particle duplication problem introduced in the upgrade to handle the beam test
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12, operation: add
 Package: G4Generator
