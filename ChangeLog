@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Tue Jan 31 07:49:27 PST 2006
+G4Generator/cmt
+
+Modified Files:
+      Tag: GR-v7r3p20-newext
+	requirements 
+Log Message:
+First round of updates for new CLHEP and Geant4 v8.0
+    *
+------------------------------------------------------------
 User: usher  Mon Jan  9 14:07:19 PST 2006
 G4Generator/src
 
