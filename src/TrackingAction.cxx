@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.14 2004/12/17 16:44:33 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.15 2005/12/08 22:46:29 usher Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -76,24 +76,32 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
     {
         // lets create a new particle (we don't need to destroy this since it will go
         // in the TDS
-        if (particle == 0) particle = new Event::McParticle();
+        if (particle == 0)
+        {
+            particle = new Event::McParticle();
       
-        // get the 4-momentum  
-        HepLorentzVector pin(aTrack->GetTotalEnergy(), aTrack->GetMomentum());  
+            // get the 4-momentum  
+            CLHEP::HepLorentzVector pin(aTrack->GetTotalEnergy(), aTrack->GetMomentum());  
 
-        // Make sure we have a non-zero parent... this could happen for first particle in list
-        if (parent == 0) parent = particle;
+            // Make sure we have a non-zero parent... this could happen for first particle in list
+            if (parent == 0) parent = particle;
       
-        // we initialize the particle by giving the parent, the PDG encoding, a flag
-        // (in that case Swum, and the initial momentum of the particle
-        // note that for ions, the stored pdg value: we recreate it from the baryon number 
-        G4ParticleDefinition* def = aTrack->GetDefinition();
-        int pdgid = def->GetPDGEncoding();
-        if ( pdgid==0 ) pdgid = 80000+def->GetBaryonNumber();
-        particle->initialize(parent, pdgid, Event::McParticle::Swum, pin, aTrack->GetPosition(), process);
+            // we initialize the particle by giving the parent, the PDG encoding, a flag
+            // (in that case Swum, and the initial momentum of the particle
+            // note that for ions, the stored pdg value: we recreate it from the baryon number 
+            G4ParticleDefinition* def = aTrack->GetDefinition();
+            int pdgid = def->GetPDGEncoding();
+            if ( pdgid==0 ) pdgid = 80000+def->GetBaryonNumber();
+            particle->initialize(parent, pdgid, Event::McParticle::Swum, pin, aTrack->GetPosition(), process);
 
-        // Make sure the primary bit is getting set on the primary particle which is tracked
-        if (isPrimary) particle->addStatusFlag(Event::McParticle::PRIMARY);
+            // Make sure the primary bit is getting set on the primary particle which is tracked
+            if (isPrimary) particle->addStatusFlag(Event::McParticle::PRIMARY);
+        }
+        // For special runs it can be that the particle already exists
+        else
+        {
+            particle->addStatusFlag(Event::McParticle::Swum);
+        }
 
         idents::VolumeIdentifier ret;
         G4TouchableHistory* theTouchable = (G4TouchableHistory*)aTrack->GetTouchable();
@@ -145,7 +153,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
     if (particle)
     {
         // get the 4-momentum   
-        HepLorentzVector pfin(aTrack->GetTotalEnergy(), aTrack->GetMomentum()); 
+        CLHEP::HepLorentzVector pfin(aTrack->GetTotalEnergy(), aTrack->GetMomentum()); 
 
         // Do this for gammas...
         if (particle->particleProperty() == 22 && aTrack->GetTrackStatus() == fStopAndKill)
@@ -154,7 +162,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
             const G4Step*      finalStep          = aTrack->GetStep();
             const G4StepPoint* preFinalStepPoint  = finalStep->GetPreStepPoint();
 
-            pfin = HepLorentzVector(preFinalStepPoint->GetTotalEnergy(), preFinalStepPoint->GetMomentum());
+            pfin = CLHEP::HepLorentzVector(preFinalStepPoint->GetTotalEnergy(), preFinalStepPoint->GetMomentum());
         }
 
         // we finalize the particle by giving the final momentum and position

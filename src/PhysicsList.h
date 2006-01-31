@@ -23,7 +23,7 @@
  *  
  * @author F.Longo 
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.h,v 1.8 2004/01/15 22:17:05 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.h,v 1.9 2004/12/08 01:33:54 usher Exp $
  */
 class PhysicsList: public G4VModularPhysicsList
 {
@@ -36,6 +36,10 @@ class PhysicsList: public G4VModularPhysicsList
   ~PhysicsList();
   
  public:
+
+  // Construct particle and physics process
+  virtual void ConstructParticle();
+  virtual void ConstructProcess();
   
   /// This method set all the physics cuts for the simulation
   virtual void SetCuts();
@@ -47,7 +51,11 @@ class PhysicsList: public G4VModularPhysicsList
   std::string m_physicsTable;
   std::string m_physicsDir;
 
-
+  G4VPhysicsConstructor* m_GeneralPhysics;
+  G4VPhysicsConstructor* m_EMPhysics;
+  G4VPhysicsConstructor* m_MuonPhysics;
+  G4VPhysicsConstructor* m_HadronPhysics;
+  G4VPhysicsConstructor* m_IonPhysics;
 };
 
 #endif

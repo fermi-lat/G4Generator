@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.10 2005/04/22 14:31:17 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.11 2005/12/08 22:46:29 usher Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -22,6 +22,10 @@
 #include "G4ParticleTable.hh"
 #include "G4ParticleDefinition.hh"
 
+// TU: Hack for CLHEP 1.9.2.2
+typedef HepGeom::Point3D<double>  HepPoint3D;
+typedef HepGeom::Vector3D<double> HepVector3D;
+
 PrimaryGeneratorAction::PrimaryGeneratorAction()
 {
   
@@ -42,6 +46,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
   particleGun->SetParticlePosition(G4ThreeVector(0.*mm,0.*mm,0.*mm));
 
   m_primaryVertex = 0;
+  m_secondaryVertexVec.clear();
 }
 
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
@@ -66,7 +71,7 @@ void PrimaryGeneratorAction::init(Event::McParticleCol* pcol, IParticlePropertyS
     HepPoint3D         primVtxPos = primary->initialPosition();
 
     // Adjust by the delta z input
-    primVtxPos = Hep3Vector(primVtxPos.x(), primVtxPos.y(), primVtxPos.z() + dz);
+    primVtxPos = CLHEP::Hep3Vector(primVtxPos.x(), primVtxPos.y(), primVtxPos.z() + dz);
 
     // Create the vertex for this primary particle
     m_primaryVertex = new G4PrimaryVertex(primVtxPos, 0.);
@@ -84,12 +89,25 @@ void PrimaryGeneratorAction::init(Event::McParticleCol* pcol, IParticlePropertyS
 
     int numDaughters = daughterVec.size();
 
+    m_secondaryVertexVec.clear();
+
     //for(Event::McParticleCol::iterator colIter = pcol->begin(); colIter != pcol->end(); colIter++)
     for(dIter = daughterVec.begin(); dIter != daughterVec.end(); dIter++)
     {
         const Event::McParticle* mcPart  = *dIter;
 
-        m_primaryVertex->SetPrimary(convertToG4Primary(mcPart, ppsvc));
+        HepPoint3D scndVtxPos = mcPart->initialPosition();
+
+        // Adjust by the delta z input
+        scndVtxPos = CLHEP::Hep3Vector(scndVtxPos.x(), scndVtxPos.y(), scndVtxPos.z() + dz);
+
+        G4PrimaryVertex* scndParticle = new G4PrimaryVertex(scndVtxPos, 0.);
+
+        scndParticle->SetPrimary(convertToG4Primary(mcPart, ppsvc));
+
+        m_secondaryVertexVec.push_back(scndParticle);
+
+        //m_primaryVertex->SetPrimary(convertToG4Primary(mcPart, ppsvc));
     }
 
     return;
@@ -118,7 +136,7 @@ G4PrimaryParticle* PrimaryGeneratorAction::convertToG4Primary(const Event::McPar
     }
 
     // Position and momentum
-    const HepLorentzVector& pinitial = mcPart->initialFourMomentum();
+    const CLHEP::HepLorentzVector& pinitial = mcPart->initialFourMomentum();
 
     // New Primary Particle
     G4PrimaryParticle* primPart = new G4PrimaryParticle(partDef, pinitial.px(), pinitial.py(), pinitial.pz());
@@ -140,10 +158,10 @@ void PrimaryGeneratorAction::init(Event::McParticle* part, IParticlePropertySvc*
   Event::McParticle::StdHepId hepid= part->particleProperty();
   ParticleProperty* ppty = ppsvc->findByStdHepID( hepid );
 
-  const HepLorentzVector& pfinal = part->finalFourMomentum();
-  Hep3Vector dir=    pfinal.vect().unit();
-  HepPoint3D p =   part->finalPosition();
-  p = Hep3Vector(p.x(), p.y(), p.z()+dz);
+  const CLHEP::HepLorentzVector& pfinal = part->finalFourMomentum();
+  CLHEP::Hep3Vector dir = pfinal.vect().unit();
+  HepPoint3D        p   = part->finalPosition();
+  p = CLHEP::Hep3Vector(p.x(), p.y(), p.z()+dz);
   // note possibility of truncation error here! especially with MeV.
   double ke =   pfinal.e() - pfinal.m(); 
   
@@ -228,6 +246,13 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   //        anEvent->AddPrimaryVertex(*vtxIter);
   //    }
     anEvent->AddPrimaryVertex(m_primaryVertex);
+
+    // If secondaries then add those as well
+    for(std::vector<G4PrimaryVertex*>::iterator vtxIter = m_secondaryVertexVec.begin();
+        vtxIter != m_secondaryVertexVec.end(); vtxIter++)
+    {
+        anEvent->AddPrimaryVertex(*vtxIter);
+    }
 }
 
 
