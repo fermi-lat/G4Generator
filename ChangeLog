@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: usher  Tue Jan 31 07:49:30 PST 2006
+G4Generator/src
+
+Modified Files:
+      Tag: GR-v7r3p20-newext
+	BeamTransform.cxx IntDetectorManager.cxx PhysicsList.cxx 
+	PhysicsList.h PosDetectorManager.cxx 
+	PrimaryGeneratorAction.cxx PrimaryGeneratorAction.h 
+	RunManager.cxx RunManager.h TrackingAction.cxx 
+Log Message:
+First round of updates for new CLHEP and Geant4 v8.0
+    *
+------------------------------------------------------------
 User: usher  Tue Jan 31 07:49:27 PST 2006
 G4Generator/cmt
 
