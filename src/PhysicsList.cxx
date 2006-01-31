@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.9 2004/01/15 22:17:05 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.10 2004/12/08 01:33:54 usher Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -48,24 +48,25 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
 
   
   // General Physics
-  RegisterPhysics( new GeneralPhysics("general") );
+  //RegisterPhysics( new GeneralPhysics("general") );
+  m_GeneralPhysics = new GeneralPhysics("general");
   
   // EM Physics 
-
-  RegisterPhysics( new EMPhysics("standard EM", msFactory, eLossFactory));
+  //RegisterPhysics( new EMPhysics("standard EM", msFactory, eLossFactory));
+  m_EMPhysics = new EMPhysics("standard EM", msFactory, eLossFactory);
 
   // Muon Physics
-
-  RegisterPhysics(  new MuonPhysics("muon", msFactory, eLossFactory));
+  //RegisterPhysics(  new MuonPhysics("muon", msFactory, eLossFactory));
+  m_MuonPhysics = new MuonPhysics("muon", msFactory, eLossFactory);
 
   // Full or EM Hadron Physics
-
-  RegisterPhysics(  new HadronPhysics("hadron", m_physicsChoice, msFactory));
+  //RegisterPhysics(  new HadronPhysics("hadron", m_physicsChoice, msFactory));
+  m_HadronPhysics = new HadronPhysics("hadron", m_physicsChoice, msFactory);
   // RegisterPhysics(  new HadronPhysics("hadron"));
   
   // Full or EM Ion Physics
-
-  RegisterPhysics( new IonPhysics("ion", m_physicsChoice, msFactory));
+  //RegisterPhysics( new IonPhysics("ion", m_physicsChoice, msFactory));
+  m_IonPhysics = new IonPhysics("ion", m_physicsChoice, msFactory);
   //RegisterPhysics( new IonPhysics("ion"));
   
 
@@ -73,6 +74,26 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
 
 PhysicsList::~PhysicsList()
 {;}
+
+void PhysicsList::ConstructParticle()
+{
+  m_GeneralPhysics->ConstructParticle();
+  m_EMPhysics->ConstructParticle();
+  m_MuonPhysics->ConstructParticle();
+  m_HadronPhysics->ConstructParticle();
+  m_IonPhysics->ConstructParticle();
+}
+
+void PhysicsList::ConstructProcess()
+{
+  AddTransportation();
+
+  m_GeneralPhysics->ConstructProcess();
+  m_EMPhysics->ConstructProcess();
+  m_MuonPhysics->ConstructProcess();
+  m_HadronPhysics->ConstructProcess();
+  m_IonPhysics->ConstructProcess();
+}
 
 void PhysicsList::SetCuts()
 {

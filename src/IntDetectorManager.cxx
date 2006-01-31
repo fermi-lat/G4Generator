@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.23 2005/10/18 18:24:26 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.24 2005/10/19 17:50:25 usher Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -105,7 +105,7 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
     }
 
   // this rotates the hit to local coordinates with respect to the center  
-  HepRotation local(*(theTouchable->GetRotation()));
+  CLHEP::HepRotation local(*(theTouchable->GetRotation()));
   HepPoint3D center=theTouchable->GetTranslation();
 
   prePos = local * (prePos-center);
