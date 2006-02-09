@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Thu Feb  9 08:06:53 PST 2006
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Improvements to BeamTransform
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12cl0, operation: add
 Package: G4Generator
