@@ -1,7 +1,10 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.60 2005/09/22 16:13:08 usher Exp $
+    $Id: release.notes,v 1.61 2005/12/10 00:33:12 burnett Exp $
+ v5r12p1 09-Feb-06 LSR Fixes for BeamTransform... 
+                       add settable pivot point, z of reporting plane in glast system
+                       transform final coordinates
  v5r12   09-Dec-05 THB New Gaudi algorithm, BeamRotate, to rotate incoming beam, specifically for Beam Test
                        G4Generator algorithm modified to propagate multiple incoming particles, specifically the 
 		       daughters of a mother particle. (work by TU)
