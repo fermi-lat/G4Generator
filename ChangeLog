@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Feb 13 14:28:35 PST 2006
+G4Generator/src
+
+Modified Files:
+      Tag: GR-v7r3p20-newext
+	G4GeometrySvc.cxx 
+Log Message:
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12p1, operation: add
 Package: G4Generator
