@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: riccardo  Wed Mar  1 08:05:09 PST 2006
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx G4Geometry.cxx 
+Log Message:
+Changes due to new Sphere shape in detModel
+
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12cl1, operation: add
 Package: G4Generator
