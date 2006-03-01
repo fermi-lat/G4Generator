@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.16 2003/04/28 23:56:12 xchen Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.17 2005/08/19 19:16:45 jrb Exp $
 //
 // Description: this is a concrete implementation of the abstract interface
 // IGeometry of GlastDetSvc. Its methods are called by the visitor mechanism of
@@ -20,6 +20,7 @@
 #include "G4VSolid.hh"
 #include "G4Box.hh"
 #include "G4Tubs.hh"
+#include "G4Sphere.hh"
 #include "G4LogicalVolume.hh"
 #include "G4ThreeVector.hh"
 #include "G4PVPlacement.hh"
@@ -102,7 +103,16 @@ G4Geometry::pushShape(ShapeType s, const UintVector& idvec,
                            rmax*mm,
                            dz*mm*0.5,
                            0,2*M_PI);
+      }else if(s==Sphere) {
+        double rmin=params[6], rmax=params[7], phimin=params[8], phimax=params[9],
+               thetamin=params[10], thetamax=params[11];
+        shape = new G4Sphere(name,
+                             rmin*mm,
+                             rmax*mm,
+                             phimin, phimax,
+                             thetamin, thetamax);
       }
+      
       // put the logical in the m_logicals vector
       logical = new G4LogicalVolume(shape,ptMaterial,name,0,0,0);
       m_logicals[name] = logical; 

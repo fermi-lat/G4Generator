@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.30 2003/04/28 23:56:12 xchen Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/DetectorConstruction.cxx,v 1.31 2004/09/08 17:59:57 usher Exp $
 //
 // Description: This class hinerits from G4VUserDetectorConstruction and it is
 // used to build the detector geometry of the G4 simulation by using two other
@@ -16,6 +16,7 @@
 #include "G4Material.hh"
 #include "G4Box.hh"
 #include "G4Tubs.hh"
+#include "G4Sphere.hh"
 #include "G4LogicalVolume.hh"
 #include "G4ThreeVector.hh"
 #include "G4PVPlacement.hh"
