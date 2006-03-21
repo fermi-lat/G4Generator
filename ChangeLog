@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: usher  Mon Mar 20 17:18:50 PST 2006
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx G4GeometrySvc.cxx IntDetectorManager.cxx 
+	PhysicsList.cxx PhysicsList.h PosDetectorManager.cxx 
+	PrimaryGeneratorAction.cxx PrimaryGeneratorAction.h 
+	RunManager.cxx RunManager.h TrackingAction.cxx 
+Log Message:
+    *
+------------------------------------------------------------
 User: usher  Mon Mar 20 17:18:49 PST 2006
 G4Generator/cmt
 
