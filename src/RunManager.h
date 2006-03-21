@@ -17,7 +17,7 @@
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.22 2004/12/08 01:33:54 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.23 2005/09/21 03:56:22 usher Exp $
  */
 //
 //
@@ -73,7 +73,9 @@ class G4Timer;
 class G4DCtable;
 class G4Run;
 
-class Hep3Vector;
+namespace CLHEP {class Hep3Vector;}
+using namespace CLHEP;
+
 class IG4GeometrySvc;
 
 class G4GenExceptionHandler;
@@ -211,6 +213,9 @@ class RunManager
     G4double defaultCut;
     G4double TkrCutValue;
     G4double CalCutValue;
+
+    /// Keep the geometry service for now
+    IG4GeometrySvc* m_gsv;
 
   public:
     virtual void StoreRandomNumberStatus(G4int eventID=-1);

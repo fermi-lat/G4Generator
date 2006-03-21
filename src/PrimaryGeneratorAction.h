@@ -24,7 +24,7 @@ class IParticlePropertySvc;
  *  
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.8 2005/12/08 22:46:29 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.9 2006/01/09 22:07:19 usher Exp $
  */
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -80,11 +80,11 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     }
     
     /// @return The four momentum as a Lorentz vector
-    HepLorentzVector GetFourMomentum(){
+    CLHEP::HepLorentzVector GetFourMomentum(){
         double mass = GetParticleDefinition()->GetPDGMass(),
             e = particleGun->GetParticleEnergy()+mass,
             p = sqrt(e*e-mass*mass);
-        HepLorentzVector p4(e, 
+        CLHEP::HepLorentzVector p4(e, 
             p*particleGun->GetParticleMomentumDirection());
         return p4;
     }
