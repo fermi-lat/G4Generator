@@ -21,7 +21,7 @@
 *
 * Data and features shared by all G4GenRecon actors.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/G4GenRecon/src/Utilities/G4GenErrorSvc.cxx,v 1.4 2005/07/26 23:46:05 usher Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/Utilities/G4GenReconSvc.cxx,v 1.1 2005/09/21 03:56:23 usher Exp $
 */
 
 class G4GenErrorSvc : virtual public IG4GenErrorSvc, public Service, public virtual IIncidentListener 
@@ -32,7 +32,7 @@ public:
 
     virtual StatusCode initialize() ;
     virtual StatusCode finalize() ;
-    StatusCode queryInterface( const IID &, void** ) ;
+    StatusCode queryInterface( const InterfaceID &, void** ) ;
         
     //! G4Genled when an event begin and end
     void handle( const Incident & ) ;
@@ -63,7 +63,7 @@ private :
 
 DECLARE_SERVICE_FACTORY(G4GenErrorSvc) ;
 
-StatusCode G4GenErrorSvc::queryInterface( const IID & riid, void** ppvIF ) 
+StatusCode G4GenErrorSvc::queryInterface( const InterfaceID & riid, void** ppvIF ) 
 {
     if (IID_IG4GenErrorSvc == riid)
     {

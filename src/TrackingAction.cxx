@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.15 2005/12/08 22:46:29 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.16 2006/01/09 22:06:24 usher Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -81,7 +81,7 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
             particle = new Event::McParticle();
       
             // get the 4-momentum  
-            HepLorentzVector pin(aTrack->GetTotalEnergy(), aTrack->GetMomentum());  
+            CLHEP::HepLorentzVector pin(aTrack->GetTotalEnergy(), aTrack->GetMomentum());  
 
             // Make sure we have a non-zero parent... this could happen for first particle in list
             if (parent == 0) parent = particle;
@@ -153,7 +153,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
     if (particle)
     {
         // get the 4-momentum   
-        HepLorentzVector pfin(aTrack->GetTotalEnergy(), aTrack->GetMomentum()); 
+        CLHEP::HepLorentzVector pfin(aTrack->GetTotalEnergy(), aTrack->GetMomentum()); 
 
         // Do this for gammas...
         if (particle->particleProperty() == 22 && aTrack->GetTrackStatus() == fStopAndKill)
@@ -162,7 +162,7 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
             const G4Step*      finalStep          = aTrack->GetStep();
             const G4StepPoint* preFinalStepPoint  = finalStep->GetPreStepPoint();
 
-            pfin = HepLorentzVector(preFinalStepPoint->GetTotalEnergy(), preFinalStepPoint->GetMomentum());
+            pfin = CLHEP::HepLorentzVector(preFinalStepPoint->GetTotalEnergy(), preFinalStepPoint->GetMomentum());
         }
 
         // we finalize the particle by giving the final momentum and position
