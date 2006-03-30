@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.17 2005/08/19 19:16:45 jrb Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.18 2006/03/01 16:05:09 riccardo Exp $
 //
 // Description: this is a concrete implementation of the abstract interface
 // IGeometry of GlastDetSvc. Its methods are called by the visitor mechanism of
@@ -82,7 +82,7 @@ G4Geometry::pushShape(ShapeType s, const UintVector& idvec,
       // the shape
       G4VSolid* shape;
       // Get the material
-      G4Material* ptMaterial = G4Material::GetMaterial(material);
+	  G4Material* ptMaterial = material.empty()? 0 : G4Material::GetMaterial(material);
       if (!ptMaterial) ptMaterial = G4Material::GetMaterial("Vacuum");
     
       // Build a box or a tube
