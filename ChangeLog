@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Thu Mar 30 07:26:57 PST 2006
-G4Generator/src
-
-Modified Files:
-	G4Geometry.cxx 
-Log Message:
-avoid warning message for null material name
-    *
-------------------------------------------------------------
 TAG
 Tag name: v5r13, operation: add
 Package: G4Generator
