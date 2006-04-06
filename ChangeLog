@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Thu Apr  6 11:55:19 PDT 2006
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Get the signs of the CU frame straightened out
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r13p1, operation: add
 Package: G4Generator
