@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: lsrea  Thu Apr  6 11:55:21 PDT 2006
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx 
+Log Message:
+Get the signs of the CU frame straightened out
+
+    *
+------------------------------------------------------------
+User: lsrea  Thu Apr  6 11:55:21 PDT 2006
 G4Generator/doc
 
 Modified Files:
