@@ -1,7 +1,7 @@
 /** @file BeamTransform.cxx
     @brief declartion, implementaion of the class BeamTransform
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.6 2006/02/09 16:06:54 lsrea Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.7 2006/03/21 01:18:49 usher Exp $
 */
 // Gaudi system includes
 #include "GaudiKernel/MsgStream.h"
@@ -140,13 +140,13 @@ void BeamTransform::transform(Event::McParticle& mcp )
     rbeam1 += m_translation;
 
     // convert to unrotated instrument coordinates
-    CLHEP::Hep3Vector r (rbeam.z(),  rbeam.y(), 
-        rbeam.x()  - m_beam_plane + m_beam_plane_glast);
-    CLHEP::Hep3Vector r1(rbeam1.z(), rbeam1.y(), 
-        rbeam1.x() - m_beam_plane + m_beam_plane_glast);
+    Hep3Vector r (-rbeam.z(),  -rbeam.y(), 
+        -rbeam.x()  + m_beam_plane + m_beam_plane_glast);
+    Hep3Vector r1(-rbeam1.z(), -rbeam1.y(), 
+        -rbeam1.x() + m_beam_plane + m_beam_plane_glast);
 
-    CLHEP::HepLorentzVector p (-pbeam.z(),  pbeam.y(),  -pbeam.x(),  pbeam.e());
-    CLHEP::HepLorentzVector p1(-pbeam1.z(), pbeam1.y(), -pbeam1.x(), pbeam1.e());
+    HepLorentzVector p (-pbeam.z(),  -pbeam.y(),  -pbeam.x(),  pbeam.e());
+    HepLorentzVector p1(-pbeam1.z(), -pbeam1.y(), -pbeam1.x(), pbeam1.e());
 
     mcp.initialize(const_cast<Event::McParticle*>( &mcp.mother()), 
         mcp.particleProperty(), mcp.statusFlags(),
