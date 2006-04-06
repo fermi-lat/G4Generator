@@ -1,7 +1,10 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.63 2006/03/23 22:00:37 usher Exp $
+    $Id: release.notes,v 1.64 2006/03/30 15:28:57 burnett Exp $
+ v5r13p2 06-Apr-06 LSR More fixes for BeamTransform... get the signs of the
+                           CU frame right... still need a good coordinate for
+                           the pivot point.
  v5r13p1 30-Mar-06 THB prevent null material warning messasge
  v5r13   23-Mar-06 TU  Tagging for new externals (CLHEP, Gaudi, G4, etc.)
  v5r12p1 09-Feb-06 LSR Fixes for BeamTransform... 
