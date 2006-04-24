@@ -1,7 +1,8 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.64 2006/03/30 15:28:57 burnett Exp $
+    $Id: release.notes,v 1.65 2006/04/06 18:55:20 lsrea Exp $
+ v5r13p3 24-Apr-06 TU  Modify particle lookup in PrimaryGeneratorAction to protect against Gaudi name changes
  v5r13p2 06-Apr-06 LSR More fixes for BeamTransform... get the signs of the
                            CU frame right... still need a good coordinate for
                            the pivot point.
