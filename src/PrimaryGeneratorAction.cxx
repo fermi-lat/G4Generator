@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.12 2006/01/09 22:07:19 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.13 2006/03/21 01:18:49 usher Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -132,7 +132,8 @@ G4PrimaryParticle* PrimaryGeneratorAction::convertToG4Primary(const Event::McPar
     else
     {
         ParticleProperty* ppty = ppsvc->findByStdHepID( hepid );
-        partDef = G4ParticleTable::GetParticleTable()->FindParticle(ppty->particle());
+        //partDef = G4ParticleTable::GetParticleTable()->FindParticle(ppty->particle());
+        partDef = G4ParticleTable::GetParticleTable()->FindParticle(ppty->pdgID());
     }
 
     // Position and momentum
