@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Tue Apr 25 12:14:27 PDT 2006
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx 
+Log Message:
+Add a few "CLHEP::"s... will be needed when header stops using the CLHEP namespace
+
+    *
+------------------------------------------------------------
 User: lsrea  Tue Apr 25 12:14:26 PDT 2006
 G4Generator/doc
 
