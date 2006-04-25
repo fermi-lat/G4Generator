@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Tue Apr 25 12:14:26 PDT 2006
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Add a few "CLHEP::"s... will be needed when header stops using the CLHEP namespace
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r13p3, operation: add
 Package: G4Generator
