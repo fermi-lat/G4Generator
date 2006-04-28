@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Fri Apr 28 08:57:02 PDT 2006
-G4Generator/src
-
-Modified Files:
-	PrimaryGeneratorAction.cxx 
-Log Message:
-Checks for a null pointer returned from G4ParticleTable
-    *
-------------------------------------------------------------
 TAG
 Tag name: v5r13p4, operation: add
 Package: G4Generator
