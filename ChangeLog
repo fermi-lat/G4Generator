@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Sat Apr 29 14:52:51 PDT 2006
+G4Generator/cmt
+
+Modified Files:
+      Tag: GR-v8r1
+	requirements 
+Log Message:
+Prepare for v5r12p1gr0, on the branch GR-v8r1
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r13p5, operation: add
 Package: G4Generator
