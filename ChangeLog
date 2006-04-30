@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Sat Apr 29 23:35:14 PDT 2006
+G4Generator/src
+
+Modified Files:
+      Tag: GR-v8r1
+	BeamTransform.cxx 
+Log Message:
+Fix up the signs of the transverse coordinates
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12p1gr0, operation: add
 Package: G4Generator
