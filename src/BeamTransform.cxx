@@ -1,7 +1,7 @@
 /** @file BeamTransform.cxx
     @brief declartion, implementaion of the class BeamTransform
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.5 2005/12/09 16:06:46 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.6 2006/02/09 16:06:54 lsrea Exp $
 */
 // Gaudi system includes
 #include "GaudiKernel/MsgStream.h"
@@ -137,12 +137,12 @@ void BeamTransform::transform(Event::McParticle& mcp )
 
     // convert to unrotated instrument coordinates
     Hep3Vector r (rbeam.z(),  rbeam.y(), 
-        rbeam.x()  - m_beam_plane + m_beam_plane_glast);
+        -(rbeam.x()  - m_beam_plane) + m_beam_plane_glast);
     Hep3Vector r1(rbeam1.z(), rbeam1.y(), 
-        rbeam1.x() - m_beam_plane + m_beam_plane_glast);
+        -(rbeam1.x() - m_beam_plane) + m_beam_plane_glast);
 
-    HepLorentzVector p (-pbeam.z(),  pbeam.y(),  -pbeam.x(),  pbeam.e());
-    HepLorentzVector p1(-pbeam1.z(), pbeam1.y(), -pbeam1.x(), pbeam1.e());
+    HepLorentzVector p (-pbeam.z(),  -pbeam.y(),  -pbeam.x(),  pbeam.e());
+    HepLorentzVector p1(-pbeam1.z(), -pbeam1.y(), -pbeam1.x(), pbeam1.e());
 
     mcp.initialize(const_cast<Event::McParticle*>( &mcp.mother()), 
         mcp.particleProperty(), mcp.statusFlags(),
@@ -168,12 +168,16 @@ StatusCode BeamTransform::execute(){
     SmartDataPtr<Event::MCEvent>     mcheader(eventSvc(),    EventModel::MC::Event);
     SmartDataPtr<Event::McParticleCol> particles(eventSvc(), EventModel::MC::McParticleCol);
 
+    bool debug = false;
+    //std::cout << "1: " << debug << std::endl;
     double t = header->time();
     log << MSG::DEBUG;
-    bool debug = log.isActive();
-    //debug = true;
+    debug = log.isActive();
+    //std::cout <<"2: " << debug << std::endl;
+
     if (debug) {log << "Event time: " << t;}
-    log << endreq;;
+    log << endreq;
+    //std::cout <<"3: " << debug << std::endl;
   
     // loop over the monte carlo particle collection
     if (particles) {
