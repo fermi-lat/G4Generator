@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Fri May  5 15:21:54 PDT 2006
+G4Generator/cmt
+
+Modified Files:
+      Tag: GR-v8r1
+	requirements 
+Log Message:
+One more try to get the signs correct... this will be tag v5r12p1gr2
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12p1gr1, operation: add
 Package: G4Generator
