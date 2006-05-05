@@ -1,7 +1,8 @@
 /** @file release.notes
     @brief package G4Generator 
 @verbatim
-    $Id: release.notes,v 1.62.2.1 2006/04/29 21:52:51 lsrea Exp $
+    $Id: release.notes,v 1.62.2.2 2006/04/30 06:39:19 lsrea Exp $
+ v5r12p1gr2 05-May-06 LSR Another try on the signs
  v5r12p1gr1 29-Apr-06 LSR Latest version of BeamTransform, corrected signs for x and y.
  v5r12p1gr0 29-Apr-06 LSR Branch tag for Beamtest production runs
  v5r12p1 09-Feb-06 LSR Fixes for BeamTransform... 
