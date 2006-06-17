@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: lsrea  Fri Jun 16 22:57:49 PDT 2006
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx 
+Log Message:
+Fix the just discovered misconception about the beamtest coordinate system
+
+    *
+------------------------------------------------------------
+User: lsrea  Fri Jun 16 22:57:49 PDT 2006
 G4Generator/doc
 
 Modified Files:
