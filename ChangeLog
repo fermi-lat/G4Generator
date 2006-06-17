@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Fri Jun 16 22:57:49 PDT 2006
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Fix the just discovered misconception about the beamtest coordinate system
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r12p1gr2, operation: add
 Package: G4Generator
