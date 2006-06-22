@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: lsrea  Thu Jun 22 11:06:22 PDT 2006
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Finish the fix to the coordinate swap (x-y table)
+Put in canonical pivot and reporting plane positions as the defaults
+
+    *
+------------------------------------------------------------
+User: lsrea  Thu Jun 22 11:06:22 PDT 2006
 G4Generator/cmt
 
 Modified Files:
