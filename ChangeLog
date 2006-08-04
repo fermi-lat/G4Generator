@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: lsrea  Fri Aug  4 09:30:59 PDT 2006
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx 
+Log Message:
+Add new jO parameter: point_on_beamline
+Add new flux source: beamtest_muon
+
+    *
+------------------------------------------------------------
+User: lsrea  Fri Aug  4 09:30:59 PDT 2006
 G4Generator/doc
 
 Modified Files:
