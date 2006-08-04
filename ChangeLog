@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lsrea  Fri Aug  4 14:28:09 PDT 2006
+G4Generator/src/test
+
+Added Files:
+	jO_testBeamTransform.txt 
+Log Message:
+jobOptions file to test BeamTransform using the source beamtest_muon
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r15p1, operation: add
 Package: G4Generator
