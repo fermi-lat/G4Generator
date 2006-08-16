@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.14 2006/04/24 18:01:47 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.15 2006/04/28 15:57:02 usher Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -22,7 +22,7 @@
 #include "G4ParticleTable.hh"
 #include "G4ParticleDefinition.hh"
 
-#include "src/Utilities/G4GenException.h"
+#include "G4Generator/G4GenException.h"
 
 // TU: Hack for CLHEP 1.9.2.2
 typedef HepGeom::Point3D<double>  HepPoint3D;

@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.60 2005/09/21 04:17:54 usher Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.61 2005/12/08 22:46:29 usher Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -54,8 +54,8 @@
 #include "CLHEP/Geometry/Vector3D.h"
 
 // Error stuff
-#include "src/Utilities/IG4GenErrorSvc.h"
-#include "src/Utilities/G4GenException.h"
+#include "G4Generator/IG4GenErrorSvc.h"
+#include "G4Generator/G4GenException.h"
 
 static const AlgFactory<G4Generator>  Factory;
 const IAlgFactory& G4GeneratorFactory = Factory;

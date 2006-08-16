@@ -11,7 +11,7 @@ static const InterfaceID IID_IG4GenErrorSvc("IG4GenErrorSvc",1,0) ;
 *
 * Interface to data and features shared by all CalRecon actors.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/CalRecon/CalRecon/IG4GenErrorSvc.h,v 1.2 2005/07/13 14:52:17 chamont Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/Utilities/IG4GenErrorSvc.h,v 1.1 2005/09/21 03:56:23 usher Exp $
 */
 
 class IG4GenErrorSvc : public virtual IInterface
