@@ -13,15 +13,15 @@
 
 // for implementation
 #include "G4GenErrorRecord.h"
-#include "G4GenException.h"
-#include "IG4GenErrorSvc.h"
+#include "G4Generator/G4GenException.h"
+#include "G4Generator/IG4GenErrorSvc.h"
 
 /**   
 * @class G4GenErrorSvc
 *
 * Data and features shared by all G4GenRecon actors.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/Utilities/G4GenReconSvc.cxx,v 1.1 2005/09/21 03:56:23 usher Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/Utilities/G4GenReconSvc.cxx,v 1.2 2006/03/21 01:18:50 usher Exp $
 */
 
 class G4GenErrorSvc : virtual public IG4GenErrorSvc, public Service, public virtual IIncidentListener 
