@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Sat Oct 28 10:31:55 PDT 2006
+G4Generator/src
+
+Modified Files:
+	HadronPhysics.cxx IonPhysics.cxx PhysicsList.cxx PhysicsList.h 
+	PrimaryGeneratorAction.cxx 
+Log Message:
+    *
+------------------------------------------------------------
+User: usher  Sat Oct 28 10:31:55 PDT 2006
 G4Generator/cmt
 
 Modified Files:
