@@ -2,7 +2,7 @@
 
 
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.8 2004/09/08 17:59:57 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/HadronPhysics.cxx,v 1.9 2005/04/22 14:31:17 riccardo Exp $
 //
 // Description: This class manages the building of hadrons and their processes
 //
@@ -334,29 +334,28 @@ void HadronPhysics::ConstructProcess()
   
   // Full Physics List
   
-  if (m_physicsChoice=="full" || m_physicsChoice=="improved")
-    {
-      // Elastic scatter 
-      
-      G4HadronElasticProcess* theElasticProcess = new G4HadronElasticProcess();
-      G4LElastic*            theElasticModel;
-      
-      theElasticModel = new G4LElastic();
-      theElasticProcess->RegisterMe(theElasticModel);
+ 
+  // Elastic scatter 
   
-      // PionPlus
-      
-      pManager = G4PionPlus::PionPlus()->GetProcessManager();
-      
-      pManager->AddDiscreteProcess(theElasticProcess);
-      G4PionPlusInelasticProcess* thePionPlusInelastic = new G4PionPlusInelasticProcess();
-      G4LEPionPlusInelastic* theLEPionPlusModel;
-      G4HEPionPlusInelastic* theHEPionPlusModel;
-      theLEPionPlusModel = new G4LEPionPlusInelastic();
-      theHEPionPlusModel = new G4HEPionPlusInelastic();
-      thePionPlusInelastic->RegisterMe(theLEPionPlusModel);
-      thePionPlusInelastic->RegisterMe(theHEPionPlusModel);
-      pManager->AddDiscreteProcess(thePionPlusInelastic);
+  G4HadronElasticProcess* theElasticProcess = new G4HadronElasticProcess();
+  G4LElastic*            theElasticModel;
+  
+  theElasticModel = new G4LElastic();
+  theElasticProcess->RegisterMe(theElasticModel);
+  
+  // PionPlus
+  
+  pManager = G4PionPlus::PionPlus()->GetProcessManager();
+  
+  pManager->AddDiscreteProcess(theElasticProcess);
+  G4PionPlusInelasticProcess* thePionPlusInelastic = new G4PionPlusInelasticProcess();
+  G4LEPionPlusInelastic* theLEPionPlusModel;
+  G4HEPionPlusInelastic* theHEPionPlusModel;
+  theLEPionPlusModel = new G4LEPionPlusInelastic();
+  theHEPionPlusModel = new G4HEPionPlusInelastic();
+  thePionPlusInelastic->RegisterMe(theLEPionPlusModel);
+  thePionPlusInelastic->RegisterMe(theHEPionPlusModel);
+  pManager->AddDiscreteProcess(thePionPlusInelastic);
     
       // PionMinus
       
@@ -682,7 +681,6 @@ void HadronPhysics::ConstructProcess()
       theAntiOmegaMinusInelastic->RegisterMe(theHEAntiOmegaMinusModel);
       pManager->AddDiscreteProcess(theAntiOmegaMinusInelastic);
     
-    }
   
 }
 
