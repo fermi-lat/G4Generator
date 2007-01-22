@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: flongo  Mon Jan 22 08:08:13 PST 2007
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx 
+Log Message:
+new set of LowEnergy EM physics processes
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r17p0, operation: add
 Package: G4Generator
