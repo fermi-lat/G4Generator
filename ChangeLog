@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Thu Feb  1 09:38:44 PST 2007
-G4Generator/src
-
-Modified Files:
-	G4Generator.cxx 
-Log Message:
-Change default physics option from "full" to "GLAST"
-    *
-------------------------------------------------------------
 TAG
 Tag name: v5r17p1, operation: add
 Package: G4Generator
