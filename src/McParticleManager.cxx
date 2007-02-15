@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.19 2007/02/15 19:13:53 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.cxx,v 1.20 2007/02/15 20:51:11 usher Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -157,6 +157,9 @@ void McParticleManager::clear()
     m_partToPosHit.clear();
     m_partToIntHit.clear();
 
+    m_currentOrigin   = 0;
+    m_currentOriginId = 0;
+
     // if running FluxAlg, collection will already have parent 
     m_particleColTDS = SmartDataPtr<Event::McParticleCol>(m_esv, EventModel::MC::McParticleCol);
 
@@ -268,7 +271,7 @@ bool McParticleManager::keepMcParticle(const G4Track* aTrack)
                         && (particle->statusFlags() & Event::McParticle::PRIMARY) == 0 ) 
         {
             // If a charged track then check to see if it created any hits 
-            if (aTrack->GetDynamicParticle()->GetCharge() != 0.)
+            if (parent->particleProperty() != 22 && aTrack->GetDynamicParticle()->GetCharge() != 0.)
             {
                 if (m_partToPosHit.empty() && m_partToIntHit.empty()) save = false;
             }
