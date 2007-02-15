@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Feb 15 12:48:26 PST 2007
+G4Generator/src
+
+Modified Files:
+	McParticleManager.h 
+Log Message:
+fix linux compilation?
+    *
+------------------------------------------------------------
 User: usher  Thu Feb 15 12:46:15 PST 2007
 G4Generator/src
 
