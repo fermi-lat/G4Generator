@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: usher  Thu Feb 15 11:13:53 PST 2007
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx IntDetectorManager.cxx McParticleManager.cxx 
+	McParticleManager.h PosDetectorManager.cxx RunManager.cxx 
+	RunManager.h SteppingAction.cxx SteppingAction.h 
+	TrackingAction.cxx 
+Added Files:
+	McTrajectoryManager.cxx McTrajectoryManager.h 
+Log Message:
+    *
+------------------------------------------------------------
+User: usher  Thu Feb 15 11:13:53 PST 2007
 G4Generator
 
 Modified Files:
