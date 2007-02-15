@@ -1,7 +1,7 @@
 
 <source_library title="G4_test_sources">
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.19 2005/04/22 14:36:26 riccardo Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.20 2006/08/04 16:30:59 lsrea Exp $
        Some simple test flux definitions for debugging
     -->
     
@@ -117,13 +117,53 @@
        </spectrum>
      </source>
 
-    <source name="electron_pencil">
+    <source name="electron_pencil_100">
+       <spectrum escale="GeV"> 
+         <particle name="e-"><energy e="0.1"/> </particle>
+           <direction theta="0" phi="0" />
+           <launch_point x="45" y="45" z="800" />
+       </spectrum>
+     </source>
+
+    <source name="electron_pencil_1000">
        <spectrum escale="GeV"> 
          <particle name="e-"><energy e="1"/> </particle>
            <direction theta="0" phi="0" />
-           <launch_point x="20" y="20" z="800" />
+           <launch_point x="45" y="45" z="800" />
        </spectrum>
      </source>
+
+    <source name="electron_pencil_10000">
+       <spectrum escale="GeV"> 
+         <particle name="e-"><energy e="10"/> </particle>
+           <direction theta="0" phi="0" />
+           <launch_point x="45" y="45" z="800" />
+       </spectrum>
+     </source>
+
+    <source name="proton_test_vertical_1GeV">
+          <spectrum escale="GeV">
+            <particle name="p"> <energy e="1.0"/> </particle>
+            <direction theta="0" phi="0"/>
+            <launch_point x="45" y="45" z="1000" />
+        </spectrum>
+    </source>
+
+    <source name="proton_test_10degrees_1GeV">
+          <spectrum escale="GeV">
+            <particle name="p"> <energy e="1.0"/> </particle>
+            <direction theta="10" phi="90"/>
+            <launch_point x="45" y="45" z="1000" />
+        </spectrum>
+    </source>
+
+    <source name="proton_test_vertical_10GeV">
+          <spectrum escale="GeV">
+            <particle name="p"> <energy e="10.0"/> </particle>
+            <direction theta="0" phi="0"/>
+            <launch_point x="45" y="45" z="1000" />
+        </spectrum>
+    </source>
 
     <source name="electron_pencil_angle">
        <spectrum escale="GeV"> 

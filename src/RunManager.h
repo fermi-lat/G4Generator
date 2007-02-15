@@ -17,7 +17,7 @@
  *
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.23 2005/09/21 03:56:22 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.h,v 1.24 2006/03/21 01:18:49 usher Exp $
  */
 //
 //
@@ -155,6 +155,7 @@ class RunManager
     int getTrajectoryTrackId(unsigned int i);
 
   protected: 
+    friend class G4Generator;
 
     ///  These three protected methods are invoked from Initialize() method
     virtual void InitializeGeometry();
