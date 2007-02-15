@@ -30,7 +30,7 @@ class G4Track;
  *
  *  @author R.Giannitrapani
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.h,v 1.7 2005/12/08 22:46:29 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McParticleManager.h,v 1.8 2007/02/15 19:13:53 usher Exp $
  */
 class McParticleManager {
  public:
@@ -143,7 +143,7 @@ class McParticleManager {
  private:
   /// The constructor is private since this is a singleton
      McParticleManager() : 
-        m_lastParticle(0),m_currentOrigin(0),m_mode(PruneMode::FULL_MC_TREE),m_cutOffE(0.),m_maxGen(3) 
+        m_lastParticle(0),m_currentOrigin(0),m_mode(FULL_MC_TREE),m_cutOffE(0.),m_maxGen(3) 
      {m_particles.clear(); m_partToPosHit.clear(); m_partToIntHit.clear();}; 
 
   /// private method to keep the local relational table lists clear
