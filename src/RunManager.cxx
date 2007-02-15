@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.35 2005/09/21 03:56:22 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.36 2006/03/21 01:18:49 usher Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -82,6 +82,7 @@ RunManager::RunManager(std::ostream& log,
  runAborted(false),
  initializedAtLeastOnce(false),
  geometryToBeOptimized(true),
+ currentEvent(0),
  runIDCounter(0),
  verboseLevel(0),
  defaultCut(defaultCutValue),
@@ -202,6 +203,14 @@ void RunManager::RunInitialization()
   if(fSDM)
   { currentRun->SetHCtable(fSDM->GetHCtable()); }
 
+  // Insert here something to clean up the current event 
+  // which appears to have been a memory leak in our code
+  if (currentEvent)
+  {
+      delete currentEvent;
+      currentEvent = 0;
+  }
+
   runAborted = false;
 
   if(storeRandomNumberStatus==1 || storeRandomNumberStatus==-1)
@@ -262,7 +271,7 @@ void RunManager::Initialize()
 
   // Set the TrackingAction to track the McParticle
   eventManager->SetUserAction(new TrackingAction(m_gsv));
-  eventManager->SetUserAction(new SteppingAction());
+  eventManager->SetUserAction(new SteppingAction(m_gsv));
 
   pUImanager->SetCoutDestination(new G4UIsession);
 
