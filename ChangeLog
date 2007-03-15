@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: lsrea  Wed Mar 14 22:55:42 PDT 2007
+G4Generator/src/test
+
+Modified Files:
+	jO_testBeamTransform.txt test_sources.xml 
+Log Message:
+Prepare for tag v5r18p1
+Add new jO parameter "table_tilt"
+Change "beamtest_muon from 5 to 20 GeV
+
+
+    *
+------------------------------------------------------------
 User: lsrea  Wed Mar 14 22:55:41 PDT 2007
 G4Generator/src
 
