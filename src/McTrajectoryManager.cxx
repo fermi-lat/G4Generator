@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McTrajectoryManager.cxx,v 1.18 2005/12/08 22:46:29 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McTrajectoryManager.cxx,v 1.1 2007/02/15 19:13:53 usher Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -93,8 +93,8 @@ void McTrajectoryManager::clear()
 
     if (m_partToTrajectoryTDS == 0)
     {
-        // Create new one and give to TDS
-        m_partToTrajectoryTDS = new Event::McPartToTrajectoryTabList();
+        // Create new one and give to TDS (note use of ReleationList here!)
+        m_partToTrajectoryTDS = new Event::RelationList<Event::McParticle, Event::McTrajectory>;
         m_esv->registerObject("/Event/MC/McPartToTrajectory", m_partToTrajectoryTDS);
     }
 
@@ -104,7 +104,7 @@ void McTrajectoryManager::clear()
     if (m_pointToPosHitTDS == 0)
     {
         // Create new one and give to TDS
-        m_pointToPosHitTDS = new Event::McPointToPosHitTabList();
+        m_pointToPosHitTDS = new Event::RelationList<Event::McTrajectoryPoint, Event::McPositionHit>;
         m_esv->registerObject("/Event/MC/McPointToPosHit", m_pointToPosHitTDS);
     }
 
@@ -114,7 +114,7 @@ void McTrajectoryManager::clear()
     if (m_pointToIntHitTDS == 0)
     {
         // Create new one and give to TDS
-        m_pointToIntHitTDS = new Event::McPointToIntHitTabList();
+        m_pointToIntHitTDS = new Event::RelationList<Event::McTrajectoryPoint, Event::McIntegratingHit>;
         m_esv->registerObject("/Event/MC/McPointToIntHit", m_pointToIntHitTDS);
     }
 }
