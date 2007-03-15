@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Mar 15 11:08:17 PDT 2007
+G4Generator/src
+
+Modified Files:
+	McTrajectoryManager.cxx 
+Log Message:
+Slight change to way relational table lists are defined
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r18p1, operation: add
 Package: G4Generator
