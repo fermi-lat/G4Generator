@@ -1,13 +1,13 @@
 
 <source_library title="G4_test_sources">
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.20 2006/08/04 16:30:59 lsrea Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/test_sources.xml,v 1.21 2007/02/15 19:13:54 usher Exp $
        Some simple test flux definitions for debugging
     -->
     
     <source name="beamtest_muon" >
        <spectrum escale="GeV"> 
-         <particle name="mu+"><energy e="5"/> </particle>
+         <particle name="mu+"><energy e="20"/> </particle>
            <direction theta="90" phi="180" />
            <launch_point x="3300" y="0" z="0" />
        </spectrum>
