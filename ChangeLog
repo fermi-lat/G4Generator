@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Sun Mar 18 08:03:20 PDT 2007
-G4Generator/src
-
-Modified Files:
-	PosDetectorManager.cxx 
-Log Message:
-Fill McPositionHit's "packed flags" with the G4 track ID for now
-    *
-------------------------------------------------------------
 User: usher  Thu Mar 15 11:08:17 PDT 2007
 G4Generator/src
 
