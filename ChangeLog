@@ -1,14 +1,4 @@
 ------------------------------------------------------------
-User: usher  Wed Apr  4 14:56:14 PDT 2007
-G4Generator/src
-
-Modified Files:
-	McParticleManager.cxx McParticleManager.h 
-	PosDetectorManager.cxx 
-Log Message:
-Fix problem with resetting mcparticle pointer in mcpositionhit when clearing relational tables
-    *
-------------------------------------------------------------
 TAG
 Tag name: v5r18p2, operation: add
 Package: G4Generator
