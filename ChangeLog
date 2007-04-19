@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: lsrea  Thu Apr 19 12:31:53 PDT 2007
+G4Generator/doc
+
+Modified Files:
+      Tag: GlastReleasev9r25
+	release.notes 
+Log Message:
+Prepare a version of G4Generator staring from v9r25, but using latest BeamTransform
+tag will be v5r17p2gr0
+
+    *
+------------------------------------------------------------
+User: lsrea  Thu Apr 19 12:31:53 PDT 2007
 G4Generator/cmt
 
 Modified Files:
