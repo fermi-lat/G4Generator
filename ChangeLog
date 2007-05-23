@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed May 23 13:55:27 PDT 2007
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Preparing to tag v5r18p4 making use of G4HadronSim public so it will export symbols for Bertini runs
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r17p2gr0, operation: add
 Package: G4Generator
