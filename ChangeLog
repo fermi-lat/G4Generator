@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu May 31 15:09:08 PDT 2007
+G4Generator/src
+
+Modified Files:
+	PrimaryGeneratorAction.cxx 
+Log Message:
+Throw exception if primary particle energy greater than 1 TeV
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r18p4, operation: add
 Package: G4Generator
