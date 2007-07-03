@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.18 2007/02/15 19:13:53 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.19 2007/02/15 23:24:44 usher Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -119,6 +119,16 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 
             // Add to the collection
             McTrajectoryManager::getPointer()->addMcTrajectory(aTrack->GetTrackID(), trajectory, particle);
+
+            // Make a McTrajectoryPoint corresponding the first point on the track
+            float             energy     = aTrack->GetTotalEnergy();
+            G4ThreeVector     g4Position = aTrack->GetPosition();
+            CLHEP::Hep3Vector point(g4Position);
+
+            Event::McTrajectoryPoint* trajectoryHit = new Event::McTrajectoryPoint(ret, energy, point);
+
+            // Save it
+            trajectory->addPoint(trajectoryHit);
         }
 
         // if the particle is an e+ or an e- coming from the conversion of a gamma,
