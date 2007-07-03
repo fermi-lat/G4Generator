@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Tue Jul  3 10:09:21 PDT 2007
+G4Generator/src
+
+Modified Files:
+	TrackingAction.cxx 
+Log Message:
+Add initial McTrajectoryPoint at start of new track to fix problem observed by Leon
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r18p5, operation: add
 Package: G4Generator
