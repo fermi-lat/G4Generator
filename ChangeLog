@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: kuss  Thu Jul 12 07:29:15 PDT 2007
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx 
+Log Message:
+add QGSC and QGSC_LEAD physics choices
+
+    *
+------------------------------------------------------------
 User: usher  Tue Jul  3 10:09:21 PDT 2007
 G4Generator/src
 
