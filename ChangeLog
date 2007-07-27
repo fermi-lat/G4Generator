@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Fri Jul 27 12:23:45 PDT 2007
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tag conversion of BeamTransform to use new McParticle set method
+
+    *
+------------------------------------------------------------
 User: lsrea  Mon Jul 23 21:29:10 PDT 2007
 G4Generator/src
 
