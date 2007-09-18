@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: flongo  Tue Sep 18 08:12:55 PDT 2007
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx 
+Added Files:
+	EpaxIonPhysics.cxx EpaxIonPhysics.h 
+Log Message:
+Ion Physics for QGSP_BERT
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r19, operation: add
 Package: G4Generator
