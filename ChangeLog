@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Mon Oct  1 12:53:27 PDT 2007
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Print table of densities and radiation lengths
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r19p0, operation: add
 Package: G4Generator
