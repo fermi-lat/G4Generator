@@ -22,7 +22,7 @@ class IG4GenErrorSvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.23 2005/05/26 20:23:13 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.24 2005/09/21 03:56:22 usher Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -85,6 +85,9 @@ class G4Generator : public Algorithm {
   /// if true, use Glast special version
   BooleanProperty m_mscatOption;
   BooleanProperty m_eLossCurrent;
+
+  /// for material printout
+  BooleanProperty m_printRadLen;
 
 };
 
