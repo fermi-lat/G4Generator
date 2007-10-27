@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.26 2007/02/15 19:13:53 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.cxx,v 1.27 2007/02/15 23:24:44 usher Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -23,9 +23,9 @@
 
 // Geant4 interface
 #include "G4Step.hh"
-#include "G4VSolid.hh"
-#include "G4Box.hh"
-#include "G4SDManager.hh"
+// #include "G4VSolid.hh"
+// #include "G4Box.hh"
+// #include "G4SDManager.hh"
 
 #include <algorithm>
 
