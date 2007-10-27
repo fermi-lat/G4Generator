@@ -5,7 +5,7 @@ author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.120 2007/09/20 09:01:23 kuss Exp $
+#$Id: requirements,v 1.121 2007/10/01 19:53:27 lsrea Exp $
 
 use GlastPolicy v*
 
@@ -17,7 +17,6 @@ apply_pattern package_include
 use Event     v*
 use GlastSvc  v*
 use geometry  v3*
-use geomrep   v4r*
 
 # Use this publicly since it exports symbols that will be needed
 use G4HadronSim v*

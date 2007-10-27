@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.32 2007/03/18 15:03:20 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.33 2007/04/04 21:56:14 usher Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -23,9 +23,9 @@
 
 // Geant4 interface
 #include "G4Step.hh"
-#include "G4VSolid.hh"
-#include "G4Box.hh"
-#include "G4SDManager.hh"
+// #include "G4VSolid.hh"
+// #include "G4Box.hh"
+// #include "G4SDManager.hh"
 
 #include <algorithm>
 
