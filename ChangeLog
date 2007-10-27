@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: jrb  Fri Oct 26 17:39:23 PDT 2007
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+G4Geometry:  support for trapezoidal prisms
+Other .cxx files:  eliminate unnecessary #include's
+requirements: eliminate unnecessary use of geomrep
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r19p1, operation: add
 Package: G4Generator
