@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: jrb  Fri Oct 26 17:39:23 PDT 2007
+G4Generator/src
+
+Modified Files:
+	DetectorConstruction.cxx G4Geometry.cxx IntDetectorManager.cxx 
+	PosDetectorManager.cxx 
+Log Message:
+G4Geometry:  support for trapezoidal prisms
+Other .cxx files:  eliminate unnecessary #include's
+requirements: eliminate unnecessary use of geomrep
+
+    *
+------------------------------------------------------------
+User: jrb  Fri Oct 26 17:39:23 PDT 2007
 G4Generator/cmt
 
 Modified Files:
