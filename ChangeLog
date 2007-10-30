@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Oct 29 20:00:38 PDT 2007
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use gr_app
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r20, operation: add
 Package: G4Generator
