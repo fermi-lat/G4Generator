@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: jrb  Wed Oct 31 15:47:12 PDT 2007
+G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx DetectorManager.cxx G4Geometry.cxx 
+	McTrajectoryManager.cxx PosDetectorManager.cxx 
+	PrimaryGeneratorAction.cxx 
+Log Message:
+G4Geometry:  Fix heretofore unused section of code handling composition
+             of rotations 
+Remainder: clean up some compile warnings
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r21, operation: add
 Package: G4Generator
