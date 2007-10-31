@@ -7,7 +7,7 @@
 
     @authors Toby Burnett, Leon Rochester
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.13 2007/03/15 05:55:41 lsrea Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.14 2007/07/24 04:29:10 lsrea Exp $
 */
 // Gaudi system includes
 #include "GaudiKernel/MsgStream.h"
@@ -174,9 +174,6 @@ StatusCode BeamTransform::initialize(){
             // move by the offset of the pivot along this line
             // it's where the central ray enters for no translation
             Point point1 = orthRay.position(m_pivot.x());
-            double angle = degToRad*(90. - m_angle);
-            double angle0 = degToRad*m_angle;
-
            
             Vector dirBeam(0.0, 0.0, 1.0);
             dirBeam = m_rot*dirBeam;

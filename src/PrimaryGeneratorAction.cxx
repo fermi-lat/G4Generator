@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.17 2006/10/28 17:31:55 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.18 2007/05/31 22:09:07 usher Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -65,7 +65,6 @@ void PrimaryGeneratorAction::init(Event::McParticleCol* pcol, IParticlePropertyS
     // Inputs: dz is an optional z offset of the particle, to match LAT offset
         
     // Count the number of particles input
-    int numParts = pcol->size();
 
     // First particle is the "generator" particle... 
     // This particle defines the event vertex
@@ -99,8 +98,6 @@ void PrimaryGeneratorAction::init(Event::McParticleCol* pcol, IParticlePropertyS
     const SmartRefVector<Event::McParticle>& daughterVec = primary->daughterList();
     
     SmartRefVector<Event::McParticle>::const_iterator dIter = daughterVec.begin();
-
-    int numDaughters = daughterVec.size();
 
     m_secondaryVertexVec.clear();
 

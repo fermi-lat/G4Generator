@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.33 2007/04/04 21:56:14 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PosDetectorManager.cxx,v 1.34 2007/10/27 00:39:23 jrb Exp $
 //
 // Description: This is a concrete implementation of the DetectorManager
 // abstract class; this one is used to manage sensitive detectors of integrating
@@ -55,7 +55,7 @@ void PosDetectorManager::Initialize(G4HCofThisEvent*)
 }
 
 G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
-                                       G4TouchableHistory* ROhist)
+                                       G4TouchableHistory* /* ROhist */)
 {
   // Purpose and Method: this method is called internally by Geant4 every time a
   // particle issue an hit in a sensitive detector of this kind
@@ -64,7 +64,7 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
 
   // Energy Deposition & Step Length
   G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
-  G4double stepl = aStep->GetStepLength()/mm;
+  //  G4double stepl = aStep->GetStepLength()/mm;   never used
 
   // Make an McPositionHit?
   if (edep > 0. || aStep->GetTrack()->GetDynamicParticle()->GetCharge() != 0.)
@@ -132,7 +132,7 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
 
     // Get the proper time for particle at this hit
     G4double properTime = aStep->GetTrack()->GetProperTime();
-    G4double localTime  = aStep->GetTrack()->GetLocalTime();
+    //    G4double localTime  = aStep->GetTrack()->GetLocalTime();  usused
     hit->setTimeOfFlight(properTime);
 
     hit->setMcParticleId(aStep->GetTrack()->GetDefinition()->GetPDGEncoding());
