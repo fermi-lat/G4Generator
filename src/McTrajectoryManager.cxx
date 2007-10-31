@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McTrajectoryManager.cxx,v 1.1 2007/02/15 19:13:53 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/McTrajectoryManager.cxx,v 1.2 2007/03/15 18:08:17 usher Exp $
 //
 // Description: this utility singleton is used in various classes of G4Generator
 // to register new McParticle objects, retrive the actual McParticle (i.e. the
@@ -202,7 +202,7 @@ void McTrajectoryManager::saveMcTrajectory()
     }
 }
 
-void McTrajectoryManager::dropMcTrajectory(const G4Track* track)
+void McTrajectoryManager::dropMcTrajectory(const G4Track* /* track */)
 {
     // Make sure we have something to get rid of
     if (m_mcTrajectory)

@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.19 2006/03/30 15:26:57 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Geometry.cxx,v 1.20 2007/10/27 00:39:23 jrb Exp $
 //
 // Description: this is a concrete implementation of the abstract interface
 // IGeometry of GlastDetSvc. Its methods are called by the visitor mechanism of
@@ -171,10 +171,11 @@ G4Geometry::pushShape(ShapeType s, const UintVector& idvec,
   // Set the rotation: note conversion to radians and change of sign
   // The sign is changed for different conventions between our XML
   // geometry database and G4 ones.
+  // Oct. 31 jrb:  Also swap order of composition
   G4RotationMatrix* rm = new G4RotationMatrix(); 
-  rm->rotateX(-rx*M_PI/180);
-  rm->rotateY(-ry*M_PI/180);
   rm->rotateZ(-rz*M_PI/180);
+  rm->rotateY(-ry*M_PI/180);
+  rm->rotateX(-rx*M_PI/180);
 
   // Create the positioned physical volume
   phys = new G4PVPlacement(rm,G4ThreeVector(x*mm,y*mm,z*mm),
