@@ -2,6 +2,7 @@
     @brief package G4Generator 
 @verbatim
 
+ v5r19gr1 21-Nov-07 JRB Fix rotation order (patch; already in main branch)
  v5r19   27-Jul-07 LSR BeamTransform: modify particle properties without re-creating
  v5r18p6 12-Jul-07 MK  add QGSC and QGSC_LEAD physics choices
  v5r18p5  4-Jun-07 TU  Throw an exception if primary particle energy over limit
