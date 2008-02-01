@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Thu Jan 31 19:53:17 PST 2008
-G4Generator/src
-
-Modified Files:
-	PrimaryGeneratorAction.cxx 
-Log Message:
-Bump upper energy limit of primary from 1 TeV to 5+ TeV for Johann
-    *
-------------------------------------------------------------
 TAG
 Tag name: v5r19gr1, operation: add
 Package: G4Generator
