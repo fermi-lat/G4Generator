@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.18 2007/05/31 22:09:07 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.cxx,v 1.19 2007/10/31 22:47:12 jrb Exp $
 //
 // Description: this class is called by Geant4 to generate the primary particle
 // during the event run
@@ -72,7 +72,7 @@ void PrimaryGeneratorAction::init(Event::McParticleCol* pcol, IParticlePropertyS
     HepPoint3D         primVtxPos = primary->initialPosition();
 
     // Look for sources with energy over the limit
-    double maxAllowedEnergy = 1000000.; // Temporary until I remember how to extract this from G4!
+    double maxAllowedEnergy = 5001000.; // Temporary until I remember how to extract this from G4!
     if (primary->initialFourMomentum().e() > maxAllowedEnergy)
     {
         std::stringstream errorStr(" ");
