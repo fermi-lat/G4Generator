@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jrb  Mon Mar  3 16:36:43 PST 2008
+G4Generator/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Make use of cfitsio public. Otherwise using packages' test programs can't 
+find it.
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-21-02, operation: add
 Package: G4Generator
