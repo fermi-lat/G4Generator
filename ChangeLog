@@ -2,6 +2,14 @@
 TAG
 Tag name: G4Generator-05-21-03, operation: add
 Package: G4Generator
+User: glastrm  Mon Apr  7 08:05:57 2008
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: G4Generator-05-21-03, operation: add
+Package: G4Generator
 User: glastrm  Mon Mar  3 16:45:17 2008
 Files:
   G4Generator/.cvsignore  1.3
