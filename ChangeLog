@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Fri May  2 14:59:55 PDT 2008
-G4Generator/src
-
-Modified Files:
-	EMPhysics.cxx 
-Log Message:
-Replacing EMPhysics with Johan's new version to turn off LPM
-    *
-------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-21-03, operation: add
 Package: G4Generator
