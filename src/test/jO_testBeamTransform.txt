@@ -1,7 +1,7 @@
 //##############################################################
 //
 // Job options file for GUI (gui or FRED) Gleam to test BeamTransform
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jO_testBeamTransform.txt,v 1.1 2006/08/04 21:28:09 lsrea Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/test/jO_testBeamTransform.txt,v 1.2 2007/03/15 05:55:41 lsrea Exp $
 
 #include "$GLEAMROOT/src/basicOptions.txt"
 
@@ -20,7 +20,7 @@ FluxAlg.source_name = "beamtest_muon";
 
 ApplicationMgr.EvtMax  = 100;
 
-GlastDetSvc.xmlfile="$(XMLGEODBSROOT)/xml/CU06/CU06SegVols.xml";
+GlastDetSvc.xmlfile="$(XMLGEODBSXMLPATH)/CU06/CU06SegVols.xml";
    
 // for the new-style basicOptions
 Generation.Members = {
