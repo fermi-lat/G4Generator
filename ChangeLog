@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: ecephas  Fri Aug 15 14:22:41 PDT 2008
+GlastRelease-scons/G4Generator
+
+Added Files:
+	SConscript 
+Log Message:
+Added SConscript files for packages
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-23-00, operation: add
 Package: G4Generator
