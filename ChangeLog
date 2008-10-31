@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: flongo  Fri Oct 31 00:50:02 PDT 2008
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h PrimaryGeneratorAction.cxx 
+	PrimaryGeneratorAction.h RunManager.cxx RunManager.h 
+	basicOptions.txt 
+Log Message:
+Energy Generation Cut
+    *
+------------------------------------------------------------
 User: flongo  Fri Oct 31 00:49:17 PDT 2008
 G4Generator/src
 
