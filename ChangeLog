@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Fri Oct 31 00:48:52 PDT 2008
+G4Generator/src
+
+Modified Files:
+	EpaxIonPhysics.cxx 
+Log Message:
+new alpha model
+    *
+------------------------------------------------------------
 User: ecephas  Fri Aug 15 14:42:34 PDT 2008
 GlastRelease-scons/G4Generator
 
