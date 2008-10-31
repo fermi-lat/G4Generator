@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.14 2007/07/12 14:29:15 kuss Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.15 2007/09/18 15:12:55 flongo Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -93,6 +93,7 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
   //          QGSP
   //          QGSP_BIC
   //          QGSP_BERT
+ //           QGSP_BERT_LPM
   //          LC 
   //          Space
  //           LowEnergy 
@@ -183,6 +184,7 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
    {
 
      G4int ver=1;
+     if (m_physicsChoice=="QGSP_BERT_LPM") ver=2;
   
      // EM Physics
      
@@ -218,6 +220,9 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
        RegisterPhysics(  new HadronPhysicsQGSP("hadron"));
 
      if (m_physicsChoice=="QGSP_BERT")
+       RegisterPhysics(  new HadronPhysicsQGSP_BERT("hadron"));
+
+     if (m_physicsChoice=="QGSP_BERT_LPM")
        RegisterPhysics(  new HadronPhysicsQGSP_BERT("hadron"));
 
      if (m_physicsChoice=="QGSP_BIC")
