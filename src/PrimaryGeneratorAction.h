@@ -24,12 +24,12 @@ class IParticlePropertySvc;
  *  
  * @author R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.9 2006/01/09 22:07:19 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PrimaryGeneratorAction.h,v 1.10 2006/03/21 01:18:49 usher Exp $
  */
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
-    PrimaryGeneratorAction();
+    PrimaryGeneratorAction(G4double HeCut);
     ~PrimaryGeneratorAction();
 
   public:
@@ -97,6 +97,8 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4PrimaryVertex* m_primaryVertex; // This for collections
 
     std::vector<G4PrimaryVertex*> m_secondaryVertexVec;
+
+    G4double HeCutValue;
 };
 
 #endif
