@@ -22,7 +22,7 @@ class IG4GenErrorSvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.24 2005/09/21 03:56:22 usher Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.25 2007/10/01 19:53:27 lsrea Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -88,6 +88,10 @@ class G4Generator : public Algorithm {
 
   /// for material printout
   BooleanProperty m_printRadLen;
+
+  /// cut in energy
+  
+  DoubleProperty m_defaultHeCut;
 
 };
 
