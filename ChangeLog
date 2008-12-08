@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+TAG
+Tag name: G4Generator-05-24-00, operation: mov
+Package: G4Generator
+User: glast  Mon Dec  8 14:41:25 2008
+Files:
+  G4Generator/SConscript  1.3
+  G4Generator/SConscript  1.3
+
+    *
+------------------------------------------------------------
 User: ecephas  Mon Dec  8 13:39:51 PST 2008
 GlastRelease-scons/G4Generator
 
