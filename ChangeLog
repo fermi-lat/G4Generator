@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: ecephas  Mon Dec  8 16:08:23 PST 2008
+GlastRelease-scons/G4Generator
+
+Modified Files:
+	G4GeneratorLib.py 
+Log Message:
+Check in G4GeneratorLib.py for G4Generator v5r24 (branch-tag, GlastReleasev15r49).
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-24-00, operation: mov
 Package: G4Generator
