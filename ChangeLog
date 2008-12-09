@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+TAG
+Tag name: G4Generator-05-24-00, operation: mov
+Package: G4Generator
+User: glast  Mon Dec  8 16:19:03 2008
+Files:
+  G4Generator/G4GeneratorLib.py  1.2
+  G4Generator/G4GeneratorLib.py  1.2
+
+    *
+------------------------------------------------------------
 User: ecephas  Mon Dec  8 16:08:23 PST 2008
 GlastRelease-scons/G4Generator
 
