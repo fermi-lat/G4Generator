@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EpaxIonPhysics.cxx,v 1.3 2008/10/31 07:48:51 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EpaxIonPhysics.cxx,v 1.4 2008/11/25 14:15:32 flongo Exp $
 //
 // Description: This class manages the building of ions and their processes
 //
@@ -124,12 +124,12 @@ void EpaxIonPhysics::ConstructProcess()
   G4HadronElasticProcess*      theAElasticProcess = new G4HadronElasticProcess();
   theAElasticProcess->RegisterMe(theIonElasticModel);
   G4AlphaInelasticProcess*     fAlphaProcess = new G4AlphaInelasticProcess();
-  G4LEAlphaInelastic*         fAlphaModel = new G4LEAlphaInelastic();
-  //EpaxInelasticModel* theAlphaModel = new  EpaxInelasticModel();
+  //G4LEAlphaInelastic*         fAlphaModel = new G4LEAlphaInelastic();
+  EpaxInelasticModel* theAlphaModel = new  EpaxInelasticModel();
   //theIonModel->SetMinEnergy(theMin);
   //theIonModel->SetMaxEnergy(theMax);
-  //fAlphaProcess->RegisterMe(theAlphaModel);
-  fAlphaProcess->RegisterMe(fAlphaModel);
+  fAlphaProcess->RegisterMe(theAlphaModel);
+  //fAlphaProcess->RegisterMe(fAlphaModel);
   fAlphaProcess->AddDataSet(theIonXSec);  
   
   // He3 physics
