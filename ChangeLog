@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v5r25p0, operation: mov
+Package: G4Generator
+User: glastrm  Fri Dec 19 14:30:18 2008
+Files:
+  G4Generator/SConscript  1.4
+
+    *
+------------------------------------------------------------
 User: glastrm  Fri Dec 19 14:30:12 PST 2008
 G4Generator
 
