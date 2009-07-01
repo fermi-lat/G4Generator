@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Jul  1 08:58:12 PDT 2009
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+add EOH to release.notes
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-22-00, operation: mov
 Package: G4Generator
