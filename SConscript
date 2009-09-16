@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/SConscript,v 1.1 2008/08/15 21:22:41 ecephas Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/SConscript,v 1.5 2009/01/23 00:07:01 ecephas Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>, R.Giannitrapani <riccardo@fisica.uniud.it>, Francesco Longo <Francesco.Longo@ts.infn.it>
 # Version: G4Generator-05-22-00
 Import('baseEnv')
@@ -9,16 +9,16 @@ progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
 libEnv.Tool('G4GeneratorLib', depsOnly = 1)
-libEnv.AppendUnique(CPPPATH = ['#G4HadronSim/src/Packaging/include', '#G4HadronSim/src/LHEP/include',
-             '#G4HadronSim/src/LHEP_BERT/include',
-             '#G4HadronSim/src/LHEP_BIC/include',
-             '#G4HadronSim/src/QGSP/include',
-             '#G4HadronSim/src/QGSP_BERT/include',
-             '#G4HadronSim/src/QGSP_BIC/include',
-             '#G4HadronSim/src/QGSC/include',
-             '#G4HadronSim/src/QGSC_LEAD/include',
-             '#G4HadronSim/src/LC/include',
-             '#G4HadronSim/src/SE/include'])
+#libEnv.AppendUnique(CPPPATH = ['#G4HadronSim/src/Packaging/include', '#G4HadronSim/src/LHEP/include',
+#             '#G4HadronSim/src/LHEP_BERT/include',
+#            '#G4HadronSim/src/LHEP_BIC/include',
+#            '#G4HadronSim/src/QGSP/include',
+#            '#G4HadronSim/src/QGSP_BERT/include',
+#            '#G4HadronSim/src/QGSP_BIC/include',
+#             '#G4HadronSim/src/QGSC/include',
+#             '#G4HadronSim/src/QGSC_LEAD/include',
+#             '#G4HadronSim/src/LC/include',
+#             '#G4HadronSim/src/SE/include'])
 
 G4Generator = libEnv.SharedLibrary('G4Generator', listFiles(['src/Utilities/*.cxx','src/Dll/*.cxx','src/*.cxx']))
 
@@ -26,7 +26,10 @@ G4Generator = libEnv.SharedLibrary('G4Generator', listFiles(['src/Utilities/*.cx
 progEnv.Tool('G4GeneratorLib')
 test_G4Generator = progEnv.GaudiProgram('test_G4Generator', listFiles(['src/test/*.cxx']), test = 1)
 
-progEnv.Tool('registerObjects', package = 'G4Generator', libraries = [G4Generator], testApps = [test_G4Generator], includes = listFiles(['G4Generator/*.h','src/RunManager.h']))
+progEnv.Tool('registerTargets', package = 'G4Generator',
+             libraryCxts = [[G4Generator, libEnv]],
+             testAppCxts = [[test_G4Generator, progEnv]],
+             includes = listFiles(['G4Generator/*.h','src/RunManager.h']))
 
 
 
