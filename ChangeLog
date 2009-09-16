@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jrb  Wed Sep 16 11:15:38 PDT 2009
+GlastRelease-scons/G4Generator
+
+Modified Files:
+	.cvsignore SConscript 
+Log Message:
+PhysicsList.cxx:  Change references to G4HadronSim includes for new org.
+.cvsignore, SConscript:  updates for SCons builds
+
+    *
+------------------------------------------------------------
 User: heather  Wed Jul  1 08:58:12 PDT 2009
 G4Generator/doc
 
