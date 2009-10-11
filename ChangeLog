@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Sun Oct 11 12:23:32 PDT 2009
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Media.cxx 
+Log Message:
+Suppress warning about composite not found (this will happen if a composite is used in another composite)
+Upgrade materials printout to suppress multiple entries for the same composite
+
+    *
+------------------------------------------------------------
 User: jrb  Wed Sep 16 11:15:38 PDT 2009
 GlastRelease-scons/G4Generator/src
 
