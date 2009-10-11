@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Media.cxx,v 1.3 2002/04/18 12:39:07 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Media.cxx,v 1.4 2002/04/19 07:44:41 riccardo Exp $
 //
 // Description: This class implements the abstract interface IMedia of
 // GlastDetSvc. The main purpouse is to build the material table for a Geant4
@@ -60,10 +60,14 @@ void G4Media::addComposite(std::string name,
   G4Material* ptMaterial = 0;
   
   G4Material* mat = new G4Material(name, density*g/cm3, components.size());
+  // Turn off the warning from GetElement, since part 
+  // of the function of the call is to test
+  //  for the existence of the element.
+  G4bool warning = false;
   
   for(unsigned int i=0;i<components.size();i++)
     {
-      if (!(ptElement = G4Element::GetElement(components[i])))
+      if (!(ptElement = G4Element::GetElement(components[i], warning)))
         {
           ptMaterial = G4Material::GetMaterial(components[i]);
         }
