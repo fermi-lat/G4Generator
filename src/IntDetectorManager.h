@@ -23,7 +23,7 @@ class IGlastDetSvc;
  * 
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.8 2002/08/12 13:17:17 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IntDetectorManager.h,v 1.9 2003/07/04 22:22:53 burnett Exp $
  */
 class IntDetectorManager : public DetectorManager {
 public:
@@ -54,6 +54,13 @@ public:
   /// A map of McIntegratingHit indicized by volume id to pile up energy
   /// deposited
   std::map<idents::VolumeIdentifier,Event::McIntegratingHit*> m_detectorList;
+
+  /// Indices of refraction for surfaces
+  double m_diodeGlueIndex;
+  double m_crystalIndex;
+
+  /// keep the cosine of the critical angle
+  double m_cosCritical;
 
 };
 #endif
