@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jun  4 07:01:40 PDT 2010
+G4Generator/src
+
+Modified Files:
+	IntDetectorManager.cxx IntDetectorManager.h 
+Log Message:
+First round of updates aimed at simulating direct and refection effects at crystal ends
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-25-01, operation: add
 Package: G4Generator
