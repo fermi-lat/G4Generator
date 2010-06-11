@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Thu Jun 10 17:35:23 PDT 2010
+GlastRelease-scons/G4Generator
+
+Modified Files:
+	SConscript 
+Log Message:
+updates for SCons build
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-26-00, operation: add
 Package: G4Generator
