@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Fri Jun 11 18:35:33 PDT 2010
+GlastRelease-scons/G4Generator/src/test
+
+Modified Files:
+	jO_testBeamTransform.txt jobOptions.txt 
+Log Message:
+in jo files replace occurrences of PKGROOT/src with PKGJOBOPTIONSPATH
+    *
+------------------------------------------------------------
 User: jrb  Thu Jun 10 17:35:23 PDT 2010
 GlastRelease-scons/G4Generator
 
