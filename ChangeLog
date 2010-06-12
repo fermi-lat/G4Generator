@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Sat Jun 12 15:36:29 PDT 2010
+GlastRelease-scons/G4Generator/src/test
+
+Modified Files:
+	jobOptions.txt 
+Log Message:
+fix typo
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-26-01, operation: add
 Package: G4Generator
