@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Sat Jun 12 10:24:42 PDT 2010
+G4Generator
+
+Modified Files:
+	SConscript 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
 User: jrb  Fri Jun 11 18:35:33 PDT 2010
 GlastRelease-scons/G4Generator/src/test
 
