@@ -1,7 +1,7 @@
 //##############################################################
 //
 // Job options file for GUI (gui or FRED) Gleam to test BeamTransform
-// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/test/jO_testBeamTransform.txt,v 1.3 2008/07/21 15:17:29 glastrm Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/test/jO_testBeamTransform.txt,v 1.4 2010/06/12 01:35:33 jrb Exp $
 
 #include "$GLEAMJOBOPTIONSPATH/basicOptions.txt"
 
@@ -13,7 +13,7 @@
 // the environment variable Fred_DIR, which is set by default in the
 // interface package IExternal/Fred
 
-FluxSvc.source_lib += {"$(G4GENERATORROOT)/src/test/test_sources.xml"};
+FluxSvc.source_lib += {"$(G4GENERATORXMLPATH)/test_sources.xml"};
 
 // 20-GeV muon along beamtest06 beamline
 FluxAlg.source_name = "beamtest_muon";
