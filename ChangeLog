@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Wed Jun 16 12:14:02 PDT 2010
+GlastRelease-scons/G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx 
+Log Message:
+various changes to make buildable and runnable with SCons
+    *
+------------------------------------------------------------
 User: jrb  Wed Jun 16 12:14:01 PDT 2010
 GlastRelease-scons/G4Generator
 
