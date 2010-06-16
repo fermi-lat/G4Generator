@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/PhysicsList.cxx,v 1.16 2008/10/31 07:49:17 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/PhysicsList.cxx,v 1.17 2009/09/16 18:15:38 jrb Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -263,8 +263,14 @@ void PhysicsList::ConstructProcess()
 
 void PhysicsList::SetCuts()
 {
-
+#ifndef SCons
   std::string physics_basedir = getenv("G4GENERATORROOT");
+#else
+  // Shouldn't matter since this routine is normally called with
+  // m_physicsTable = "build"
+  std::string physics_basedir("stuffAndNonsense");
+#endif
+
   std::string physics_Dir = physics_basedir + "/" + m_physicsDir;
   if (m_physicsTable=="retrieve")
     {  
