@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jrb  Wed Jun 16 12:14:02 PDT 2010
+GlastRelease-scons/G4Generator/xml
+
+Added Files:
+	test_sources.xml 
+Log Message:
+various changes to make buildable and runnable with SCons
+    *
+------------------------------------------------------------
+User: jrb  Wed Jun 16 12:14:02 PDT 2010
 GlastRelease-scons/G4Generator/src/test
 
 Modified Files:
