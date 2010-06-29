@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Tue Jun 29 12:26:07 PDT 2010
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h 
+Log Message:
+Added a jO parameter to make debugging of geometry easier
+Should be transparent
+
+    *
+------------------------------------------------------------
 User: jrb  Wed Jun 16 12:14:02 PDT 2010
 GlastRelease-scons/G4Generator/xml
 
