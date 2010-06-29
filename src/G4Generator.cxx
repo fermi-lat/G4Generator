@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.68 2008/11/20 16:11:44 flongo Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.69 2009/10/11 19:23:32 lsrea Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -104,6 +104,8 @@ G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator)
   declareProperty("eLossCurrent", m_eLossCurrent = true);  // default is to use the current, not 5.2.
 
   declareProperty("printRadLen",  m_printRadLen  = true);
+  // if printRadLen is true, print all elements, including duplicates
+  declareProperty("printAll",     m_printAll     = false);
 }
     
 ////////////////////////////////////////////////////////////////////////////
@@ -260,7 +262,7 @@ StatusCode G4Generator::initialize()
           double radlenG = radlen*density;
           G4Material* matName = G4Material::GetMaterial(mat->GetName());
           int indName = matName->GetIndex();
-          if(i!=indName) continue;
+          if(!m_printAll&&i!=indName) continue;
           std::cout << std::left << std::setprecision(4) 
               << std::setw(2) << i; 
           //if(i!=indName) {
