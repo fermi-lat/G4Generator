@@ -3,10 +3,12 @@
 @verbatim
  * EOH *
 
+ G4Generatory-05-26-03-gr01 06-Oct-2010 hmk Upgrade Gaudi v21r7 along branch
  G4Generator-05-26-03 29-Jun-2010  lsrea Added jO param to make debugging of geometry easier
  G4Generator-05-26-02 12-Jun-2010    jrb typo in job options
  G4Generator-05-26-01 12-Jun-2010    jrb upgrades for SCons builds
  G4Generator-05-26-00 04-Jun-2010 burnett Tracy's changes for CAL
+ G4Generator-05-25-01-gr01 02-Sep-2010 hmk Upgrade to Gaudi v21r7
  G4Generator-05-25-01 11-Oct-2009  lsrea upgrades to handle composites of composites
  v5r25p0 19-Dec-08 TU  Franz's updates for alpha interactions
  v5r24p0 26-Nov-08 TU  Franz's updates for option to include LPM effect from G4HadronSim
