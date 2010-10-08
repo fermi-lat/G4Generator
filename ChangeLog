@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Fri Oct  8 09:27:50 PDT 2010
+G4Generator
+
+Modified Files:
+      Tag: GlastReleasev18r7p1
+	SConscript 
+Log Message:
+gaudi updates
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-05-25-01-gr01, operation: add
 Package: G4Generator
