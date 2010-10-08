@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: heather  Fri Oct  8 09:27:51 PDT 2010
+G4Generator/src
+
+Modified Files:
+      Tag: GlastReleasev18r7p1
+	BeamTransform.cxx G4Generator.cxx G4Generator.h 
+	G4GeneratorRandom.cxx G4GeometrySvc.cxx 
+Log Message:
+gaudi updates
+    *
+------------------------------------------------------------
 User: heather  Fri Oct  8 09:27:50 PDT 2010
 G4Generator/doc
 
