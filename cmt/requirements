@@ -5,7 +5,7 @@ author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.135 2010/06/12 22:38:25 jrb Exp $
+#$Id: requirements,v 1.136 2010/06/29 19:28:05 lsrea Exp $
 
 use GlastPolicy v*
 
@@ -31,6 +31,7 @@ use cfitsio * IExternal
 private
 #this is private to avoid passing on build info to clients
 use Geant4   v3r8* IExternal
+use RootmapPolicy * GlastPolicy
 
 # special code to replace the standared multiple scattering 
 use GlastMS
@@ -48,7 +49,9 @@ use gr_app *
 apply_pattern package_Cshlibflags
 
 macro source "*.cxx" WIN32 "*.h *.cxx"
-library G4Generator -s=../src $(source) -s=../src/Utilities $(source) -s=Dll *.cxx  
+library G4Generator -s=../src $(source) -s=../src/Utilities $(source)   
+
+apply_pattern generate_rootmap library=G4Generator
 
 # test program 
 public
