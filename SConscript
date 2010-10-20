@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.13 2010/06/29 19:28:05 lsrea Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/SConscript,v 1.13.2.1 2010/10/08 16:27:50 heather Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>, R.Giannitrapani <riccardo@fisica.uniud.it>, Francesco Longo <Francesco.Longo@ts.infn.it>
 # Version: G4Generator-05-26-03-gr01
 
@@ -10,18 +10,10 @@ progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
 libEnv.Tool('addLinkDeps', package='G4Generator', toBuild='component')
-#libEnv.AppendUnique(CPPPATH = ['#G4HadronSim/src/Packaging/include', '#G4HadronSim/src/LHEP/include',
-#             '#G4HadronSim/src/LHEP_BERT/include',
-#            '#G4HadronSim/src/LHEP_BIC/include',
-#            '#G4HadronSim/src/QGSP/include',
-#            '#G4HadronSim/src/QGSP_BERT/include',
-#            '#G4HadronSim/src/QGSP_BIC/include',
-#             '#G4HadronSim/src/QGSC/include',
-#             '#G4HadronSim/src/QGSC_LEAD/include',
-#             '#G4HadronSim/src/LC/include',
-#             '#G4HadronSim/src/SE/include'])
 
-G4Generator = libEnv.SharedLibrary('G4Generator', listFiles(['src/Utilities/*.cxx','src/Dll/*.cxx','src/*.cxx']))
+G4Generator = libEnv.ComponentLibrary('G4Generator',
+                                      listFiles(['src/Utilities/*.cxx',
+                                                 'src/*.cxx']))
 
 
 progEnv.Tool('G4GeneratorLib')
