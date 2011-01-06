@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.12 2010/06/16 19:14:01 jrb Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.13 2010/06/29 19:28:05 lsrea Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>, R.Giannitrapani <riccardo@fisica.uniud.it>, Francesco Longo <Francesco.Longo@ts.infn.it>
 # Version: G4Generator-05-26-03
 Import('baseEnv')
@@ -32,7 +32,7 @@ progEnv.Tool('registerTargets', package = 'G4Generator',
              libraryCxts = [[G4Generator, libEnv]],
              testAppCxts = [[test_G4Generator, progEnv]],
              includes = listFiles(['G4Generator/*.h','src/RunManager.h']),
-             jo = listFiles(['src/test/*.txt', 'src/*.txt']),
+             jo = listFiles(['src/test/*.txt', 'src/test/test_sources.xml', 'src/*.txt']),
              xml = ['xml/test_sources.xml'])
 
 
