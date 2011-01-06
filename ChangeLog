@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Thu Jan  6 11:36:40 PST 2011
+G4Generator
+
+Modified Files:
+	SConscript 
+Log Message:
+Install src/test/test_sources.xml
+
+    *
+------------------------------------------------------------
 User: jrb  Wed Oct 20 11:07:16 PDT 2010
 GlastRelease-scons/G4Generator
 
