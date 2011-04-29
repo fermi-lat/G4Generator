@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/PhysicsList.cxx,v 1.17 2009/09/16 18:15:38 jrb Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.18 2010/06/16 19:14:02 jrb Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -54,7 +54,6 @@
 #include "G4HadronSim/HadronPhysicsQGSP_BIC.hh"
 #include "G4HadronSim/HadronPhysicsQGSP_BERT.hh"
 #include "G4HadronSim/HadronPhysicsQGSC.hh"
-#include "G4HadronSim/HadronPhysicsQGSC_LEAD.hh"
 #include "G4HadronSim/G4EmStandardPhysics.hh"
 #include "G4HadronSim/G4EmExtraPhysics.hh"
 #include "G4HadronSim/G4EmLowEnergyPhysics.hh"
@@ -230,9 +229,6 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
 
      if ( m_physicsChoice == "QGSC" )
          RegisterPhysics(new HadronPhysicsQGSC("hadron"));
-
-     if ( m_physicsChoice == "QGSC_LEAD" )
-         RegisterPhysics(new HadronPhysicsQGSC_LEAD("hadron"));
 
    }
 }

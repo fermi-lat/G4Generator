@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IonPhysics.cxx,v 1.9 2005/04/22 14:31:17 riccardo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/IonPhysics.cxx,v 1.10 2006/10/28 17:31:55 usher Exp $
 //
 // Description: This class manages the building of ions and their processes
 //
@@ -54,8 +54,7 @@ void IonPhysics::ConstructParticle()
 
 #include "G4hIonisation.hh"
 #include "G4ionIonisation.hh"
-#include "G4hIonisation52.hh"
-#include "G4MultipleScattering.hh"
+#include "G4hMultipleScattering.hh"
 
 //--------------------------------------
 // Ions hadronics models
@@ -183,7 +182,7 @@ void IonPhysics::ConstructProcess()
   //G4hIonisation52*          fIonIonisation = new  G4hIonisation52();
   // G4hLowEnergyIonisation* fIonIonisation = new G4hLowEnergyIonisation();
   pManager->AddProcess(fIonIonisation, ordInActive, 2, 2);
-  G4VProcess* fIonMultipleScattering = new G4MultipleScattering();
+  G4VProcess* fIonMultipleScattering = new G4hMultipleScattering();
   pManager->AddProcess(fIonMultipleScattering);
   pManager->SetProcessOrdering(fIonMultipleScattering, idxAlongStep,  1);
   pManager->SetProcessOrdering(fIonMultipleScattering, idxPostStep,  1);

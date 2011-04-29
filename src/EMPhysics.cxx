@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EMPhysics.cxx,v 1.9 2004/12/10 17:25:17 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EMPhysics.cxx,v 1.10 2008/05/02 21:59:55 usher Exp $
 //
 // Description: This class manages the building of gamma/electron/positron and
 // their processes
@@ -91,7 +91,7 @@ void EMPhysics::ConstructProcess()
       m_eLossFactory(GlastMS::EnergyLossFactory::ELECTRON, GlastMS::EnergyLossFactory::BREMSSTRAHLUNG);
 
     G4eBremsstrahlungModel* bm = new G4eBremsstrahlungModel();
-    bm->SetLPMflag(false);
+    //bm->SetLPMflag(false);
 
     G4VEnergyLossProcess* ebrem = 
       reinterpret_cast<G4VEnergyLossProcess*>(theElectronBremsStrahlung);
@@ -113,7 +113,7 @@ void EMPhysics::ConstructProcess()
   G4eplusAnnihilation*          theAnnihilation               = new G4eplusAnnihilation();
 
     G4eBremsstrahlungModel* bp = new G4eBremsstrahlungModel();
-    bp->SetLPMflag(false);
+    //bp->SetLPMflag(false);
     G4VEnergyLossProcess* epbrem =
       reinterpret_cast<G4VEnergyLossProcess*>(thePositronBremsStrahlung);
     epbrem->AddEmModel(0,bp);
