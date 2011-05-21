@@ -1,11 +1,11 @@
 package G4Generator
-version v6r0p0
+version v6r0p1
 
 author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.137 2011/01/06 19:37:31 lsrea Exp $
+#$Id: requirements,v 1.138 2011/05/20 15:32:43 heather Exp $
 
 use GlastPolicy v*
 
@@ -22,7 +22,7 @@ use geometry  v3*
 use G4HadronSim v*
 
 # for linux execution clients to get the LD_LIBRARY_PATH set.
-use Geant4Runtime v3r* IExternal
+use Geant4Runtime v9r* IExternal
 
 ## Attempt to keep our clients' test programs happy by making this public
 use cfitsio * IExternal
