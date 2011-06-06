@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.37 2007/02/15 19:13:53 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.39 2008/11/20 16:10:55 flongo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -57,6 +57,7 @@
 
 #include "src/G4GenExceptionHandler.h"
 
+#include "G4PhysListFactory.hh"
 
 RunManager* RunManager::fRunManager = 0;
 
@@ -115,9 +116,21 @@ RunManager::RunManager(std::ostream& log,
   G4ProcessTable::GetProcessTable()->CreateMessenger();
   randomNumberStatusDir = "./";
 
+
+  
+
+
   // The user stuff
-  physicsList = new PhysicsList(defaultCutValue, physics_choice, physics_table, physics_dir, msfactory, eLossFactory);
+
+  //  physicsList = new PhysicsList(defaultCutValue, physics_choice, physics_table, physics_dir, msfactory, eLossFactory);
+  
+  G4PhysListFactory* myFactory = new G4PhysListFactory();
+  
+  physicsList = myFactory -> GetReferencePhysList(G4String(physics_choice));
+
   //userPrimaryGeneratorAction = new PrimaryGeneratorAction;
+
+
 
 }
 
