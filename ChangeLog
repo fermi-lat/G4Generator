@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Thu Jun  9 20:41:53 PDT 2011
+G4Generator/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+make default physics_choice QGSP_BERT
+    *
+------------------------------------------------------------
+User: heather  Thu Jun  9 20:41:53 PDT 2011
 G4Generator/cmt
 
 Modified Files:
