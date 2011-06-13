@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Sun Jun 12 20:39:01 PDT 2011
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx TrackingAction.h 
+Log Message:
+copuple of patches
+    *
+------------------------------------------------------------
+User: heather  Sun Jun 12 20:39:01 PDT 2011
 G4Generator/doc
 
 Modified Files:
