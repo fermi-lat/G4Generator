@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.19 2011/04/29 13:55:19 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.20 2011/06/06 15:14:19 flongo Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -247,7 +247,7 @@ PhysicsList::PhysicsList(double cutValue, const std::string& physicsChoice,
 	 
 	 // Hadron Elastic Phys
 
-	 RegisterPhysics(  new G4HadronElasticPhysicsLHEP("hadronElast"));
+	 RegisterPhysics(  new G4HadronElasticPhysicsLHEP());
 
 	 //  Ion Physics   
 
