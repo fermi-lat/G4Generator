@@ -1,4 +1,4 @@
-#ifndef TackingAction_h
+#ifndef TrackingAction_h
 #define TrackingAction_h 1
 
 #include "G4UserTrackingAction.hh"
@@ -15,7 +15,7 @@ class IG4GeometrySvc;
  *  
  * @author R.Giannitrapani
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.h,v 1.2 2002/04/17 08:34:15 riccardo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.h,v 1.3 2003/07/22 15:47:58 riccardo Exp $
  */
 class TrackingAction : public G4UserTrackingAction {
 
