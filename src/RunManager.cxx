@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.39 2008/11/20 16:10:55 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.40 2011/06/06 15:13:50 flongo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -21,7 +21,7 @@
 #include "G4RunManagerKernel.hh"
 
 #include "UIsession.h"
-#include "PhysicsList.h"
+//#include "PhysicsList.h"
 #include "PrimaryGeneratorAction.h"
 #include "TrackingAction.h"
 #include "SteppingAction.h"
