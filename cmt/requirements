@@ -1,11 +1,11 @@
 package G4Generator
-version v5r25p1
+version v5r25p1gr01
 
 author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.132 2008/12/19 21:28:14 usher Exp $
+#$Id: requirements,v 1.133 2009/10/11 19:24:17 lsrea Exp $
 
 use GlastPolicy v*
 

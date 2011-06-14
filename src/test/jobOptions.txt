@@ -2,7 +2,7 @@
 //
 // Job options file for G4Generator test
 // 
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.45 2008/11/20 16:08:27 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.49 2010/06/16 19:14:02 jrb Exp $
 
 //  -------------- basic Glast/Gaudi run enviornment -----------
 ApplicationMgr.DLLs   = {  "GlastSvc"};
@@ -30,9 +30,10 @@ GlastDetSvc.topVolume="LAT";         // the whole schebang
 GlastDetSvc.visitorMode="recon";
 
 
-#include "$FLUXSVCROOT/src/defaultOptions.txt"
+#include "$FLUXSVCJOBOPTIONSPATH/defaultOptions.txt"
 // Append (no replace) the list of source library documents
-FluxSvc.source_lib = {"$(G4GENERATORROOT)/src/test/test_sources.xml"};
+//FluxSvc.source_lib = {"$(G4GENERATORROOT)/src/test/test_sources.xml"};
+FluxSvc.source_lib = {"$(G4GENERATORXMLPATH)/test_sources.xml"};
 
 //----------------- local algorithms to run -------------------
 ApplicationMgr.TopAlg = { 
@@ -65,8 +66,11 @@ G4Generator.mcTreeMode = "pruneCal";
 
 //G4Generator.physics_choice = "LowEnergy";
 G4Generator.physics_choice = "GLAST";
-G4Generator.defaultCutValue= 0.7;		
-G4Generator.physics_tables = "store";	
+G4Generator.defaultCutValue= 0.7;	
+// Change from "store" to "build" since no one is truly interested
+// in storing
+//G4Generator.physics_tables = "store";	
+G4Generator.physics_tables = "build";	
 G4Generator.physics_dir = "G4cuts/700micron";
 
 // commands to run before each event. 

@@ -1,14 +1,14 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.6 2009/09/16 18:15:38 jrb Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.15 2011/01/06 19:37:31 lsrea Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>, R.Giannitrapani <riccardo@fisica.uniud.it>, Francesco Longo <Francesco.Longo@ts.infn.it>
-# Version: G4Generator-05-25-01
+# Version: G4Generator-05-25-01-gr01
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-libEnv.Tool('G4GeneratorLib', depsOnly = 1)
+libEnv.Tool('addLinkDeps', package='G4Generator', toBuild='component')
 #libEnv.AppendUnique(CPPPATH = ['#G4HadronSim/src/Packaging/include', '#G4HadronSim/src/LHEP/include',
 #             '#G4HadronSim/src/LHEP_BERT/include',
 #            '#G4HadronSim/src/LHEP_BIC/include',
@@ -24,12 +24,16 @@ G4Generator = libEnv.SharedLibrary('G4Generator', listFiles(['src/Utilities/*.cx
 
 
 progEnv.Tool('G4GeneratorLib')
-test_G4Generator = progEnv.GaudiProgram('test_G4Generator', listFiles(['src/test/*.cxx']), test = 1)
+test_G4Generator = progEnv.GaudiProgram('test_G4Generator',
+                                        listFiles(['src/test/*.cxx']),
+                                        test = 1, package = 'G4Generator')
 
 progEnv.Tool('registerTargets', package = 'G4Generator',
              libraryCxts = [[G4Generator, libEnv]],
              testAppCxts = [[test_G4Generator, progEnv]],
-             includes = listFiles(['G4Generator/*.h','src/RunManager.h']))
+             includes = listFiles(['G4Generator/*.h','src/RunManager.h']),
+             jo = listFiles(['src/test/*.txt', 'src/test/test_sources.xml', 'src/*.txt']),
+             xml = ['xml/test_sources.xml'])
 
 
 
