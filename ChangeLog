@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Tue Jun 14 10:17:46 PDT 2011
+G4Generator/src/test
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	jO_testBeamTransform.txt jobOptions.txt 
+Log Message:
+merge in SCons updates
+    *
+------------------------------------------------------------
+User: heather  Tue Jun 14 10:17:46 PDT 2011
 G4Generator/doc
 
 Modified Files:
