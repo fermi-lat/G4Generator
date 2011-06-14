@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Jun 14 09:12:53 PDT 2011
+G4Generator/src
+
+Removed Files:
+	PhysicsList.cxx PhysicsList.h 
+Log Message:
+removing PhysicsList.*
+    *
+------------------------------------------------------------
 User: heather  Tue Jun 14 08:59:18 PDT 2011
 G4Generator/src
 
