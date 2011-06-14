@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Tue Jun 14 10:17:47 PDT 2011
+G4Generator/xml
+
+Added Files:
+      Tag: GR-branch-17-35-01
+	test_sources.xml 
+Log Message:
+merge in SCons updates
+    *
+------------------------------------------------------------
 User: heather  Tue Jun 14 10:17:46 PDT 2011
 G4Generator/src/test
 
