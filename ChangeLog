@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: heather  Tue Jun 14 08:59:18 PDT 2011
+G4Generator/src
+
+Modified Files:
+	RunManager.cxx 
+Removed Files:
+      Tag: v6r0p5
+	PhysicsList.cxx PhysicsList.h 
+Log Message:
+use Tracy's updates
+    *
+------------------------------------------------------------
+User: heather  Tue Jun 14 08:59:18 PDT 2011
 G4Generator/doc
 
 Modified Files:
