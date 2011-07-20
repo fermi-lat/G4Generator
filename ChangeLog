@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: flongo  Wed Jul 20 05:40:17 PDT 2011
+G4Generator/src
+
+Added Files:
+	MultipleScattering.cxx MultipleScattering.h 
+	MultipleScattering.icc 
+Log Message:
+back old MCS
+    *
+------------------------------------------------------------
 User: flongo  Wed Jul 20 05:38:23 PDT 2011
 G4Generator/cmt
 
