@@ -2,7 +2,7 @@
 //
 // Job options file for G4Generator test
 // 
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.49 2010/06/16 19:14:02 jrb Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/test/jobOptions.txt,v 1.50 2011/06/06 15:17:01 flongo Exp $
 
 //  -------------- basic Glast/Gaudi run enviornment -----------
 ApplicationMgr.DLLs   = {  "GlastSvc"};
@@ -64,9 +64,9 @@ G4Generator.mcTreeMode = "pruneCal";
 
 // do you want the full or only the em physics? (default is full)
 
-//G4Generator.physics_choice = "LowEnergy";
+G4Generator.physics_choice = "EmStd";
 //G4Generator.physics_choice = "GLAST";
-G4Generator.physics_choice = "QGSP_BERT";
+//G4Generator.physics_choice = "QGSP_BERT";
 //G4Generator.physics_choice = "QGSP_INCL_ABLA";
 //G4Generator.physics_choice = "LHEP";
 G4Generator.defaultCutValue= 0.7;	

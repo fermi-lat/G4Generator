@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EpaxIonPhysics.cxx,v 1.4 2008/11/25 14:15:32 flongo Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/EpaxIonPhysics.cxx,v 1.5 2008/12/11 22:26:55 flongo Exp $
 //
 // Description: This class manages the building of ions and their processes
 //
@@ -12,9 +12,8 @@
 #include "G4ios.hh"
 #include <iomanip> 
 
-EpaxIonPhysics::EpaxIonPhysics(const G4String& name, std::string& physicsChoice
-                       , GlastMS::MultipleScatteringFactory& msfactory)
-  :  G4VPhysicsConstructor(name), m_physicsChoice(physicsChoice), m_msFactory(msfactory)
+EpaxIonPhysics::EpaxIonPhysics(const G4String& name, std::string& physicsChoice)
+  :  G4VPhysicsConstructor(name), m_physicsChoice(physicsChoice)
 {
 }
 
