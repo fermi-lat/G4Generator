@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Wed Jul 20 05:33:23 PDT 2011
+G4Generator/src
+
+Removed Files:
+	HadronPhysics.h HadronPhysics.cxx 
+Log Message:
+back new MCS
+    *
+------------------------------------------------------------
 User: flongo  Wed Jul 20 05:32:25 PDT 2011
 G4Generator/src
 
