@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Thu Jul 28 01:34:45 PDT 2011
+G4Generator/src
+
+Added Files:
+	EmLowEnergyPhysics.cxx EmStandardPhysics.cxx 
+Log Message:
+coding conventions
+    *
+------------------------------------------------------------
 User: flongo  Thu Jul 28 01:34:14 PDT 2011
 G4Generator/src
 
