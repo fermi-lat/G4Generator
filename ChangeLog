@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Thu Jul 28 01:34:14 PDT 2011
+G4Generator/src
+
+Removed Files:
+	EmLowEnergyPhysics.cc 
+Log Message:
+coding conventions
+    *
+------------------------------------------------------------
 User: flongo  Thu Jul 28 01:33:48 PDT 2011
 G4Generator/src
 
