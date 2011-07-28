@@ -20,8 +20,8 @@
 // * statement, and all its terms.                                    *
 // ********************************************************************
 //
-// $Id: EmLowEnergyPhysics.cc,v 1.6 2011/04/29 13:46:43 flongo Exp $
-// GEANT4 tag $Name: v2r0p1 $
+// $Id: EmLowEnergyPhysics.cc,v 1.1 2011/07/20 12:36:49 flongo Exp $
+// GEANT4 tag $Name:  $
 //
 //---------------------------------------------------------------------------
 //
