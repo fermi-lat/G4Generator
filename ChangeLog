@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Fri Aug  5 21:12:51 PDT 2011
+G4Generator
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	SConscript 
+Log Message:
+Joanne's patch to remove G4GENERATORROOT for SCons
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease_Pass7-17-35-23-gr10, operation: add
 Package: G4Generator
