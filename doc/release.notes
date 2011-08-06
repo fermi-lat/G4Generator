@@ -3,6 +3,8 @@
 @verbatim
  * EOH *
 
+ G4Generator-05-25-01-gr03 05-Aug-2011 HMK Take Joanne's patch for PhysicsList::
+   SetCuts to remove use of G4GENERATORROOT in SCons builds
  G4Generator-05-25-01-gr02 14-Jun-2011 HMK merge in SCons patches
  G4Generator-05-25-01 11-Oct-2009  lsrea upgrades to handle composites of composites
  v5r25p0 19-Dec-08 TU  Franz's updates for alpha interactions
