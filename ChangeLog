@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Fri Aug  5 21:12:52 PDT 2011
+G4Generator/src
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	PhysicsList.cxx 
+Log Message:
+Joanne's patch to remove G4GENERATORROOT for SCons
+    *
+------------------------------------------------------------
 User: heather  Fri Aug  5 21:12:51 PDT 2011
 G4Generator/doc
 
