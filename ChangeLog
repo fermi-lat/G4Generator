@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Fri Aug  5 21:12:51 PDT 2011
+G4Generator/cmt
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	requirements 
+Log Message:
+Joanne's patch to remove G4GENERATORROOT for SCons
+    *
+------------------------------------------------------------
+User: heather  Fri Aug  5 21:12:51 PDT 2011
 G4Generator
 
 Modified Files:
