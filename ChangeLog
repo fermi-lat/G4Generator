@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Thu Aug 11 10:35:53 PDT 2011
+G4Generator/doc
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	release.notes 
+Log Message:
+patch the patch
+    *
+------------------------------------------------------------
+User: heather  Thu Aug 11 10:35:53 PDT 2011
 G4Generator/cmt
 
 Modified Files:
