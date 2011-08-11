@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Thu Aug 11 10:35:53 PDT 2011
+G4Generator
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	SConscript 
+Log Message:
+patch the patch
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease_Pass7-17-35-23-gr13, operation: add
 Package: G4Generator
