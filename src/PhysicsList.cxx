@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.17 2009/09/16 18:15:38 jrb Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.17.34.1 2011/08/06 04:12:52 heather Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -263,14 +263,15 @@ void PhysicsList::ConstructProcess()
 
 void PhysicsList::SetCuts()
 {
-
+    if (m_physicsTable=="build")
+        return;
 #ifndef SCons
-  std::string physics_basedir = getenv("G4GENERATORROOT");
-  std::string physics_Dir = physics_basedir + "/" + m_physicsDir;
+    std::string physics_basedir = getenv("G4GENERATORROOT");
+    std::string physics_Dir = physics_basedir + "/" + m_physicsDir;
 #else 
-  std::string physics_Dir("nonsense");
-  std::cerr << "PhysicsList::SetCuts: retrieve and store not currently supported for SCons" << std::endl;
-  exit(1);
+    std::string physics_Dir("nonsense");
+    std::cerr << "PhysicsList::SetCuts: retrieve and store not currently supported for SCons" << std::endl;
+    exit(1);
 #endif
   if (m_physicsTable=="retrieve")
     {  

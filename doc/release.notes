@@ -3,6 +3,7 @@
 @verbatim
  * EOH *
 
+ G4Generator-05-23-01-gr04 11-Aug-2011 HMK patch the patch
  G4Generator-05-25-01-gr03 05-Aug-2011 HMK Take Joanne's patch for PhysicsList::
    SetCuts to remove use of G4GENERATORROOT in SCons builds
  G4Generator-05-25-01-gr02 14-Jun-2011 HMK merge in SCons patches

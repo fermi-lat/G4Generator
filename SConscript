@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.7.34.2 2011/06/14 17:19:15 heather Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/SConscript,v 1.7.34.3 2011/08/06 04:12:51 heather Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>, R.Giannitrapani <riccardo@fisica.uniud.it>, Francesco Longo <Francesco.Longo@ts.infn.it>
-# Version: G4Generator-05-25-01-gr03
+# Version: G4Generator-05-25-01-gr04
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
