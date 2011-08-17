@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Tue Aug 16 18:11:23 PDT 2011
+GlastRelease-scons/G4Generator
+
+Modified Files:
+	SConscript 
+Log Message:
+get rid of diagnostic clutter
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-06-02-00, operation: add
 Package: G4Generator
