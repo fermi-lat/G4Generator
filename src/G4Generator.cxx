@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.71 2011/06/10 03:41:53 heather Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/G4Generator.cxx,v 1.72 2011/07/20 12:44:17 flongo Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -47,6 +47,10 @@
 //#include "Event/MonteCarlo/McTrajectory.h"
 
 #include "G4Generator/IG4GeometrySvc.h"
+
+// For setting env. variables G4 needs
+#include "facilities/commonUtilities.h"
+#include "facilities/Util.h"
 
 //vectors
 #include "CLHEP/Geometry/Point3D.h"
@@ -186,6 +190,9 @@ StatusCode G4Generator::initialize()
   // create a factory for the multiplescattering to pass around to the physics guys
   
   log << MSG::INFO << "Initializing run manager... ";
+
+  // Set up environment variables for G4 tables
+  setTableEnvs();
 
   // The geant4 manager
   if (!(m_runManager = RunManager::GetRunManager()))
@@ -370,6 +377,33 @@ StatusCode G4Generator::finalize()
 }
 
 
+void G4Generator::setTableEnvs() {
+#ifdef G4TABLESPATH
+  using facilities::commonUtilities;
+
+  std::string tablesPath("$(GLAST_EXT)");
+  tablesPath += std::string(G4TABLESPATH);
+  facilities::Util::expandEnvVar(&tablesPath);
+  commonUtilities::setEnvironment("G4TableDir", tablesPath);
+  commonUtilities::setEnvironment("G4LEVELGAMMADATA", 
+                                  commonUtilities::joinPath(tablesPath, "PhotonEvaporation2.1"));
+  commonUtilities::setEnvironment("G4NEUTRONHPDATA", 
+                                  commonUtilities::joinPath(tablesPath, "G4NDL3.14"));
+  commonUtilities::setEnvironment("G4RADIOACTIVEDATA", 
+                                  commonUtilities::joinPath(tablesPath, "RadiativeDecay3.3"));
+  commonUtilities::setEnvironment("G4LEDATA", 
+                                  commonUtilities::joinPath(tablesPath, "G4EMLOW6.19"));
+  commonUtilities::setEnvironment("G4REALSURFACEDATA", 
+                                  commonUtilities::joinPath(tablesPath, "RealSurface1.0"));
+  commonUtilities::setEnvironment("G4NEUTRONXSDATA", 
+                                  commonUtilities::joinPath(tablesPath, "G4NEUTRONXS1.0"));
+  commonUtilities::setEnvironment("G4PIIDATA", 
+                                  commonUtilities::joinPath(tablesPath, "G4PIII.2"));
+  commonUtilities::setEnvironment("G4ABLADATA", 
+                                  commonUtilities::joinPath(tablesPath, "G4ABLA3.0"));
+#endif
+  return;
+}
 
 
 
