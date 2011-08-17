@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Tue Aug 16 17:13:07 PDT 2011
+GlastRelease-scons/G4Generator/src
+
+Modified Files:
+	G4Generator.cxx G4Generator.h 
+Log Message:
+define G4 table environment variables for SCons builds
+    *
+------------------------------------------------------------
 User: jrb  Tue Aug 16 17:13:06 PDT 2011
 GlastRelease-scons/G4Generator
 
