@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Tue Aug 16 17:11:53 PDT 2011
+GlastRelease-scons/G4Generator
+
+Modified Files:
+	G4GeneratorLib.py 
+Log Message:
+Get rid of unnecessary library dependencies
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr02, operation: add
 Package: G4Generator
