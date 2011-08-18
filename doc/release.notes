@@ -3,6 +3,8 @@
 @verbatim
  * EOH *
 
+ G4Generator-05-23-01-gr05 17-Aug-2011 HMK add in Joanne's patch to handle G4 
+      env vars such as G4TABLESPATH
  G4Generator-05-23-01-gr04 11-Aug-2011 HMK patch the patch
  G4Generator-05-25-01-gr03 05-Aug-2011 HMK Take Joanne's patch for PhysicsList::
    SetCuts to remove use of G4GENERATORROOT in SCons builds
