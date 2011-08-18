@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Wed Aug 17 20:30:10 PDT 2011
+G4Generator/doc
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	release.notes 
+Log Message:
+pick up Joanne's G4 table env var updates for P7
+    *
+------------------------------------------------------------
+User: heather  Wed Aug 17 20:30:10 PDT 2011
 G4Generator/cmt
 
 Modified Files:
