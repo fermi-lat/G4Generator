@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Thu Aug 25 14:09:46 PDT 2011
+G4Generator/xml
+
+Modified Files:
+	test_sources.xml 
+Log Message:
+Add diagnostic_muons to G4 test_sources
+This version, in xml/ is the one we're maintaining
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-19-03-05, operation: add
 Package: G4Generator
