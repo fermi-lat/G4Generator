@@ -1,10 +1,20 @@
 
 <source_library title="G4_test_sources">
    <!--
-       $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/test/test_sources.xml,v 1.22 2007/03/15 05:55:41 lsrea Exp $
+       $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/xml/test_sources.xml,v 1.1 2010/06/16 19:14:02 jrb Exp $
        Some simple test flux definitions for debugging
     -->
     
+    <!-- Diagnostic muons, 10 GeV, 2pi, default launch point -->
+    <source name="diagnostic_muons" flux="1.0">
+        <spectrum escale="GeV">
+            <particle name="mu+">
+               <energy e="10"/>
+            </particle>
+            <solid_angle mincos="0.0" maxcos="1.0"/>
+        </spectrum>
+    </source>
+
     <source name="beamtest_muon" >
        <spectrum escale="GeV"> 
          <particle name="mu+"><energy e="20"/> </particle>
