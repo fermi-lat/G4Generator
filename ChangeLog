@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: flongo  Fri Aug 26 16:59:15 PDT 2011
+G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx 
+Log Message:
+trial QGSP EPAX Physics List
+    *
+------------------------------------------------------------
 TAG
 Tag name: G4Generator-06-02-02, operation: add
 Package: G4Generator
