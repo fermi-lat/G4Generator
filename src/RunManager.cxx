@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.41 2011/06/14 15:59:18 heather Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/RunManager.cxx,v 1.42 2011/07/20 12:47:52 flongo Exp $
 //
 // Description: 
 // This class manages the Geant4 main loop and calls; since we don't need event
@@ -121,7 +121,8 @@ RunManager::RunManager(std::ostream& log,
   // The user stuff
 
 
-  if (physics_choice =="EmStd" || physics_choice == "EmLow")
+  if (physics_choice =="EmStd" || physics_choice == "EmLow" ||
+      physics_choice =="EmLiv" || physics_choice == "QGSP_BERT_EPAX")
     {
       physicsList = new PhysicsList(defaultCutValue, physics_choice, physics_table, physics_dir);
     }
