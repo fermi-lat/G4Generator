@@ -2,6 +2,22 @@
 TAG
 Tag name: GlastRelease-19-03-07, operation: add
 Package: G4Generator
+User: heather  Wed Sep  7 10:41:48 2011
+Files:
+  G4Generator/src/Utilities/G4GenReconSvc.cxx  1.3
+  G4Generator/src/Utilities/G4GenErrorRecord.h  1.1
+  G4Generator/src/Utilities/G4GenErrorRecord.cxx  1.1
+  G4Generator/src/test/jobOptions.txt  1.51
+  G4Generator/src/test/test_sources.xml  1.22
+  G4Generator/src/test/jO_testBeamTransform.txt  1.5
+  G4Generator/src/test/G4TestAlg.cxx  1.2
+  G4Generator/xml/test_sources.xml  1.2
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-19-03-07, operation: add
+Package: G4Generator
 User: heather  Wed Sep  7 10:41:38 2011
 Files:
   G4Generator/src/EpaxInelasticModel.cxx  1.1
