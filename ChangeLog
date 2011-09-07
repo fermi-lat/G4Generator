@@ -1,5 +1,23 @@
 ------------------------------------------------------------
 TAG
+Tag name: GlastRelease-19-03-07, operation: add
+Package: G4Generator
+User: heather  Wed Sep  7 10:41:26 2011
+Files:
+  G4Generator/.cvsignore  1.4
+  G4Generator/ChangeLog  1.852
+  G4Generator/SConscript  1.30
+  G4Generator/G4GeneratorLib.py  1.4
+  G4Generator/G4Generator/IG4GenErrorSvc.h  1.1
+  G4Generator/G4Generator/IG4GeometrySvc.h  1.4
+  G4Generator/G4Generator/G4GenException.h  1.1
+  G4Generator/cmt/.cvsignore  1.3
+  G4Generator/cmt/requirements  1.154
+  G4Generator/doc/release.notes  1.114
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: GlastRelease-19-03-07, operation: del
 Package: G4Generator
 User: glastrm  Tue Sep  6 14:14:19 2011
