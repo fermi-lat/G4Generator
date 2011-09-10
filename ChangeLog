@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Sep  9 17:51:44 PDT 2011
+G4Generator/src
+
+Modified Files:
+	G4Generator.cxx 
+Log Message:
+Set QGSP_BERT_EPAX as the new default physics choice
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr04, operation: add
 Package: G4Generator
