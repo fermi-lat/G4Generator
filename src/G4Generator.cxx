@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/G4Generator.cxx,v 1.72 2011/07/20 12:44:17 flongo Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.73 2011/08/17 00:13:07 jrb Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -86,7 +86,7 @@ G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator)
   declareProperty("defaultCalCutValue", m_defaultCalCutValue=0.1*mm);
 
   // G4 choices 
-  declareProperty("physics_choice", m_physics_choice="QGSP_BERT");
+  declareProperty("physics_choice", m_physics_choice="QGSP_BERT_EPAX");
   declareProperty("physics_tables", m_physics_table="build");
   declareProperty("physics_dir",    m_physics_dir="G4cuts/100micron/");
 
