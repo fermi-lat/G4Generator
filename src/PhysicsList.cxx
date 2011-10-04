@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.17.34.1 2011/08/06 04:12:52 heather Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/PhysicsList.cxx,v 1.17.34.2 2011/08/11 17:35:53 heather Exp $
 //
 // Description: This class manages the building of particles definitions and
 // physics processes setup by creating a set of specialized classes and
@@ -263,22 +263,20 @@ void PhysicsList::ConstructProcess()
 
 void PhysicsList::SetCuts()
 {
-    if (m_physicsTable=="build")
-        return;
 #ifndef SCons
     std::string physics_basedir = getenv("G4GENERATORROOT");
-    std::string physics_Dir = physics_basedir + "/" + m_physicsDir;
 #else 
-    std::string physics_Dir("nonsense");
-    std::cerr << "PhysicsList::SetCuts: retrieve and store not currently supported for SCons" << std::endl;
-    exit(1);
+    // Shouldn't matter since this routine is normally called with 
+    // m_physicsTable = "build"
+    std::string physics_basedir("nonsense");
 #endif
-  if (m_physicsTable=="retrieve")
+    std::string physics_Dir = physics_basedir + "/" + m_physicsDir;
+    if (m_physicsTable=="retrieve")
     {  
       SetPhysicsTableRetrieved(physics_Dir);
     }
-  SetCutsWithDefault(); 
-  if (m_physicsTable=="store")
+    SetCutsWithDefault(); 
+    if (m_physicsTable=="store")
     {  
       if(StorePhysicsTable(physics_Dir))
 	{// std::cout << "done Physics Store" << std::endl;
