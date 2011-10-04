@@ -3,6 +3,9 @@
 @verbatim
  * EOH *
 
+ G4Generator-05-23-01-gr06 04-Oct-2011 HMK Patch the mess I made of #ifdef in 
+      PhysicsList.cxx - that should take care of speed trouble
+      Also modify the G4Generator setTableEnv for the G4 8.0.p01 version
  G4Generator-05-23-01-gr05 17-Aug-2011 HMK add in Joanne's patch to handle G4 
       env vars such as G4TABLESPATH
  G4Generator-05-23-01-gr04 11-Aug-2011 HMK patch the patch
