@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Tue Oct  4 10:58:35 PDT 2011
+G4Generator/src
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	G4Generator.cxx PhysicsList.cxx 
+Log Message:
+patches for G4 setup
+    *
+------------------------------------------------------------
 User: heather  Tue Oct  4 10:58:34 PDT 2011
 G4Generator/doc
 
