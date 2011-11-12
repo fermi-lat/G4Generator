@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Fri Nov 11 19:04:19 PST 2011
+GlastRelease-scons/G4Generator/src
+
+Modified Files:
+	PhysicsList.cxx 
+Log Message:
+Fix carriage control for vc90
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr13, operation: add
 Package: G4Generator
