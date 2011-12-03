@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Fri Dec  2 16:01:26 PST 2011
+G4Generator/cmt
+
+Modified Files:
+      Tag: GR-branch-17-35-01
+	requirements 
+Log Message:
+apply Joanne's patch to create G4tablePath correctly so that the tables are found
+    *
+------------------------------------------------------------
 User: heather  Fri Dec  2 16:01:25 PST 2011
 G4Generator
 
