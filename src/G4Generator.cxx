@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.69.34.1 2011/08/18 03:30:10 heather Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.69.34.2 2011/10/04 17:58:35 heather Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -397,8 +397,7 @@ void G4Generator::setTableEnvs() {
 #ifdef G4TABLESPATH
   using facilities::commonUtilities;
 
-  std::string tablesPath("$(GLAST_EXT)");
-  tablesPath += std::string(G4TABLESPATH);
+  std::string tablesPath = commonUtilities::joinPath(std::string("$(GLAST_EXT)"), std::string(G4TABLESPATH)  );
   facilities::Util::expandEnvVar(&tablesPath);
   commonUtilities::setEnvironment("G4TableDir", tablesPath);
   commonUtilities::setEnvironment("G4LEVELGAMMADATA", 
