@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Dec 12 12:49:22 PST 2011
+GlastRelease-scons/G4Generator/src/test
+
+Modified Files:
+	G4TestAlg.cxx jobOptions.txt 
+Log Message:
+merge Gaudi v21r7
+    *
+------------------------------------------------------------
 User: heather  Mon Dec 12 12:49:21 PST 2011
 GlastRelease-scons/G4Generator/src
 
