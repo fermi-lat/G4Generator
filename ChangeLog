@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Mon Dec 12 12:49:21 PST 2011
+GlastRelease-scons/G4Generator/src
+
+Modified Files:
+	BeamTransform.cxx G4Generator.cxx G4Generator.h 
+	G4GeneratorRandom.cxx G4GeometrySvc.cxx 
+Log Message:
+merge Gaudi v21r7
+    *
+------------------------------------------------------------
+User: heather  Mon Dec 12 12:49:21 PST 2011
 GlastRelease-scons/G4Generator/doc
 
 Modified Files:
