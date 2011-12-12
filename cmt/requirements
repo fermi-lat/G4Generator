@@ -1,11 +1,11 @@
 package G4Generator
-version v6r3p1
+version v6r4p0
 
 author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.154 2011/09/01 02:46:47 heather Exp $
+#$Id: requirements,v 1.155 2011/09/10 01:04:37 usher Exp $
 
 use GlastPolicy v*
 
@@ -47,6 +47,7 @@ set G4ABLADATA                "${G4tableDir}/G4ABLA3.0"
 private
 #this is private to avoid passing on build info to clients
 use Geant4   v9r* IExternal
+use RootmapPolicy * GlastPolicy
 
 # special code to replace the standared multiple scattering 
 use GlastMS
@@ -63,8 +64,10 @@ use gr_app *
 
 apply_pattern package_Cshlibflags
 
-macro source "*.cxx" WIN32 "*.h *.hh *.cxx"
-library G4Generator -s=../src $(source) -s=../src/Utilities $(source) -s=Dll *.cxx *.cc 
+macro source "*.cxx" WIN32 "*.h *.cxx"
+library G4Generator -s=../src $(source) -s=../src/Utilities $(source)   
+
+apply_pattern generate_rootmap library=G4Generator
 
 # test program 
 public
