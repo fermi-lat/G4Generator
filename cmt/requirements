@@ -5,7 +5,7 @@ author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.155 2011/09/10 01:04:37 usher Exp $
+#$Id: requirements,v 1.156 2011/12/12 20:49:20 heather Exp $
 
 use GlastPolicy v*
 
@@ -50,7 +50,7 @@ use Geant4   v9r* IExternal
 use RootmapPolicy * GlastPolicy
 
 # special code to replace the standared multiple scattering 
-use GlastMS
+#use GlastMS
 
 # only needed by test program 
 use FluxSvc v*
