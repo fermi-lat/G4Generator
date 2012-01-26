@@ -7,7 +7,7 @@
 
     @authors Toby Burnett, Leon Rochester
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.14 2007/07/24 04:29:10 lsrea Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/BeamTransform.cxx,v 1.16 2011/12/12 20:49:21 heather Exp $
 */
 // Gaudi system includes
 #include "GaudiKernel/MsgStream.h"
@@ -93,8 +93,9 @@ namespace {
     const double degToRad = M_PI/180.;
 }
 
-static const AlgFactory<BeamTransform>  Factory;
-const IAlgFactory& BeamTransformFactory = Factory;
+//static const AlgFactory<BeamTransform>  Factory;
+//const IAlgFactory& BeamTransformFactory = Factory;
+DECLARE_ALGORITHM_FACTORY(BeamTransform);
 
 BeamTransform::BeamTransform(const std::string& name, ISvcLocator* pSvcLocator)
 :Algorithm(name, pSvcLocator)

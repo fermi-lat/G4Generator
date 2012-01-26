@@ -3,6 +3,7 @@
 @verbatim
  * EOH *
 
+ G4Generator-05-23-01-gr08 26-Jan-2012 HMK Gaudi v21r7
  G4Generator-05-23-01-gr07 02-Dec-2011 HMK Patch setTableEnv to include trailing
     \ after $GLAST_EXT when creating G4tablePath
  G4Generator-05-23-01-gr06 04-Oct-2011 HMK Patch the mess I made of #ifdef in 

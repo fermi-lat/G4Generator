@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.cxx,v 1.6 2003/04/28 23:56:12 xchen Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4GeometrySvc.cxx,v 1.8 2011/12/12 20:49:21 heather Exp $
 //
 // Description: Service for particle transport management
 //
@@ -73,8 +73,9 @@ class G4GeometrySvc : public Service, virtual public IG4GeometrySvc
 };
 
 
-static SvcFactory<G4GeometrySvc> g4_factory;
-const ISvcFactory& G4GeometrySvcFactory = g4_factory;
+//static SvcFactory<G4GeometrySvc> g4_factory;
+//const ISvcFactory& G4GeometrySvcFactory = g4_factory;
+DECLARE_SERVICE_FACTORY(G4GeometrySvc);
 
 G4GeometrySvc::G4GeometrySvc(const std::string& name, ISvcLocator* pSvcLocator) :
   Service(name, pSvcLocator), m_UserDetector(0), m_TransportationManager(0), m_idmap(0)

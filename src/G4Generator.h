@@ -6,11 +6,11 @@
 #include <string>
 #include <vector>
 #include "GaudiKernel/Property.h"
+#include "GlastSvc/GlastRandomSvc/IRandomAccess.h"
 
 class RunManager;
 class IParticlePropertySvc;
 class IG4GenErrorSvc;
-
 
 /** 
  * @class G4Generator
@@ -22,7 +22,7 @@ class IG4GenErrorSvc;
  *  
  * @author T.Burnett and R.Giannitrapani
  *    
- * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.27 2008/11/20 16:11:44 flongo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.h,v 1.30 2011/12/12 20:49:21 heather Exp $
  */
 class G4Generator : public Algorithm {
  public:
@@ -38,6 +38,8 @@ class G4Generator : public Algorithm {
 
   /// a pointer to the service for particle properties
   IParticlePropertySvc* m_ppsvc;
+
+  IRandomAccess *m_randTool;
 
   /// a pointer to the Error handling service
   IG4GenErrorSvc* m_ErrorSvc;
@@ -91,6 +93,7 @@ class G4Generator : public Algorithm {
 
   /// for material printout
   BooleanProperty m_printRadLen;
+  //BooleanProperty m_printAll;
 
 };
 
