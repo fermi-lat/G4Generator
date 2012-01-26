@@ -1,7 +1,7 @@
 /** @file G4Generator.cxx
     @brief implementation of class G4Generator
 
-    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.69.34.2 2011/10/04 17:58:35 heather Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/G4Generator.cxx,v 1.69.34.3 2011/12/03 00:01:27 heather Exp $
 
  This is the Gaudi algorithm that runs Geant4 and fills the TDS
  with Montecarlo data. It initalizes some services (for tds and detector
@@ -67,8 +67,9 @@
 // General
 #include <iomanip>
 
-static const AlgFactory<G4Generator>  Factory;
-const IAlgFactory& G4GeneratorFactory = Factory;
+//static const AlgFactory<G4Generator>  Factory;
+//const IAlgFactory& G4GeneratorFactory = Factory;
+DECLARE_ALGORITHM_FACTORY(G4Generator);
 
 namespace {
     double zOffset;
@@ -158,6 +159,10 @@ StatusCode G4Generator::initialize()
   {
       log << MSG::ERROR << "Could not find G4GenErrorSvc"<<endreq ;
       return StatusCode::FAILURE ;
+  }
+
+  if (toolSvc()->retrieveTool("G4GeneratorRandom",m_randTool).isFailure()){
+    log << MSG::WARNING << "Failed to create G4GeneratorRandomTool " << endreq;
   }
 
   // Get the GlastDetService Service
@@ -385,6 +390,8 @@ StatusCode G4Generator::finalize()
 
   MsgStream log(msgSvc(), name());
   log << MSG::INFO << "finalize: " << endreq;
+
+  toolSvc()->releaseTool(m_randTool);
 
   // delete the runManager of geant4
   delete m_runManager;
