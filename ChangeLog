@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Thu Feb  9 09:29:30 PST 2012
+G4Generator/cmt
+
+Modified Files:
+      Tag: GlastReleasev19r4p1
+	requirements 
+Log Message:
+remove use of GlastMS
+    *
+------------------------------------------------------------
 User: heather  Thu Feb  9 09:29:29 PST 2012
 G4Generator
 
