@@ -1,11 +1,11 @@
 package G4Generator
-version v6r3p1
+version v6r3p1gr01
 
 author  T. Burnett <tburnett@u.washington.edu>
 author  R.Giannitrapani <riccardo@fisica.uniud.it>
 author  Francesco Longo <Francesco.Longo@ts.infn.it>
 
-#$Id: requirements,v 1.154 2011/09/01 02:46:47 heather Exp $
+#$Id: requirements,v 1.155 2011/09/10 01:04:37 usher Exp $
 
 use GlastPolicy v*
 
@@ -49,7 +49,7 @@ private
 use Geant4   v9r* IExternal
 
 # special code to replace the standared multiple scattering 
-use GlastMS
+#use GlastMS
 
 # only needed by test program 
 use FluxSvc v*
