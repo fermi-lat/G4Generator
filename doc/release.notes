@@ -3,6 +3,7 @@
 @verbatim
  * EOH *
 
+ G4Generator-06-03-01-gr01 09-Feb-2012 HMK Remove use of GlastMS
  G4Generator-06-03-01  9-Sep-2011  TU Making QGSP_BERT_EPAX the default for physics choice
  G4Generator-06-03-00 29-Aug-2011  flongo enable EmLiv physics list and 
      QGSP_BERT with Epax ion process (QGSP_BERT_EPAX)
