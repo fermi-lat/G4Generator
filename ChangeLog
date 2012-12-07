@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: kuss  Fri Dec  7 05:53:04 PST 2012
+G4Generator/src
+
+Modified Files:
+	TrackingAction.cxx 
+Log Message:
+set initial and final volume name and id of the McParticle object
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-07-00, operation: add
 Package: G4Generator
