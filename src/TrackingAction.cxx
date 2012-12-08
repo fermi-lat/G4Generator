@@ -1,5 +1,5 @@
 // File and Version Information:
-// $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/G4Generator/src/TrackingAction.cxx,v 1.20 2007/07/03 17:09:20 usher Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/G4Generator/src/TrackingAction.cxx,v 1.20 2007/07/03 17:09:20 usher Exp $
 //
 // Description: this method is used to generate new McParticle objects in the
 // McParticle hierarchy. It uses a standard mechanism of Geant4 that permits to
@@ -104,8 +104,6 @@ void TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
         }
       
         particle->setInitialId(ret);
-        const G4Material* material = theTouchable->GetVolume(0)->GetLogicalVolume()->GetMaterial();
-        particle->setInitialMaterial(material->GetName(), material->GetIndex());
       
         // we add this particle to our collection for subsequent saving in the TDS
         man->addMcParticle(aTrack->GetTrackID(),particle);
@@ -196,8 +194,6 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
             }
       
             particle->setFinalId(ret);
-            const G4Material* material = theTouchable->GetVolume(0)->GetLogicalVolume()->GetMaterial();
-            particle->setFinalMaterial(material->GetName(), material->GetIndex());
 
             // Move the McParticles to the TDS
             man->saveMcParticle();
@@ -214,3 +210,6 @@ void TrackingAction::PostUserTrackingAction(const G4Track* aTrack)
 
     return;
 }
+
+
+
