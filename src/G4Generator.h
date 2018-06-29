@@ -95,6 +95,8 @@ class G4Generator : public Algorithm {
   BooleanProperty m_printRadLen;
   BooleanProperty m_printAll;
 
+  int m_maxMcPositionHit;
+  int m_maxMcIntegratingHit;
 };
 
 #endif

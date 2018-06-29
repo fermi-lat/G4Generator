@@ -107,6 +107,9 @@ G4Generator::G4Generator(const std::string& name, ISvcLocator* pSvcLocator)
   declareProperty("printRadLen",  m_printRadLen  = true);
   // if printRadLen is true, print all elements, including duplicates
   declareProperty("printAll",     m_printAll     = false);
+
+  declareProperty("maxMcPositionHit",m_maxMcPositionHit=999999999);
+  declareProperty("maxMcIntegratingHit",m_maxMcIntegratingHit=999999999);
 }
     
 ////////////////////////////////////////////////////////////////////////////
@@ -133,6 +136,9 @@ StatusCode G4Generator::initialize()
 
   log << MSG::INFO << "Cut Table " << m_physics_table << endreq;
   log << MSG::INFO << "Cut Table Dir" << m_physics_dir << endreq;
+
+  log << MSG::INFO << "maxMcPositionHit " << m_maxMcPositionHit << endreq;
+  log << MSG::INFO << "maxMcIntegratingHit " << m_maxMcIntegratingHit << endreq;
  
   // Apply Geant4 specific commands throught the ui
   if( !m_uiCommands.value().empty() ) {
@@ -185,7 +191,7 @@ StatusCode G4Generator::initialize()
   McParticleManager::getPointer()->initialize(eventSvc(), glastsvc);
 
   // Init the McTrajectory hierarchy 
-  McTrajectoryManager::getPointer()->initialize(eventSvc(), glastsvc);
+  McTrajectoryManager::getPointer()->initialize(eventSvc(), glastsvc, m_maxMcPositionHit, m_maxMcIntegratingHit);
 
   if( service( "ParticlePropertySvc", m_ppsvc).isFailure() ) {
       log << MSG::ERROR << "Couldn't set up ParticlePropertySvc!" << endreq;
@@ -353,7 +359,18 @@ StatusCode G4Generator::execute()
       if (sc == StatusCode::SUCCESS) m_runManager->RunTermination();
       return sc;
   }
-    
+
+  if(McTrajectoryManager::getPointer()->m_counterMcPositionHit>McTrajectoryManager::getPointer()->m_maxMcPositionHit)
+    {
+      log << MSG::INFO << "Event aborted because m_counterMcPositionHit>" << m_maxMcPositionHit << endreq;
+      return StatusCode::SUCCESS;
+    }
+  if(McTrajectoryManager::getPointer()->m_counterMcIntegratingHit>McTrajectoryManager::getPointer()->m_maxMcIntegratingHit)
+    {
+      log << MSG::INFO << "Event aborted because m_counterMcIntegratingHit>" << m_maxMcIntegratingHit << endreq;
+      return StatusCode::SUCCESS;
+    }
+
   // If we set the pruneCal mode than we remove all the not TKR interacting
   // particles that does not touch the TKR zone (z>0)
   if (m_mcTreeMode=="pruneCal")

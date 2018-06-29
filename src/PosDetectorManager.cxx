@@ -62,6 +62,9 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
   // Inputs: the step of the hit and the hierarchy of touchable volumes
   // Outpus: false if there is no hit to register, true otherwise
 
+  // If the nb of McPositionHit has hit the limit, stop processing hits
+  if(McTrajectoryManager::getPointer()->m_counterMcPositionHit>McTrajectoryManager::getPointer()->m_maxMcPositionHit) return false;
+
   // Energy Deposition & Step Length
   G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
   //  G4double stepl = aStep->GetStepLength()/mm;   never used
@@ -91,6 +94,8 @@ G4bool PosDetectorManager::ProcessHits(G4Step* aStep,
 
     // Filling of the hits container
     Event::McPositionHit *hit = new Event::McPositionHit;
+    // Increment the McPositionHit counter to allow event abortion when the counter hits the limit
+    McTrajectoryManager::getPointer()->m_counterMcPositionHit += 1;
 
     // this rotates the hits to local coordinates with respect to the center  
     CLHEP::HepRotation local(*(theTouchable->GetRotation()));

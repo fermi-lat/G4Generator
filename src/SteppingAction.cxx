@@ -38,6 +38,14 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
         G4Track*     track = aStep->GetTrack();
         unsigned int id    = track->GetTrackID();
 
+        // If the nb of McPositionHit/McIntegratingHit has hit the limit, abort the event (by stopping and killing all tracks)
+        if(McTrajectoryManager::getPointer()->m_counterMcPositionHit>McTrajectoryManager::getPointer()->m_maxMcPositionHit
+           || McTrajectoryManager::getPointer()->m_counterMcIntegratingHit>McTrajectoryManager::getPointer()->m_maxMcIntegratingHit)
+          {
+            track->SetTrackStatus(fStopAndKill);
+            return;
+          }
+
         Event::McTrajectory* trajectory = McTrajectoryManager::getPointer()->getMcTrajectory(id);
 
         if (trajectory)
