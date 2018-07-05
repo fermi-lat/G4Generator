@@ -71,6 +71,9 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
     // Inputs: the step of the hit and the hierarchy of touchable volumes
     // Outpus: false if there is no hit to register, true otherwise
 
+  // If the nb of McIntegratingHit has hit the limit, stop processing hits
+  if(McTrajectoryManager::getPointer()->m_counterMcIntegratingHit>McTrajectoryManager::getPointer()->m_maxMcIntegratingHit) return false;
+
     // Energy Deposition & Step Length  
     G4double edep = aStep->GetTotalEnergyDeposit()/MeV;
     G4double stepl = aStep->GetStepLength()/mm;
@@ -106,6 +109,8 @@ G4bool IntDetectorManager::ProcessHits(G4Step* aStep,
     {
         // A new object is needed
         hit = new Event::McIntegratingHit;
+        // Increment the McIntegratingHit counter to allow event abortion when the counter hits the limit
+        McTrajectoryManager::getPointer()->m_counterMcIntegratingHit += 1;
         // Set its volume identifier
         hit->setVolumeID(id);
         // Put it in the collection of hits

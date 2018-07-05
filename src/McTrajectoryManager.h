@@ -94,7 +94,7 @@ class McTrajectoryManager {
   /// operations
   /// @param esv The pointer to the DataProviderSvc service 
   /// @param gsvc The pointer to the GlastDetSvc service
-  void initialize(IDataProviderSvc* esv, IGlastDetSvc* gsvc);
+  void initialize(IDataProviderSvc* esv, IGlastDetSvc* gsvc, int maxmcpositionhit, int maxmcintegratinghit);
   
   /// clear the hierarchy of McTrajectory
   void clear();
@@ -107,6 +107,11 @@ class McTrajectoryManager {
 
   /// For pruning, remove a given trajectory
   void removeTrajectory(unsigned int id);
+
+  int m_counterMcPositionHit;
+  int m_maxMcPositionHit;
+  int m_counterMcIntegratingHit;
+  int m_maxMcIntegratingHit;
 
  private:
   /// The constructor is private since this is a singleton

@@ -23,7 +23,7 @@
 // This is the singleton static pointer
 McTrajectoryManager* McTrajectoryManager::m_pointer = 0;
 
-void McTrajectoryManager::initialize(IDataProviderSvc* esv, IGlastDetSvc* gsvc)
+void McTrajectoryManager::initialize(IDataProviderSvc* esv, IGlastDetSvc* gsvc, int maxmcpositionhit, int maxmcintegratinghit)
 {
     m_mcPosHit            = 0;
     m_mcIntHit            = 0;
@@ -38,6 +38,11 @@ void McTrajectoryManager::initialize(IDataProviderSvc* esv, IGlastDetSvc* gsvc)
     m_trajectories.clear();
     m_pointToPosHit.clear();
     m_pointToIntHit.clear();
+ 
+    m_counterMcPositionHit = 0;
+    m_maxMcPositionHit = maxmcpositionhit;
+    m_counterMcIntegratingHit = 0;
+    m_maxMcIntegratingHit = maxmcintegratinghit;
 }
 
 void McTrajectoryManager::clearRelTables()
@@ -75,6 +80,9 @@ void McTrajectoryManager::clear()
     m_mcIntHit     = 0;
     m_mcTrajectory = 0;
     m_trajectories.clear(); 
+
+    m_counterMcPositionHit = 0;
+    m_counterMcIntegratingHit = 0;
 
     clearRelTables();
 
